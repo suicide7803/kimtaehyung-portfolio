@@ -4,81 +4,122 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>작품 상세 — 김태형 연출</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <style>
-  @font-face{
-    font-family:"Pretendard";
-    src: local("Pretendard Variable"), local("Pretendard");
-    font-weight: 400 800;
-  }
   :root{
-    --bg-void:#14110d;--bg-tile:#1c1712;
+    --void:#0d0b08;--panel:#161209;
+    --glass:rgba(24,19,12,.55);--line:rgba(239,233,220,.10);
+    --ink:#efe9dc;--ink-dim:#a89e8a;--ink-faint:#6f6656;
     --gold:#c9a961;--gold-bright:#e0c17d;--gold-dim:#8a7442;
-    --ink:#ece6d8;--ink-dim:#a89e8a;--ink-faint:#6f6656;
-    --line-dark:rgba(236,230,216,.1);
-    --shadow-poster:0 18px 50px -12px rgba(0,0,0,.65),0 4px 14px rgba(0,0,0,.35);
-    --shadow-poster-sm:0 10px 24px -8px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.3);
+    --serif:"Noto Serif KR","Nanum Myeongjo",serif;
+    --sans:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --shadow-poster:0 30px 80px -20px rgba(0,0,0,.8),0 8px 24px rgba(0,0,0,.5);
+    --glow-gold:0 0 70px rgba(201,169,97,.16);
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg-tile);color:var(--ink);
-    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
-    line-height:1.65;-webkit-font-smoothing:antialiased}
+  body{background:var(--void);color:var(--ink);font-family:var(--sans);
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 
-  nav.topnav{padding:22px 0;background:var(--bg-void)}
-  .navwrap{display:flex;align-items:center;justify-content:space-between}
-  .wordmark{font-size:14.5px;letter-spacing:.04em;color:var(--ink);font-weight:600}
+  body::after{
+    content:"";position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  nav.top{
+    position:fixed;top:0;left:0;right:0;z-index:1001;
+    background:var(--glass);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);
+    border-bottom:1px solid var(--line);
+  }
+  nav.top .inner{max-width:1120px;margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .wordmark{font-family:var(--serif);font-weight:600;font-size:15px}
   .wordmark span{color:var(--gold)}
-  .back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--ink);
-    background:linear-gradient(180deg,#2a2118,#1c1712);border-radius:99px;padding:9px 18px 9px 14px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 0 0 1px rgba(0,0,0,.4),0 1px 2px rgba(0,0,0,.3)}
+  .back{
+    display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+    font-size:13px;font-weight:600;color:#241a08;
+    padding:9px 20px 9px 15px;border-radius:99px;
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 0 1px rgba(0,0,0,.12),0 4px 16px rgba(201,169,97,.22);
+    transition:transform .18s var(--ease);
+  }
+  .back:active{transform:scale(.96)}
   .back svg{width:13px;height:13px}
-  .back:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px var(--gold-dim),0 1px 2px rgba(0,0,0,.3)}
+  .back:focus-visible{outline:2px solid var(--gold-dim);outline-offset:3px}
 
-  header.detail{display:grid;grid-template-columns:300px 1fr;gap:48px;padding:56px 0 64px;align-items:start}
-  @media(max-width:720px){header.detail{grid-template-columns:1fr}}
-  .main-poster{border-radius:6px;overflow:hidden}
-  .main-poster img{width:100%;display:block;border-radius:6px;box-shadow:var(--shadow-poster)}
+  .stage{position:relative;overflow:hidden;
+    background:radial-gradient(ellipse 100% 90% at 50% -20%, rgba(201,169,97,.07), transparent 60%)}
+  header.detail{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:320px 1fr;gap:56px;
+    padding:130px 0 72px;align-items:start;
+  }
+  @media(max-width:760px){header.detail{grid-template-columns:1fr;padding-top:110px}}
+  .main-poster{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-poster),var(--glow-gold)}
+  .main-poster img{width:100%}
   .main-poster.empty{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;
-    color:var(--ink-faint);font-size:13px;background:rgba(255,255,255,.03);border-radius:6px}
-  .kicker{font-size:12px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:14px}
-  h1{font-size:clamp(30px,4.5vw,46px);font-weight:600;letter-spacing:-.026em;line-height:1.12;text-wrap:balance}
-  .credit{margin-top:12px;font-size:14.5px;color:var(--ink-dim)}
-  .desc{margin-top:20px;font-size:15.5px;color:var(--ink-dim);line-height:1.8;max-width:560px}
-  .awards{margin-top:24px}
-  .award-chip{display:inline-block;font-size:12px;color:var(--gold-bright);
-    background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.28);
-    border-radius:99px;padding:4px 13px;margin:0 6px 8px 0;font-weight:500}
+    color:var(--ink-faint);font-size:13px;background:var(--panel)}
+  .kicker{font-size:12px;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;
+    font-weight:600;margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:900;
+    font-size:clamp(38px,5.5vw,64px);line-height:1.12;letter-spacing:.005em;
+    text-wrap:balance;text-shadow:0 0 60px rgba(201,169,97,.18)}
+  .credit{margin-top:16px;font-size:14.5px;color:var(--ink-dim)}
+  .desc{margin-top:22px;font-size:15.5px;color:var(--ink-dim);line-height:1.85;max-width:560px}
+  .awards{margin-top:28px;display:flex;flex-wrap:wrap;gap:9px}
+  .award-chip{
+    font-size:12px;padding:7px 15px;border-radius:99px;font-weight:500;
+    color:var(--gold-bright);background:rgba(201,169,97,.10);
+    border:1px solid rgba(201,169,97,.26);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  }
 
-  section{padding:48px 0 84px}
-  h2{font-size:13px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:30px}
-  .seasons{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:32px 24px}
-  .season .img{aspect-ratio:3/4;overflow:hidden;display:flex;align-items:center;justify-content:center;border-radius:4px}
-  .season .img img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;
-    box-shadow:var(--shadow-poster-sm);transition:transform .25s ease}
-  .season:hover .img img{transform:translateY(-3px)}
-  .season .img .ph{color:var(--ink-faint);font-size:12.5px;text-align:center;padding:16px;line-height:1.7;
-    background:rgba(255,255,255,.03);width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:4px}
-  .season .body{padding:14px 2px 0}
-  .season .yr{font-size:12px;letter-spacing:.1em;color:var(--gold);margin-bottom:5px;font-weight:600}
-  .season .yr b{font-size:15px;letter-spacing:0}
-  .season .info{font-size:13px;color:var(--ink-dim);line-height:1.75;margin-top:6px}
+  section{padding:56px 0 100px}
+  h2{font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;
+    font-weight:600;margin-bottom:34px}
+  .seasons{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:36px 24px}
+  .season .img{aspect-ratio:3/4;border-radius:5px;overflow:hidden;background:var(--panel);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 14px 40px -12px rgba(0,0,0,.7);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .season .img img{width:100%;height:100%;object-fit:cover;
+    filter:brightness(.88) saturate(.92);transition:filter .3s}
+  .season:hover .img{transform:translateY(-5px);box-shadow:0 22px 56px -14px rgba(0,0,0,.85),0 0 40px rgba(201,169,97,.15)}
+  .season:hover .img img{filter:brightness(1) saturate(1)}
+  .season .img .ph{color:var(--ink-faint);font-size:12.5px;text-align:center;padding:16px;line-height:1.7}
+  .season .body{padding:16px 2px 0}
+  .season .yr{font-size:12px;letter-spacing:.1em;color:var(--gold);font-weight:600}
+  .season .yr b{font-family:var(--serif);font-size:17px;letter-spacing:.01em}
+  .season .info{font-size:13px;color:var(--ink-dim);line-height:1.75;margin-top:7px}
   .season .info span{display:block}
-  .season .cast{margin-top:8px;font-size:12.5px;color:var(--ink-faint)}
-  .notfound{padding:120px 0;text-align:center;color:var(--ink-dim)}
-  footer{padding:0 0 70px;font-size:12px;color:var(--ink-faint);border-top:1px solid var(--line-dark);margin-top:8px;padding-top:28px}
+  .season .cast{margin-top:9px;font-size:12.5px;color:var(--ink-faint);line-height:1.7}
+  .notfound{padding:160px 0;text-align:center;color:var(--ink-dim)}
+  footer{padding:0 0 80px;font-size:12px;color:var(--ink-faint);
+    border-top:1px solid var(--line);padding-top:30px;margin-top:10px;line-height:2}
+
+  .js [data-reveal]{opacity:0}
+  @media (prefers-reduced-motion: reduce){
+    .js [data-reveal]{opacity:1}
+  }
 </style>
 </head>
 <body>
-<nav class="topnav"><div class="wrap navwrap">
+<nav class="top"><div class="inner">
   <div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div>
-  <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>전체 작품</a>
+  <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>전체 작품</a>
 </div></nav>
+<div class="stage"><div class="wrap"><div id="root"></div></div></div>
 <div class="wrap">
-  <div id="root"></div>
   <footer>포스터 저작권은 각 제작사에 있습니다 · 시즌·캐스트 정보는 PlayDB 전수 수집 + 언론·웹 교차검증 (2026-07-19) · 세부 정보는 계속 업데이트됩니다</footer>
 </div>
 <script src="works-data.js"></script>
+<script src="assets/vendor/motion.min.js"></script>
 <script>
 (function(){
   var key = decodeURIComponent((location.hash||'').slice(1));
@@ -89,23 +130,27 @@
     var names = Object.keys(W);
     for(var i=0;i<names.length;i++){ if(key && names[i].indexOf(key)>=0){ work=W[names[i]]; key=names[i]; break; } }
   }
-  if(!work){ root.innerHTML = '<div class="notfound">작품을 찾을 수 없습니다.<br>목록에서 다시 선택해 주세요.</div>'; return; }
+  if(!work){
+    root.innerHTML = '<div class="notfound">작품을 찾을 수 없습니다.<br>목록에서 다시 선택해 주세요.</div>';
+    document.documentElement.classList.remove('js');
+    return;
+  }
   document.title = key + ' — 김태형 연출';
   var h = '<header class="detail">';
   h += work.poster
-    ? '<div class="main-poster"><img src="'+work.poster+'" alt="'+key+'"></div>'
-    : '<div class="main-poster empty">포스터 준비 중</div>';
-  h += '<div><div class="kicker">'+(work.genre||'')+' · '+(work.debut||'')+(work.seasons&&work.seasons.length>1?' · '+work.seasons.length+'시즌':'')+'</div>';
-  h += '<h1>'+key+'</h1>';
-  if(work.credit) h += '<div class="credit">'+work.credit+'</div>';
-  if(work.desc) h += '<p class="desc">'+work.desc+'</p>';
+    ? '<div class="main-poster" data-reveal><img src="'+work.poster+'" alt="'+key+'" fetchpriority="high"></div>'
+    : '<div class="main-poster empty" data-reveal>포스터 준비 중</div>';
+  h += '<div><div class="kicker" data-reveal>'+(work.genre||'')+' · '+(work.debut||'')+(work.seasons&&work.seasons.length>1?' · '+work.seasons.length+'시즌':'')+'</div>';
+  h += '<h1 data-reveal>'+key+'</h1>';
+  if(work.credit) h += '<div class="credit" data-reveal>'+work.credit+'</div>';
+  if(work.desc) h += '<p class="desc" data-reveal>'+work.desc+'</p>';
   if(work.awards && work.awards.length){
-    h += '<div class="awards">';
+    h += '<div class="awards" data-reveal>';
     work.awards.forEach(function(a){ h += '<span class="award-chip">'+a+'</span>'; });
     h += '</div>';
   }
   h += '</div></header>';
-  h += '<section><h2>시즌별 기록</h2><div class="seasons">';
+  h += '<section><h2 data-reveal>시즌별 기록 — '+(work.seasons||[]).length+' Productions</h2><div class="seasons" data-reveal-group>';
   (work.seasons||[]).forEach(function(s){
     h += '<div class="season"><div class="img">';
     h += s.poster ? '<img src="'+s.poster+'" loading="lazy" alt="'+key+' '+s.year+'">'
@@ -121,6 +166,27 @@
   });
   h += '</div></section>';
   root.innerHTML = h;
+
+  var M = window.Motion;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!M || reduced){ document.documentElement.classList.remove('js'); return; }
+  var EASE=[.16,1,.3,1];
+
+  /* header load sequence */
+  var bits=root.querySelectorAll('header [data-reveal], h2[data-reveal]');
+  Array.prototype.forEach.call(bits,function(el,i){
+    M.animate(el,{opacity:[0,1],transform:['translateY(26px)','translateY(0)']},
+      {duration:.9,easing:EASE,delay:.12+i*.09});
+  });
+
+  /* season cards: staggered reveal on view */
+  M.inView('[data-reveal-group]',function(info){
+    var el=info.target||info;
+    var kids=Array.prototype.slice.call(el.children);
+    kids.forEach(function(k){k.style.opacity='0';});
+    M.animate(kids,{opacity:[0,1],transform:['translateY(30px)','translateY(0)']},
+      {duration:.8,easing:EASE,delay:M.stagger(.06)});
+  },{margin:'0px 0px -80px 0px'});
 })();
 window.addEventListener('hashchange', function(){ location.reload(); });
 </script>

@@ -4,139 +4,329 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>김태형 — 연출 포트폴리오</title>
+<meta name="description" content="연극·뮤지컬 연출 김태형 — 2007년 데뷔 이후 62편의 작품, 123번의 공연 아카이브.">
+<meta property="og:title" content="김태형 — 연출 포트폴리오">
+<meta property="og:description" content="소극장의 공간 실험에서 대극장 뮤지컬까지 — 62작 123시즌의 기록.">
+<meta property="og:image" content="https://suicide7803.github.io/kimtaehyung-portfolio/assets/posters/%EB%A7%88%EB%A6%AC%ED%80%B4%EB%A6%AC_2025.gif">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <style>
-  @font-face{
-    font-family:"Pretendard";
-    src: local("Pretendard Variable"), local("Pretendard");
-    font-weight: 400 800;
-  }
   :root{
-    --bg-void:#14110d;--bg-tile:#1c1712;--bg-tile-2:#221b13;
-    --case:#f4ecd8;--case-line:#ded0ac;
+    --void:#0d0b08;--panel:#161209;--panel-2:#1a150d;
+    --glass:rgba(24,19,12,.55);--glass-strong:rgba(20,16,10,.78);
+    --line:rgba(239,233,220,.10);--line-strong:rgba(239,233,220,.17);
+    --ink:#efe9dc;--ink-dim:#a89e8a;--ink-faint:#6f6656;
     --gold:#c9a961;--gold-bright:#e0c17d;--gold-dim:#8a7442;
-    --ink:#ece6d8;--ink-dim:#a89e8a;--ink-faint:#6f6656;
-    --ink-on-case:#2a2116;--ink-on-case-dim:#5c5140;
-    --line-dark:rgba(236,230,216,.1);--line-case:rgba(42,33,22,.14);
-    --shadow-poster:0 18px 50px -12px rgba(0,0,0,.65),0 4px 14px rgba(0,0,0,.35);
-    --shadow-poster-case:0 16px 40px -14px rgba(42,33,22,.35),0 3px 10px rgba(42,33,22,.18);
-    --shadow-poster-sm:0 10px 24px -8px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.3);
+    --serif:"Noto Serif KR","Nanum Myeongjo",serif;
+    --sans:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --shadow-poster:0 30px 80px -20px rgba(0,0,0,.8),0 8px 24px rgba(0,0,0,.5);
+    --glow-gold:0 0 70px rgba(201,169,97,.16);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg-void);color:var(--ink);
-    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
-    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{
+    background:var(--void);color:var(--ink);font-family:var(--sans);
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
 
-  nav.topnav{padding:22px 0;background:var(--bg-void)}
-  .wordmark{font-size:14.5px;letter-spacing:.04em;color:var(--ink);font-weight:600}
+  /* film grain */
+  body::after{
+    content:"";position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* scroll progress */
+  .progress{
+    position:fixed;top:0;left:0;right:0;height:2px;z-index:1002;
+    background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+    transform-origin:0 50%;transform:scaleX(0);
+  }
+  html:not(.js) .progress{display:none}
+
+  /* glass nav */
+  nav.top{
+    position:fixed;top:0;left:0;right:0;z-index:1001;
+    background:var(--glass);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);
+    border-bottom:1px solid var(--line);
+  }
+  nav.top .inner{
+    max-width:1240px;margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .wordmark{font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:.02em}
   .wordmark span{color:var(--gold)}
+  .navlinks{display:flex;gap:26px;font-size:13px;letter-spacing:.08em;color:var(--ink-dim)}
+  .navlinks a{transition:color .2s;cursor:pointer}
+  .navlinks a:hover,.navlinks a:focus-visible{color:var(--gold-bright)}
+  .navlinks a:focus-visible{outline:2px solid var(--gold-dim);outline-offset:4px;border-radius:2px}
+  @media(max-width:640px){.navlinks{gap:16px;font-size:12px}.navlinks a:nth-child(n+4){display:none}}
 
-  header{padding:76px 0 84px;
-    background:radial-gradient(ellipse 90% 60% at 50% -10%, rgba(201,169,97,.11), transparent), var(--bg-void)}
-  .kicker{font-size:12.5px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:22px}
-  h1{font-size:clamp(44px,7vw,76px);font-weight:600;letter-spacing:-.028em;line-height:1.05;text-wrap:balance}
-  .sub{margin-top:18px;font-size:17px;color:var(--ink-dim);max-width:640px}
-  .stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line-dark)}
-  .stat{display:flex;flex-direction:column;gap:5px}
-  .stat b{font-size:27px;font-weight:600;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-  .stat span{font-size:12px;color:var(--ink-faint);letter-spacing:.07em;text-transform:uppercase}
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;min-height:100dvh;display:flex;flex-direction:column;
+    justify-content:center;overflow:hidden;
+    background:radial-gradient(ellipse 120% 80% at 50% 120%, rgba(201,169,97,.05), transparent 60%);
+  }
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform}
+  .blob.b1{width:560px;height:560px;left:-140px;top:-120px;background:radial-gradient(circle,rgba(201,169,97,.16),transparent 65%);animation:drift1 28s ease-in-out infinite alternate}
+  .blob.b2{width:640px;height:640px;right:-180px;bottom:-160px;background:radial-gradient(circle,rgba(224,193,125,.10),transparent 65%);animation:drift2 36s ease-in-out infinite alternate}
+  @keyframes drift1{from{transform:translate(0,0) scale(1)}to{transform:translate(90px,60px) scale(1.12)}}
+  @keyframes drift2{from{transform:translate(0,0) scale(1.08)}to{transform:translate(-80px,-70px) scale(1)}}
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse 90% 70% at 50% 45%, transparent 55%, rgba(6,5,3,.55) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;padding-top:70px}
+  .hero .eyebrow{
+    font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+    font-weight:600;margin-bottom:30px;
+  }
+  h1.title{
+    font-family:var(--serif);font-weight:900;
+    font-size:clamp(84px,16vw,190px);line-height:1.02;letter-spacing:.01em;
+    color:var(--ink);text-shadow:0 0 90px rgba(201,169,97,.22);
+  }
+  h1.title .ch{display:inline-block}
+  .hero .tag{
+    margin-top:30px;font-size:clamp(15px,1.6vw,18px);color:var(--ink-dim);
+    max-width:560px;line-height:1.8;
+  }
+  .hero .tag b{color:var(--ink);font-weight:600}
+  .stats{
+    display:flex;flex-wrap:wrap;gap:14px;margin-top:56px;
+  }
+  .stat{
+    flex:1 1 150px;min-width:140px;padding:20px 22px;border-radius:14px;
+    background:var(--glass);border:1px solid var(--line);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  }
+  .stat b{
+    display:block;font-family:var(--serif);font-weight:600;font-size:30px;color:var(--gold-bright);
+    font-variant-numeric:tabular-nums;letter-spacing:.01em;line-height:1.2;
+  }
+  .stat span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+  .scroll-cue{
+    position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+    font-size:10px;letter-spacing:.3em;color:var(--ink-faint);text-transform:uppercase;
+  }
+  .scroll-cue::after{
+    content:"";width:1px;height:44px;
+    background:linear-gradient(180deg,var(--gold),transparent);
+    animation:cue 2.2s var(--ease) infinite;transform-origin:top;
+  }
+  @keyframes cue{0%{transform:scaleY(0)}45%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  section{padding:80px 0}
-  h2{font-size:13px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;margin-bottom:34px}
-  h2 small{letter-spacing:.05em;text-transform:none;font-weight:400;margin-left:14px;font-size:13px}
+  /* ---------- section scaffolding ---------- */
+  section{position:relative;padding:120px 0}
+  .sec-head{margin-bottom:64px}
+  .sec-head .eyebrow{
+    font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
+    font-weight:600;margin-bottom:14px;
+  }
+  .sec-head h2{
+    font-family:var(--serif);font-weight:900;font-size:clamp(34px,4.6vw,56px);
+    line-height:1.15;letter-spacing:.005em;text-wrap:balance;
+  }
+  .sec-head p.note{margin-top:14px;font-size:13.5px;color:var(--ink-faint)}
 
-  #awards{background:var(--case)}
-  #awards h2{color:var(--gold-dim)}
-  #awards h2 small{color:var(--ink-on-case-dim)}
-  .awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .award{border:1px solid var(--case-line);border-radius:10px;padding:22px}
-  .award .yr{font-size:12px;color:var(--gold-dim);letter-spacing:.15em;margin-bottom:8px;font-weight:600}
-  .award .nm{font-size:16.5px;font-weight:700;line-height:1.4;color:var(--ink-on-case)}
-  .award .wk{font-size:13.5px;color:var(--ink-on-case-dim);margin-top:6px}
-  .subnote{margin-top:26px;font-size:13.5px;color:var(--ink-on-case-dim);line-height:1.9;max-width:860px}
-  .subnote b{color:var(--ink-on-case);font-weight:600}
+  /* ---------- spotlight panels ---------- */
+  .spot{
+    display:grid;grid-template-columns:minmax(280px,420px) 1fr;
+    gap:clamp(36px,6vw,90px);align-items:center;
+    padding:70px 0;
+  }
+  .spot.rev{grid-template-columns:1fr minmax(280px,420px)}
+  .spot.rev .spot-poster{order:2}
+  .spot-poster{position:relative;border-radius:6px;overflow:hidden;box-shadow:var(--shadow-poster),var(--glow-gold)}
+  .spot-poster img{width:100%;transform:scale(1.12);will-change:transform}
+  .spot-copy .eyebrow{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+    font-weight:600;margin-bottom:18px;
+  }
+  .spot-copy h3{
+    font-family:var(--serif);font-weight:900;font-size:clamp(36px,5vw,62px);
+    line-height:1.12;margin-bottom:22px;text-wrap:balance;
+  }
+  .spot-copy p.desc{font-size:16px;color:var(--ink-dim);line-height:1.8;max-width:520px;margin-bottom:26px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px}
+  .chip{
+    font-size:12px;letter-spacing:.02em;padding:7px 15px;border-radius:99px;font-weight:500;
+    color:var(--gold-bright);background:rgba(201,169,97,.10);
+    border:1px solid rgba(201,169,97,.26);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  }
+  .btn-gold{
+    display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+    font-size:14.5px;font-weight:600;letter-spacing:.01em;color:#241a08;
+    padding:13px 28px;border-radius:99px;border:none;
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 0 1px rgba(0,0,0,.12),0 6px 22px rgba(201,169,97,.25);
+    transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+  }
+  .btn-gold:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 0 1px rgba(0,0,0,.12),0 10px 30px rgba(201,169,97,.34)}
+  .btn-gold:active{transform:scale(.97)}
+  .btn-gold svg{width:15px;height:15px}
+  @media(max-width:760px){
+    .spot,.spot.rev{grid-template-columns:1fr;padding:48px 0}
+    .spot.rev .spot-poster{order:0}
+    .spot-poster{max-width:320px;margin:0 auto}
+  }
 
-  #featured{background:var(--bg-tile)}
-  #featured h2{color:var(--gold)}
-  #featured h2 small{color:var(--ink-faint)}
-  .feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:40px 28px}
-  a.fcard{display:block}
-  .fcard .img{aspect-ratio:3/4;overflow:hidden;border-radius:4px}
-  .fcard img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;
-    box-shadow:var(--shadow-poster-sm);transition:transform .3s ease,box-shadow .3s ease}
-  a.fcard:hover img{transform:translateY(-5px);box-shadow:var(--shadow-poster)}
-  .fcard .body{padding:16px 2px 0}
-  .fcard .meta{font-size:11.5px;letter-spacing:.13em;color:var(--gold);margin-bottom:7px;text-transform:uppercase}
-  .fcard h3{font-size:18.5px;font-weight:600;letter-spacing:-.01em}
-  .fcard p{font-size:13.5px;color:var(--ink-dim);margin-top:9px;line-height:1.7}
-  .fcard .tag{display:inline-block;margin-top:13px;font-size:11.5px;color:var(--gold-bright);
-    background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.28);border-radius:99px;
-    padding:3px 11px;margin-right:6px;font-weight:500}
+  /* ---------- featured grid ---------- */
+  .feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:44px 26px}
+  a.fcard{display:block;cursor:pointer}
+  .fcard .img{border-radius:5px;overflow:hidden;aspect-ratio:3/4;background:var(--panel)}
+  .fcard img{
+    width:100%;height:100%;object-fit:cover;
+    filter:brightness(.88) saturate(.92);
+    transition:filter .35s var(--ease),transform .35s var(--ease);
+  }
+  .fcard .img{box-shadow:0 14px 40px -12px rgba(0,0,0,.7);transition:box-shadow .35s var(--ease),transform .35s var(--ease)}
+  a.fcard:hover .img,a.fcard:focus-visible .img{transform:translateY(-6px);box-shadow:0 24px 60px -16px rgba(0,0,0,.85),0 0 44px rgba(201,169,97,.18)}
+  a.fcard:hover img{filter:brightness(1) saturate(1)}
+  a.fcard:focus-visible{outline:2px solid var(--gold-dim);outline-offset:6px;border-radius:6px}
+  .fcard .meta{margin-top:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .fcard h4{font-family:var(--serif);font-weight:600;font-size:19px;margin-top:6px;letter-spacing:.01em}
+  .fcard p{font-size:13px;color:var(--ink-faint);margin-top:8px;line-height:1.7;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-  #upcoming{background:var(--case)}
-  #upcoming h2{color:var(--gold-dim)}
-  .up{display:flex;flex-direction:column;border:1px solid var(--case-line);border-radius:10px;overflow:hidden}
-  .uprow{display:grid;grid-template-columns:210px 1fr;gap:18px;padding:20px 24px;border-bottom:1px solid var(--case-line)}
+  /* ---------- awards ---------- */
+  #awards{background:linear-gradient(180deg,transparent,rgba(201,169,97,.03) 50%,transparent)}
+  .awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .award{
+    padding:28px 26px;border-radius:16px;
+    background:var(--glass);border:1px solid var(--line);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    transition:border-color .3s;
+  }
+  .award:hover{border-color:rgba(201,169,97,.35)}
+  .award .yr{font-family:var(--serif);font-weight:900;font-size:34px;color:var(--gold);line-height:1;margin-bottom:14px}
+  .award .nm{font-size:16px;font-weight:700;line-height:1.45}
+  .award .wk{font-size:13px;color:var(--ink-dim);margin-top:7px}
+  .subnote{margin-top:36px;font-size:13.5px;color:var(--ink-dim);line-height:2;max-width:900px}
+  .subnote b{color:var(--ink);font-weight:600}
+
+  /* ---------- upcoming ---------- */
+  .up{
+    border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  }
+  .uprow{
+    display:grid;grid-template-columns:230px 1fr;gap:18px;padding:24px 30px;
+    border-bottom:1px solid var(--line);transition:background .25s;
+  }
   .uprow:last-child{border-bottom:none}
-  .uprow .when{font-size:13.5px;color:var(--gold-dim);letter-spacing:.03em;font-weight:600}
-  .uprow .what b{font-size:16px;font-weight:700;color:var(--ink-on-case)}
-  .uprow .what span{display:block;font-size:13px;color:var(--ink-on-case-dim);margin-top:4px}
-  @media(max-width:640px){.uprow{grid-template-columns:1fr}}
+  .uprow:hover{background:rgba(201,169,97,.04)}
+  .uprow .when{font-size:14px;color:var(--gold);letter-spacing:.02em;font-weight:600;font-variant-numeric:tabular-nums}
+  .uprow .what b{font-family:var(--serif);font-size:17px;font-weight:600}
+  .uprow .what span{display:block;font-size:13px;color:var(--ink-dim);margin-top:5px}
+  @media(max-width:640px){.uprow{grid-template-columns:1fr;gap:6px;padding:20px 22px}}
 
-  #archive{background:var(--bg-tile-2)}
-  #archive h2{color:var(--gold)}
-  #archive h2 small{color:var(--ink-faint)}
-  .year-block{margin-bottom:48px}
-  .year{font-size:22px;font-weight:600;color:var(--ink);margin-bottom:18px;display:flex;align-items:baseline;gap:12px}
-  .year small{font-size:12px;color:var(--ink-faint);font-weight:400}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:22px 16px}
-  a.card{display:block}
-  .card .img{aspect-ratio:3/4;border-radius:3px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .card .img img{width:100%;height:100%;object-fit:cover;display:block;border-radius:3px;
-    box-shadow:var(--shadow-poster-sm);transition:transform .25s ease}
-  a.card:hover .img img{transform:translateY(-3px)}
-  .card .img .ph{color:var(--ink-faint);font-size:12px;text-align:center;padding:12px;line-height:1.6;
-    background:rgba(255,255,255,.03);width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:3px}
+  /* ---------- archive ---------- */
+  .year-block{margin-bottom:72px;content-visibility:auto;contain-intrinsic-size:auto 600px}
+  .year{
+    display:flex;align-items:baseline;gap:16px;margin-bottom:26px;
+    border-bottom:1px solid var(--line);padding-bottom:14px;
+  }
+  .year b{font-family:var(--serif);font-weight:900;font-size:40px;color:var(--gold);letter-spacing:.01em;line-height:1}
+  .year small{font-size:12px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:26px 16px}
+  a.card{display:block;cursor:pointer}
+  a.card:focus-visible{outline:2px solid var(--gold-dim);outline-offset:5px;border-radius:5px}
+  .card .img{aspect-ratio:3/4;border-radius:4px;overflow:hidden;background:var(--panel);
+    box-shadow:0 10px 26px -10px rgba(0,0,0,.65);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .card .img img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) saturate(.9);transition:filter .3s}
+  .card .img .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-faint);font-size:12px;text-align:center;padding:12px;line-height:1.6}
+  a.card:hover .img{transform:translateY(-4px);box-shadow:0 18px 40px -12px rgba(0,0,0,.8),0 0 34px rgba(201,169,97,.14)}
+  a.card:hover .img img{filter:brightness(1) saturate(1)}
   .card .cap{padding:10px 2px 0}
-  .card .cap b{display:block;font-size:13px;font-weight:600;line-height:1.4;color:var(--ink)}
+  .card .cap b{display:block;font-size:13px;font-weight:600;line-height:1.4}
   .card .cap span{font-size:11px;color:var(--ink-faint);display:block;margin-top:2px}
 
-  footer{background:#0a0907;padding:56px 0 80px;font-size:12.5px;color:var(--ink-faint);line-height:2}
+  footer{
+    padding:70px 0 90px;font-size:12.5px;color:var(--ink-faint);line-height:2.1;
+    border-top:1px solid var(--line);
+    background:linear-gradient(180deg,transparent,rgba(201,169,97,.03));
+  }
   footer b{color:var(--ink-dim)}
+
+  /* reveal defaults: hidden only when JS present; reduced-motion sees everything */
+  .js [data-reveal]{opacity:0}
+  @media (prefers-reduced-motion: reduce){
+    .js [data-reveal]{opacity:1}
+    .blob,.scroll-cue::after{animation:none}
+    html{scroll-behavior:auto}
+  }
 </style>
 </head>
 <body>
 
-<nav class="topnav"><div class="wrap"><div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div></div></nav>
+<div class="progress" aria-hidden="true"></div>
 
-<header>
-  <div class="wrap">
-    <div class="kicker">Director · Theatre &amp; Musical</div>
-    <h1>김태형</h1>
-    <p class="sub">연극·뮤지컬 연출. 한국예술종합학교 연극원 연출과. 조명과 무대감독으로 시작해 2007년 데뷔했다.
-    소극장의 공간 실험에서 대극장 뮤지컬까지, 2026년 현재 스무 번째 시즌을 지나고 있다.</p>
-    <div class="stats">
+<nav class="top">
+  <div class="inner">
+    <div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div>
+    <div class="navlinks">
+      <a href="#featured">대표작</a>
+      <a href="#awards">수상</a>
+      <a href="#upcoming">예정</a>
+      <a href="#archive">아카이브</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow" data-hero>Director · Theatre &amp; Musical</div>
+    <h1 class="title" id="heroTitle" data-hero>김태형</h1>
+    <p class="tag" data-hero>연극·뮤지컬 연출. 조명과 무대감독으로 시작해 <b>2007년 데뷔</b>.
+    소극장의 공간 실험에서 대극장 뮤지컬까지, 2026년 현재 <b>스무 번째 시즌</b>을 지나고 있다.</p>
+    <div class="stats" id="stats" data-hero>
       <div class="stat"><b>2007 —</b><span>활동 시작</span></div>
-      <div class="stat"><b>62</b><span>고유 작품</span></div>
-      <div class="stat"><b>123</b><span>공연 프로덕션</span></div>
+      <div class="stat"><b data-count="62">62</b><span>고유 작품</span></div>
+      <div class="stat"><b data-count="123">123</b><span>공연 프로덕션</span></div>
       <div class="stat"><b>연출상 2</b><span>한국뮤지컬어워즈</span></div>
       <div class="stat"><b>대상 1</b><span>K-Theater Awards</span></div>
     </div>
   </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll</div>
 </header>
+
+<section id="featured">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Spotlight</div>
+      <h2>무대 위의 기록</h2>
+      <p class="note">작품을 클릭하면 시즌별 상세 페이지로 이동합니다</p>
+    </div>
+    <div id="spotRoot"></div>
+    <div class="feat-grid" id="featRoot" style="margin-top:40px"></div>
+  </div>
+</section>
 
 <section id="awards">
   <div class="wrap">
-    <h2>수상</h2>
-    <div class="awards">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Recognition</div>
+      <h2>수상</h2>
+    </div>
+    <div class="awards" data-reveal-group>
       <div class="award"><div class="yr">2021</div><div class="nm">제5회 한국뮤지컬어워즈 연출상</div><div class="wk">마리 퀴리 — 대상 포함 5관왕</div></div>
       <div class="award"><div class="yr">2023</div><div class="nm">제61회 K-Theater Awards 대상</div><div class="wk">빵야</div></div>
       <div class="award"><div class="yr">2024</div><div class="nm">제8회 한국뮤지컬어워즈 연출상</div><div class="wk">멤피스 — 작품상 포함 5관왕</div></div>
       <div class="award"><div class="yr">2026</div><div class="nm">제62회 백상예술대상 백상연극상 후보</div><div class="wk">미러 A Mirror</div></div>
     </div>
-    <p class="subnote">
+    <p class="subnote" data-reveal>
       <b>한국뮤지컬어워즈 연출상 후보</b> 제1회 로기수 (2017) · 제3회 매디슨 카운티의 다리 (2019) · 제9회 스윙 데이즈 (2025) · 제10회 매디슨 카운티의 다리 (2026) &nbsp;·&nbsp;
       <b>빵야</b> 2022 창작산실 올해의신작 · 월간 한국연극 2023 공연 베스트 7 &nbsp;·&nbsp;
       <b>히스토리 보이즈</b> 2014 대한민국 연극대상 작품상 &nbsp;·&nbsp;
@@ -147,17 +337,13 @@
   </div>
 </section>
 
-<section id="featured">
-  <div class="wrap">
-    <h2>대표작 <small>클릭하면 시즌별 상세 페이지로 이동</small></h2>
-    <div class="feat" id="featRoot"></div>
-  </div>
-</section>
-
 <section id="upcoming">
   <div class="wrap">
-    <h2>진행 중 · 예정</h2>
-    <div class="up">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Now &amp; Next</div>
+      <h2>진행 중 · 예정</h2>
+    </div>
+    <div class="up" data-reveal>
       <div class="uprow"><div class="when">2026.07.09 – 10.11</div>
         <div class="what"><b>더헬멧 (4연)</b> <span>연극 · 홍익대 대학로 아트센터 소극장 · 지이선 작 — 하나의 무대를 벽으로 나눈 분할 공연</span></div></div>
       <div class="uprow"><div class="when">2026.07.23 – 10.11</div>
@@ -176,7 +362,11 @@
 
 <section id="archive">
   <div class="wrap">
-    <h2>연도별 전체 기록 <small>시즌 단위 · 반복 공연 포함 · 카드를 클릭하면 작품 상세로</small></h2>
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Archive · 2007 — 2027</div>
+      <h2>연도별 전체 기록</h2>
+      <p class="note">시즌 단위 · 반복 공연 포함</p>
+    </div>
     <div id="archiveRoot"></div>
   </div>
 </section>
@@ -191,36 +381,56 @@
   </div>
 </footer>
 
-<script src="works-data.js"></script><script>
+<script src="works-data.js"></script>
+<script src="assets/vendor/motion.min.js"></script>
+<script>
 (function(){
   var W = window.WORKS_DATA || {};
   function link(t){ return 'work.html#'+encodeURIComponent(t); }
+  var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+  /* ---- spotlight: the award trio ---- */
+  var SPOTLIGHT = [
+    {t:"마리 퀴리", tag:["한국뮤지컬어워즈 연출상","대상 포함 5관왕","런던 프로덕션"]},
+    {t:"빵야", tag:["K-Theater Awards 대상","창작산실 올해의신작"]},
+    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"]}
+  ];
+  var sh='';
+  SPOTLIGHT.forEach(function(f,i){
+    var w=W[f.t]; if(!w) return;
+    sh+='<article class="spot'+(i%2?' rev':'')+'" data-spot>';
+    sh+='<div class="spot-poster">'+(w.poster?'<img src="'+w.poster+'" alt="'+f.t+' 포스터"'+(i?' loading="lazy"':' fetchpriority="high"')+'>':'')+'</div>';
+    sh+='<div class="spot-copy" data-reveal>';
+    sh+='<div class="eyebrow">'+w.genre+' · '+w.debut+' — '+(w.seasons?w.seasons.length:1)+'시즌</div>';
+    sh+='<h3>'+f.t+'</h3>';
+    if(w.desc) sh+='<p class="desc">'+w.desc+'</p>';
+    sh+='<div class="chips">';
+    (f.tag||[]).forEach(function(g){ sh+='<span class="chip">'+g+'</span>'; });
+    sh+='</div>';
+    sh+='<a class="btn-gold" href="'+link(f.t)+'">시즌별 기록 '+arrow+'</a>';
+    sh+='</div></article>';
+  });
+  document.getElementById('spotRoot').innerHTML=sh;
+
+  /* ---- featured grid: the rest ---- */
   var FEATURED = [
-    {t:"빵야", tag:["K-Theater Awards 대상"]},
-    {t:"마리 퀴리", tag:["한국뮤지컬어워즈 연출상","5관왕"]},
-    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","5관왕"]},
-    {t:"히스토리 보이즈", tag:["2014 대한민국 연극대상 작품상"]},
-    {t:"팬레터", tag:["누적 26만"]},
-    {t:"카포네 트릴로지", tag:["전석 매진"]},
-    {t:"벙커 트릴로지", tag:["이머시브"]},
-    {t:"더헬멧", tag:["분할 무대"]},
-    {t:"매디슨 카운티의 다리", tag:["한국뮤지컬어워즈 연출상 후보 2회"]},
-    {t:"스윙 데이즈_암호명 A", tag:["한국뮤지컬어워즈 연출상 후보"]},
-    {t:"미러 A Mirror", tag:["백상예술대상 백상연극상 후보"]}
+    {t:"히스토리 보이즈"},{t:"팬레터"},{t:"카포네 트릴로지"},{t:"벙커 트릴로지"},
+    {t:"더헬멧"},{t:"매디슨 카운티의 다리"},{t:"스윙데이즈"},{t:"미러 (A Mirror)"}
   ];
   var fh='';
   FEATURED.forEach(function(f){
     var w=W[f.t]; if(!w) return;
-    fh+='<a class="fcard" href="'+link(f.t)+'">';
+    fh+='<a class="fcard" href="'+link(f.t)+'" data-card>';
     fh+='<div class="img">'+(w.poster?'<img src="'+w.poster+'" alt="'+f.t+'" loading="lazy">':'')+'</div>';
-    fh+='<div class="body"><div class="meta">'+w.genre+' · '+w.debut+' · '+(w.seasons?w.seasons.length:1)+'시즌</div>';
-    fh+='<h3>'+f.t+'</h3>';
+    fh+='<div class="meta">'+w.genre+' · '+w.debut+' · '+(w.seasons?w.seasons.length:1)+'시즌</div>';
+    fh+='<h4>'+f.t+'</h4>';
     if(w.desc) fh+='<p>'+w.desc+'</p>';
-    (f.tag||[]).forEach(function(g){ fh+='<span class="tag">'+g+'</span>'; });
-    fh+='</div></a>';
+    fh+='</a>';
   });
   document.getElementById('featRoot').innerHTML=fh;
+  document.getElementById('featRoot').setAttribute('data-reveal-group','');
 
+  /* ---- archive ---- */
   var byYear={};
   Object.keys(W).forEach(function(t){
     (W[t].seasons||[]).forEach(function(s){
@@ -231,7 +441,7 @@
   var ah='';
   years.forEach(function(y){
     var items=byYear[y];
-    ah+='<div class="year-block"><div class="year">'+y+' <small>'+items.length+'건</small></div><div class="grid">';
+    ah+='<div class="year-block"><div class="year" data-reveal><b>'+y+'</b><small>'+items.length+' Productions</small></div><div class="grid" data-reveal-group>';
     items.forEach(function(it){
       var poster=it.s.poster||it.w.poster;
       ah+='<a class="card" href="'+link(it.t)+'">';
@@ -242,6 +452,82 @@
     ah+='</div></div>';
   });
   document.getElementById('archiveRoot').innerHTML=ah;
+
+  /* ================= motion ================= */
+  var M = window.Motion;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!M || reduced){
+    document.documentElement.classList.remove('js');
+    return;
+  }
+  var EASE=[.16,1,.3,1];
+
+  /* scroll progress */
+  M.scroll(M.animate('.progress',{scaleX:[0,1]},{easing:'linear'}));
+
+  /* hero: cinematic opening — split name into chars, staggered rise */
+  var titleEl=document.getElementById('heroTitle');
+  var chars=titleEl.textContent.split('');
+  titleEl.textContent='';
+  chars.forEach(function(c){
+    var s=document.createElement('span');
+    s.className='ch';s.textContent=c;
+    titleEl.appendChild(s);
+  });
+  var heroBits=document.querySelectorAll('[data-hero]');
+  heroBits.forEach(function(el){el.style.opacity='0';});
+  M.animate('.hero .eyebrow',{opacity:[0,1],transform:['translateY(18px)','translateY(0)']},{duration:.9,easing:EASE,delay:.15});
+  document.querySelectorAll('#heroTitle .ch').forEach(function(ch,i){
+    ch.style.opacity='0';
+    M.animate(ch,{opacity:[0,1],transform:['translateY(60px)','translateY(0)']},{duration:1.1,easing:EASE,delay:.3+i*.09});
+  });
+  titleEl.style.opacity='1';
+  M.animate('.hero .tag',{opacity:[0,1],transform:['translateY(24px)','translateY(0)']},{duration:.9,easing:EASE,delay:.7});
+  M.animate('#stats',{opacity:[0,1],transform:['translateY(28px)','translateY(0)']},{duration:1,easing:EASE,delay:.9});
+
+  /* hero: scroll-linked exit (parallax fade) */
+  var hero=document.querySelector('.hero');
+  M.scroll(M.animate('.hero-inner',{transform:['translateY(0)','translateY(-90px)'],opacity:[1,0]},{easing:'linear'}),
+    {target:hero,offset:['start start','end start']});
+
+  /* stat count-up */
+  function countUp(el){
+    var n=+el.getAttribute('data-count'),t0=null;
+    function frame(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/1500,1);
+      var e=1-Math.pow(2,-10*p); /* expo-out */
+      el.textContent=Math.round(e*n);
+      if(p<1)requestAnimationFrame(frame);else el.textContent=n;
+    }
+    requestAnimationFrame(frame);
+  }
+  M.inView('#stats',function(){
+    document.querySelectorAll('[data-count]').forEach(countUp);
+  },{amount:.4});
+
+  /* generic reveals */
+  M.inView('[data-reveal]',function(info){
+    var el=info.target||info;
+    M.animate(el,{opacity:[0,1],transform:['translateY(26px)','translateY(0)']},{duration:.85,easing:EASE});
+  },{margin:'0px 0px -60px 0px'});
+
+  /* grouped staggered reveals */
+  M.inView('[data-reveal-group]',function(info){
+    var el=info.target||info;
+    var kids=Array.prototype.slice.call(el.children);
+    kids.forEach(function(k){k.style.opacity='0';});
+    M.animate(kids,{opacity:[0,1],transform:['translateY(30px)','translateY(0)']},
+      {duration:.8,easing:EASE,delay:M.stagger(.06)});
+  },{margin:'0px 0px -80px 0px'});
+
+  /* spotlight posters: scroll-linked inner parallax */
+  document.querySelectorAll('[data-spot]').forEach(function(panel){
+    var img=panel.querySelector('.spot-poster img');
+    if(!img)return;
+    M.scroll(M.animate(img,{transform:['scale(1.12) translateY(4%)','scale(1.12) translateY(-4%)']},{easing:'linear'}),
+      {target:panel,offset:['start end','end start']});
+  });
 })();
 </script>
 </body>
