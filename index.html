@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김태형 — 연출 포트폴리오</title>
+<style>
+  @font-face{
+    font-family:"Pretendard";
+    src: local("Pretendard Variable"), local("Pretendard");
+    font-weight: 400 800;
+  }
+  :root{
+    --bg-void:#14110d;--bg-tile:#1c1712;--bg-tile-2:#221b13;
+    --case:#f4ecd8;--case-line:#ded0ac;
+    --gold:#c9a961;--gold-bright:#e0c17d;--gold-dim:#8a7442;
+    --ink:#ece6d8;--ink-dim:#a89e8a;--ink-faint:#6f6656;
+    --ink-on-case:#2a2116;--ink-on-case-dim:#5c5140;
+    --line-dark:rgba(236,230,216,.1);--line-case:rgba(42,33,22,.14);
+    --shadow-poster:0 18px 50px -12px rgba(0,0,0,.65),0 4px 14px rgba(0,0,0,.35);
+    --shadow-poster-case:0 16px 40px -14px rgba(42,33,22,.35),0 3px 10px rgba(42,33,22,.18);
+    --shadow-poster-sm:0 10px 24px -8px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.3);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg-void);color:var(--ink);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  nav.topnav{padding:22px 0;background:var(--bg-void)}
+  .wordmark{font-size:14.5px;letter-spacing:.04em;color:var(--ink);font-weight:600}
+  .wordmark span{color:var(--gold)}
+
+  header{padding:76px 0 84px;
+    background:radial-gradient(ellipse 90% 60% at 50% -10%, rgba(201,169,97,.11), transparent), var(--bg-void)}
+  .kicker{font-size:12.5px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:22px}
+  h1{font-size:clamp(44px,7vw,76px);font-weight:600;letter-spacing:-.028em;line-height:1.05;text-wrap:balance}
+  .sub{margin-top:18px;font-size:17px;color:var(--ink-dim);max-width:640px}
+  .stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line-dark)}
+  .stat{display:flex;flex-direction:column;gap:5px}
+  .stat b{font-size:27px;font-weight:600;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .stat span{font-size:12px;color:var(--ink-faint);letter-spacing:.07em;text-transform:uppercase}
+
+  section{padding:80px 0}
+  h2{font-size:13px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;margin-bottom:34px}
+  h2 small{letter-spacing:.05em;text-transform:none;font-weight:400;margin-left:14px;font-size:13px}
+
+  #awards{background:var(--case)}
+  #awards h2{color:var(--gold-dim)}
+  #awards h2 small{color:var(--ink-on-case-dim)}
+  .awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .award{border:1px solid var(--case-line);border-radius:10px;padding:22px}
+  .award .yr{font-size:12px;color:var(--gold-dim);letter-spacing:.15em;margin-bottom:8px;font-weight:600}
+  .award .nm{font-size:16.5px;font-weight:700;line-height:1.4;color:var(--ink-on-case)}
+  .award .wk{font-size:13.5px;color:var(--ink-on-case-dim);margin-top:6px}
+  .subnote{margin-top:26px;font-size:13.5px;color:var(--ink-on-case-dim);line-height:1.9;max-width:860px}
+  .subnote b{color:var(--ink-on-case);font-weight:600}
+
+  #featured{background:var(--bg-tile)}
+  #featured h2{color:var(--gold)}
+  #featured h2 small{color:var(--ink-faint)}
+  .feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:40px 28px}
+  a.fcard{display:block}
+  .fcard .img{aspect-ratio:3/4;overflow:hidden;border-radius:4px}
+  .fcard img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;
+    box-shadow:var(--shadow-poster-sm);transition:transform .3s ease,box-shadow .3s ease}
+  a.fcard:hover img{transform:translateY(-5px);box-shadow:var(--shadow-poster)}
+  .fcard .body{padding:16px 2px 0}
+  .fcard .meta{font-size:11.5px;letter-spacing:.13em;color:var(--gold);margin-bottom:7px;text-transform:uppercase}
+  .fcard h3{font-size:18.5px;font-weight:600;letter-spacing:-.01em}
+  .fcard p{font-size:13.5px;color:var(--ink-dim);margin-top:9px;line-height:1.7}
+  .fcard .tag{display:inline-block;margin-top:13px;font-size:11.5px;color:var(--gold-bright);
+    background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.28);border-radius:99px;
+    padding:3px 11px;margin-right:6px;font-weight:500}
+
+  #upcoming{background:var(--case)}
+  #upcoming h2{color:var(--gold-dim)}
+  .up{display:flex;flex-direction:column;border:1px solid var(--case-line);border-radius:10px;overflow:hidden}
+  .uprow{display:grid;grid-template-columns:210px 1fr;gap:18px;padding:20px 24px;border-bottom:1px solid var(--case-line)}
+  .uprow:last-child{border-bottom:none}
+  .uprow .when{font-size:13.5px;color:var(--gold-dim);letter-spacing:.03em;font-weight:600}
+  .uprow .what b{font-size:16px;font-weight:700;color:var(--ink-on-case)}
+  .uprow .what span{display:block;font-size:13px;color:var(--ink-on-case-dim);margin-top:4px}
+  @media(max-width:640px){.uprow{grid-template-columns:1fr}}
+
+  #archive{background:var(--bg-tile-2)}
+  #archive h2{color:var(--gold)}
+  #archive h2 small{color:var(--ink-faint)}
+  .year-block{margin-bottom:48px}
+  .year{font-size:22px;font-weight:600;color:var(--ink);margin-bottom:18px;display:flex;align-items:baseline;gap:12px}
+  .year small{font-size:12px;color:var(--ink-faint);font-weight:400}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:22px 16px}
+  a.card{display:block}
+  .card .img{aspect-ratio:3/4;border-radius:3px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card .img img{width:100%;height:100%;object-fit:cover;display:block;border-radius:3px;
+    box-shadow:var(--shadow-poster-sm);transition:transform .25s ease}
+  a.card:hover .img img{transform:translateY(-3px)}
+  .card .img .ph{color:var(--ink-faint);font-size:12px;text-align:center;padding:12px;line-height:1.6;
+    background:rgba(255,255,255,.03);width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:3px}
+  .card .cap{padding:10px 2px 0}
+  .card .cap b{display:block;font-size:13px;font-weight:600;line-height:1.4;color:var(--ink)}
+  .card .cap span{font-size:11px;color:var(--ink-faint);display:block;margin-top:2px}
+
+  footer{background:#0a0907;padding:56px 0 80px;font-size:12.5px;color:var(--ink-faint);line-height:2}
+  footer b{color:var(--ink-dim)}
+</style>
+</head>
+<body>
+
+<nav class="topnav"><div class="wrap"><div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div></div></nav>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Director · Theatre &amp; Musical</div>
+    <h1>김태형</h1>
+    <p class="sub">연극·뮤지컬 연출. 한국예술종합학교 연극원 연출과. 조명과 무대감독으로 시작해 2007년 데뷔했다.
+    소극장의 공간 실험에서 대극장 뮤지컬까지, 2026년 현재 스무 번째 시즌을 지나고 있다.</p>
+    <div class="stats">
+      <div class="stat"><b>2007 —</b><span>활동 시작</span></div>
+      <div class="stat"><b>62</b><span>고유 작품</span></div>
+      <div class="stat"><b>123</b><span>공연 프로덕션</span></div>
+      <div class="stat"><b>연출상 2</b><span>한국뮤지컬어워즈</span></div>
+      <div class="stat"><b>대상 1</b><span>K-Theater Awards</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="awards">
+  <div class="wrap">
+    <h2>수상</h2>
+    <div class="awards">
+      <div class="award"><div class="yr">2021</div><div class="nm">제5회 한국뮤지컬어워즈 연출상</div><div class="wk">마리 퀴리 — 대상 포함 5관왕</div></div>
+      <div class="award"><div class="yr">2023</div><div class="nm">제61회 K-Theater Awards 대상</div><div class="wk">빵야</div></div>
+      <div class="award"><div class="yr">2024</div><div class="nm">제8회 한국뮤지컬어워즈 연출상</div><div class="wk">멤피스 — 작품상 포함 5관왕</div></div>
+      <div class="award"><div class="yr">2026</div><div class="nm">제62회 백상예술대상 백상연극상 후보</div><div class="wk">미러 A Mirror</div></div>
+    </div>
+    <p class="subnote">
+      <b>한국뮤지컬어워즈 연출상 후보</b> 제1회 로기수 (2017) · 제3회 매디슨 카운티의 다리 (2019) · 제9회 스윙 데이즈 (2025) · 제10회 매디슨 카운티의 다리 (2026) &nbsp;·&nbsp;
+      <b>빵야</b> 2022 창작산실 올해의신작 · 월간 한국연극 2023 공연 베스트 7 &nbsp;·&nbsp;
+      <b>히스토리 보이즈</b> 2014 대한민국 연극대상 작품상 &nbsp;·&nbsp;
+      <b>팬레터</b> 국내 누적 26만 명, 중국·일본·대만 라이선스 &nbsp;·&nbsp;
+      <b>마리 퀴리</b> 2024 런던 채링 크로스 시어터 영어 프로덕션 &nbsp;·&nbsp;
+      <b>KOPIS 2025</b> 연출작 5편 장르별 티켓판매 TOP 10 동시 진입 — 연극·뮤지컬 양 장르 복수 진입은 유일
+    </p>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="wrap">
+    <h2>대표작 <small>클릭하면 시즌별 상세 페이지로 이동</small></h2>
+    <div class="feat" id="featRoot"></div>
+  </div>
+</section>
+
+<section id="upcoming">
+  <div class="wrap">
+    <h2>진행 중 · 예정</h2>
+    <div class="up">
+      <div class="uprow"><div class="when">2026.07.09 – 10.11</div>
+        <div class="what"><b>더헬멧 (4연)</b> <span>연극 · 홍익대 대학로 아트센터 소극장 · 지이선 작 — 하나의 무대를 벽으로 나눈 분할 공연</span></div></div>
+      <div class="uprow"><div class="when">2026.07.23 – 10.11</div>
+        <div class="what"><b>비더슈탄트 (3연)</b> <span>뮤지컬 · 링크아트센터드림 드림1관 · 정은비 작 — 전곡 교체 개정판</span></div></div>
+      <div class="uprow"><div class="when">2026.07.25 – 08.09</div>
+        <div class="what"><b>경성의 고독한 미식가들</b> <span>연극 초연(1막+2막 합본) · 두산아트센터 Space111 · 박해림 작 — 1930년 경성, 추리와 미식의 관객참여형</span></div></div>
+      <div class="uprow"><div class="when">2026.09.15 – 12.06</div>
+        <div class="what"><b>아나키스트 (재연)</b> <span>뮤지컬 · 예스24아트원 1관 · 재연 창작진 공식 발표 대기</span></div></div>
+      <div class="uprow"><div class="when">2026.11.10 – 2027.02.14</div>
+        <div class="what"><b>인트라무로스</b> <span>연극 · 충무아트센터 중극장 블랙 · Alexis Michalik 작, 한국 초연</span></div></div>
+      <div class="uprow"><div class="when">2026.12.08 – 2027.03.28</div>
+        <div class="what"><b>두 번째 아이</b> <span>연극 · LG아트센터 서울 U+ 스테이지 · 다비드 포앙키노스 원작 · 연출 크레딧 공식 발표 대기</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="archive">
+  <div class="wrap">
+    <h2>연도별 전체 기록 <small>시즌 단위 · 반복 공연 포함 · 카드를 클릭하면 작품 상세로</small></h2>
+    <div id="archiveRoot"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>데이터 출처</b> — PlayDB 프로필(ManNo 6372) + 티켓링크·예스24·인터파크 단독 판매작 보완.
+    시즌·캐스트는 PlayDB 전수 수집(62작 123시즌), 수상·초연 정보는 연합뉴스·뉴시스·뉴스1·경향신문·더뮤지컬 등 언론 보도 교차검증 (2026-07-19).
+    흥행 데이터는 KOPIS 공연시장 티켓판매 현황 분석 보고서(예술경영지원센터).<br>
+    초기 스태프 경력 — 무대감독: 뮤지컬 「빨래」, 「열한마리 고양이」 외 · 조명디자인: 「판소리 애플그린을 먹다」, 「어항 속 물고기」 외.<br>
+    포스터 저작권은 각 제작사에 있습니다. 이 페이지는 포트폴리오 목적의 아카이브입니다.
+  </div>
+</footer>
+
+<script src="works-data.js"></script><script>
+(function(){
+  var W = window.WORKS_DATA || {};
+  function link(t){ return 'work.html#'+encodeURIComponent(t); }
+  var FEATURED = [
+    {t:"빵야", tag:["K-Theater Awards 대상"]},
+    {t:"마리 퀴리", tag:["한국뮤지컬어워즈 연출상","5관왕"]},
+    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","5관왕"]},
+    {t:"히스토리 보이즈", tag:["2014 대한민국 연극대상 작품상"]},
+    {t:"팬레터", tag:["누적 26만"]},
+    {t:"카포네 트릴로지", tag:["전석 매진"]},
+    {t:"벙커 트릴로지", tag:["이머시브"]},
+    {t:"더헬멧", tag:["분할 무대"]},
+    {t:"매디슨 카운티의 다리", tag:["한국뮤지컬어워즈 연출상 후보 2회"]},
+    {t:"스윙 데이즈_암호명 A", tag:["한국뮤지컬어워즈 연출상 후보"]},
+    {t:"미러 A Mirror", tag:["백상예술대상 백상연극상 후보"]}
+  ];
+  var fh='';
+  FEATURED.forEach(function(f){
+    var w=W[f.t]; if(!w) return;
+    fh+='<a class="fcard" href="'+link(f.t)+'">';
+    fh+='<div class="img">'+(w.poster?'<img src="'+w.poster+'" alt="'+f.t+'" loading="lazy">':'')+'</div>';
+    fh+='<div class="body"><div class="meta">'+w.genre+' · '+w.debut+' · '+(w.seasons?w.seasons.length:1)+'시즌</div>';
+    fh+='<h3>'+f.t+'</h3>';
+    if(w.desc) fh+='<p>'+w.desc+'</p>';
+    (f.tag||[]).forEach(function(g){ fh+='<span class="tag">'+g+'</span>'; });
+    fh+='</div></a>';
+  });
+  document.getElementById('featRoot').innerHTML=fh;
+
+  var byYear={};
+  Object.keys(W).forEach(function(t){
+    (W[t].seasons||[]).forEach(function(s){
+      (byYear[s.year]=byYear[s.year]||[]).push({t:t,s:s,w:W[t]});
+    });
+  });
+  var years=Object.keys(byYear).map(Number).sort(function(a,b){return b-a;});
+  var ah='';
+  years.forEach(function(y){
+    var items=byYear[y];
+    ah+='<div class="year-block"><div class="year">'+y+' <small>'+items.length+'건</small></div><div class="grid">';
+    items.forEach(function(it){
+      var poster=it.s.poster||it.w.poster;
+      ah+='<a class="card" href="'+link(it.t)+'">';
+      ah+='<div class="img">'+(poster?'<img src="'+poster+'" loading="lazy" alt="'+it.t+'">':'<div class="ph">'+it.t+'</div>')+'</div>';
+      ah+='<div class="cap"><b>'+it.t+'</b><span>'+it.w.genre+' · '+(it.s.label||'')+'</span><span>'+(it.s.venue?it.s.venue.split(' — ')[0].split(' + ')[0]:'')+'</span></div>';
+      ah+='</a>';
+    });
+    ah+='</div></div>';
+  });
+  document.getElementById('archiveRoot').innerHTML=ah;
+})();
+</script>
+</body>
+</html>

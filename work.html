@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>작품 상세 — 김태형 연출</title>
+<style>
+  @font-face{
+    font-family:"Pretendard";
+    src: local("Pretendard Variable"), local("Pretendard");
+    font-weight: 400 800;
+  }
+  :root{
+    --bg-void:#14110d;--bg-tile:#1c1712;
+    --gold:#c9a961;--gold-bright:#e0c17d;--gold-dim:#8a7442;
+    --ink:#ece6d8;--ink-dim:#a89e8a;--ink-faint:#6f6656;
+    --line-dark:rgba(236,230,216,.1);
+    --shadow-poster:0 18px 50px -12px rgba(0,0,0,.65),0 4px 14px rgba(0,0,0,.35);
+    --shadow-poster-sm:0 10px 24px -8px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.3);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg-tile);color:var(--ink);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  nav.topnav{padding:22px 0;background:var(--bg-void)}
+  .navwrap{display:flex;align-items:center;justify-content:space-between}
+  .wordmark{font-size:14.5px;letter-spacing:.04em;color:var(--ink);font-weight:600}
+  .wordmark span{color:var(--gold)}
+  .back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--ink);
+    background:linear-gradient(180deg,#2a2118,#1c1712);border-radius:99px;padding:9px 18px 9px 14px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 0 0 1px rgba(0,0,0,.4),0 1px 2px rgba(0,0,0,.3)}
+  .back svg{width:13px;height:13px}
+  .back:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px var(--gold-dim),0 1px 2px rgba(0,0,0,.3)}
+
+  header.detail{display:grid;grid-template-columns:300px 1fr;gap:48px;padding:56px 0 64px;align-items:start}
+  @media(max-width:720px){header.detail{grid-template-columns:1fr}}
+  .main-poster{border-radius:6px;overflow:hidden}
+  .main-poster img{width:100%;display:block;border-radius:6px;box-shadow:var(--shadow-poster)}
+  .main-poster.empty{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-faint);font-size:13px;background:rgba(255,255,255,.03);border-radius:6px}
+  .kicker{font-size:12px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:14px}
+  h1{font-size:clamp(30px,4.5vw,46px);font-weight:600;letter-spacing:-.026em;line-height:1.12;text-wrap:balance}
+  .credit{margin-top:12px;font-size:14.5px;color:var(--ink-dim)}
+  .desc{margin-top:20px;font-size:15.5px;color:var(--ink-dim);line-height:1.8;max-width:560px}
+  .awards{margin-top:24px}
+  .award-chip{display:inline-block;font-size:12px;color:var(--gold-bright);
+    background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.28);
+    border-radius:99px;padding:4px 13px;margin:0 6px 8px 0;font-weight:500}
+
+  section{padding:48px 0 84px}
+  h2{font-size:13px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:30px}
+  .seasons{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:32px 24px}
+  .season .img{aspect-ratio:3/4;overflow:hidden;display:flex;align-items:center;justify-content:center;border-radius:4px}
+  .season .img img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;
+    box-shadow:var(--shadow-poster-sm);transition:transform .25s ease}
+  .season:hover .img img{transform:translateY(-3px)}
+  .season .img .ph{color:var(--ink-faint);font-size:12.5px;text-align:center;padding:16px;line-height:1.7;
+    background:rgba(255,255,255,.03);width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:4px}
+  .season .body{padding:14px 2px 0}
+  .season .yr{font-size:12px;letter-spacing:.1em;color:var(--gold);margin-bottom:5px;font-weight:600}
+  .season .yr b{font-size:15px;letter-spacing:0}
+  .season .info{font-size:13px;color:var(--ink-dim);line-height:1.75;margin-top:6px}
+  .season .info span{display:block}
+  .season .cast{margin-top:8px;font-size:12.5px;color:var(--ink-faint)}
+  .notfound{padding:120px 0;text-align:center;color:var(--ink-dim)}
+  footer{padding:0 0 70px;font-size:12px;color:var(--ink-faint);border-top:1px solid var(--line-dark);margin-top:8px;padding-top:28px}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="wrap navwrap">
+  <div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div>
+  <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>전체 작품</a>
+</div></nav>
+<div class="wrap">
+  <div id="root"></div>
+  <footer>포스터 저작권은 각 제작사에 있습니다 · 시즌·캐스트 정보는 PlayDB 전수 수집 + 언론·웹 교차검증 (2026-07-19) · 세부 정보는 계속 업데이트됩니다</footer>
+</div>
+<script src="works-data.js"></script>
+<script>
+(function(){
+  var key = decodeURIComponent((location.hash||'').slice(1));
+  var root = document.getElementById('root');
+  var W = window.WORKS_DATA || {};
+  var work = W[key];
+  if(!work){
+    var names = Object.keys(W);
+    for(var i=0;i<names.length;i++){ if(key && names[i].indexOf(key)>=0){ work=W[names[i]]; key=names[i]; break; } }
+  }
+  if(!work){ root.innerHTML = '<div class="notfound">작품을 찾을 수 없습니다.<br>목록에서 다시 선택해 주세요.</div>'; return; }
+  document.title = key + ' — 김태형 연출';
+  var h = '<header class="detail">';
+  h += work.poster
+    ? '<div class="main-poster"><img src="'+work.poster+'" alt="'+key+'"></div>'
+    : '<div class="main-poster empty">포스터 준비 중</div>';
+  h += '<div><div class="kicker">'+(work.genre||'')+' · '+(work.debut||'')+(work.seasons&&work.seasons.length>1?' · '+work.seasons.length+'시즌':'')+'</div>';
+  h += '<h1>'+key+'</h1>';
+  if(work.credit) h += '<div class="credit">'+work.credit+'</div>';
+  if(work.desc) h += '<p class="desc">'+work.desc+'</p>';
+  if(work.awards && work.awards.length){
+    h += '<div class="awards">';
+    work.awards.forEach(function(a){ h += '<span class="award-chip">'+a+'</span>'; });
+    h += '</div>';
+  }
+  h += '</div></header>';
+  h += '<section><h2>시즌별 기록</h2><div class="seasons">';
+  (work.seasons||[]).forEach(function(s){
+    h += '<div class="season"><div class="img">';
+    h += s.poster ? '<img src="'+s.poster+'" loading="lazy" alt="'+key+' '+s.year+'">'
+                  : '<div class="ph">'+s.year+' '+(s.label||'')+'<br>포스터 미확보</div>';
+    h += '</div><div class="body">';
+    h += '<div class="yr"><b>'+s.year+'</b> · '+(s.label||'')+'</div>';
+    h += '<div class="info">';
+    if(s.dates) h += '<span>'+s.dates+'</span>';
+    if(s.venue) h += '<span>'+s.venue+'</span>';
+    h += '</div>';
+    if(s.cast) h += '<div class="cast">출연 — '+s.cast+'</div>';
+    h += '</div></div>';
+  });
+  h += '</div></section>';
+  root.innerHTML = h;
+})();
+window.addEventListener('hashchange', function(){ location.reload(); });
+</script>
+</body>
+</html>
