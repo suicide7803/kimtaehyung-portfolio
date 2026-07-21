@@ -65,7 +65,9 @@
   .navlinks a{transition:color .2s;cursor:pointer}
   .navlinks a:hover,.navlinks a:focus-visible{color:var(--gold-bright)}
   .navlinks a:focus-visible{outline:2px solid var(--gold-dim);outline-offset:4px;border-radius:2px}
-  @media(max-width:640px){.navlinks{gap:16px;font-size:12px}.navlinks a:nth-child(n+4){display:none}}
+  .navlinks a.nav-db{color:var(--gold);border:1px solid var(--gold-dim);border-radius:99px;padding:5px 13px}
+  .navlinks a.nav-db:hover{background:rgba(201,169,97,.12);color:var(--gold-bright)}
+  @media(max-width:640px){.navlinks{gap:14px;font-size:12px}.navlinks a:nth-child(n+3):not(.nav-db){display:none}}
 
   /* ---------- hero ---------- */
   .hero{
@@ -279,6 +281,7 @@
       <a href="#awards">수상</a>
       <a href="#upcoming">예정</a>
       <a href="#archive">아카이브</a>
+      <a href="db.html" class="nav-db">DB 열람 →</a>
     </div>
   </div>
 </nav>

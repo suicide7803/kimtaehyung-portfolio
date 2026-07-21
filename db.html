@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김태형 연출작 DB — 열람</title>
+<meta name="description" content="김태형 연출 62작 123시즌을 연도·배우·극장·제작사·장르별로 열람하는 데이터베이스.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0d0b08;--panel:#161209;--panel-2:#1a150d;
+    --glass:rgba(24,19,12,.62);--glass-strong:rgba(20,16,10,.82);
+    --line:rgba(239,233,220,.10);--line-strong:rgba(239,233,220,.18);
+    --ink:#efe9dc;--ink-dim:#a89e8a;--ink-faint:#6f6656;
+    --gold:#c9a961;--gold-bright:#e0c17d;--gold-dim:#8a7442;
+    --serif:"Noto Serif KR","Nanum Myeongjo",serif;
+    --sans:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --shadow-poster:0 12px 34px -12px rgba(0,0,0,.75),0 3px 10px rgba(0,0,0,.4);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--void);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  input{font-family:inherit}
+
+  body::after{content:"";position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* ---------- top bar ---------- */
+  header.top{
+    position:sticky;top:0;z-index:100;
+    background:var(--glass-strong);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);
+    border-bottom:1px solid var(--line);
+  }
+  .top-inner{max-width:1440px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .brand{font-family:var(--serif);font-weight:600;font-size:16px;white-space:nowrap}
+  .brand span{color:var(--gold)}
+  .brand a.home{color:var(--ink-faint);font-family:var(--sans);font-size:12px;margin-left:10px;
+    border:1px solid var(--line);border-radius:99px;padding:4px 11px;transition:color .2s,border-color .2s}
+  .brand a.home:hover{color:var(--gold-bright);border-color:var(--gold-dim)}
+  .search{flex:1 1 240px;min-width:180px;position:relative}
+  .search input{
+    width:100%;padding:10px 14px 10px 38px;border-radius:10px;
+    background:var(--panel);border:1px solid var(--line-strong);color:var(--ink);font-size:14px;
+  }
+  .search input:focus{outline:none;border-color:var(--gold-dim);box-shadow:0 0 0 3px rgba(201,169,97,.12)}
+  .search input::placeholder{color:var(--ink-faint)}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-faint);pointer-events:none}
+  .count{font-size:12.5px;color:var(--ink-dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .count b{color:var(--gold-bright);font-weight:600}
+
+  /* ---------- controls ---------- */
+  .controls{max-width:1440px;margin:0 auto;padding:16px 24px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .ctl{display:flex;align-items:center;gap:8px}
+  .ctl label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+  .seg{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .seg button{padding:8px 14px;font-size:13px;color:var(--ink-dim);transition:background .2s,color .2s;white-space:nowrap}
+  .seg button[aria-pressed="true"]{background:rgba(201,169,97,.14);color:var(--gold-bright)}
+  .seg button:hover{color:var(--gold-bright)}
+  select.ctl-sel{
+    padding:8px 30px 8px 12px;border-radius:10px;background:var(--panel);
+    border:1px solid var(--line);color:var(--ink);font-size:13px;cursor:pointer;
+    appearance:none;-webkit-appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%238a7442' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 11px center;
+  }
+  select.ctl-sel:focus{outline:none;border-color:var(--gold-dim)}
+  .view-toggle{margin-left:auto}
+  .filter-btn{
+    display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:10px;
+    background:var(--panel);border:1px solid var(--line);color:var(--ink-dim);font-size:13px;
+  }
+  .filter-btn:hover{color:var(--gold-bright);border-color:var(--gold-dim)}
+  .filter-btn .fcount{background:var(--gold);color:#241a08;border-radius:99px;padding:0 7px;font-size:11px;font-weight:700;min-width:18px;text-align:center}
+
+  /* ---------- active filter chips ---------- */
+  .chips{max-width:1440px;margin:0 auto;padding:12px 24px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .chip{
+    display:inline-flex;align-items:center;gap:7px;padding:5px 8px 5px 13px;border-radius:99px;font-size:12.5px;
+    background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.28);color:var(--gold-bright);
+  }
+  .chip .k{color:var(--ink-faint);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;margin-right:2px}
+  .chip button{width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:var(--gold-bright);background:rgba(201,169,97,.16);font-size:13px;line-height:1;transition:background .2s}
+  .chip button:hover{background:rgba(201,169,97,.34)}
+  .chips .clear-all{color:var(--ink-faint);font-size:12px;border-bottom:1px solid transparent;padding:4px 0}
+  .chips .clear-all:hover{color:var(--gold-bright);border-color:var(--gold-dim)}
+
+  /* ---------- layout ---------- */
+  .shell{max-width:1440px;margin:0 auto;padding:20px 24px 90px;display:grid;grid-template-columns:250px 1fr;gap:28px}
+  @media(max-width:900px){.shell{grid-template-columns:1fr}}
+  .facets-scrim{display:none}
+
+  /* ---------- facet sidebar ---------- */
+  .facets{position:sticky;top:150px;align-self:start;max-height:calc(100dvh - 170px);overflow-y:auto;padding-right:6px}
+  @media(max-width:900px){
+    .facets{position:fixed;inset:0 auto 0 0;z-index:200;width:min(88vw,320px);max-height:none;top:0;
+      background:var(--glass-strong);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+      border-right:1px solid var(--line-strong);padding:20px 18px;transform:translateX(-100%);transition:transform .3s var(--ease)}
+    .facets.open{transform:translateX(0)}
+    .facets-scrim{display:block;position:fixed;inset:0;z-index:199;background:rgba(6,5,3,.55);opacity:0;pointer-events:none;transition:opacity .3s}
+    .facets-scrim.open{opacity:1;pointer-events:auto}
+  }
+  .facets::-webkit-scrollbar{width:8px}
+  .facets::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:4px}
+  .facet-mobile-head{display:none}
+  @media(max-width:900px){.facet-mobile-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .facet-mobile-head b{font-family:var(--serif);font-size:17px}
+    .facet-mobile-head button{font-size:22px;color:var(--ink-dim);width:34px;height:34px}}
+  .fgroup{margin-bottom:8px;border-bottom:1px solid var(--line)}
+  .fgroup>summary{
+    list-style:none;cursor:pointer;padding:12px 2px;display:flex;align-items:center;justify-content:space-between;
+    font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;
+  }
+  .fgroup>summary::-webkit-details-marker{display:none}
+  .fgroup>summary .arw{transition:transform .2s;color:var(--ink-faint)}
+  .fgroup[open]>summary .arw{transform:rotate(90deg)}
+  .fgroup>summary .n{color:var(--ink-faint);font-weight:400;font-size:11px;margin-left:auto;margin-right:10px}
+  .fbody{padding:2px 0 14px}
+  .fsearch{width:100%;padding:7px 10px;margin-bottom:8px;border-radius:7px;background:var(--void);
+    border:1px solid var(--line);color:var(--ink);font-size:12.5px}
+  .fsearch:focus{outline:none;border-color:var(--gold-dim)}
+  .fopt{display:flex;align-items:center;gap:9px;padding:5px 4px;border-radius:6px;cursor:pointer;font-size:13px;transition:background .15s}
+  .fopt:hover{background:rgba(201,169,97,.06)}
+  .fopt input{appearance:none;-webkit-appearance:none;width:15px;height:15px;flex:none;border-radius:4px;
+    border:1.5px solid var(--line-strong);position:relative;transition:background .15s,border-color .15s}
+  .fopt input:checked{background:var(--gold);border-color:var(--gold)}
+  .fopt input:checked::after{content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;
+    border:solid #241a08;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .fopt .lbl{flex:1;color:var(--ink-dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .fopt input:checked+.lbl{color:var(--ink)}
+  .fopt .cnt{color:var(--ink-faint);font-size:11px;font-variant-numeric:tabular-nums}
+  .fmore{font-size:12px;color:var(--gold-dim);padding:6px 4px;cursor:pointer}
+  .fmore:hover{color:var(--gold-bright)}
+
+  /* ---------- results ---------- */
+  .results{min-width:0}
+  .group-sec{margin-bottom:44px}
+  .group-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .group-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(24px,3.4vw,34px);color:var(--gold);letter-spacing:.01em;line-height:1}
+  .group-head .gc{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap}
+  .group-head .gc b{color:var(--ink-dim)}
+
+  /* card grid */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:30px 20px}
+  @media(max-width:520px){.cards{grid-template-columns:repeat(2,1fr);gap:22px 12px}}
+  a.card{display:block;cursor:pointer}
+  .card .pw{aspect-ratio:3/4;border-radius:5px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow-poster);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);position:relative}
+  .card .pw img{width:100%;height:100%;object-fit:cover;filter:brightness(.9) saturate(.92);transition:filter .3s}
+  .card .pw .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-faint);font-size:12px;text-align:center;padding:14px;line-height:1.6}
+  a.card:hover .pw{transform:translateY(-5px);box-shadow:0 20px 48px -14px rgba(0,0,0,.85),0 0 34px rgba(201,169,97,.15)}
+  a.card:hover .pw img{filter:brightness(1) saturate(1)}
+  a.card:focus-visible{outline:2px solid var(--gold-dim);outline-offset:5px;border-radius:6px}
+  .card .badge{position:absolute;top:8px;left:8px;background:var(--glass-strong);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border:1px solid var(--line-strong);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--gold-bright);font-weight:600}
+  .card .meta{margin-top:13px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:17px;margin-top:5px;letter-spacing:.01em;line-height:1.3}
+  .card .ctx{font-size:12px;color:var(--ink-faint);margin-top:6px;line-height:1.55}
+  .card .aw{margin-top:9px;display:flex;flex-wrap:wrap;gap:5px}
+  .card .aw span{font-size:10.5px;color:var(--gold-bright);background:rgba(201,169,97,.10);
+    border:1px solid rgba(201,169,97,.24);border-radius:99px;padding:2px 8px}
+
+  /* table view */
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--glass)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+  thead th{position:sticky;top:0;background:var(--panel-2);text-align:left;padding:13px 16px;
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;
+    border-bottom:1px solid var(--line-strong);white-space:nowrap;cursor:pointer;user-select:none}
+  thead th .sar{color:var(--ink-faint);margin-left:5px;font-size:10px}
+  thead th[aria-sort="ascending"] .sar::after{content:"▲";color:var(--gold)}
+  thead th[aria-sort="descending"] .sar::after{content:"▼";color:var(--gold)}
+  tbody td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim);vertical-align:top}
+  tbody tr{transition:background .15s}
+  tbody tr:hover{background:rgba(201,169,97,.05)}
+  tbody tr:last-child td{border-bottom:none}
+  td.t-title{color:var(--ink);font-weight:600;font-family:var(--serif)}
+  td.t-title a:hover{color:var(--gold-bright)}
+  td .g-tag{font-size:11px;color:var(--gold);white-space:nowrap}
+  .t-num{font-variant-numeric:tabular-nums;text-align:right}
+  td .lk{color:var(--ink-faint);cursor:pointer;border-bottom:1px dotted var(--line-strong)}
+  td .lk:hover{color:var(--gold-bright)}
+
+  .empty{padding:100px 20px;text-align:center;color:var(--ink-dim)}
+  .empty b{color:var(--ink);font-family:var(--serif);font-size:20px;display:block;margin-bottom:10px}
+
+  footer{max-width:1440px;margin:0 auto;padding:40px 24px 60px;font-size:12px;color:var(--ink-faint);
+    border-top:1px solid var(--line);line-height:1.9}
+  footer b{color:var(--ink-dim)}
+
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">김태형 연출작 <span>DB</span><a class="home" href="index.html">← 포트폴리오</a></div>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="작품·배우·극장·작가 검색…" autocomplete="off" aria-label="검색">
+    </div>
+    <div class="count" id="count"></div>
+  </div>
+  <div class="controls">
+    <div class="ctl">
+      <label for="groupBy">분류</label>
+      <select id="groupBy" class="ctl-sel">
+        <option value="none">전체</option>
+        <option value="year">연도별</option>
+        <option value="actor">배우별</option>
+        <option value="venue">극장별</option>
+        <option value="producer">제작사별</option>
+        <option value="genre">장르별</option>
+        <option value="status">상태별</option>
+      </select>
+    </div>
+    <div class="ctl">
+      <label for="sortBy">정렬</label>
+      <select id="sortBy" class="ctl-sel">
+        <option value="latest">최신순</option>
+        <option value="debut">데뷔순</option>
+        <option value="title">가나다순</option>
+        <option value="seasons">시즌 많은 순</option>
+      </select>
+    </div>
+    <button class="filter-btn" id="mobileFilterBtn" style="display:none">필터 <span class="fcount" id="mFcount">0</span></button>
+    <div class="seg view-toggle" role="group" aria-label="보기 전환">
+      <button id="viewCards" aria-pressed="true">카드</button>
+      <button id="viewTable" aria-pressed="false">표</button>
+    </div>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+
+<div class="shell">
+  <aside class="facets" id="facets" aria-label="필터">
+    <div class="facet-mobile-head"><b>필터</b><button id="facetClose" aria-label="닫기">×</button></div>
+    <div id="facetGroups"></div>
+  </aside>
+  <div class="facets-scrim" id="facetScrim"></div>
+  <main class="results" id="results" aria-live="polite"></main>
+</div>
+
+<footer>
+  <b>데이터</b> — wiki/shows/*.md frontmatter에서 자동 생성(62작 123시즌). 배우·극장·제작사 패싯은 시즌별 캐스트·공연장·제작 크레딧에서 추출.
+  극장은 건물 단위로 정규화, 제작사는 ㈜·공동제작 표기를 병합했습니다. 포스터 저작권은 각 제작사에 있습니다.
+</footer>
+
+<script src="db-data.js"></script>
+<script>
+(function(){
+  var DB = window.DB_DATA || {works:[],counts:{}};
+  var works = DB.works || [];
+  var $ = function(s,r){return (r||document).querySelector(s);};
+  function el(t,c){var e=document.createElement(t); if(c)e.className=c; return e;}
+  function workLink(w){ return 'work.html#'+encodeURIComponent(w.title); }
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  var STATUS_LABEL = {closed:'종료',repertoire:'레퍼토리',upcoming:'예정',development:'개발중'};
+  function statusLabel(s){return STATUS_LABEL[s]||s||'—';}
+  function roleClass(w){return w.role==='연출'?'연출':'비연출';}
+
+  /* ---------- build facet indices ---------- */
+  var FACETS = [
+    {key:'year',    label:'연도',   get:function(w){return w.years.map(String);}, sort:'numdesc'},
+    {key:'genre',   label:'장르',   get:function(w){return w.genre?[w.genre]:[];}, sort:'countdesc'},
+    {key:'venue',   label:'극장',   get:function(w){return w.venues;}, sort:'countdesc', searchable:true},
+    {key:'producer',label:'제작사', get:function(w){return w.producers;}, sort:'countdesc', searchable:true},
+    {key:'actor',   label:'배우',   get:function(w){return w.actors;}, sort:'countdesc', searchable:true},
+    {key:'role',    label:'역할',   get:function(w){return [roleClass(w)];}, sort:'countdesc'},
+    {key:'status',  label:'상태',   get:function(w){return w.status?[w.status]:[];}, sort:'countdesc'}
+  ];
+  var facetValues = {}; // key -> [{v, count}]
+  FACETS.forEach(function(f){
+    var m = {};
+    works.forEach(function(w){ f.get(w).forEach(function(v){ m[v]=(m[v]||0)+1; }); });
+    var arr = Object.keys(m).map(function(v){return {v:v,count:m[v]};});
+    if(f.sort==='numdesc') arr.sort(function(a,b){return (+b.v)-(+a.v);});
+    else arr.sort(function(a,b){return b.count-a.count || (a.v<b.v?-1:1);});
+    facetValues[f.key]=arr;
+  });
+
+  /* ---------- state ---------- */
+  var state = {
+    q:'', groupBy:'none', sortBy:'latest', view:'cards',
+    filters:{year:new Set(),genre:new Set(),venue:new Set(),producer:new Set(),actor:new Set(),role:new Set(),status:new Set()},
+    facetSearch:{}, facetExpand:{}, tableSort:{key:'latest_year',dir:'desc'}
+  };
+
+  function activeFilterCount(){var n=0;for(var k in state.filters)n+=state.filters[k].size;return n;}
+
+  /* ---------- filtering ---------- */
+  function matchesFilters(w){
+    for(var i=0;i<FACETS.length;i++){
+      var f=FACETS[i], sel=state.filters[f.key];
+      if(sel.size){
+        var vals=f.get(w), ok=false;
+        for(var j=0;j<vals.length;j++){ if(sel.has(vals[j])){ok=true;break;} }
+        if(!ok) return false;
+      }
+    }
+    if(state.q){
+      var q=state.q.toLowerCase();
+      var hay=[w.title,w.author,w.genre].concat(w.actors,w.venues,w.producers).join(' ').toLowerCase();
+      if(hay.indexOf(q)<0) return false;
+    }
+    return true;
+  }
+  function filtered(){ return works.filter(matchesFilters); }
+
+  /* ---------- sorting ---------- */
+  function sorter(mode){
+    if(mode==='debut') return function(a,b){return (a.debut||9999)-(b.debut||9999) || cmp(a.title,b.title);};
+    if(mode==='title') return function(a,b){return cmp(a.title,b.title);};
+    if(mode==='seasons') return function(a,b){return b.season_count-a.season_count || (b.latest_year||0)-(a.latest_year||0);};
+    return function(a,b){return (b.latest_year||0)-(a.latest_year||0) || (b.debut||0)-(a.debut||0);}; // latest
+  }
+  function cmp(a,b){return String(a).localeCompare(String(b),'ko');}
+
+  /* ---------- grouping ---------- */
+  function groupResults(list){
+    var g=state.groupBy;
+    if(g==='none') return [{key:null,label:null,works:list.slice().sort(sorter(state.sortBy))}];
+    var buckets={}, order=[];
+    function push(k,w){ if(!buckets[k]){buckets[k]=[];order.push(k);} buckets[k].push(w); }
+    list.forEach(function(w){
+      var keys;
+      if(g==='year') keys=w.years.map(String);
+      else if(g==='actor') keys=w.actors;
+      else if(g==='venue') keys=w.venues;
+      else if(g==='producer') keys=w.producers.length?w.producers:['(미상)'];
+      else if(g==='genre') keys=w.genre?[w.genre]:['(미상)'];
+      else if(g==='status') keys=[statusLabel(w.status)];
+      else keys=['(전체)'];
+      var seen={};
+      keys.forEach(function(k){ if(!seen[k]){seen[k]=1;push(k,w);} });
+    });
+    var secs=order.map(function(k){return {key:k,label:k,works:buckets[k].sort(sorter(state.sortBy))};});
+    // section ordering — '(미상)'은 항상 맨 뒤로
+    function unknown(k){return k==='(미상)'?1:0;}
+    if(g==='year') secs.sort(function(a,b){return (+b.key)-(+a.key);});
+    else if(g==='status'){ var so=['예정','레퍼토리','개발중','종료']; secs.sort(function(a,b){return so.indexOf(a.key)-so.indexOf(b.key);}); }
+    else secs.sort(function(a,b){return unknown(a.key)-unknown(b.key) || b.works.length-a.works.length || cmp(a.key,b.key);});
+    return secs;
+  }
+
+  /* ---------- context line per grouping ---------- */
+  function contextLine(w,groupKey){
+    var g=state.groupBy;
+    if(g==='year'){
+      var ss=w.seasons.filter(function(s){return s.year==+groupKey || (s.dates&&s.dates.indexOf(groupKey)>=0);});
+      if(ss.length) return ss.map(function(s){return (s.label||'')+' · '+shortVenue(s.venue);}).join(' / ');
+    }
+    if(g==='venue'){
+      var vs=w.seasons.filter(function(s){return s.venue_norm===groupKey;});
+      if(vs.length) return vs.map(function(s){return s.year+' '+(s.label||'');}).join(' / ');
+    }
+    if(g==='actor'){
+      var roles=[];
+      w.seasons.forEach(function(s){(s.cast||[]).forEach(function(r){ if(r.actors.indexOf(groupKey)>=0 && roles.indexOf(r.role)<0 && r.role) roles.push(r.role); });});
+      if(roles.length) return '분(扮) '+roles.join(', ');
+    }
+    // default meta
+    return (w.genre||'')+' · '+(w.debut||'')+' · '+w.season_count+'시즌';
+  }
+  function shortVenue(v){return String(v||'').split(' — ')[0].split('(')[0].trim();}
+
+  /* ---------- render ---------- */
+  var elResults=$('#results');
+  function render(){
+    var list=filtered();
+    var secs=groupResults(list);
+    $('#count').innerHTML='<b>'+list.length+'</b> / '+works.length+'작';
+    renderChips();
+    if(!list.length){
+      elResults.innerHTML='<div class="empty"><b>결과 없음</b>조건에 맞는 작품이 없습니다. 필터를 조정해 보세요.</div>';
+      return;
+    }
+    if(state.view==='table' && state.groupBy==='none'){ renderTable(list); return; }
+    var frag=document.createDocumentFragment();
+    secs.forEach(function(sec){
+      var wrap=el('section','group-sec');
+      if(sec.label!=null){
+        var h=el('div','group-head');
+        h.innerHTML='<h2>'+esc(sec.label)+'</h2><div class="gc"><b>'+sec.works.length+'</b> 작품</div>';
+        wrap.appendChild(h);
+      }
+      if(state.view==='table'){ wrap.appendChild(tableEl(sec.works,sec.key)); }
+      else{
+        var grid=el('div','cards');
+        sec.works.forEach(function(w){ grid.appendChild(cardEl(w,sec.key)); });
+        wrap.appendChild(grid);
+      }
+      frag.appendChild(wrap);
+    });
+    elResults.innerHTML=''; elResults.appendChild(frag);
+  }
+
+  function cardEl(w,groupKey){
+    var a=el('a','card'); a.href=workLink(w);
+    var poster=w.poster||(w.seasons[0]&&w.seasons[0].poster)||'';
+    var badge = (state.groupBy==='year' && groupKey) ? '<div class="badge">'+esc(groupKey)+'</div>'
+             : (w.role!=='연출' ? '<div class="badge">'+esc(w.role||'')+'</div>' : '');
+    var aw = (w.awards&&w.awards.length) ? '<div class="aw">'+w.awards.slice(0,2).map(function(x){return '<span>'+esc(shortAward(x))+'</span>';}).join('')+'</div>' : '';
+    a.innerHTML =
+      '<div class="pw">'+badge+(poster?'<img src="'+esc(poster)+'" loading="lazy" alt="'+esc(w.title)+'">':'<div class="ph">'+esc(w.title)+'</div>')+'</div>'+
+      '<div class="meta">'+esc(w.genre)+' · '+(w.debut||'')+' · '+w.season_count+'시즌</div>'+
+      '<h3>'+esc(w.title)+'</h3>'+
+      '<div class="ctx">'+esc(contextLine(w,groupKey))+'</div>'+aw;
+    return a;
+  }
+  function shortAward(a){return String(a).split('(')[0].split('·')[0].trim().slice(0,26);}
+
+  /* ---------- table ---------- */
+  var TCOLS=[
+    {k:'title',label:'작품',cls:'t-title'},
+    {k:'genre',label:'장르'},
+    {k:'debut',label:'데뷔',cls:'t-num'},
+    {k:'latest_year',label:'최근',cls:'t-num'},
+    {k:'season_count',label:'시즌',cls:'t-num'},
+    {k:'role',label:'역할'},
+    {k:'status',label:'상태'},
+    {k:'venues',label:'극장'}
+  ];
+  function tableEl(list,groupKey){
+    var sorted=list.slice();
+    var ts=state.tableSort;
+    sorted.sort(function(a,b){
+      var va=tcell(a,ts.key), vb=tcell(b,ts.key), r;
+      if(typeof va==='number'&&typeof vb==='number') r=va-vb; else r=cmp(va,vb);
+      return ts.dir==='asc'?r:-r;
+    });
+    var wrap=el('div','tbl-wrap');
+    var t=el('table');
+    var thead='<thead><tr>'+TCOLS.map(function(c){
+      var as=ts.key===c.k?(ts.dir==='asc'?'ascending':'descending'):'none';
+      return '<th data-k="'+c.k+'" aria-sort="'+as+'">'+c.label+'<span class="sar"></span></th>';
+    }).join('')+'</tr></thead>';
+    var rows=sorted.map(function(w){
+      return '<tr>'+TCOLS.map(function(c){
+        var cls=c.cls||''; var v;
+        if(c.k==='title') v='<a href="'+workLink(w)+'">'+esc(w.title)+'</a>';
+        else if(c.k==='genre') v='<span class="g-tag">'+esc(w.genre)+'</span>';
+        else if(c.k==='status') v=statusLabel(w.status);
+        else if(c.k==='role') v=esc(w.role||'—');
+        else if(c.k==='venues') v=esc(w.venues.slice(0,3).join(', '))+(w.venues.length>3?' 외':'');
+        else v=esc(tcell(w,c.k));
+        return '<td class="'+cls+'">'+v+'</td>';
+      }).join('')+'</tr>';
+    }).join('');
+    t.innerHTML=thead+'<tbody>'+rows+'</tbody>';
+    t.querySelectorAll('th').forEach(function(th){
+      th.addEventListener('click',function(){
+        var k=th.getAttribute('data-k');
+        if(state.tableSort.key===k) state.tableSort.dir=state.tableSort.dir==='asc'?'desc':'asc';
+        else state.tableSort={key:k,dir:(k==='title'||k==='genre'||k==='status'||k==='role')?'asc':'desc'};
+        render();
+      });
+    });
+    wrap.appendChild(t);
+    return wrap;
+  }
+  function tcell(w,k){
+    if(k==='title') return w.title;
+    if(k==='venues') return w.venues.join(', ');
+    if(k==='debut') return w.debut||0;
+    if(k==='latest_year') return w.latest_year||0;
+    if(k==='season_count') return w.season_count;
+    return w[k]||'';
+  }
+  function renderTable(list){
+    elResults.innerHTML='';
+    var wrap=el('section','group-sec');
+    wrap.appendChild(tableEl(list,null));
+    elResults.appendChild(wrap);
+  }
+
+  /* ---------- chips ---------- */
+  function renderChips(){
+    var box=$('#chips'); box.innerHTML='';
+    var any=false;
+    FACETS.forEach(function(f){
+      state.filters[f.key].forEach(function(v){
+        any=true;
+        var c=el('span','chip');
+        var disp = f.key==='status'?statusLabel(v):(f.key==='role'?v:v);
+        c.innerHTML='<span class="k">'+f.label+'</span>'+esc(disp)+'<button aria-label="제거">×</button>';
+        c.querySelector('button').addEventListener('click',function(){ state.filters[f.key].delete(v); syncFacetChecks(); render(); });
+        box.appendChild(c);
+      });
+    });
+    if(state.q){
+      any=true; var c=el('span','chip');
+      c.innerHTML='<span class="k">검색</span>'+esc(state.q)+'<button aria-label="제거">×</button>';
+      c.querySelector('button').addEventListener('click',function(){ state.q=''; $('#q').value=''; render(); });
+      box.appendChild(c);
+    }
+    if(any){
+      var ca=el('button','clear-all'); ca.textContent='전체 해제';
+      ca.addEventListener('click',clearAll); box.appendChild(ca);
+    }
+    $('#mFcount').textContent=activeFilterCount();
+  }
+  function clearAll(){
+    FACETS.forEach(function(f){state.filters[f.key].clear();});
+    state.q=''; $('#q').value=''; syncFacetChecks(); render();
+  }
+
+  /* ---------- facet sidebar ---------- */
+  var DEFAULT_SHOW=8;
+  function renderFacets(){
+    var box=$('#facetGroups'); box.innerHTML='';
+    FACETS.forEach(function(f){
+      var vals=facetValues[f.key];
+      var d=el('details','fgroup'); if(f.key==='year'||f.key==='genre') d.open=true;
+      var openFacets=['year','genre'];
+      var sum=el('summary');
+      sum.innerHTML='<span class="arw">▸</span> '+f.label+' <span class="n">'+vals.length+'</span>';
+      d.appendChild(sum);
+      var body=el('div','fbody');
+      if(f.searchable){
+        var si=el('input','fsearch'); si.type='search'; si.placeholder=f.label+' 검색…';
+        si.value=state.facetSearch[f.key]||'';
+        si.addEventListener('input',function(){ state.facetSearch[f.key]=si.value; drawOpts(); });
+        body.appendChild(si);
+      }
+      var optWrap=el('div');
+      body.appendChild(optWrap);
+      d.appendChild(body);
+      box.appendChild(d);
+
+      function drawOpts(){
+        optWrap.innerHTML='';
+        var q=(state.facetSearch[f.key]||'').toLowerCase();
+        var shown=vals.filter(function(o){return !q||String(o.v).toLowerCase().indexOf(q)>=0;});
+        var expand=state.facetExpand[f.key];
+        var limit=expand?shown.length:DEFAULT_SHOW;
+        shown.slice(0,limit).forEach(function(o){
+          var lab=el('label','fopt');
+          var disp = f.key==='status'?statusLabel(o.v):o.v;
+          lab.innerHTML='<input type="checkbox"><span class="lbl" title="'+esc(disp)+'">'+esc(disp)+'</span><span class="cnt">'+o.count+'</span>';
+          var cb=lab.querySelector('input');
+          cb.checked=state.filters[f.key].has(o.v);
+          cb.addEventListener('change',function(){
+            if(cb.checked)state.filters[f.key].add(o.v); else state.filters[f.key].delete(o.v);
+            render();
+          });
+          optWrap.appendChild(lab);
+        });
+        if(shown.length>DEFAULT_SHOW){
+          var more=el('div','fmore');
+          more.textContent=expand?'접기':('+ '+(shown.length-DEFAULT_SHOW)+'개 더');
+          more.addEventListener('click',function(){ state.facetExpand[f.key]=!expand; drawOpts(); });
+          optWrap.appendChild(more);
+        }
+      }
+      drawOpts();
+      d._draw=drawOpts;
+    });
+  }
+  function syncFacetChecks(){ renderFacets(); } // simplest: rebuild
+
+  /* ---------- events ---------- */
+  var qt;
+  $('#q').addEventListener('input',function(e){ clearTimeout(qt); qt=setTimeout(function(){ state.q=e.target.value.trim(); render(); },140); });
+  $('#groupBy').addEventListener('change',function(e){ state.groupBy=e.target.value;
+    // table view only meaningful for flat; keep but grouping still renders per-section tables
+    render(); });
+  $('#sortBy').addEventListener('change',function(e){ state.sortBy=e.target.value; render(); });
+  $('#viewCards').addEventListener('click',function(){ setView('cards'); });
+  $('#viewTable').addEventListener('click',function(){ setView('table'); });
+  function setView(v){ state.view=v;
+    $('#viewCards').setAttribute('aria-pressed',v==='cards');
+    $('#viewTable').setAttribute('aria-pressed',v==='table'); render(); }
+
+  // mobile facets
+  var mfb=$('#mobileFilterBtn'), facets=$('#facets'), scrim=$('#facetScrim');
+  function checkMobile(){ mfb.style.display = window.innerWidth<=900 ? 'inline-flex':'none'; }
+  mfb.addEventListener('click',function(){ facets.classList.add('open'); scrim.classList.add('open'); });
+  function closeFacets(){ facets.classList.remove('open'); scrim.classList.remove('open'); }
+  $('#facetClose').addEventListener('click',closeFacets);
+  scrim.addEventListener('click',closeFacets);
+  window.addEventListener('resize',checkMobile);
+  window.addEventListener('keydown',function(e){ if(e.key==='Escape')closeFacets(); });
+
+  /* ---------- init ---------- */
+  renderFacets();
+  render();
+  checkMobile();
+})();
+</script>
+</body>
+</html>
