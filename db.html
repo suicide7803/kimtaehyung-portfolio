@@ -219,6 +219,7 @@
         <option value="venue">극장별</option>
         <option value="producer">제작사별</option>
         <option value="genre">장르별</option>
+        <option value="immersive">형식별 (이머시브)</option>
         <option value="status">상태별</option>
       </select>
     </div>
@@ -272,6 +273,7 @@
   var FACETS = [
     {key:'year',    label:'연도',   get:function(w){return w.years.map(String);}, sort:'numdesc'},
     {key:'genre',   label:'장르',   get:function(w){return w.genre?[w.genre]:[];}, sort:'countdesc'},
+    {key:'immersive',label:'형식',  get:function(w){return [w.immersive?'이머시브 공연':'일반 공연'];}, sort:'countdesc'},
     {key:'venue',   label:'극장',   get:function(w){return w.venues;}, sort:'countdesc', searchable:true},
     {key:'producer',label:'제작사', get:function(w){return w.producers;}, sort:'countdesc', searchable:true},
     {key:'actor',   label:'배우',   get:function(w){return w.actors;}, sort:'countdesc', searchable:true},
@@ -291,7 +293,7 @@
   /* ---------- state ---------- */
   var state = {
     q:'', groupBy:'none', sortBy:'latest', view:'cards',
-    filters:{year:new Set(),genre:new Set(),venue:new Set(),producer:new Set(),actor:new Set(),role:new Set(),status:new Set()},
+    filters:{year:new Set(),genre:new Set(),immersive:new Set(),venue:new Set(),producer:new Set(),actor:new Set(),role:new Set(),status:new Set()},
     facetSearch:{}, facetExpand:{}, tableSort:{key:'latest_year',dir:'desc'}
   };
 
@@ -338,6 +340,7 @@
       else if(g==='venue') keys=w.venues;
       else if(g==='producer') keys=w.producers.length?w.producers:['(미상)'];
       else if(g==='genre') keys=w.genre?[w.genre]:['(미상)'];
+      else if(g==='immersive') keys=[w.immersive?'이머시브 공연':'일반 공연'];
       else if(g==='status') keys=[statusLabel(w.status)];
       else keys=['(전체)'];
       var seen={};
@@ -348,6 +351,7 @@
     function unknown(k){return k==='(미상)'?1:0;}
     if(g==='year') secs.sort(function(a,b){return (+b.key)-(+a.key);});
     else if(g==='status'){ var so=['예정','레퍼토리','개발중','종료']; secs.sort(function(a,b){return so.indexOf(a.key)-so.indexOf(b.key);}); }
+    else if(g==='immersive') secs.sort(function(a,b){return (a.key==='이머시브 공연'?0:1)-(b.key==='이머시브 공연'?0:1);});
     else secs.sort(function(a,b){return unknown(a.key)-unknown(b.key) || b.works.length-a.works.length || cmp(a.key,b.key);});
     return secs;
   }
@@ -520,8 +524,7 @@
     var box=$('#facetGroups'); box.innerHTML='';
     FACETS.forEach(function(f){
       var vals=facetValues[f.key];
-      var d=el('details','fgroup'); if(f.key==='year'||f.key==='genre') d.open=true;
-      var openFacets=['year','genre'];
+      var d=el('details','fgroup'); if(f.key==='year'||f.key==='genre'||f.key==='immersive') d.open=true;
       var sum=el('summary');
       sum.innerHTML='<span class="arw">▸</span> '+f.label+' <span class="n">'+vals.length+'</span>';
       d.appendChild(sum);

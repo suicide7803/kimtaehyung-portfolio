@@ -63,7 +63,7 @@ window.WORKS_DATA = {
   seasons:[
     {year:2012, label:"시즌", dates:"2012.11.30–2013.02.24", venue:"충무아트센터 중극장 블랙", poster:"assets/posters/브루클린_2012.jpg", cast:"브루클린 난아·박은미 / 파라다이스 이영미·김경선 / 클리반트 이주광 / 테일러 조형균 / 페이스 소정화"}]},
 
-"내일 공연인데 어떡하지": { genre:"관객참여극", debut:2013, credit:"지이선", status:"closed", page:"내일 공연인데 어떡하지",
+"내일 공연인데 어떡하지": { genre:"연극", debut:2013, credit:"지이선", status:"closed", page:"내일 공연인데 어떡하지",
   desc:"관객이 공연 제작 과정에 참여하는 씨어터 RPG 시리즈.",
   poster:"assets/posters/내일공연인데어떡하지_2017.jpg",
   seasons:[
@@ -89,7 +89,7 @@ window.WORKS_DATA = {
     {year:2023, label:"7연 (10주년)", dates:"2023.06.13–08.13", venue:"두산아트센터 연강홀", poster:"assets/posters/히스토리보이즈_2023.gif", cast:"헥터 오대석·정상훈·견민성 / 어윈 박정복·안재영·박은석 / 데이킨 박은석·최정우·손유동·윤승우 / 포스너 김리현·김현진·김기택·정지우"},
     {year:2026, label:"8연", dates:"2026.03.19–06.07", venue:"링크아트센터 페이코홀", poster:"assets/posters/히스토리보이즈_2026.jpg"}]},
 
-"내일도 공연할 수 있을까": { genre:"관객참여극", debut:2014, status:"closed", page:"내일도 공연할 수 있을까",
+"내일도 공연할 수 있을까": { genre:"연극", debut:2014, status:"closed", page:"내일도 공연할 수 있을까",
   desc:"「내일 공연인데 어떡하지」의 후속 버전. 2014 마로니에여름축제.",
   poster:"assets/posters/내일도공연할수있을까_2014.gif",
   seasons:[
