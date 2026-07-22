@@ -11,4 +11,4 @@
    shortname 이 비어 있으면 각 작품 상세페이지의 코멘트 영역은 "준비 중"으로 표시됩니다.
    작품별 스레드는 제목(work:<작품명>)으로 식별되어 서로 섞이지 않습니다.
    ──────────────────────────────────────────────────────────── */
-window.DISQUS_SHORTNAME = "";
+window.DISQUS_SHORTNAME = "kimtaehyung-portfolio";
