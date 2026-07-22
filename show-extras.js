@@ -28,6 +28,15 @@ window.SHOW_EXTRAS = {
     photos_note: "제작사 배포(언론 공개) 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
+  "경성의 고독한 미식가들": {
+    quotes: [
+      { line: "진정한 맛은 혀 끝에 느껴지는 화려함이 아니라, 함께 씹고 삼키는 이의 온기에 있다.", speaker: "해운 · 미식 칼럼", note: "작품의 미학을 압축한 대사" },
+      { line: "적의 적은 동지라고들 하죠. 난 같은 적을 가진 사람들만이 가질 수 있는 강력한 연대를 믿어요.", speaker: "아이나", note: "연대의 논리" },
+      { line: "세상에 저절로 터지는 폭탄은 없다는 거.", speaker: "영재", note: "" }
+    ],
+    quotes_note: "대본 기준 주요 대사. 2026.7.25 두산아트센터 개막 — 관객·언론 리뷰는 개막 후 수집 예정."
+  },
+
   "마리 퀴리": {
     audience: [
       { quote: "이렇게 울었던 공연은 처음이야", source: "네이버 블로그 · 청인재의 아카이브", date: "2025.09", url: "https://blog.naver.com/cij_bookshelf/224008196669" },
@@ -52,7 +61,8 @@ window.SHOW_EXTRAS = {
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
     photos: [
       { src: "assets/photos/멤피스/멤피스_2023_still.jpg", caption: "앙상블 넘버 (2023)", credit: "프로덕션 스틸 · 언론 공개" },
-      { src: "assets/photos/멤피스/멤피스_2025_still.jpg", caption: "Rolling Rocks 무대 (2025)", credit: "프로덕션 스틸 · 언론 공개" }
+      { src: "assets/photos/멤피스/멤피스_2025_still.jpg", caption: "Rolling Rocks 무대 (2025)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/멤피스/멤피스_2023_still2.jpg", caption: "개막 무대 — Rolling Rocks·군무·피날레 (2023)", credit: "언론 공개 · 개막 리뷰" }
     ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
@@ -140,6 +150,9 @@ window.SHOW_EXTRAS = {
   },
 
   "스윙데이즈": {
+    quotes: [
+      { line: "보웅아 — 야스오라고 부르면 돌아볼 거냐?", speaker: "일형 · 야스오", note: "2막 M20 핵심 교환 — 이름과 정체성" }
+    ],
     audience: [
       { quote: "유일한 박사의 뜨거운 애국심과 감동… 최애 뮤지컬로 등극", source: "네이버 블로그 · 내맘대로 인문학", date: "2024.12", url: "https://blog.naver.com/lindaift/223680188126" },
       { quote: "커튼콜 때 관객들은 모두 기립박수", source: "네이버 블로그 · 오늘의 드라마", date: "2024.11", url: "https://blog.naver.com/micahyesung/223671687330" },
@@ -153,6 +166,10 @@ window.SHOW_EXTRAS = {
   },
 
   "더헬멧": {
+    quotes: [
+      { line: "정권이 바뀌어도 우린 그대로야. 왜? 편하니까.", speaker: "룸서울", note: "체제 순응을 응축한 서울 룸의 대표 대사" },
+      { line: "세상이 변해도 이 믹스커피는 남을 걸, 우리처럼?", speaker: "룸서울", note: "변하지 않는 일상의 상징 — 믹스커피" }
+    ],
     audience: [
       { quote: "로비 소품까지 충실한 갓극", source: "네이버 블로그 · 행복따리", date: "2026.07", url: "https://blog.naver.com/charming_graphy/224345715562" },
       { quote: "몰입도가 중요한데 정말 최고였다", source: "네이버 블로그 · 공연기록", date: "2024.07", url: "https://blog.naver.com/gunbbbang_/223502595804" }
@@ -234,6 +251,10 @@ window.SHOW_EXTRAS = {
   },
 
   "비더슈탄트": {
+    quotes: [
+      { line: "이 칼 앞에 맹세해, 우린 서로 세상 끝까지 목숨 다해 지킨다고", speaker: "매그너스 · 아벨", note: "두 사람의 맹세 — 작품의 정서적 중심" },
+      { line: "부서질 듯 가느다란 한 줄기의 빛, 양날의 검 같은 위태로움", speaker: "매그너스 · 프롤로그 「양날의 검」", note: "저항의 위태로움을 여는 첫 넘버" }
+    ],
     audience: [
       { quote: "절대 강추! 감동의 눈물을 흘리고 싶은 짜릿한 카타르시스", source: "네이버 블로그 · gogo며들기", date: "2022.11", url: "https://blog.naver.com/juimju1208/223231381000" },
       { quote: "탄탄한 내용, 웅장한 넘버, 뛰어난 노래 실력으로 이입이 좋았다", source: "네이버 블로그 · 이지한 일상", date: "2022.09", url: "https://blog.naver.com/tooeasy_/222854515536" }
