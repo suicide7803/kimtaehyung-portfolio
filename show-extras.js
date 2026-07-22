@@ -93,5 +93,71 @@ window.SHOW_EXTRAS = {
       { src: "assets/photos/매디슨/매디슨_2025_still.jpg", caption: "삼연 (2025)", credit: "프로덕션 스틸 · 언론 공개" }
     ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+  },
+
+  "카포네 트릴로지": {
+    audience: [
+      { quote: "영화 같은 연출에 엄청난 연기 실력, 보는 내내 입을 다물지 못하고 몰입", source: "네이버 블로그 · 새봄 in 취향가옥", date: "2025.05", url: "https://blog.naver.com/saebom_eugene/223876579578" },
+      { quote: "전회 매진인 핫한 대학로 연극", source: "네이버 블로그 · 쎄려니", date: "2025.03", url: "https://blog.naver.com/sseryuni/223803148480" },
+      { quote: "극대화된 관음에의 허용과 스타일리시한 미장센", source: "네이버 블로그 · 나무&", date: "2021.10", url: "https://blog.naver.com/faithjjj/222540043119" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/카포네트릴로지/카포네_2021_still.jpg", caption: "렉싱턴 호텔 661호 (2021)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/카포네트릴로지/카포네_2025_still.jpg", caption: "2025 프로덕션", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+  },
+
+  "벙커 트릴로지": {
+    audience: [
+      { quote: "참혹하지만 아름다운 인간의 초상", source: "네이버 블로그 · 자유로운영혼", date: "2025.10", url: "https://blog.naver.com/freespirit___/224044969774" },
+      { quote: "표만 있으면 무조건 들어가서 보시는 것을 적극 추천", source: "네이버 블로그 · 늘보토끼의 공연전시 일지", date: "2025.12", url: "https://blog.naver.com/hopeful1101/224123172734" },
+      { quote: "정말 오랜만에 심장 빨리 뛰는 공연을 보고 왔어요", source: "네이버 블로그 · 뿔로그", date: "2026.01", url: "https://blog.naver.com/oxo777777/224164793307" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/벙커트릴로지/벙커_2017_still.jpg", caption: "참호 속 장면 (2017)", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+  },
+
+  "미러 (A Mirror)": {
+    audience: [
+      { quote: "웃기고, 감동적이고, 신기하고, 반전 짜릿하고", source: "네이버 블로그 · 순간을 소중하게", date: "2025.07", url: "https://blog.naver.com/around_5_am/223941569110" },
+      { quote: "연극 속 연극이 또 반전의 연극이 되는 흥미로운 연극", source: "네이버 블로그 · 영혼의 잡덕수프", date: "2025.07", url: "https://blog.naver.com/jobduglife/223939939077" },
+      { quote: "예상치 못한 반전으로 큰 사랑을 받은", source: "네이버 블로그 · 루이스뚱이의 일상", date: "2025.07", url: "https://blog.naver.com/ddongee17/223921118731" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/미러/미러_2025_still.jpg", caption: "예식 장면 (2025 초연)", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+  },
+
+  "스윙데이즈": {
+    audience: [
+      { quote: "유일한 박사의 뜨거운 애국심과 감동… 최애 뮤지컬로 등극", source: "네이버 블로그 · 내맘대로 인문학", date: "2024.12", url: "https://blog.naver.com/lindaift/223680188126" },
+      { quote: "커튼콜 때 관객들은 모두 기립박수", source: "네이버 블로그 · 오늘의 드라마", date: "2024.11", url: "https://blog.naver.com/micahyesung/223671687330" },
+      { quote: "감동 가득 무대", source: "네이버 블로그 · 채널샤넬", date: "2026.06", url: "https://blog.naver.com/2jonga/224329697158" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/스윙데이즈/스윙데이즈_2024_still.jpg", caption: "초연 무대 (2024)", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+  },
+
+  "더헬멧": {
+    audience: [
+      { quote: "로비 소품까지 충실한 갓극", source: "네이버 블로그 · 행복따리", date: "2026.07", url: "https://blog.naver.com/charming_graphy/224345715562" },
+      { quote: "몰입도가 중요한데 정말 최고였다", source: "네이버 블로그 · 공연기록", date: "2024.07", url: "https://blog.naver.com/gunbbbang_/223502595804" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/더헬멧/더헬멧_2018_still.jpg", caption: "룸알레포 장면 (2018)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/더헬멧/더헬멧_2019_still.png", caption: "분할 무대 (2019)", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   }
 };
