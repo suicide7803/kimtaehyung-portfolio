@@ -47,6 +47,10 @@ window.SHOW_EXTRAS = {
   },
 
   "마리 퀴리": {
+    quotes: [
+      { line: "당신은 왜 과학을 하십니까?", speaker: "피에르", note: "마리와 피에르의 첫 만남 장면 — 명대사로 회자" },
+      { line: "애썼어 마리, 충분한 삶이었어.", speaker: "안느", note: "마리의 고단했던 삶에 대한 마지막 위로" }
+    ],
     audience: [
       { quote: "이렇게 울었던 공연은 처음이야", source: "네이버 블로그 · 청인재의 아카이브", date: "2025.09", url: "https://blog.naver.com/cij_bookshelf/224008196669" },
       { quote: "화려한 쇼보다 깊고 진한 감동을 원한다면 반드시 만나야 할 뮤지컬", source: "네이버 블로그 · 안 녕 일 기", date: "2025.05", url: "https://blog.naver.com/tjsdudrhadl/223881582610" },
@@ -77,6 +81,9 @@ window.SHOW_EXTRAS = {
   },
 
   "팬레터": {
+    quotes: [
+      { line: "아이고, 우리 원고 때문에? 괜찮소. 그깟 거 김형이라면 한 획에 써도 명작이겠지요. 대충 쓰시오.", speaker: "이윤", note: "4연 대본집 28p 인용 — 세 배우(철윤·형훈윤·표윤)가 각기 다른 톤으로 연기하는 대표 장면" }
+    ],
     audience: [
       { quote: "너무너무 좋은 공연", source: "네이버 블로그 · 별을 잇는 사람", date: "2026.06", url: "https://blog.naver.com/12009701/224304180453" },
       { quote: "감동 그 자체. 여러분 보세요. 재밌습니다", source: "네이버 블로그 · 다온", date: "2026.05", url: "https://blog.naver.com/yume917/224280256375" },
@@ -303,7 +310,12 @@ window.SHOW_EXTRAS = {
       { quote: "너무너무 행복하고 좋았다", source: "네이버 블로그 · 오늘 하루도", date: "2025.07", url: "https://blog.naver.com/seulgi066/224344512798" },
       { quote: "여운이 가득했던", source: "네이버 블로그 · 찬찬히", date: "2025.07", url: "https://blog.naver.com/o3o_0511/224351114274" }
     ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/아몬드/아몬드_2025_still1.jpg", caption: "재연 무대 — 소년을 둘러싼 시선들 (2025)", credit: "언론 공개" },
+      { src: "assets/photos/아몬드/아몬드_2025_still2.jpg", caption: "재연 무대 장면 (2025, NOL 유니플렉스)", credit: "언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "천 개의 파랑": {
