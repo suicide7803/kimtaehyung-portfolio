@@ -37,6 +37,15 @@ window.SHOW_EXTRAS = {
     quotes_note: "대본 기준 주요 대사. 2026.7.25 두산아트센터 개막 — 관객·언론 리뷰는 개막 후 수집 예정."
   },
 
+  "사악한 소년": {
+    quotes: [
+      { line: "법정이야말로 가장 완벽한 실험실이지.", speaker: "듀크", note: "인간을 체커판 위의 말로 보는 궤변 — 작품의 악" },
+      { line: "당신이 어떤 사람이든 상관없다. 제겐 아빠 대신이었다.", speaker: "세이지 · 폴의 묘지에서", note: "폭력의 대물림을 끊는 애도" },
+      { line: "나침반을 가지고 있지 않아도 길을 잃지 않을 것이다.", speaker: "세이지", note: "1장부터 이어진 나침반 모티프의 최종 내면화 — 마지막 대사" }
+    ],
+    quotes_note: "0707 신판 트리트먼트 기준 주요 대사(11장 「저문 꽃은 다시 피지만」)."
+  },
+
   "마리 퀴리": {
     audience: [
       { quote: "이렇게 울었던 공연은 처음이야", source: "네이버 블로그 · 청인재의 아카이브", date: "2025.09", url: "https://blog.naver.com/cij_bookshelf/224008196669" },
@@ -131,7 +140,9 @@ window.SHOW_EXTRAS = {
     ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
     photos: [
-      { src: "assets/photos/벙커트릴로지/벙커_2017_still.jpg", caption: "참호 속 장면 (2017)", credit: "프로덕션 스틸 · 언론 공개" }
+      { src: "assets/photos/벙커트릴로지/벙커_2017_still.jpg", caption: "참호 속 장면 (2017)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/벙커트릴로지/벙커_2018_still.jpg", caption: "소총 대치 장면 (2018 재연)", credit: "프레스콜 · 언론 공개" },
+      { src: "assets/photos/벙커트릴로지/벙커_2019_still.jpg", caption: "주요 장면 모음 (2019)", credit: "언론 공개" }
     ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
