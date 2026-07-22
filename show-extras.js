@@ -339,5 +339,37 @@ window.SHOW_EXTRAS = {
   "모범생들": {
     audience: [ { quote: "작은 감동으로 가득 채워줬습니다", source: "네이버 블로그 · 스트레스제로", date: "2012.02", url: "https://blog.naver.com/jslee402/10133161394" } ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "어쩔 수 없는 막, 다른 길에서": {
+    audience: [
+      { quote: "이머시브 공연이지만 부담스럽지 않은 수준의 참여라서 좋았다", source: "네이버 블로그 · 혀기의 소소한 블로그", date: "2021.03", url: "https://blog.naver.com/classical97/222287610353" },
+      { quote: "2층에서 일어난 일들이 제일 좋았다", source: "네이버 블로그 · 혀기의 소소한 블로그", date: "2021.03", url: "https://blog.naver.com/classical97/222287610353" }
+    ],
+    audience_note: "전태일기념관 제작 이머시브(2021 초연, 김태형 연출)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "월하가요": {
+    audience: [
+      { quote: "우연히 보게 된 공연이지만 너무 재밌었어요", source: "네이버 블로그 · Life is a Journey", date: "2023.06", url: "https://blog.naver.com/sealice/223132643234" },
+      { quote: "새로운 시도였고 재미도 있었기에 전반적으로는 매우 만족스러운 공연이었다", source: "네이버 블로그 · 소근소근", date: "2023.06", url: "https://blog.naver.com/suhaniee/223142578212" }
+    ],
+    audience_note: "강릉 선교장 고택 이머시브(2023 초연, 김태형 연출)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "땡큐 베리 스트로베리": {
+    audience: [
+      { quote: "진짜진짜 슬펐고 여운이 많이 남는 뮤지컬이었다", source: "네이버 블로그 · 김다감의 취미생활", date: "2021.07", url: "https://blog.naver.com/9amzaw/222428784053" },
+      { quote: "넓은 의미의 사랑 얘기였고 메시지도 있고 감동도 있었습니다", source: "네이버 블로그 · 미헤이 컬쳐데이", date: "2021.07", url: "https://blog.naver.com/nggaggi/222448359631" }
+    ],
+    audience_note: "2021 재연(김태형 연출, 서경대 스콘1관)의 공개 관람 후기 발췌. 초연(2018)은 타 연출. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "개와 고양이의 시간": {
+    audience: [
+      { quote: "인간 VS 인간, 인간 VS 동물이 서로 기대어 사랑하는 모습은 한없이 따뜻하고 아름답다", source: "네이버 블로그 · 하얀나무 극장에 가다", date: "2020.08", url: "https://blog.naver.com/hanseul73/222056662352" },
+      { quote: "관극으로 지쳤던 내 마음은 다시, 관극으로 위로 받는다 … 주제는 힐링", source: "네이버 블로그 · 하얀나무 극장에 가다", date: "2020.08", url: "https://blog.naver.com/hanseul73/222056662352" }
+    ],
+    audience_note: "2020 초연(김태형 연출, 드림아트센터 1관)의 공개 관람 후기 발췌. 2021 재연·2025는 타 연출이라 제외. 각 후기의 저작권은 작성자에게 있음."
   }
 };
