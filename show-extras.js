@@ -307,5 +307,37 @@ window.SHOW_EXTRAS = {
   "한밤중에 개에게 일어난 의문의 사건": {
     audience: [ { quote: "후기가 너무 좋아서 우리 크리스마스 문화활동으로 당첨", source: "네이버 블로그 · eRICA'sTORY", date: "2015.12", url: "https://blog.naver.com/kjherica/220578734255" } ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "아나키스트": {
+    audience: [
+      { quote: "초연이라는데 완성도나 연기력, 넘버까지 모두 좋아서", source: "네이버 블로그 · 쏠라의 문화 탐방기", date: "2025.01", url: "https://blog.naver.com/onlylove0908/223736241287" },
+      { quote: "웃음과 감동이 뒤섞인 공연의 매력을 일깨워 준 창작극", source: "네이버 블로그 · 언제나 좋은 시절", date: "2025.02", url: "https://blog.naver.com/windforlife/223745036704" },
+      { quote: "잔잔한 감동을 가져온다", source: "네이버 블로그 · 사랑, 함께 했던 시간에 대한 예의", date: "2025.01", url: "https://blog.naver.com/hyoniholic/223736022589" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "부치하난": {
+    audience: [
+      { quote: "나의 평점은 별 4개, 화려한 무대장치와 수시로 바뀌는 세트들", source: "네이버 블로그 · 너굴's 스토리", date: "2024.09", url: "https://blog.naver.com/nugulpanda/223593745300" },
+      { quote: "대립구도가 확실한 점이 너무 좋았어요", source: "네이버 블로그 · Silverpaper", date: "2024.09", url: "https://blog.naver.com/silverpap2r_/223593305881" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [ { src: "assets/photos/부치하난/부치하난_2024_still.png", caption: "초대형 고래 무대 (2024)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+  },
+
+  "브루클린": {
+    audience: [
+      { quote: "폭발적인 가창력! 가슴을 울리는 힐링 뮤지컬", source: "네이버 블로그 · 타오르는 태양", date: "2013.01", url: "https://blog.naver.com/kk97653/70157890932" },
+      { quote: "벅찬 감동이 남아 있었다", source: "네이버 블로그 · 로폰의 즐거운 하루", date: "2013.02", url: "https://blog.naver.com/weeeunjee/30160607876" }
+    ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "모범생들": {
+    audience: [ { quote: "작은 감동으로 가득 채워줬습니다", source: "네이버 블로그 · 스트레스제로", date: "2012.02", url: "https://blog.naver.com/jslee402/10133161394" } ],
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
   }
 };
