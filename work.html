@@ -185,6 +185,7 @@
 </div>
 <script src="db-data.js"></script>
 <script src="show-extras.js"></script>
+<script src="comments-config.js"></script>
 <script src="assets/vendor/motion.min.js"></script>
 <script>
 (function(){
@@ -298,7 +299,7 @@
   var ex=EXTRAS[work.title];
   if(ex){
     h+='<section class="block extras"><div class="sec-head" data-reveal><h2>공연 아카이브</h2><span class="hn">언론·관객 리뷰 · 공연 사진 · 주요 대사</span></div>';
-    h+='<div class="ex-note" data-reveal><b>1단계</b> — DB 정보 정리 완료. 이 아래는 <b>2단계</b> 확장 영역으로, 언론·관객 리뷰와 공연 사진, 주요 대사를 검색·직접입력으로 축적한다. 현재 <b>빵야</b>에 시드 데이터를 넣어 구조를 시연 중.</div>';
+    h+='<div class="ex-note" data-reveal>언론·관객 리뷰와 공연 사진, 주요 대사를 검색·직접입력으로 축적하는 <b>공연 아카이브</b>입니다. 자료가 확보된 작품부터 순차적으로 채워집니다.</div>';
 
     /* 주요 대사 */
     h+='<div class="ex-block" data-reveal><h3>주요 대사 <span class="tag '+(ex.quotes&&ex.quotes.length?'live':'soon')+'">'+(ex.quotes&&ex.quotes.length?'시드':'준비중')+'</span></h3>';
@@ -356,6 +357,12 @@
     h+='</section>';
   }
 
+  /* ---------- comments (모든 작품, Disqus) ---------- */
+  h+='<section class="block" data-reveal><div class="sec-head"><h2>방명록 · 코멘트</h2><span class="hn">이 작품을 보셨나요? 감상을 남겨주세요</span></div>';
+  h+='<div id="disqus_thread"></div>';
+  h+='<div id="cmt_fallback" class="ex-empty" style="display:none">코멘트 기능을 준비 중입니다.</div>';
+  h+='</section>';
+
   root.innerHTML=h;
 
   /* deep-linked season: scroll into view */
@@ -363,6 +370,23 @@
     var tgt=document.getElementById('s'+seasonHint);
     if(tgt) setTimeout(function(){tgt.scrollIntoView({behavior:'smooth',block:'center'});},250);
   }
+
+  /* ---------- comments (Disqus) ---------- */
+  (function(){
+    var sn=(window.DISQUS_SHORTNAME||'').trim();
+    var fb=document.getElementById('cmt_fallback');
+    if(!sn){ if(fb) fb.style.display='block'; return; }
+    window.disqus_config=function(){
+      this.page.identifier='work:'+work.title;
+      this.page.url=location.origin+location.pathname+'#'+encodeURIComponent(work.title);
+      this.page.title=work.title+' — 김태형 연출';
+    };
+    var s=document.createElement('script');
+    s.src='https://'+sn+'.disqus.com/embed.js';
+    s.setAttribute('data-timestamp',+new Date());
+    s.async=true;
+    (document.head||document.body).appendChild(s);
+  })();
 
   /* ---------- motion ---------- */
   var M=window.Motion, reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -36,7 +36,9 @@ window.SHOW_EXTRAS = {
     ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
     photos: [
-      { src: "assets/photos/마리퀴리/마리퀴리_2020_still.jpg", caption: "라듐 공장 장면 (2020)", credit: "프로덕션 스틸 · 언론 공개" }
+      { src: "assets/photos/마리퀴리/마리퀴리_2020_still.jpg", caption: "라듐 공장 장면 (2020)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/마리퀴리/마리퀴리_2020_still2.jpg", caption: "프레스콜 — 전 배우 넘버 (2020)", credit: "프레스콜 · 언론 공개" },
+      { src: "assets/photos/마리퀴리/마리퀴리_2020_still3.jpg", caption: "라듐의 밤 장면 (2020)", credit: "프레스콜 · 언론 공개" }
     ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
@@ -64,7 +66,9 @@ window.SHOW_EXTRAS = {
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
     photos: [
       { src: "assets/photos/팬레터/팬레터_2021_still.jpg", caption: "문우회 장면 (2021)", credit: "프로덕션 스틸 · 언론 공개" },
-      { src: "assets/photos/팬레터/팬레터_2025_still.jpg", caption: "10주년 공연 (2025)", credit: "프로덕션 스틸 · 언론 공개" }
+      { src: "assets/photos/팬레터/팬레터_2025_still.jpg", caption: "10주년 공연 (2025)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/팬레터/팬레터_2021_still2.jpg", caption: "4연 프레스콜 — 편지 장면 (2021)", credit: "프레스콜 · 언론 공개" },
+      { src: "assets/photos/팬레터/팬레터_2025_still2.jpg", caption: "10주년 프레스콜 — 문우회 대치 (2025)", credit: "프레스콜 · 언론 공개" }
     ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
