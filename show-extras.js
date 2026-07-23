@@ -4,6 +4,88 @@
 // 리뷰는 실제 게시물의 짧은 발췌를 출처·링크와 함께 인용(창작 금지).
 // 사진은 제작사 배포(언론 공개) 프로덕션 스틸 — 저작권은 각 제작사에 있으며 크레딧 표기.
 window.SHOW_EXTRAS = {
+  "초록": {
+    audience: [
+      { quote: "다시 한번 더 보러 가고 싶다", source: "네이버 블로그 · 뮤미땅의 사부작사부작", date: "2026.03", url: "https://blog.naver.com/mumittang/224213818165" },
+      { quote: "재밌는 뮤지컬로 탄생했다", source: "네이버 블로그 · live every minute", date: "2026.02", url: "https://blog.naver.com/enddl0911/224187230178" },
+      { quote: "그렇게 기대하고 보고 싶었던 뮤지컬", source: "네이버 블로그 · 서툰 관객의 지독한 시선", date: "2026.03", url: "https://blog.naver.com/mint_baby_g/224215951248" }
+    ],
+    audience_note: "2026 초연(김태형 연출, 링크아트센터드림 드림3관)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "옥탑방 고양이": {
+    audience: [
+      { quote: "10년 만에 다시 봐도 재밌는 연극", source: "네이버 블로그 · 마녀의 은밀한 연구실", date: "2025.04", url: "https://blog.naver.com/alicec__/223824414955" },
+      { quote: "연극하면 떠오르는 아주 유명한 작품", source: "네이버 블로그 · 소중한 보금자리", date: "2026.02", url: "https://blog.naver.com/dfgfdertre/224192012601" },
+      { quote: "공연 내내 시간 가는줄 모르고 재밌게 봤습니다", source: "네이버 블로그 · 자몽이와 전국팔도", date: "2025.11", url: "https://blog.naver.com/with__mong/224061100282" }
+    ],
+    audience_note: "대학로 장기 공연(김태형 연출) '더 라스트 시즌'의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "연애시대": {
+    audience: [
+      { quote: "본인이 본 몇 안되는 연극중에 제일 재미있는 연극", source: "네이버 블로그 · 힐러리스트", date: "2013.11", url: "https://blog.naver.com/baba_here/90184886613" },
+      { quote: "은근 호평인 공연이길래", source: "네이버 블로그 · 감성큐레이터", date: "2013.10", url: "https://blog.naver.com/ralrapo/100198760208" },
+      { quote: "언제나 내가 좋아하는 공연, 선호하는 공연", source: "네이버 블로그 · lovely_with", date: "2013.11", url: "https://blog.naver.com/lovely_with/140200616175" }
+    ],
+    audience_note: "2011·2013 연극(김태형 연출, 김수로프로젝트, 대학로)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "내일 공연인데 어떡하지": {
+    audience: [
+      { quote: "메시지와 재미가 함께 한 연극이다", source: "네이버 블로그 · 읽고 걷는 삶의 재발견", date: "2017.07", url: "https://blog.naver.com/scent72/221060370600" },
+      { quote: "워낙 단기간 하는 극이라서 못 볼 뻔했는데 다행히 표를 구했어요", source: "네이버 블로그 · For Forever.", date: "2017.07", url: "https://blog.naver.com/epilography/221044080352" }
+    ],
+    audience_note: "2013·2017 연극(김태형 연출, 지이선 작, 대학로예술극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "내일도 공연할 수 있을까": {
+    audience: [
+      { quote: "아주 흥미로운 공연이었습니다", source: "네이버 블로그 · 봉봉오쇼콜라", date: "2014.08", url: "https://blog.naver.com/tenderfox/220091452821" },
+      { quote: "진짜! 진짜!! 오랜만에 본 유진언니 공연", source: "네이버 블로그 · daL _B", date: "2014.08", url: "https://blog.naver.com/constant_r/220101705184" }
+    ],
+    audience_note: "2014 관객참여형 연극(김태형 연출, 씨어터RPG Ver.2.0)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "두결한장": {
+    audience: [
+      { quote: "영화와 비슷한 부분과 각색된 부분이 적절히 조화되어 있었어요", source: "네이버 블로그 · For Forever.", date: "2014.10", url: "https://blog.naver.com/epilography/220141734682" },
+      { quote: "그들의 진실된 사랑에 박수를 보낸다", source: "네이버 블로그 · 엔냥의 한줄놀이", date: "2014.10", url: "https://blog.naver.com/nadiyaggo/220150929398" }
+    ],
+    audience_note: "2014 음악극(김태형 연출, '두 번의 결혼식과 한 번의 장례식', DCF대명문화공장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "베헤모스": {
+    audience: [
+      { quote: "현실을 꼬집는 영화 같은 연극", source: "네이버 블로그 · 무비무비", date: "2017.03", url: "https://blog.naver.com/winterwind19/220962198544" },
+      { quote: "다음 이야기가 궁금하게 만드는 극, 너무 좋다", source: "네이버 블로그 · 사랑, 함께 했던 시간에 대한 예의", date: "2017.02", url: "https://blog.naver.com/hyoniholic/220939608096" },
+      { quote: "프리뷰 같지않게 완성도 있는 공연이었어요", source: "네이버 블로그 · Musical AND Travel", date: "2017.02", url: "https://blog.naver.com/wisdom_jh337/220927687651" }
+    ],
+    audience_note: "2017 초연(김태형 연출, 충무아트센터 중극장 블랙)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "푸른 눈 박연": {
+    audience: [
+      { quote: "지금껏 뮤지컬을 봐오면서 처음 느낀 감정", source: "네이버 블로그 · amy with", date: "2013.11", url: "https://blog.naver.com/mo_on_uh/90185139888" }
+    ],
+    audience_note: "2013 가무극(김태형 연출, 성남아트센터 오페라하우스)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "신창극시리즈2 우주소리": {
+    audience: [
+      { quote: "무대는 조명과 소품으로 신비롭고 아름다운 우주를 잘 표현해냈고", source: "네이버 블로그 · 항상 즐거운 날이 되기를", date: "2018.10", url: "https://blog.naver.com/2000121037/221387412758" }
+    ],
+    audience_note: "2018 초연(구성·각색·연출 김태형, 국립극장 달오름극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
+  "BBK라는 이름의 떡밥": {
+    audience: [
+      { quote: "연극과 연극하는 나를 돌아보는 이중구조가 딜레마적 상황을 재치있게 포착한다", source: "네이버 블로그 · 수상한 소문", date: "2012.08", url: "https://blog.naver.com/kdoonga/30144042944" },
+      { quote: "두 편 모두 굉장히 기대했던 작품", source: "네이버 블로그 · 서울프린지페스티벌", date: "2012.09", url: "https://blog.naver.com/hellofringe/80168045176" }
+    ],
+    audience_note: "2012 연극(김태형 연출, 극사발 프로젝트 공동창작, 카톨릭청년회관 다리)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+  },
+
   "빵야": {
     quotes: [
       { line: "영문도 모르고 끌려와서 모두 모두 총이 됐어", speaker: "빵야 · 99식 장총", note: "작품을 관통하는 핵심 대사 — 도구가 된 존재들의 자기고백" },
@@ -239,6 +321,12 @@ window.SHOW_EXTRAS = {
   },
 
   "보니 앤 클라이드": {
+    audience: [
+      { quote: "마치 보니랑 클라이드의 집에 제가 잠깐 놀러 간 것 같은 느낌", source: "네이버 블로그 · 초쵸춉의 소소한 여행일기", date: "2026.02", url: "https://blog.naver.com/chochocho_o/224189345399" },
+      { quote: "음악이 진짜 중독성 있어요", source: "네이버 블로그 · 크레센도 : 점점 크게", date: "2026.01", url: "https://blog.naver.com/so891111/224155626681" },
+      { quote: "배나라 배우님은 눈빛 자체가 이미 클라이드 그 자체였고", source: "네이버 블로그 · 라쏘의 하루", date: "2026.02", url: "https://blog.naver.com/oozzzi/224192962177" }
+    ],
+    audience_note: "2025–2026 시즌(김태형 연출, 홍익대 대학로 아트센터 대극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
     photos: [ { src: "assets/photos/보니앤클라이드/보니앤클라이드_2025_still.jpg", caption: "무대 장면 (2025)", credit: "프로덕션 스틸 · 언론 공개" } ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
@@ -283,6 +371,11 @@ window.SHOW_EXTRAS = {
   },
 
   "언더스터디": {
+    audience: [
+      { quote: "배우들 연기의 진수를 보고싶으신 분들께 추천", source: "네이버 블로그 · 해피더쿠의 즐거운 생활", date: "2022.01", url: "https://blog.naver.com/dmstjrooda/222618912927" },
+      { quote: "무대 뒤, 배우들의 애환을 담아낸 내용이라 기대하면서 예매", source: "네이버 블로그 · 어제와 오늘", date: "2022.01", url: "https://blog.naver.com/dusk3012/222628418399" }
+    ],
+    audience_note: "2021–2022 한국 초연(김태형 연출, 예술의전당 자유소극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
     photos: [ { src: "assets/photos/언더스터디/언더스터디_2021_still.jpg", caption: "초연 무대 (2021)", credit: "프로덕션 스틸 · 언론 공개" } ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
@@ -300,9 +393,16 @@ window.SHOW_EXTRAS = {
   "금란방": {
     audience: [
       { quote: "여지껏 본 적 없는 장르라 추천드려요", source: "네이버 블로그 · 해밍의 하루", date: "2024.09", url: "https://blog.naver.com/moonhaemini/223589931076" },
-      { quote: "단순한 오락을 넘어 관객에게 깊은 생각과 감동을 줄 수 있다", source: "네이버 블로그 · 치링치링", date: "2024.09", url: "https://blog.naver.com/tkxkdwhdk888/223572111875" }
+      { quote: "단순한 오락을 넘어 관객에게 깊은 생각과 감동을 줄 수 있다", source: "네이버 블로그 · 치링치링", date: "2024.09", url: "https://blog.naver.com/tkxkdwhdk888/223572111875" },
+      { quote: "요즘 가장 핫한 공연", source: "네이버 블로그 · WANNA B", date: "2025.06", url: "https://blog.naver.com/songsu374/223910304760" },
+      { quote: "뮤지컬의 화려함을 한껏 뽐내면서도 연극적 상상과 재치를 놓치지 않았다", source: "네이버 블로그 · rright-r", date: "2024.09", url: "https://blog.naver.com/rright-r/223577779326" }
     ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/금란방/금란방_2024_still1.jpg", caption: "앙상블 장면 (2024)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/금란방/금란방_2024_still2.jpg", caption: "무대 장면 (2024)", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "아몬드": {
@@ -319,7 +419,11 @@ window.SHOW_EXTRAS = {
   },
 
   "천 개의 파랑": {
-    audience: [ { quote: "지난해 5월에 처음 보고 푹 빠져든 뒤", source: "네이버 블로그 · 이야기를 찾는 사람", date: "2025.01", url: "https://blog.naver.com/felizerin/223770539006" } ],
+    audience: [
+      { quote: "지난해 5월에 처음 보고 푹 빠져든 뒤", source: "네이버 블로그 · 이야기를 찾는 사람", date: "2025.01", url: "https://blog.naver.com/felizerin/223770539006" },
+      { quote: "탄탄한 스토리라인 인간과 휴머노이드의 만남을 잘 풀어낸", source: "네이버 블로그 · eunpiri715", date: "2025.03", url: "https://blog.naver.com/eunpiri715/223779306827" },
+      { quote: "찾아간 공연에서 저는 따뜻한 위로를 받고", source: "네이버 블로그 · jaykey0103", date: "2025.08", url: "https://blog.naver.com/jaykey0103/223964693828" }
+    ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
   },
 
@@ -328,7 +432,9 @@ window.SHOW_EXTRAS = {
       { quote: "막공 3일 전 첫 경험한 게 너무 아쉬울 정도로 좋았던", source: "네이버 블로그 · 캠핑갈까영", date: "2024.08", url: "https://blog.naver.com/joycamp0/223568508316" },
       { quote: "너무 재밌게 보고 온", source: "네이버 블로그 · 혤로, 연뮤덕", date: "2024.07", url: "https://blog.naver.com/everday_pit-a-pat/223523887747" }
     ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [ { src: "assets/photos/오늘처음만드는뮤지컬/오늘처음_2024_still.jpg", caption: "연남장 캬바레 무대 (2024)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "이토록 보통의": {
@@ -339,7 +445,7 @@ window.SHOW_EXTRAS = {
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
   },
 
-  "0528": {
+  "#0528": {
     audience: [
       { quote: "보는 내내 엄마 미소를 짓느라 끝나고 나올 때 잇몸이 다 마를 지경", source: "네이버 블로그 · 혼자서도 잘 놀아요", date: "2025.11", url: "https://blog.naver.com/cocod4321/224053677134" },
       { quote: "웃음과 감동의 두 마리 토끼를 잡은 작품", source: "네이버 블로그 · 미래를 준비하는 사람들", date: "2026.01", url: "https://blog.naver.com/cgs2020/224238141733" }
@@ -349,12 +455,16 @@ window.SHOW_EXTRAS = {
 
   "글로리아": {
     audience: [ { quote: "내가 관람한 연극 중 가장 잘 만든 극이라고 말하고 싶다", source: "네이버 블로그 · Rejoice Always!", date: "2017.08", url: "https://blog.naver.com/somabo/221068227942" } ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [ { src: "assets/photos/글로리아/글로리아_2016_still.jpg", caption: "잡지사 사무실 (2016 초연)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "한밤중에 개에게 일어난 의문의 사건": {
     audience: [ { quote: "후기가 너무 좋아서 우리 크리스마스 문화활동으로 당첨", source: "네이버 블로그 · eRICA'sTORY", date: "2015.12", url: "https://blog.naver.com/kjherica/220578734255" } ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [ { src: "assets/photos/한밤중에개/한밤중에개_2015_still.jpg", caption: "크리스토퍼 (2015 한국 초연)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "아나키스트": {
@@ -381,12 +491,19 @@ window.SHOW_EXTRAS = {
       { quote: "폭발적인 가창력! 가슴을 울리는 힐링 뮤지컬", source: "네이버 블로그 · 타오르는 태양", date: "2013.01", url: "https://blog.naver.com/kk97653/70157890932" },
       { quote: "벅찬 감동이 남아 있었다", source: "네이버 블로그 · 로폰의 즐거운 하루", date: "2013.02", url: "https://blog.naver.com/weeeunjee/30160607876" }
     ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/브루클린/브루클린_2012_still1.jpg", caption: "콘서트 뮤지컬 무대 (2012)", credit: "프로덕션 스틸 · 언론 공개" },
+      { src: "assets/photos/브루클린/브루클린_2012_still2.jpg", caption: "공연 장면 (2012)", credit: "프로덕션 스틸 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "모범생들": {
     audience: [ { quote: "작은 감동으로 가득 채워줬습니다", source: "네이버 블로그 · 스트레스제로", date: "2012.02", url: "https://blog.naver.com/jslee402/10133161394" } ],
-    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
+    photos: [ { src: "assets/photos/모범생들/모범생들_2017_still.jpg", caption: "무대 장면 (2017 프레스콜)", credit: "프레스콜 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "어쩔 수 없는 막, 다른 길에서": {
@@ -394,7 +511,12 @@ window.SHOW_EXTRAS = {
       { quote: "이머시브 공연이지만 부담스럽지 않은 수준의 참여라서 좋았다", source: "네이버 블로그 · 혀기의 소소한 블로그", date: "2021.03", url: "https://blog.naver.com/classical97/222287610353" },
       { quote: "2층에서 일어난 일들이 제일 좋았다", source: "네이버 블로그 · 혀기의 소소한 블로그", date: "2021.03", url: "https://blog.naver.com/classical97/222287610353" }
     ],
-    audience_note: "전태일기념관 제작 이머시브(2021 초연, 김태형 연출)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "전태일기념관 제작 이머시브(2021 초연, 김태형 연출)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
+    photos: [
+      { src: "assets/photos/어쩔수없는막/어쩔수없는막_2021_still1.jpg", caption: "무대 장면 (2021)", credit: "뉴시스 · 언론 공개" },
+      { src: "assets/photos/어쩔수없는막/어쩔수없는막_2021_still2.jpg", caption: "가이드 생존권 장면 (2021)", credit: "뉴시스 · 언론 공개" }
+    ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
 
   "월하가요": {
@@ -418,6 +540,8 @@ window.SHOW_EXTRAS = {
       { quote: "인간 VS 인간, 인간 VS 동물이 서로 기대어 사랑하는 모습은 한없이 따뜻하고 아름답다", source: "네이버 블로그 · 하얀나무 극장에 가다", date: "2020.08", url: "https://blog.naver.com/hanseul73/222056662352" },
       { quote: "관극으로 지쳤던 내 마음은 다시, 관극으로 위로 받는다 … 주제는 힐링", source: "네이버 블로그 · 하얀나무 극장에 가다", date: "2020.08", url: "https://blog.naver.com/hanseul73/222056662352" }
     ],
-    audience_note: "2020 초연(김태형 연출, 드림아트센터 1관)의 공개 관람 후기 발췌. 2021 재연·2025는 타 연출이라 제외. 각 후기의 저작권은 작성자에게 있음."
+    audience_note: "2020 초연(김태형 연출, 드림아트센터 1관)의 공개 관람 후기 발췌. 2021 재연·2025는 타 연출이라 제외. 각 후기의 저작권은 작성자에게 있음.",
+    photos: [ { src: "assets/photos/개와고양이의시간/개와고양이_2020_still.jpg", caption: "초연 무대 (2020)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   }
 };
