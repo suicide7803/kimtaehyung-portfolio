@@ -332,6 +332,11 @@ window.SHOW_EXTRAS = {
   },
 
   "존경하는 엘레나 선생님": {
+    audience: [
+      { quote: "배우분들이 이렇게 연기를 잘해서 화가 치밀어 오르는 극은 정말 처음이었네요", source: "네이버 블로그 · 꿈을 향한 정거장", date: "2020.06", url: "https://blog.naver.com/qhrguscjf99/222008213621" },
+      { quote: "흥미로운 연극이 생겨 예매하고 보고왔습니다", source: "네이버 블로그 · 평범한 하루", date: "2020.07", url: "https://blog.naver.com/tjklc0310/222032150825" }
+    ],
+    audience_note: "2020 공연(김태형 연출, 홍익대 대학로 아트센터 소극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
     photos: [ { src: "assets/photos/존경하는엘레나선생님/존경하는엘레나_2020_still.jpg", caption: "무대 장면 (2020)", credit: "프로덕션 스틸 · 언론 공개" } ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
