@@ -375,7 +375,6 @@ window.SHOW_EXTRAS = {
     press: [
       { outlet: "오마이뉴스", date: "2025.05", quote: "코로나19 팬데믹 탓에", url: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003127429" },
       { outlet: "엑스포츠뉴스", date: "2025.03", quote: "피비린내 나는 복수극", url: "https://www.xportsnews.com/article/1974550" },
-      { outlet: "뉴스컬처", date: "2019.01", quote: "호텔의 비좁은 방 661호", url: "http://www.newsculture.press/view.htm?idxno=2019012501195379436" },
       { outlet: "한경닷컴", date: "2025.03", quote: "대학로 오픈런 무대, 사건에 빠져들다", url: "https://www.hankyung.com/article/202503257618H" },
       { outlet: "SWTV뉴스", date: "2025.03", quote: "시카고의 좁은 호텔 방 안, 직접 목격하는 세 번의 살인", url: "https://swtvnews.com/news/newsview.php?ncode=1065603472559187" }
     ],
@@ -387,8 +386,9 @@ window.SHOW_EXTRAS = {
     ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
     photos: [
-      { src: "assets/photos/카포네트릴로지/카포네_2021_still.jpg", caption: "렉싱턴 호텔 661호 (2021)", credit: "프로덕션 스틸 · 언론 공개" },
-      { src: "assets/photos/카포네트릴로지/카포네_2025_still.jpg", caption: "2025 프로덕션", credit: "프로덕션 스틸 · 언론 공개" }
+      { src: "assets/photos/카포네트릴로지/카포네_2015_still.jpg", caption: "초연 — 렉싱턴 호텔 661호 이머시브 무대 (2015)", credit: "뉴시스 · 언론 공개" },
+      { src: "assets/photos/카포네트릴로지/카포네_2018_still.jpg", caption: "3연 장면 — 김도빈·손지윤 (2018)", credit: "스타데일리뉴스 · 언론 공개" },
+      { src: "assets/photos/카포네트릴로지/카포네_2025_still.jpg", caption: "4연 장면 (2025)", credit: "프로덕션 스틸 · 언론 공개" }
     ],
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
   },
