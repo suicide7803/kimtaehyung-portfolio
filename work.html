@@ -318,7 +318,10 @@
     if(ex.press&&ex.press.length){
       h+='<div class="press">';
       ex.press.forEach(function(p){
-        h+='<div class="p"><div class="pq">“'+esc(p.quote)+'”</div><div class="pm">'+esc(p.outlet)+(p.date?' · '+esc(p.date):'')+(p.context?' <span class="ctx">· '+esc(p.context)+'</span>':'')+'</div></div>';
+        var pout = p.url
+          ? '<a class="src-link" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(p.outlet||'언론')+' ↗</a>'
+          : esc(p.outlet||'');
+        h+='<div class="p"><div class="pq">“'+esc(p.quote)+'”</div><div class="pm">'+pout+(p.date?' · '+esc(p.date):'')+(p.context?' <span class="ctx">· '+esc(p.context)+'</span>':'')+'</div></div>';
       });
       h+='</div>';
       if(ex.press_note) h+='<div class="ex-note" style="margin-top:14px">'+esc(ex.press_note)+'</div>';
