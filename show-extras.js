@@ -6,6 +6,8 @@
 window.SHOW_EXTRAS = {
   "신과 함께 - 이승편": {
     press: [
+      { outlet: "뉴시스", date: "2019.06", quote: "진정한 한국형 창작뮤지컬을 만났다", url: "http://www.newsis.com/view/?id=NISX20190628_0000694579" },
+      { outlet: "동아닷컴 스포츠", date: "2019.06", quote: "'착하게 살자'던 '신과 함께', 이제는 '다 같이 살'", url: "http://sports.donga.com/3/all/20190626/96180011/2" },
       { outlet: "연합뉴스TV", date: "2019.06", quote: "원작자도 눈물나", url: "http://www.yonhapnewstv.co.kr/MYH20190624018100038/?did=1825m" },
       { outlet: "아이뉴스24", date: "2019.06", quote: "음악·무대적으로 다른 시도를 해보고 있습니다", context: "김태형 연출", url: "http://www.inews24.com/view/1183599" }
     ],
@@ -22,6 +24,8 @@ window.SHOW_EXTRAS = {
 
   "인트라무로스": {
     press: [
+      { outlet: "KFE뉴스", date: "2025.12", quote: "김태형 연출, 현지은 작가, 박윤솔 작곡가의 조합으로", url: "https://www.kfenews.co.kr/news/articleView.html?idxno=650758" },
+      { outlet: "더뮤지컬", date: "2025.12", quote: "구치소에서 진행되는 연극 수업을 통해 밝혀지는 진실", url: "http://www.themusical.co.kr/Magazine/Detail?num=5553" },
       { outlet: "더뮤지컬", date: "2025.12", quote: "대학로의 믿고 보는 연출가 김태형", context: "엠비제트 2026 라인업", url: "https://www.themusical.co.kr/News/Detail?num=14574" },
       { outlet: "뉴시스", date: "2025.12", quote: "연극 '인트라무로스', '두 번째 아이' 등 신작들", url: "https://www.newsis.com/view/NISX20251209_0003433412" }
     ],
@@ -30,6 +34,7 @@ window.SHOW_EXTRAS = {
 
   "두 번째 아이": {
     press: [
+      { outlet: "뉴스컬처", date: "2025.12", quote: "다비드 포앙키노스의 소설을 원작으로 하는 작품", url: "https://www.nc.press/news/articleView.html?idxno=601234" },
       { outlet: "뉴시스", date: "2025.12", quote: "연극 '인트라무로스', '두 번째 아이' 등 신작들을 선보일 예정", context: "엠비제트 2026 라인업", url: "https://www.newsis.com/view/NISX20251209_0003433412" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -67,6 +72,9 @@ window.SHOW_EXTRAS = {
 
   "오월엔 결혼할꺼야": {
     press: [
+      { outlet: "연합뉴스", date: "2007.07", quote: "대학로 씨어터 디아더에서", url: "https://n.news.naver.com/mnews/article/001/0001694861?sid=103" },
+      { outlet: "매일신문", date: "2009.09", quote: "맛깔스런 대사와", url: "https://n.news.naver.com/mnews/article/088/0000140741?sid=102" },
+      { outlet: "전자신문", date: "2011.04", quote: "시즌 6을 개막하기에", url: "https://n.news.naver.com/mnews/article/030/0002115041?sid=103" },
       { outlet: "연합뉴스", date: "2007.07", quote: "세 여자 친구의 결혼과 사랑, 우정이 입에 착착 달라붙는", context: "김효진 작·김태형 연출", url: "https://n.news.naver.com/mnews/article/001/0001695477?sid=103" },
       { outlet: "문화일보", date: "2010.11", quote: "계속되는 흥행에 힘입어", context: "시즌1", url: "https://n.news.naver.com/mnews/article/086/0002026774" }
     ],
@@ -148,6 +156,9 @@ window.SHOW_EXTRAS = {
 
   "베헤모스": {
     press: [
+      { outlet: "헤럴드경제", date: "2017.03", quote: "무대에 펼쳐진 현실, 그 씁쓸한 뒷맛", url: "http://biz.heraldcorp.com/view.php?ud=201703311606136330124_1" },
+      { outlet: "연합뉴스", date: "2017.03", quote: "괴물을 삼킨 인간…연극 '베헤모스'", url: "http://app.yonhapnews.co.kr/YNA/Basic/SNS/r.aspx?c=AKR20170317114100704" },
+      { outlet: "서울신문", date: "2017.03", quote: "인간 심연에 자리잡은 악마성에 대한 이야기", url: "http://www.seoul.co.kr/news/newsView.php?id=20170302024011" },
       { outlet: "서울경제", date: "2017.03", quote: "욕망에 기생하는 惡···인간은 '괴물'", url: "http://www.sedaily.com/NewsView/1OD7QRAXIB" },
       { outlet: "뉴스컬처", date: "2017.02", quote: "어떤 칼도 통하지 않는 괴물이 있다", url: "http://www.newsculture.press/view.htm?idxno=2017021110320022926" }
     ],
@@ -201,6 +212,8 @@ window.SHOW_EXTRAS = {
       { line: "이야기 하나를 아프게 쓰면 아픈 사람 하나가 조금은 나아질지도 몰라.", speaker: "빵야", note: "나나의 초기 창작 동기를 빵야가 고쳐 되뇌는 대사 — 작품 주제의 응축" }
     ],
     press: [
+      { outlet: "오마이뉴스", date: "2024.08", quote: "일본이 남기고 간 '79세' 소총이", url: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003058682" },
+      { outlet: "위드인뉴스", date: "2024.07", quote: "한국 현대사의 비극 속 빵야가", url: "http://www.withinnews.co.kr/news/view.html?section=134&category=137&item=&no=33758" },
       { outlet: "문화뉴스", date: "2024.07", quote: "아픈 시대의 꿈들이 울려퍼지는 소리", context: "재연 리뷰", url: "https://www.mhns.co.kr/news/articleView.html?idxno=613020" },
       { outlet: "ABC뉴스", date: "2026.04", quote: "화려한 무대 장치보다 배우의 힘으로 완성되는 작품", context: "삼연 리뷰", url: "https://www.abcn.kr/news/articleView.html?idxno=87228" }
     ],
@@ -245,6 +258,8 @@ window.SHOW_EXTRAS = {
 
   "마리 퀴리": {
     press: [
+      { outlet: "VOP", date: "2025.08", quote: "방사성 물질 '라듐' 뒤에 감춰진", url: "https://vop.co.kr/A00001677258.html" },
+      { outlet: "한경닷컴", date: "2025.10", quote: "마리퀴리의 고뇌·개츠비의 환상", url: "https://www.hankyung.com/article/2025100231807" },
       { outlet: "기호일보", date: "2025.09", quote: "과학자 아닌 인간 마리를 말하다", url: "http://www.kihoilbo.co.kr/news/articleView.html?idxno=1159856" },
       { outlet: "스타뉴스", date: "2025.08", quote: "빛과 그림자 속 되살아난 위대한 과학자", url: "http://www.starnewsk.com/news/articleView.html?idxno=48300" }
     ],
@@ -269,6 +284,9 @@ window.SHOW_EXTRAS = {
 
   "멤피스": {
     press: [
+      { outlet: "아트인사이트", date: "2025.08", quote: "내 안에 살아 숨쉬네 하카두!", url: "https://www.artinsight.co.kr/news/view.php?no=76816" },
+      { outlet: "더팩트", date: "2025.07", quote: "음악의 힘과 매력에 흠뻑 취해", url: "https://news.tf.co.kr/read/entertain/2225629.htm" },
+      { outlet: "퀸매거진", date: "2025.07", quote: "여름을 뚫고 나를 흔드는 음악", url: "http://www.queen.co.kr/news/articleView.html?idxno=437270" },
       { outlet: "VOP", date: "2025.07", quote: "로큰롤로 뒤흔든 인종차별의 시대", url: "https://vop.co.kr/A00001674745.html" },
       { outlet: "위드인뉴스", date: "2025.07", quote: "차별의 벽을 부순 영혼의 음악", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=36595" }
     ],
@@ -289,6 +307,9 @@ window.SHOW_EXTRAS = {
 
   "팬레터": {
     press: [
+      { outlet: "아트인사이트", date: "2026.02", quote: "나를 잃지 않고 당신에게", url: "https://www.artinsight.co.kr/news/view.php?no=79488" },
+      { outlet: "기호일보", date: "2026.01", quote: "편지로 피어난 그 시절 문인들의", url: "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3010242" },
+      { outlet: "TV데일리", date: "2026.01", quote: "지독하게 매혹적인 사랑의 희열", url: "http://www.tvdaily.co.kr/read.php3?aid=17673399001774080002" },
       { outlet: "SBS", date: "2025.12", quote: "느리지만 묵직한 여운…그것은 사랑이었다", url: "https://ent.sbs.co.kr/news/article.do?article_id=E10010310779" },
       { outlet: "아트인사이트", date: "2026.02", quote: "찬란한 봄과 나란히 앉은 비극", context: "10주년", url: "https://www.artinsight.co.kr/news/view.php?no=79497" }
     ],
@@ -330,6 +351,9 @@ window.SHOW_EXTRAS = {
 
   "매디슨 카운티의 다리": {
     press: [
+      { outlet: "퀸매거진", date: "2025.06", quote: "7년 만에 다시 무대에", url: "http://www.queen.co.kr/news/articleView.html?idxno=436072" },
+      { outlet: "조이뉴스24", date: "2025.05", quote: "단 나흘간의 만남으로", url: "http://www.joynews24.com/view/1841615" },
+      { outlet: "SWTV뉴스", date: "2025.05", quote: "감정의 파도를 느끼게", url: "https://swtvnews.com/news/newsview.php?ncode=1065614694875918" },
       { outlet: "한경닷컴", date: "2025.05", quote: "아내·엄마 아닌 진짜 '나'를 만났다", url: "https://www.hankyung.com/article/202505167474H" },
       { outlet: "문화저널21", date: "2025.05", quote: "7년 만에 돌아온 웰메이드 로맨스 뮤지컬", url: "https://vop.co.kr/A00001671161.html" }
     ],
@@ -349,6 +373,9 @@ window.SHOW_EXTRAS = {
 
   "카포네 트릴로지": {
     press: [
+      { outlet: "오마이뉴스", date: "2025.05", quote: "코로나19 팬데믹 탓에", url: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003127429" },
+      { outlet: "엑스포츠뉴스", date: "2025.03", quote: "피비린내 나는 복수극", url: "https://www.xportsnews.com/article/1974550" },
+      { outlet: "뉴스컬처", date: "2019.01", quote: "호텔의 비좁은 방 661호", url: "http://www.newsculture.press/view.htm?idxno=2019012501195379436" },
       { outlet: "한경닷컴", date: "2025.03", quote: "대학로 오픈런 무대, 사건에 빠져들다", url: "https://www.hankyung.com/article/202503257618H" },
       { outlet: "SWTV뉴스", date: "2025.03", quote: "시카고의 좁은 호텔 방 안, 직접 목격하는 세 번의 살인", url: "https://swtvnews.com/news/newsview.php?ncode=1065603472559187" }
     ],
@@ -368,6 +395,9 @@ window.SHOW_EXTRAS = {
 
   "벙커 트릴로지": {
     press: [
+      { outlet: "위드인뉴스", date: "2026.01", quote: "4년 만에 돌아왔다", url: "http://www.withinnews.co.kr/news/view.html?section=134&category=137&item=&no=35582" },
+      { outlet: "동아일보", date: "2019.01", quote: "전쟁터의 참호처럼 꾸민", url: "http://news.donga.com/3/all/20190115/93701887/1" },
+      { outlet: "문화저널21", date: "2018.12", quote: "세 편의 옴니버스 연극", url: "http://www.vop.co.kr/A00001366953.html" },
       { outlet: "서울경제", date: "2025.12", quote: "참호 속에서 목격하는 전쟁의 비극", url: "https://www.sedaily.com/NewsView/2H1WNDJCAD" },
       { outlet: "문화저널21", date: "2026.01", quote: "전쟁의 참상을 공감각 할 수 있는 무대", url: "https://vop.co.kr/A00001687160.html" }
     ],
@@ -411,6 +441,7 @@ window.SHOW_EXTRAS = {
 
   "스윙데이즈": {
     press: [
+      { outlet: "4th뉴스", date: "2026.05", quote: "유일한 박사 실화 기반 뮤지컬 '스윙데이즈' 흥행 돌풍", url: "http://www.4th.kr/news/articleView.html?idxno=2112114" },
       { outlet: "데일리스마트", date: "2024.11", quote: "과정의 휴머니즘을 담은", context: "암호명 A", url: "http://www.dailysmart.co.kr/news/articleView.html?idxno=100954" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -452,6 +483,7 @@ window.SHOW_EXTRAS = {
 
   "로기수": {
     press: [
+      { outlet: "위드인뉴스", date: "2018.12", quote: "1952년 거제포로수용소의 소년 공산포로", url: "http://withinnews.co.kr/news/view.html?section=169&category=170&item=&no=17455" },
       { outlet: "뉴스컬처", date: "2016.03", quote: "춤을 내세운 뮤지컬의 본보기, 만개해 돌아온", url: "http://www.newsculture.press/view.htm?idxno=2016030710520005903" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -466,6 +498,7 @@ window.SHOW_EXTRAS = {
 
   "리지": {
     press: [
+      { outlet: "위드인뉴스", date: "2024.10", quote: "콘서트와 뮤지컬의 경계를 넘나드는", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=34578" },
       { outlet: "동아닷컴 스포츠", date: "2022.04", quote: "록음악에 살인사건을 때려넣은 희대의 뮤지컬", url: "https://sports.donga.com/article/all/20220419/112965574/2" },
       { outlet: "톱스타뉴스", date: "2024.09", quote: "여성 락 뮤지컬의 진가", url: "http://www.topstarnews.net/news/articleView.html?idxno=15549879" }
     ],
@@ -478,6 +511,8 @@ window.SHOW_EXTRAS = {
 
   "창문 넘어 도망친 100세 노인": {
     press: [
+      { outlet: "위드인뉴스", date: "2019.12", quote: "'삶의 불꽃'을 피우는 100세 노인", url: "http://withinnews.co.kr/news/view.html?section=134&category=137&item=&no=20628" },
+      { outlet: "뉴스컬처", date: "2019.12", quote: "다시 불을 붙여..창문 넘어 도망친 100세 노인", url: "http://www.newsculture.press/view.htm?idxno=2019122714364205055" },
       { outlet: "아트인사이트", date: "2019.12", quote: "반복된 일상에 지친 이들이여, 창문을 넘자", url: "https://www.artinsight.co.kr/news/view.php?no=45316" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -489,6 +524,8 @@ window.SHOW_EXTRAS = {
 
   "바스커빌 - 셜록홈즈 미스터리": {
     press: [
+      { outlet: "뉴스컬처", date: "2024.07", quote: "5명의 배우가 40여개", url: "https://www.newsculture.press/news/articleView.html?idxno=551525" },
+      { outlet: "뉴스컬처", date: "2024.05", quote: "관객리뷰 평점 9.9", url: "https://www.newsculture.press/news/articleView.html?idxno=548818" },
       { outlet: "위드인뉴스", date: "2024.06", quote: "홈즈의 유쾌한 수사가 시작된다", url: "http://www.withinnews.co.kr/news/view.html?section=134&category=137&item=&no=33582" },
       { outlet: "뉴스티엔티", date: "2024.05", quote: "2024년 대학로 공연들 중에서 단연 주목받고 있는 공연", context: "인터파크 평점 9.9", url: "http://www.newstnt.com/news/articleView.html?idxno=376401" }
     ],
@@ -501,6 +538,7 @@ window.SHOW_EXTRAS = {
 
   "보이A": {
     press: [
+      { outlet: "브릿지경제", date: "2023.08", quote: "마지막까지 '나이키 이스케이프'를 신", url: "https://www.viva100.com/main/view.php?key=20230804010001414" },
       { outlet: "위드인뉴스", date: "2023.06", quote: "우리의 편견에 질문을 던지는", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=30944" },
       { outlet: "경인일보", date: "2023.07", quote: "두 번째 삶 꿈꾼 '소년범'", url: "http://www.kyeongin.com/main/view.php?key=20230723010004429" }
     ],
@@ -513,6 +551,9 @@ window.SHOW_EXTRAS = {
 
   "보니 앤 클라이드": {
     press: [
+      { outlet: "퀸매거진", date: "2026.01", quote: "우리에게 내일은", url: "http://www.queen.co.kr/news/articleView.html?idxno=448878" },
+      { outlet: "스포츠월드", date: "2026.01", quote: "1934년 5월", url: "https://www.sportsworldi.com/newsView/20260118504250" },
+      { outlet: "SWTV뉴스", date: "2026.02", quote: "파멸로 내달리는 두", url: "https://www.swtvnews.com/news/newsview.php?ncode=1065602661758619" },
       { outlet: "위드인뉴스", date: "2025.12", quote: "끝을 알 것 같은 비극으로 가는 청춘들", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=38076" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -528,6 +569,8 @@ window.SHOW_EXTRAS = {
 
   "존경하는 엘레나 선생님": {
     press: [
+      { outlet: "노컷뉴스", date: "2020.07", quote: "양심의 기준은 뭘까…'엘레나 선생님'의 질문", url: "https://www.nocutnews.co.kr/news/5386840" },
+      { outlet: "문화저널21", date: "2020.06", quote: "도덕과 욕망에 대한 100분간의 설전", url: "https://www.vop.co.kr/A00001497222.html" },
       { outlet: "위드인뉴스", date: "2020.07", quote: "배우들의 연기가 주는 긴장감과 불편한 설정", url: "http://withinnews.co.kr/news/view.html?section=134&category=137&item=&no=22390" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -542,6 +585,9 @@ window.SHOW_EXTRAS = {
 
   "오펀스": {
     press: [
+      { outlet: "위드인뉴스", date: "2022.12", quote: "단지 필요한 건 단 한마디의 격려일 뿐", url: "http://www.withinnews.co.kr/news/view.html?section=134&category=137&item=&no=29497" },
+      { outlet: "경기일보", date: "2023.01", quote: "베테랑 배우들의 묵직한 메시지, 연극 '오펀스'", url: "http://www.kyeongin.com/main/view.php?key=20230108010001386" },
+      { outlet: "BNT뉴스", date: "2026.04", quote: "9년 만 복귀…'욕설 열연' 파격 변신", url: "https://www.bntnews.co.kr/article/view/bnt202604290166" },
       { outlet: "위드인뉴스", date: "2026.03", quote: "대학로 최고의 화제작 연극 《오펀스》가 4년 만의 돌아왔다", url: "http://www.withinnews.co.kr/news/view.html?section=134&category=137&item=&no=38785" },
       { outlet: "셀럽미디어", date: "2026.04", quote: "격려를 잃은 시대, '오펀스'가 건네는 한마디", url: "http://www.celuvmedia.com/article.php?aid=1776753701519001006" }
     ],
@@ -557,6 +603,8 @@ window.SHOW_EXTRAS = {
 
   "홀연했던 사나이": {
     press: [
+      { outlet: "뉴스컬처", date: "2018.02", quote: "확실히, 아주 다른 뮤지컬 '홀연했던 사나이'", url: "http://www.newsculture.press/view.htm?idxno=2018022309393148515" },
+      { outlet: "이데일리", date: "2021.08", quote: "크게 웃고 즐기려면? 뮤지컬 '홀연했던 사나이'", url: "http://www.edaily.co.kr/news/newspath.asp?newsid=01105366629145352" },
       { outlet: "이투데이", date: "2021.08", quote: "꿈이 있다면 인생은 '희극'", url: "https://www.etoday.co.kr/news/view/2051764" },
       { outlet: "위드인뉴스", date: "2021.07", quote: "허세를 기세로 만드는 작품", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=25323" }
     ],
@@ -572,6 +620,7 @@ window.SHOW_EXTRAS = {
 
   "비더슈탄트": {
     press: [
+      { outlet: "MHN스포츠", date: "2023.10", quote: "평점 9점 이상...대학로 뮤지컬 PICK3", url: "https://www.mhns.co.kr/news/articleView.html?idxno=564228" },
       { outlet: "위드인뉴스", date: "2023.10", quote: "야만의 시대에 살았던 소년들의 격정적인 넘버들", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=31842" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -590,6 +639,8 @@ window.SHOW_EXTRAS = {
 
   "언더스터디": {
     press: [
+      { outlet: "오뉴스", date: "2022.01", quote: "내가 배우가 아니라고?", url: "https://www.onews.tv/news/articleView.html?idxno=109176" },
+      { outlet: "아트인사이트", date: "2022.02", quote: "이해관계를 통해 권한과 권위를 다루는", url: "https://www.artinsight.co.kr/news/view.php?no=58107" },
       { outlet: "경향신문", date: "2022.01", quote: "막 뒤에서 펼쳐지는 진짜 무대 이야기", url: "https://www.khan.co.kr/article/202201091544011" },
       { outlet: "아트인사이트", date: "2022.01", quote: "삶이란 무대 위에선 누구나 주인공", url: "https://www.artinsight.co.kr/news/view.php?no=58065" }
     ],
@@ -620,6 +671,7 @@ window.SHOW_EXTRAS = {
 
   "금란방": {
     press: [
+      { outlet: "한경닷컴", date: "2024.09", quote: "2024년에 문 연 조선 클럽", url: "https://www.hankyung.com/article/202409283926H" },
       { outlet: "매일경제", date: "2024.09", quote: "내로남불을 깨는 통쾌함", context: "서울예술단 삼연", url: "https://n.news.naver.com/mnews/article/009/0005366567?sid=103" },
       { outlet: "조선일보", date: "2024.09", quote: "국립극장 후끈 달구는 '조선 19禁'", url: "https://n.news.naver.com/mnews/article/023/0003858156?sid=103" }
     ],
@@ -640,6 +692,10 @@ window.SHOW_EXTRAS = {
 
   "아몬드": {
     press: [
+      { outlet: "서울신문", date: "2025.10", quote: "주인공 무표정인데 눈물·콧물이", url: "https://www.seoul.co.kr/news/life/performance/2025/10/29/20251029025002" },
+      { outlet: "JTBC", date: "2025.10", quote: "무대에 오른 문학…뮤지컬 '아몬드'", url: "https://news.jtbc.co.kr/article/NB12266949" },
+      { outlet: "오마이뉴스", date: "2025.12", quote: "감정을 느끼지 못하는 삶", url: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003189179" },
+      { outlet: "오마이뉴스", date: "2025.07", quote: "배우와 관객 찬사 한몸에 받은", url: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003151929" },
       { outlet: "조이뉴스24", date: "2025.10", quote: "한권의 책을 읽었다⋯한글의 아름다운 매력", url: "http://www.joynews24.com/view/1901691" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -657,6 +713,9 @@ window.SHOW_EXTRAS = {
 
   "천 개의 파랑": {
     press: [
+      { outlet: "위드인뉴스", date: "2024.05", quote: "2035년의 서울을", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=33436" },
+      { outlet: "매일신문", date: "2024.04", quote: "따뜻한 위로를 전하고", url: "https://www.imaeil.com/page/view/2024042408304003028" },
+      { outlet: "이데일리", date: "2025.01", quote: "K뮤지컬의 저력을", url: "http://www.edaily.co.kr/news/newspath.asp?newsid=01207046642041656" },
       { outlet: "데일리스마트", date: "2024.06", quote: "인간과 비인간의 경계를 허무는 연대와 공존", url: "https://www.dailysmart.co.kr/news/articleView.html?idxno=88389" },
       { outlet: "위드인뉴스", date: "2025.03", quote: "가장 차가워 보이는 소재로 가장 따스한 이야기를 그린 작품", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=35757" }
     ],
@@ -671,6 +730,7 @@ window.SHOW_EXTRAS = {
 
   "오늘 처음 만드는 뮤지컬": {
     press: [
+      { outlet: "브라보마이라이프", date: "2025.03", quote: "정해진 대본 없이 배우와 관객이", url: "https://bravo.etoday.co.kr/view/atc_view/16134" },
       { outlet: "문화뉴스", date: "2017.04", quote: "즉흥 뮤지컬 '오늘 처음 만드는 뮤지컬'", url: "http://www.munhwanews.com/news/articleView.html?idxno=51626" },
       { outlet: "위드인뉴스", date: "2024.12", quote: "오늘이 첫공이자, 막공이다", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=35179" }
     ],
@@ -686,6 +746,9 @@ window.SHOW_EXTRAS = {
 
   "이토록 보통의": {
     press: [
+      { outlet: "위드인뉴스", date: "2021.09", quote: "사랑이야기 그 너머에 있는 감정", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=25803" },
+      { outlet: "엑스포츠뉴스", date: "2021.10", quote: "특별한 감성 로맨스 (ft.반전)", url: "https://www.xportsnews.com/?ac=article_view&entry_id=1491078" },
+      { outlet: "아트인사이트", date: "2021.09", quote: "사랑에 빠진 프란체스와 레미", url: "https://www.artinsight.co.kr/news/view.php?no=56107" },
       { outlet: "MHN", date: "2021.10", quote: "사랑하는 사람과 똑같은 복제인간", url: "http://www.mhns.co.kr/news/articleView.html?idxno=512756" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
@@ -710,6 +773,8 @@ window.SHOW_EXTRAS = {
 
   "글로리아": {
     press: [
+      { outlet: "문화뉴스", date: "2017.08", quote: "연극 '글로리아'가 보여주는 거대한 충격", url: "http://www.munhwanews.com/news/articleView.html?idxno=71555" },
+      { outlet: "서울신문", date: "2017.07", quote: "가장 오래 근무했지만 모두에게 소외된", url: "http://www.seoul.co.kr/news/newsView.php?id=20170727029008" },
       { outlet: "뉴스컬처", date: "2016.08", quote: "외면받던 존재의 선택, 인간성 상실의 오늘을 비추다", context: "초연", url: "http://www.newsculture.press/view.htm?idxno=2016080512390036908" },
       { outlet: "헤럴드경제", date: "2017.08", quote: "진한 여운과 동반되는 근본적인 성찰", context: "재연", url: "https://biz.heraldcorp.com/view.php?ud=201708111821238452373_1" }
     ],
@@ -722,6 +787,8 @@ window.SHOW_EXTRAS = {
 
   "한밤중에 개에게 일어난 의문의 사건": {
     press: [
+      { outlet: "BNT뉴스", date: "2015.12", quote: "열다섯 자폐아의 성장통은 결국", url: "https://www.bntnews.co.kr/article/view/bnt201512220006" },
+      { outlet: "파이낸셜뉴스", date: "2015.12", quote: "범인을 잡겠다며 마을 사람들을", url: "http://www.fnnews.com/news/201512161821488312" },
       { outlet: "뉴스컬처", date: "2015.12", quote: "눈이 즐겁다? 마음마저 사로잡는", url: "http://www.newsculture.press/view.htm?idxno=2015121706510045829" },
       { outlet: "마이데일리", date: "2015.12", quote: "그건 내가 뭐든 할 수 있다는 뜻인가요?", context: "마지막 대사", url: "http://www.mydaily.co.kr/new_yk/html/read.php?newsid=201512151109911151" }
     ],
@@ -778,6 +845,8 @@ window.SHOW_EXTRAS = {
 
   "모범생들": {
     press: [
+      { outlet: "서울신문", date: "2017.07", quote: "친구는 적이 되었을까", url: "https://n.news.naver.com/mnews/article/081/0002836814" },
+      { outlet: "문화뉴스", date: "2017.06", quote: "원조 '지탱극'인 '모범생들'은", url: "http://www.munhwanews.com/news/articleView.html?idxno=60376" },
       { outlet: "연합뉴스", date: "2017.07", quote: "엘리트의 비열한 욕망", url: "https://m.entertain.naver.com/article/001/0009403099" },
       { outlet: "베타뉴스", date: "2012.05", quote: "싸구려 가치관에 왜곡된 욕망", url: "http://www.betanews.net/article/562055" }
     ],
@@ -808,6 +877,7 @@ window.SHOW_EXTRAS = {
 
   "월하가요": {
     press: [
+      { outlet: "서울문화투데이", date: "2023.05", quote: "이머시브 뮤지컬 '월하가요'", url: "http://www.sctoday.co.kr/news/articleView.html?idxno=40717" },
       { outlet: "한국일보", date: "2023.06", quote: "배우·관객이 함께 만드는 '환상의 밤'", context: "300년 고택 선교장", url: "https://n.news.naver.com/mnews/article/469/0000744818?sid=103" },
       { outlet: "스타뉴스", date: "2023.06", quote: "강릉 지역 스토리 기반 창작 공연 호평", url: "http://www.starnewsk.com/news/articleView.html?idxno=37881" }
     ],
@@ -820,6 +890,10 @@ window.SHOW_EXTRAS = {
   },
 
   "땡큐 베리 스트로베리": {
+    press: [
+      { outlet: "스포츠월드", date: "2023.04", quote: "2021년 재연되며 한국 관객들의 많은 사랑을 받아 왔다", url: "http://www.slist.kr/news/articleView.html?idxno=445460" }
+    ],
+    press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
     audience: [
       { quote: "진짜진짜 슬펐고 여운이 많이 남는 뮤지컬이었다", source: "네이버 블로그 · 김다감의 취미생활", date: "2021.07", url: "https://blog.naver.com/9amzaw/222428784053" },
       { quote: "넓은 의미의 사랑 얘기였고 메시지도 있고 감동도 있었습니다", source: "네이버 블로그 · 미헤이 컬쳐데이", date: "2021.07", url: "https://blog.naver.com/nggaggi/222448359631" }
