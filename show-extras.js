@@ -394,7 +394,8 @@ window.SHOW_EXTRAS = {
     audience: [
       { quote: "웃기고, 감동적이고, 신기하고, 반전 짜릿하고", source: "네이버 블로그 · 순간을 소중하게", date: "2025.07", url: "https://blog.naver.com/around_5_am/223941569110" },
       { quote: "연극 속 연극이 또 반전의 연극이 되는 흥미로운 연극", source: "네이버 블로그 · 영혼의 잡덕수프", date: "2025.07", url: "https://blog.naver.com/jobduglife/223939939077" },
-      { quote: "예상치 못한 반전으로 큰 사랑을 받은", source: "네이버 블로그 · 루이스뚱이의 일상", date: "2025.07", url: "https://blog.naver.com/ddongee17/223921118731" }
+      { quote: "예상치 못한 반전으로 큰 사랑을 받은", source: "네이버 블로그 · 루이스뚱이의 일상", date: "2025.07", url: "https://blog.naver.com/ddongee17/223921118731" },
+      { quote: "나에게 <미러>는 평생 끝나지 않는 연극이 되었다", source: "티스토리 · 행성B", date: "2025.08", url: "https://space1344.tistory.com/173" }
     ],
     audience_note: "예매처·SNS·블로그 공개 후기 중 호평을 선별 인용(짧은 발췌 + 원문 링크). 각 후기의 저작권은 작성자에게 있음.",
     photos: [
