@@ -388,7 +388,12 @@ window.SHOW_EXTRAS = {
 
   "미러 (A Mirror)": {
     press: [
-      { outlet: "서울문화투데이", date: "2025.07", quote: "말해지지 않은 것들을 통해 오히려 더 많은 것을 드러내는 연극", context: "거울은 무엇을 비추고 있는가 · 예스24아트원 1관", url: "http://www.sctoday.co.kr/news/articleView.html?idxno=45671" }
+      { outlet: "한겨레", date: "2025.07", quote: "연극과 검열에 대한 재기발랄하고 스릴 넘치는 풍자", context: "관객이 자발적으로 '스포일러 금지' 외치는 연극", url: "https://www.hani.co.kr/arti/culture/music/1207305.html" },
+      { outlet: "중앙일보", date: "2025.07", quote: "이 결혼은 허가되지 않은 연극…검열과 예술의 한판 승부", url: "https://www.joongang.co.kr/article/25350928" },
+      { outlet: "한국일보", date: "2025.07", quote: "위장 결혼식에서 시작된 극중극… 허구 속에 드러나는 진실", url: "https://www.hankookilbo.com/News/Read/A2025070816120000017" },
+      { outlet: "서울신문", date: "2025.07", quote: "관객이 곧 하객… 경보음 울리는 '불온한 결혼식'", context: "연극 리뷰", url: "https://www.seoul.co.kr/news/life/performance/2025/07/29/20250729030001" },
+      { outlet: "세계일보", date: "2025.09", quote: "검열의 국가 폭력 실체 비추다", context: "'이 공연은 허가되지 않았습니다'", url: "https://www.segye.com/newsView/20250914507750" },
+      { outlet: "서울문화투데이", date: "2025.07", quote: "말해지지 않은 것들을 통해 오히려 더 많은 것을 드러내는 연극", context: "거울은 무엇을 비추고 있는가", url: "http://www.sctoday.co.kr/news/articleView.html?idxno=45671" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
     audience: [
