@@ -387,6 +387,10 @@ window.SHOW_EXTRAS = {
   },
 
   "미러 (A Mirror)": {
+    press: [
+      { outlet: "서울문화투데이", date: "2025.07", quote: "말해지지 않은 것들을 통해 오히려 더 많은 것을 드러내는 연극", context: "거울은 무엇을 비추고 있는가 · 예스24아트원 1관", url: "http://www.sctoday.co.kr/news/articleView.html?idxno=45671" }
+    ],
+    press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
     audience: [
       { quote: "웃기고, 감동적이고, 신기하고, 반전 짜릿하고", source: "네이버 블로그 · 순간을 소중하게", date: "2025.07", url: "https://blog.naver.com/around_5_am/223941569110" },
       { quote: "연극 속 연극이 또 반전의 연극이 되는 흥미로운 연극", source: "네이버 블로그 · 영혼의 잡덕수프", date: "2025.07", url: "https://blog.naver.com/jobduglife/223939939077" },
