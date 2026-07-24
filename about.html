@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — 김태형 연출</title>
+<meta name="description" content="연극·뮤지컬 연출가 김태형 — 약력·연출 세계·경력·수상.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0d0b08;--panel:#161209;--glass:rgba(24,19,12,.55);--glass-strong:rgba(20,16,10,.82);
+    --line:rgba(239,233,220,.10);--line-strong:rgba(239,233,220,.17);
+    --ink:#efe9dc;--ink-dim:#a89e8a;--ink-faint:#6f6656;
+    --gold:#c9a961;--gold-bright:#e0c17d;--gold-dim:#8a7442;
+    --serif:"Noto Serif KR","Nanum Myeongjo",serif;
+    --sans:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--void);color:var(--ink);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px}
+  body::after{content:"";position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  nav.top{position:fixed;top:0;left:0;right:0;z-index:1001;background:var(--glass);
+    backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);border-bottom:1px solid var(--line)}
+  nav.top .inner{max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .wordmark{font-family:var(--serif);font-weight:600;font-size:15px}
+  .wordmark span{color:var(--gold)}
+  .navlinks{display:flex;gap:24px;font-size:13px;letter-spacing:.06em;color:var(--ink-dim)}
+  .navlinks a{transition:color .2s}
+  .navlinks a:hover{color:var(--gold-bright)}
+  .navlinks a.on{color:var(--gold)}
+  .navlinks a.nav-db{color:var(--gold);border:1px solid var(--gold-dim);border-radius:99px;padding:5px 13px}
+  .navlinks a.nav-db:hover{background:rgba(201,169,97,.12)}
+  @media(max-width:640px){.navlinks{gap:13px;font-size:12px}}
+
+  header.hero{padding:150px 0 40px;position:relative;
+    background:radial-gradient(ellipse 90% 80% at 50% -10%, rgba(201,169,97,.09), transparent 60%)}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8vw,88px);line-height:1.02;letter-spacing:.01em;text-shadow:0 0 60px rgba(201,169,97,.18)}
+  .hero .lead{margin-top:22px;font-size:17px;color:var(--ink-dim);max-width:640px;line-height:1.95}
+  .hero .lead b{color:var(--ink);font-weight:600}
+
+  section{padding:38px 0}
+  .sh{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;
+    display:flex;align-items:center;gap:14px}
+  .sh::after{content:"";flex:1;height:1px;background:var(--line)}
+  .prose p{font-size:15.5px;color:var(--ink-dim);line-height:2.0;margin-bottom:16px;max-width:720px}
+  .prose p b{color:var(--ink);font-weight:600}
+  .prose .draft{font-size:12px;color:var(--ink-faint);border:1px dashed var(--line-strong);border-radius:10px;padding:10px 14px;margin-top:8px;max-width:720px}
+
+  .facts{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0 4px}
+  .fact{flex:1 1 150px;min-width:140px;padding:18px 20px;border-radius:14px;background:var(--glass);border:1px solid var(--line)}
+  .fact b{display:block;font-family:var(--serif);font-weight:600;font-size:26px;color:var(--gold-bright);line-height:1.2;font-variant-numeric:tabular-nums}
+  .fact span{font-size:11.5px;letter-spacing:.06em;color:var(--ink-faint)}
+
+  .tl{display:grid;gap:2px;border-left:1px solid var(--line-strong);margin-left:6px}
+  .tl .row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:12px 0 12px 24px;position:relative}
+  .tl .row::before{content:"";position:absolute;left:-5px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--gold-dim)}
+  .tl .yr{font-family:var(--serif);font-size:15px;color:var(--gold);font-weight:600}
+  .tl .tx{font-size:14.5px;color:var(--ink-dim);line-height:1.7}
+  .tl .tx b{color:var(--ink);font-weight:600}
+  @media(max-width:560px){.tl .row{grid-template-columns:1fr;gap:4px}}
+
+  .awardlist{display:grid;gap:10px}
+  .aw{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:baseline;padding:15px 18px;border-radius:12px;
+    background:rgba(201,169,97,.05);border:1px solid var(--line)}
+  .aw .y{font-family:var(--serif);font-size:17px;color:var(--gold-bright)}
+  .aw .n{font-size:14.5px;color:var(--ink)}
+  .aw .n small{display:block;color:var(--ink-faint);font-size:12.5px;margin-top:3px}
+  .subnote{margin-top:16px;font-size:12.5px;color:var(--ink-faint);line-height:1.85;max-width:760px}
+  .subnote b{color:var(--gold-dim)}
+
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:4px}
+  .chip{font-size:13px;color:var(--gold-bright);background:rgba(201,169,97,.09);border:1px solid rgba(201,169,97,.26);
+    border-radius:99px;padding:7px 15px;transition:background .2s,transform .2s}
+  .chip:hover{background:rgba(201,169,97,.16);transform:translateY(-1px)}
+
+  .contact{background:var(--glass);border:1px solid var(--line-strong);border-radius:16px;padding:26px 28px;max-width:720px}
+  .contact .k{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .contact .v{font-size:15px;color:var(--ink-dim)}
+  .contact .ph{color:var(--ink-faint);font-style:italic}
+
+  footer{padding:44px 0 90px;font-size:12px;color:var(--ink-faint);border-top:1px solid var(--line);margin-top:24px;line-height:1.95}
+</style>
+</head>
+<body>
+<nav class="top"><div class="inner">
+  <div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div>
+  <div class="navlinks">
+    <a href="index.html#featured">대표작</a>
+    <a href="index.html#awards">수상</a>
+    <a href="about.html" class="on">About</a>
+    <a href="db.html" class="nav-db">DB 열람 →</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">About the Director</div>
+  <h1>김태형</h1>
+  <p class="lead">연극·뮤지컬 연출가. 조명디자인·무대감독으로 커리어를 시작해 <b>2007년 연출로 데뷔</b>,
+  대학로 소극장의 공간 실험에서 대극장 뮤지컬까지 폭넓게 무대를 만들어 왔다.
+  2026년 현재 <b>스무 번째 시즌</b>을 지나고 있다.</p>
+</div></header>
+
+<div class="wrap">
+
+  <section>
+    <div class="sh">약력</div>
+    <div class="facts">
+      <div class="fact"><b>2007 —</b><span>연출 활동 시작</span></div>
+      <div class="fact"><b>59</b><span>고유 작품</span></div>
+      <div class="fact"><b>119</b><span>공연 프로덕션</span></div>
+      <div class="fact"><b>3</b><span>연출상·대상 (뮤지컬어워즈·K-Theater)</span></div>
+    </div>
+    <div class="prose" style="margin-top:22px">
+      <p>한국예술종합학교 연극원 연출과를 졸업했다. 조명디자인과 무대감독으로 현장을 익힌 뒤 연출가로 전향했으며,
+      2007년 데뷔 이래 연극과 뮤지컬 양 장르를 오가며 작업해 왔다.</p>
+      <p>150석 소극장부터 1,250석 대극장까지 규모를 가리지 않고, <b>창작 초연</b>과 <b>라이선스</b>,
+      <b>이머시브·관객참여형</b> 공연까지 다양한 형식을 실험한다. 히스토리 보이즈·팬레터·마리 퀴리·카포네 트릴로지처럼
+      여러 시즌에 걸쳐 다시 무대에 오르는 장기 레퍼토리를 다수 만들었다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">연출 세계</div>
+    <div class="prose">
+      <p>화려한 장치보다 <b>배우의 몸과 공간의 밀도</b>로 승부하는 무대를 지향한다.
+      카포네 트릴로지·벙커 트릴로지의 단일 공간 몰입, 더헬멧의 분할 무대, 미러·경성의 고독한 미식가들의
+      관객참여형 이머시브처럼, 극장이라는 형식 자체를 다시 묻는 작업을 이어 왔다.</p>
+      <p>빵야·베헤모스·히스토리 보이즈에서 보이듯 <b>역사와 사회를 정면으로 응시하는 창작극</b>,
+      그리고 마리 퀴리·매디슨 카운티의 다리 같은 <b>인물의 내면을 파고드는 드라마</b>를 나란히 놓는다.</p>
+      <p class="draft">※ 이 소개 문단은 작품 이력에서 관찰되는 경향을 정리한 초안입니다 — 연출가 본인의 연출관·소개문으로 교체 예정.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">경력</div>
+    <div class="tl">
+      <div class="row"><div class="yr">시작</div><div class="tx"><b>조명디자인 · 무대감독</b><br>무대감독: 뮤지컬 「빨래」·「열한마리 고양이」 외 · 조명디자인: 「판소리 애플그린을 먹다」·「어항 속 물고기」 외</div></div>
+      <div class="row"><div class="yr">2007</div><div class="tx"><b>연출 데뷔</b> — 「오월엔 결혼할꺼야」·「모범생들」 등 대학로 창작 연극</div></div>
+      <div class="row"><div class="yr">2013 —</div><div class="tx"><b>장기 레퍼토리 확립</b> — 히스토리 보이즈·팬레터·모범생들 등 반복 공연 창작극</div></div>
+      <div class="row"><div class="yr">2015 —</div><div class="tx"><b>대극장 라이선스 진출</b> — 한밤중에 개에게 일어난 의문의 사건·두 도시 이야기·멤피스·매디슨 카운티의 다리</div></div>
+      <div class="row"><div class="yr">2021 —</div><div class="tx"><b>이머시브·공간 실험 확장</b> — 어쩔 수 없는 막 다른 길에서(전태일기념관)·월하가요(강릉 선교장)·미러·경성의 고독한 미식가들</div></div>
+      <div class="row"><div class="yr">2023 —</div><div class="tx"><b>창작극 대표작</b> — 빵야(K-Theater Awards 대상), 마리 퀴리 런던 프로덕션·팬레터 해외 라이선스</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">수상 · 성과</div>
+    <div class="awardlist">
+      <div class="aw"><div class="y">2021</div><div class="n">제5회 한국뮤지컬어워즈 연출상 <small>마리 퀴리 — 대상 포함 5관왕</small></div></div>
+      <div class="aw"><div class="y">2023</div><div class="n">제61회 K-Theater Awards 대상 <small>빵야</small></div></div>
+      <div class="aw"><div class="y">2024</div><div class="n">제8회 한국뮤지컬어워즈 연출상 <small>멤피스 — 작품상 포함 5관왕</small></div></div>
+      <div class="aw"><div class="y">2026</div><div class="n">제62회 백상예술대상 백상연극상 후보 <small>미러 (A Mirror)</small></div></div>
+    </div>
+    <p class="subnote">
+      <b>연출상 후보</b> 제1회 로기수(2017) · 제3회 매디슨 카운티의 다리(2019) · 제9회 스윙 데이즈(2025) · 제10회 매디슨 카운티의 다리(2026) &nbsp;·&nbsp;
+      <b>히스토리 보이즈</b> 2014 대한민국 연극대상 작품상 &nbsp;·&nbsp;
+      <b>빵야</b> 2022 창작산실 올해의신작 · 월간 한국연극 2023 베스트 7 &nbsp;·&nbsp;
+      <b>KOPIS 2025</b> 연출작 5편이 장르별 티켓판매 TOP 10 동시 진입(매디슨 카운티의 다리 1,000석 미만 1위) — 연극·뮤지컬 양 장르 복수 진입은 2025년 유일.
+    </p>
+  </section>
+
+  <section>
+    <div class="sh">대표작</div>
+    <div class="chips">
+      <a class="chip" href="work.html#%EB%A7%88%EB%A6%AC%20%ED%80%B4%EB%A6%AC">마리 퀴리</a>
+      <a class="chip" href="work.html#%EB%B9%B5%EC%95%BC">빵야</a>
+      <a class="chip" href="work.html#%EB%A9%A4%ED%94%BC%EC%8A%A4">멤피스</a>
+      <a class="chip" href="work.html#%ED%8C%AC%EB%A0%88%ED%84%B0">팬레터</a>
+      <a class="chip" href="work.html#%EC%B9%B4%ED%8F%AC%EB%84%A4%20%ED%8A%B8%EB%A6%B4%EB%A1%9C%EC%A7%80">카포네 트릴로지</a>
+      <a class="chip" href="work.html#%EB%AF%B8%EB%9F%AC%20(A%20Mirror)">미러</a>
+      <a class="chip" href="work.html#%EB%A7%A4%EB%94%94%EC%8A%A8%20%EC%B9%B4%EC%9A%B4%ED%8B%B0%EC%9D%98%20%EB%8B%A4%EB%A6%AC">매디슨 카운티의 다리</a>
+      <a class="chip" href="work.html#%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EB%B3%B4%EC%9D%B4%EC%A6%88">히스토리 보이즈</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">문의</div>
+    <div class="contact">
+      <div class="k">공연 · 섭외 · 협업 문의</div>
+      <div class="v ph">이메일 / 소속·에이전시 연락처 기입 예정 — 확정 후 업데이트합니다.</div>
+    </div>
+  </section>
+
+</div>
+
+<footer><div class="wrap">
+  데이터 출처 — PlayDB 프로필(ManNo 6372) 전수 수집(59작 119시즌) + 티켓링크·예스24·인터파크 보완,
+  수상·성과는 연합뉴스·뉴시스·경향신문·더뮤지컬 등 언론 교차검증 및 KOPIS 티켓판매 분석 보고서(예술경영지원센터).
+  이 페이지는 포트폴리오 목적의 아카이브입니다.
+</div></footer>
+</body>
+</html>
