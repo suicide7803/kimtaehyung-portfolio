@@ -283,8 +283,7 @@ window.WORKS_DATA = {
 "이토록 보통의": { genre:"뮤지컬", debut:2021, credit:"박해림 (극본·작사)", status:"closed", page:"이토록 보통의",
   poster:"assets/posters/이토록보통의_2021.jpg",
   seasons:[
-    {year:2021, label:"재연", dates:"2021.09.14–11.21", venue:"예스24스테이지 3관", poster:"assets/posters/이토록보통의_2021.jpg", cast:"제이 최연우·강혜인·이지수 / 은기 손유동·정휘·신재범"},
-    {year:2021, label:"온라인 중계", dates:"2022.02.14", venue:"온라인", poster:"assets/posters/이토록보통의_2021.jpg"}]},
+    {year:2021, label:"재연", dates:"2021.09.14–11.21", venue:"예스24스테이지 3관", poster:"assets/posters/이토록보통의_2021.jpg", cast:"제이 최연우·강혜인·이지수 / 은기 손유동·정휘·신재범"}]},
 
 "금란방": { genre:"뮤지컬", debut:2022, credit:"박해림 (대본)", status:"closed", page:"금란방",
   desc:"조선의 밀주방 금란방에서 벌어지는 소동극.",
