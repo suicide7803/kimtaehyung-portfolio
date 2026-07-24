@@ -5,6 +5,8 @@
 // 사진은 제작사 배포(언론 공개) 프로덕션 스틸 — 저작권은 각 제작사에 있으며 크레딧 표기.
 window.SHOW_EXTRAS = {
   "신과 함께 - 이승편": {
+    photos: [ { src: "assets/photos/신과함께이승편/신과함께이승편_2019_still.jpg", caption: "재개발 달동네 무대 (2019)", credit: "연합뉴스 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "뉴시스", date: "2019.06", quote: "진정한 한국형 창작뮤지컬을 만났다", url: "http://www.newsis.com/view/?id=NISX20190628_0000694579" },
       { outlet: "동아닷컴 스포츠", date: "2019.06", quote: "'착하게 살자'던 '신과 함께', 이제는 '다 같이 살'", url: "http://sports.donga.com/3/all/20190626/96180011/2" },
@@ -15,6 +17,8 @@ window.SHOW_EXTRAS = {
   },
 
   "미 온 더 송": {
+    photos: [ { src: "assets/photos/미온더송/미온더송_2017_still.jpg", caption: "카바레 'Blue Velvet Live' (2017)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "뉴스컬처", date: "2017.08", quote: "카바레 분위기 속의 뮤지컬 '미 온 더 송'", url: "http://www.newsculture.press/view.htm?idxno=2017082402250051097" },
       { outlet: "헤럴드경제", date: "2017.08", quote: "소소하고 담백한 위로", url: "https://m.entertain.naver.com/article/112/0002951316" }
@@ -64,6 +68,8 @@ window.SHOW_EXTRAS = {
   },
 
   "초록": {
+    photos: [ { src: "assets/photos/초록/초록_2026_still.jpg", caption: "배따라기 모티프 장면 (2026)", credit: "언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "더뮤지컬", date: "2026.03", quote: "운명을 비집고 몰아친 근현대, 뒤늦은 개안", url: "http://www.themusical.co.kr/Magazine/Detail?num=5579" }
     ],
@@ -77,6 +83,8 @@ window.SHOW_EXTRAS = {
   },
 
   "옥탑방 고양이": {
+    photos: [ { src: "assets/photos/옥탑방고양이/옥탑방고양이_2010_still.jpg", caption: "옥탑방 무대 (대학로 공연)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "매일경제", date: "2013.04", quote: "펀(FUN)한, 결코 뻔하지 않은", url: "https://m.entertain.naver.com/article/009/0002927717" }
     ],
@@ -137,6 +145,8 @@ window.SHOW_EXTRAS = {
   },
 
   "베헤모스": {
+    photos: [ { src: "assets/photos/베헤모스/베헤모스_2017_still.jpg", caption: "법정 취조 장면 (2017)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "헤럴드경제", date: "2017.03", quote: "무대에 펼쳐진 현실, 그 씁쓸한 뒷맛", url: "http://biz.heraldcorp.com/view.php?ud=201703311606136330124_1" },
       { outlet: "연합뉴스", date: "2017.03", quote: "괴물을 삼킨 인간…연극 '베헤모스'", url: "http://app.yonhapnews.co.kr/YNA/Basic/SNS/r.aspx?c=AKR20170317114100704" },
@@ -165,6 +175,8 @@ window.SHOW_EXTRAS = {
   },
 
   "신창극시리즈2 우주소리": {
+    photos: [ { src: "assets/photos/신창극우주소리/신창극우주소리_2018_still.jpg", caption: "SF창극 무대 (2018)", credit: "프로덕션 스틸 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "RPM9", date: "2018.10", quote: "창극으로 즐기는 머나먼 우주", url: "http://www.rpm9.com/news/article.html?id=20181023090008" }
     ],
@@ -688,6 +700,8 @@ window.SHOW_EXTRAS = {
   },
 
   "천 개의 파랑": {
+    photos: [ { src: "assets/photos/천개의파랑/천개의파랑_2024_still.jpg", caption: "로봇과 앙상블 — 2035년 서울 (2024)", credit: "연합뉴스 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "위드인뉴스", date: "2024.05", quote: "2035년의 서울을", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=33436" },
       { outlet: "매일신문", date: "2024.04", quote: "따뜻한 위로를 전하고", url: "https://www.imaeil.com/page/view/2024042408304003028" },
@@ -721,6 +735,8 @@ window.SHOW_EXTRAS = {
   },
 
   "이토록 보통의": {
+    photos: [ { src: "assets/photos/이토록보통의/이토록보통의_2021_still.jpg", caption: "별밤 창문 — '어느 밤 그녀가 우주에서' (2021)", credit: "뉴시스 · 언론 공개" } ],
+    photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "위드인뉴스", date: "2021.09", quote: "사랑이야기 그 너머에 있는 감정", url: "http://www.withinnews.co.kr/news/view.html?section=9&category=119&item=&no=25803" },
       { outlet: "엑스포츠뉴스", date: "2021.10", quote: "특별한 감성 로맨스 (ft.반전)", url: "https://www.xportsnews.com/?ac=article_view&entry_id=1491078" },
