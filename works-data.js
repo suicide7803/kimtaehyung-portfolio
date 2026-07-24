@@ -401,26 +401,11 @@ window.WORKS_DATA = {
   seasons:[
     {year:2026, label:"초연 (1막+2막 합본)", dates:"2026.07.25–08.09", venue:"두산아트센터 Space111", poster:"assets/posters/경성의고독한미식가들_2026.jpg"}]},
 
-"두 번째 아이": { genre:"연극", debut:2026, credit:"다비드 포앙키노스 원작, 오세혁 각색", status:"upcoming", page:"두 번째 아이",
-  desc:"연출 크레딧 공식 발표 대기.",
-  seasons:[
-    {year:2026, label:"예정", dates:"2026.12.08–2027.03.28", venue:"LG아트센터 서울 U+ 스테이지"}]},
-
-"인트라무로스": { genre:"연극", debut:2026, credit:"Alexis Michalik", status:"upcoming", page:"인트라무로스",
-  desc:"한국 초연 예정. 티켓오픈·캐스팅 미발표.",
-  seasons:[
-    {year:2026, label:"한국 초연 (예정)", dates:"2026.11.10–2027.02.14", venue:"충무아트센터 중극장 블랙"}]},
-
 "초록": { genre:"뮤지컬", debut:2026, credit:"현지은 (극본·작사), 박윤솔 (작곡)", status:"closed", page:"초록",
   desc:"김동인 「배따라기」와 오셀로를 겹쳐 놓은 창작 초연. 공연예술창작산실 올해의 신작.",
   awards:["2025 공연예술창작산실 올해의신작 선정","이데일리 문화대상 추천작"],
   poster:"assets/posters/초록_2026.webp",
   seasons:[
     {year:2026, label:"초연", dates:"2026.01.27–03.29", venue:"링크아트센터드림 드림3관", poster:"assets/posters/초록_2026.webp", cast:"토마 박규원·손유동·김지철 / 류인/영진 이종석·김찬종·김재한 / 유희 박란주·이한별·전민지"}]},
-
-"사악한 소년": { genre:"뮤지컬", debut:2027, credit:"황은혜", status:"development", page:"사악한 소년",
-  desc:"리딩 공개(2025.10, 한양대 Into the Creation). 본공연 미발표.",
-  seasons:[
-    {year:2025, label:"리딩", dates:"2025.10.22", venue:"성수아트홀 (Into the Creation 2025, 한양대 산학협력·콘진원 멘토링)"}]},
 
 };

@@ -22,24 +22,6 @@ window.SHOW_EXTRAS = {
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
   },
 
-  "인트라무로스": {
-    press: [
-      { outlet: "KFE뉴스", date: "2025.12", quote: "김태형 연출, 현지은 작가, 박윤솔 작곡가의 조합으로", url: "https://www.kfenews.co.kr/news/articleView.html?idxno=650758" },
-      { outlet: "더뮤지컬", date: "2025.12", quote: "구치소에서 진행되는 연극 수업을 통해 밝혀지는 진실", url: "http://www.themusical.co.kr/Magazine/Detail?num=5553" },
-      { outlet: "더뮤지컬", date: "2025.12", quote: "대학로의 믿고 보는 연출가 김태형", context: "엠비제트 2026 라인업", url: "https://www.themusical.co.kr/News/Detail?num=14574" },
-      { outlet: "뉴시스", date: "2025.12", quote: "연극 '인트라무로스', '두 번째 아이' 등 신작들", url: "https://www.newsis.com/view/NISX20251209_0003433412" }
-    ],
-    press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
-  },
-
-  "두 번째 아이": {
-    press: [
-      { outlet: "뉴스컬처", date: "2025.12", quote: "다비드 포앙키노스의 소설을 원작으로 하는 작품", url: "https://www.nc.press/news/articleView.html?idxno=601234" },
-      { outlet: "뉴시스", date: "2025.12", quote: "연극 '인트라무로스', '두 번째 아이' 등 신작들을 선보일 예정", context: "엠비제트 2026 라인업", url: "https://www.newsis.com/view/NISX20251209_0003433412" }
-    ],
-    press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
-  },
-
   "앙상블": {
     press: [
       { outlet: "뉴스컬처", date: "2019.07", quote: "안무를 작품 개발의 출발점으로 시작한 특징", context: "우란문화재단 트라이아웃", url: "http://www.newsculture.press/view.htm?idxno=2019071708513716880" },
@@ -245,15 +227,6 @@ window.SHOW_EXTRAS = {
       { line: "세상에 저절로 터지는 폭탄은 없다는 거.", speaker: "영재", note: "" }
     ],
     quotes_note: "대본 기준 주요 대사. 2026.7.25 두산아트센터 개막 — 관객·언론 리뷰는 개막 후 수집 예정."
-  },
-
-  "사악한 소년": {
-    quotes: [
-      { line: "법정이야말로 가장 완벽한 실험실이지.", speaker: "듀크", note: "인간을 체커판 위의 말로 보는 궤변 — 작품의 악" },
-      { line: "당신이 어떤 사람이든 상관없다. 제겐 아빠 대신이었다.", speaker: "세이지 · 폴의 묘지에서", note: "폭력의 대물림을 끊는 애도" },
-      { line: "나침반을 가지고 있지 않아도 길을 잃지 않을 것이다.", speaker: "세이지", note: "1장부터 이어진 나침반 모티프의 최종 내면화 — 마지막 대사" }
-    ],
-    quotes_note: "0707 신판 트리트먼트 기준 주요 대사(11장 「저문 꽃은 다시 피지만」)."
   },
 
   "마리 퀴리": {
