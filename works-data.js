@@ -178,8 +178,8 @@ window.WORKS_DATA = {
   seasons:[
     {year:2017, label:"초연", dates:"2017.08.18–08.27", venue:"예스24아트원 3관", poster:"assets/posters/미온더송_2017.jpg", cast:"출연 이영미"}]},
 
-"베헤모스": { genre:"연극", debut:2017, credit:"unknown", status:"closed", page:"베헤모스",
-  desc:"법정 스릴러 창작뮤지컬.",
+"베헤모스": { genre:"연극", debut:2017, credit:"정민아 (극작) · 박필주 (원작)", status:"closed", page:"베헤모스",
+  desc:"법정 스릴러 창작연극. 박필주의 KBS 단막극 「괴물」을 정민아가 극작하고 김태형이 연출했다.",
   poster:"assets/posters/베헤모스_2017.webp",
   seasons:[
     {year:2017, label:"초연", dates:"2017.02.01–2017.04.02", venue:"충무아트센터 중극장 블랙", poster:"assets/posters/베헤모스_2017.webp", cast:"오검 정원조·김도현 / 이변 최대훈·김찬호 / 태석 문성일·차서원 / 멀티 권동호·김히어라"}]},
