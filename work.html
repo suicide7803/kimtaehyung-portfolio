@@ -135,6 +135,13 @@
   .ex-note{font-size:12.5px;color:var(--ink-faint);background:rgba(239,233,220,.04);
     border:1px dashed var(--line-strong);border-radius:12px;padding:14px 18px;line-height:1.7;margin-bottom:26px}
   .ex-note b{color:var(--gold)}
+  .director-note{margin-bottom:34px}
+  .director-note .dnote{margin:0;padding:22px 26px;border-radius:16px;
+    background:linear-gradient(180deg,rgba(201,169,97,.10),rgba(201,169,97,.03));
+    border:1px solid rgba(201,169,97,.28);border-left:3px solid var(--gold);
+    font-family:var(--serif);font-size:17px;line-height:1.9;color:var(--ink)}
+  .director-note .dnote b{color:var(--gold-bright);font-weight:600}
+  .director-note .sign{margin-top:14px;text-align:right;font-size:13px;color:var(--gold);letter-spacing:.03em}
   .ex-block{margin-bottom:30px}
   .ex-block h3{font-family:var(--serif);font-size:19px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px}
   .ex-block h3 .tag{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
@@ -300,6 +307,18 @@
   if(ex){
     h+='<section class="block extras"><div class="sec-head" data-reveal><h2>공연 아카이브</h2><span class="hn">언론·관객 리뷰 · 공연 사진 · 주요 대사</span></div>';
     h+='<div class="ex-note" data-reveal>언론·관객 리뷰와 공연 사진, 주요 대사를 검색·직접입력으로 축적하는 <b>공연 아카이브</b>입니다. 자료가 확보된 작품부터 순차적으로 채워집니다.</div>';
+
+    /* 연출 노트 (director's statement) */
+    if(ex.director_note){
+      var dn = (typeof ex.director_note==='string') ? {body:ex.director_note} : ex.director_note;
+      if(dn.body){
+        h+='<div class="ex-block director-note" data-reveal><h3>연출 노트 <span class="tag live">김태형</span></h3>';
+        h+='<blockquote class="dnote">'+esc(dn.body).replace(/\n/g,'<br>')+'</blockquote>';
+        if(dn.sign) h+='<div class="sign">— '+esc(dn.sign)+'</div>';
+        if(dn.note) h+='<div class="ex-subnote">'+esc(dn.note)+'</div>';
+        h+='</div>';
+      }
+    }
 
     /* 주요 대사 */
     h+='<div class="ex-block" data-reveal><h3>주요 대사 <span class="tag '+(ex.quotes&&ex.quotes.length?'live':'soon')+'">'+(ex.quotes&&ex.quotes.length?'시드':'준비중')+'</span></h3>';
