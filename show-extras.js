@@ -14,6 +14,10 @@ window.SHOW_EXTRAS = {
       { outlet: "아이뉴스24", date: "2019.06", quote: "음악·무대적으로 다른 시도를 해보고 있습니다", context: "김태형 연출", url: "http://www.inews24.com/view/1183599" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
+    audience: [
+      { quote: "나오기만 하면 날 펑펑울게 함", source: "X · @HeyreyP", date: "2019.06", url: "https://x.com/HeyreyP/status/1142325172638105600" }
+    ],
+    audience_note: "2019 초연(김태형 연출, 서울예술단, LG아트센터) 개막일 SNS(X) 관객 반응 발췌. 각 게시물의 저작권은 작성자에게 있음.",
   },
 
   "미 온 더 송": {
@@ -244,7 +248,12 @@ window.SHOW_EXTRAS = {
       { line: "적의 적은 동지라고들 하죠. 난 같은 적을 가진 사람들만이 가질 수 있는 강력한 연대를 믿어요.", speaker: "아이나", note: "연대의 논리" },
       { line: "세상에 저절로 터지는 폭탄은 없다는 거.", speaker: "영재", note: "" }
     ],
-    quotes_note: "대본 기준 주요 대사. 2026.7.25 두산아트센터 개막 — 관객·언론 리뷰는 개막 후 수집 예정."
+    quotes_note: "대본 기준 주요 대사. 2026.7.25 두산아트센터 개막 — 관객·언론 리뷰는 개막 후 수집.",
+    audience: [
+      { quote: "역대급 레전드인데요?! 내가 이걸 24,000원에 경험 중이라고요?", source: "X · @yeonmudeock", date: "2026.07", url: "https://x.com/yeonmudeock/status/2080918499879452998" },
+      { quote: "이머시브 극 보다가 우는 게 가능하다니 실화인가..", source: "X · @majesticmiaou", date: "2026.07", url: "https://x.com/majesticmiaou/status/2081341129543565681" }
+    ],
+    audience_note: "2026 초연(김태형 연출, 두산아트센터 Space111) 개막 직후 SNS(X) 관객 반응 발췌. 각 게시물의 저작권은 작성자에게 있음."
   },
 
   "마리 퀴리": {
