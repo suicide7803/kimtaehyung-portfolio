@@ -394,8 +394,8 @@ window.WORKS_DATA = {
     {year:2025, label:"초연", dates:"2025.01.14–04.06", venue:"링크아트센터드림 드림3관", poster:"assets/posters/아나키스트_2025.webp", cast:"덕형 김도빈·문태유·최호승·이진혁 / 자경 김지온·동현·이세헌 / 무혁 박준형·강유찬·홍기범"},
     {year:2026, label:"재연 (예정)", dates:"2026.09.15–12.06", venue:"예스24아트원 1관"}]},
 
-"경성의 고독한 미식가들": { genre:"연극", debut:2026, credit:"박해림", status:"upcoming", page:"경성의 고독한 미식가들",
-  desc:"1930년 경성, 추리와 미식이 결합한 관객참여형 이머시브. 2026년 1막+2막 합본 재연.",
+"경성의 고독한 미식가들": { genre:"연극", debut:2026, credit:"박해림", status:"running", page:"경성의 고독한 미식가들",
+  desc:"1930년 경성, 추리와 미식이 결합한 관객참여형 이머시브. 2026년 1막+2막 합본 초연.",
   poster:"assets/posters/경성의고독한미식가들_2026.jpg",
   seasons:[
     {year:2026, label:"초연 (1막+2막 합본)", dates:"2026.07.25–08.09", venue:"두산아트센터 Space111", poster:"assets/posters/경성의고독한미식가들_2026.jpg"}]},

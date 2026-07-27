@@ -250,10 +250,12 @@ window.SHOW_EXTRAS = {
     ],
     quotes_note: "대본 기준 주요 대사. 2026.7.25 두산아트센터 개막 — 관객·언론 리뷰는 개막 후 수집.",
     audience: [
+      { quote: "이머시브 극 보다가 우는 게 가능하다니 실화인가.. 나도 모르게 과몰입해버림", source: "X · @majesticmiaou", date: "2026.07", url: "https://x.com/majesticmiaou/status/2081341129543565681" },
+      { quote: "한국형 이머시브의 좋은 예로 기록될 것 같다", source: "X · @majesticmiaou", date: "2026.07", url: "https://x.com/majesticmiaou/status/2081370154836148418" },
       { quote: "역대급 레전드인데요?! 내가 이걸 24,000원에 경험 중이라고요?", source: "X · @yeonmudeock", date: "2026.07", url: "https://x.com/yeonmudeock/status/2080918499879452998" },
-      { quote: "이머시브 극 보다가 우는 게 가능하다니 실화인가..", source: "X · @majesticmiaou", date: "2026.07", url: "https://x.com/majesticmiaou/status/2081341129543565681" }
+      { quote: "3시간이 30분 같았어", source: "X · @qthbdt086072", date: "2026.07", url: "https://x.com/qthbdt086072/status/2081639032921219519" }
     ],
-    audience_note: "2026 초연(김태형 연출, 두산아트센터 Space111) 개막 직후 SNS(X) 관객 반응 발췌. 각 게시물의 저작권은 작성자에게 있음."
+    audience_note: "2026 초연(김태형 연출, 두산아트센터 Space111) 개막 직후 SNS(X) 관객 반응 발췌 — 전 회차 매진. 각 게시물의 저작권은 작성자에게 있음."
   },
 
   "마리 퀴리": {
