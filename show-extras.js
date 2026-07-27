@@ -894,6 +894,10 @@ window.SHOW_EXTRAS = {
   },
 
   "개와 고양이의 시간": {
+    press: [
+      { outlet: "더스쿠프", date: "2020.07", quote: "공감, 바로 그 순간", context: "2020 초연 리뷰 · 심지영, 더스쿠프 2020년 7월호", url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11529056" }
+    ],
+    press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
     audience: [
       { quote: "인간 VS 인간, 인간 VS 동물이 서로 기대어 사랑하는 모습은 한없이 따뜻하고 아름답다", source: "네이버 블로그 · 하얀나무 극장에 가다", date: "2020.08", url: "https://blog.naver.com/hanseul73/222056662352" },
       { quote: "관극으로 지쳤던 내 마음은 다시, 관극으로 위로 받는다 … 주제는 힐링", source: "네이버 블로그 · 하얀나무 극장에 가다", date: "2020.08", url: "https://blog.naver.com/hanseul73/222056662352" }
