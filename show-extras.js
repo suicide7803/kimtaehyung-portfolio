@@ -21,7 +21,8 @@ window.SHOW_EXTRAS = {
     photos_note: "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     press: [
       { outlet: "뉴스컬처", date: "2017.08", quote: "카바레 분위기 속의 뮤지컬 '미 온 더 송'", url: "http://www.newsculture.press/view.htm?idxno=2017082402250051097" },
-      { outlet: "헤럴드경제", date: "2017.08", quote: "소소하고 담백한 위로", url: "https://m.entertain.naver.com/article/112/0002951316" }
+      { outlet: "헤럴드경제", date: "2017.08", quote: "소소하고 담백한 위로", url: "https://m.entertain.naver.com/article/112/0002951316" },
+      { outlet: "서울신문", date: "2017.08", quote: "작사·작곡·노래·연기·춤… 혼자 다 하는 그녀", context: "김태형 대본·연출, 이영미 1인 뮤지컬", url: "https://www.seoul.co.kr/news/entertainment/2017/08/10/20170810020004" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
   },
@@ -65,6 +66,10 @@ window.SHOW_EXTRAS = {
       { outlet: "문화일보", date: "2010.11", quote: "계속되는 흥행에 힘입어", context: "시즌1", url: "https://n.news.naver.com/mnews/article/086/0002026774" }
     ],
     press_note: "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
+    audience: [
+      { quote: "시작부터 끝까지 재미있고 유쾌하게 즐겁게 볼 수 있는 연극", source: "블로그 · 라라윈", date: "2010.05", url: "https://lalawin.com/entry/play-marriage-in-May" }
+    ],
+    audience_note: "2007~2011 김태형 연출 장기공연의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
   },
 
   "초록": {
