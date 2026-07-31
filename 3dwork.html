@@ -144,6 +144,8 @@
 
   function render(){
     var raw=decodeURIComponent((location.hash||'').slice(1));
+    /* Disqus 퍼머링크(?w=작품명)로 들어온 경우도 해석 */
+    if(!raw){ var qm=/[?&]w=([^&]+)/.exec(location.search||''); if(qm){ try{raw=decodeURIComponent(qm[1]);}catch(e){raw=qm[1];} } }
     var key=raw.split('::')[0].trim();
     var work=null;
     for(var i=0;i<DB.length;i++){ if(DB[i].title===key||DB[i].page===key){work=DB[i];break;} }
@@ -283,8 +285,10 @@
       var fb=document.getElementById('cmt_fallback');
       if(!sn){ if(fb) fb.style.display='block'; return; }
       var cfg=function(){
+        /* 작품별 개별 스레드 — Disqus는 URL 해시(#…)를 무시하므로 쿼리스트링(?w=)으로
+           작품마다 고유 URL을 만든다. identifier·url을 work.html과 동일하게 맞춰 같은 작품은 스레드 공유 */
         this.page.identifier='work:'+work.title;
-        this.page.url=location.origin+location.pathname.replace(/[^/]*$/,'')+'work.html#'+encodeURIComponent(work.title);
+        this.page.url=location.origin+location.pathname.replace(/[^/]*$/,'')+'work.html?w='+encodeURIComponent(work.title);
         this.page.title=work.title+' — 김태형 연출';
       };
       if(window.DISQUS&&window.DISQUS.reset){
