@@ -382,7 +382,8 @@
   </div>
 </footer>
 
-<script src="works-data.js"></script>
+<script src="db-data.js"></script>
+<script>/* 단일 데이터 소스: db-data.js 하나에서 WORKS_DATA 합성 (works-data.js 폐기) */ window.WORKS_DATA=(function(){var o={},d=(window.DB_DATA&&window.DB_DATA.works)||[];d.forEach(function(w){o[w.title]=w;});return o;})();</script>
 <script src="assets/vendor/motion.min.js"></script>
 <script>
 (function(){
