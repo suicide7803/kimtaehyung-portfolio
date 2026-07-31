@@ -6,3 +6,5 @@ assets/photos/_rejected/
 assets/photos/_contact/
 assets/photos/_collected_manifest.csv
 assets/photos/_dllist.txt
+assets/photos/**/_raw/
+_video/
