@@ -333,6 +333,18 @@
     } else h+='<div class="ex-empty">주요 대사가 아직 없습니다 — 다음 단계에서 추가.</div>';
     h+='</div>';
 
+    /* 공연 특징·성과 */
+    h+='<div class="ex-block" data-reveal><h3>공연 특징·성과 <span class="tag '+(ex.highlights&&ex.highlights.length?'live':'soon')+'">'+(ex.highlights&&ex.highlights.length?'시드':'준비중')+'</span></h3>';
+    if(ex.highlights&&ex.highlights.length){
+      h+='<div class="press">';
+      ex.highlights.forEach(function(t){
+        h+='<div class="p"><div class="pq">'+esc(t)+'</div></div>';
+      });
+      h+='</div>';
+      if(ex.highlights_note) h+='<div class="ex-subnote">'+esc(ex.highlights_note)+'</div>';
+    } else h+='<div class="ex-empty">공연 특징·성과 정보가 아직 없습니다.</div>';
+    h+='</div>';
+
     /* 언론 리뷰 */
     h+='<div class="ex-block" data-reveal><h3>언론 리뷰 <span class="tag '+(ex.press&&ex.press.length?'live':'soon')+'">'+(ex.press&&ex.press.length?'시드':'준비중')+'</span></h3>';
     if(ex.press&&ex.press.length){

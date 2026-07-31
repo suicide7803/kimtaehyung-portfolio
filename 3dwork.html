@@ -243,6 +243,13 @@
         });
         h+='</div>'+(ex.quotes_note?'<p class="subnote">'+esc(ex.quotes_note)+'</p>':'')+'</section>';
       }
+      if(ex.highlights&&ex.highlights.length){
+        h+='<section style="padding:64px 0 0"><div class="eyebrow2">공연 특징·성과</div><div style="display:grid;gap:10px;max-width:900px">';
+        ex.highlights.forEach(function(t){
+          h+='<div class="qcard"><p>'+esc(t)+'</p></div>';
+        });
+        h+='</div>'+(ex.highlights_note?'<p class="subnote">'+esc(ex.highlights_note)+'</p>':'')+'</section>';
+      }
       if(ex.press&&ex.press.length){
         h+='<section style="padding:64px 0 0"><div class="eyebrow2">언론</div><div class="pressgrid">';
         ex.press.forEach(function(p){
