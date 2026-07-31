@@ -400,8 +400,9 @@
     var fb=document.getElementById('cmt_fallback');
     if(!sn){ if(fb) fb.style.display='block'; return; }
     window.disqus_config=function(){
+      /* 표준 식별자·URL — 2D(work.html)와 3D(3dwork.html)가 동일 스레드 공유 */
       this.page.identifier='work:'+work.title;
-      this.page.url=location.origin+location.pathname+'#'+encodeURIComponent(work.title);
+      this.page.url=location.origin+location.pathname.replace(/[^/]*$/,'')+'work.html#'+encodeURIComponent(work.title);
       this.page.title=work.title+' — 김태형 연출';
     };
     var s=document.createElement('script');

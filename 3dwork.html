@@ -133,6 +133,7 @@
 
 <script src="db-data.js"></script>
 <script src="show-extras.js"></script>
+<script src="comments-config.js"></script>
 <script>
 (function(){
   var root=document.getElementById('root');
@@ -267,8 +268,36 @@
       }
     }
 
+    /* ---------- comments (모든 작품, Disqus) — 2D work.html과 동일 스레드 ---------- */
+    h+='<section style="padding:64px 0 0"><div class="eyebrow2">방명록 · 코멘트</div>';
+    h+='<div id="disqus_thread"></div>';
+    h+='<div id="cmt_fallback" style="display:none;color:var(--faint);font-size:13px;padding:20px 0">코멘트 기능을 준비 중입니다.</div>';
+    h+='</section>';
+
     h+='<footer>포스터·공연사진 저작권은 각 제작사에 있습니다 · 시즌·캐스트·크리에이티브 정보는 PlayDB 전수 수집 + 언론·웹 교차검증 · 세부 정보는 계속 업데이트됩니다</footer>';
     root.innerHTML=h;
+
+    /* ---------- comments (Disqus) — 식별자·URL을 work.html과 동일하게 맞춰 하나의 스레드 공유 ---------- */
+    (function(){
+      var sn=(window.DISQUS_SHORTNAME||'').trim();
+      var fb=document.getElementById('cmt_fallback');
+      if(!sn){ if(fb) fb.style.display='block'; return; }
+      var cfg=function(){
+        this.page.identifier='work:'+work.title;
+        this.page.url=location.origin+location.pathname.replace(/[^/]*$/,'')+'work.html#'+encodeURIComponent(work.title);
+        this.page.title=work.title+' — 김태형 연출';
+      };
+      if(window.DISQUS&&window.DISQUS.reset){
+        window.DISQUS.reset({reload:true,config:cfg});
+      }else{
+        window.disqus_config=cfg;
+        var s=document.createElement('script');
+        s.src='https://'+sn+'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp',+new Date());
+        s.async=true;
+        (document.head||document.body).appendChild(s);
+      }
+    })();
 
     var box=document.getElementById('tiltbox'), inner=document.getElementById('tiltin');
     if(box&&inner){
