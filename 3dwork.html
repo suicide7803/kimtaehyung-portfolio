@@ -284,7 +284,7 @@
       if(!sn){ if(fb) fb.style.display='block'; return; }
       var cfg=function(){
         this.page.identifier='work:'+work.title;
-        this.page.url=location.origin+location.pathname.replace(/[^/]*$/,'')+'work.html#'+encodeURIComponent(work.title);
+        this.page.url=location.origin+location.pathname.replace(/[^/]*$/,'')+'work.html?w='+encodeURIComponent(work.title)+'#'+encodeURIComponent(work.title);
         this.page.title=work.title+' — 김태형 연출';
       };
       if(window.DISQUS&&window.DISQUS.reset){
