@@ -1,2 +1,8 @@
 DESIGN-apple.md
 DESIGN-lovable.md
+
+# 사진 수집 과정 스테이징 산출물 (공개 사이트 제외)
+assets/photos/_rejected/
+assets/photos/_contact/
+assets/photos/_collected_manifest.csv
+assets/photos/_dllist.txt

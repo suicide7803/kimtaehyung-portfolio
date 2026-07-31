@@ -86,7 +86,13 @@
   @media(max-width:760px){.spot{grid-template-columns:1fr!important}.spot .tiltbox{order:0!important;max-width:340px}}
 
   #stills{background:var(--void);padding:60px 0 160px}
-  #strip{display:flex;gap:28px;overflow-x:auto;padding:0 40px 32px;perspective:1400px;scroll-snap-type:x mandatory;cursor:grab}
+  .stripwrap{position:relative}
+  #strip{display:flex;gap:28px;overflow-x:auto;padding:0 40px 32px;perspective:1400px;scrollbar-width:none}
+  #strip::-webkit-scrollbar{display:none}
+  .sarrow{position:absolute;top:38%;transform:translateY(-50%);z-index:5;width:56px;height:56px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--bright);font-size:20px;background:rgba(14,12,7,.75);border:1px solid rgba(201,169,97,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .25s,box-shadow .25s,border-color .25s;user-select:none}
+  .sarrow:hover{background:rgba(201,169,97,.18);border-color:var(--gold);box-shadow:0 0 30px rgba(201,169,97,.35)}
+  .sarrow.left{left:18px}
+  .sarrow.right{right:18px}
   #strip figure{margin:0;flex:0 0 clamp(320px,46vw,620px);scroll-snap-align:center;transform-style:preserve-3d;transition:transform .4s var(--ease)}
   #strip .ph{overflow:hidden;border-radius:3px;background:var(--panel);box-shadow:0 40px 90px -34px rgba(0,0,0,.9)}
   #strip img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:brightness(.92) saturate(.95)}
@@ -102,26 +108,30 @@
 
   #press{background:var(--void);padding:0 40px 180px}
   .pressgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-  .pressgrid .p{background:var(--void);padding:44px 36px;transition:background .3s}
-  .pressgrid .p:hover{background:#100d09}
+  .pressgrid a.p{display:block;background:var(--void);padding:44px 36px;transition:background .3s,box-shadow .3s}
+  .pressgrid a.p:hover{background:#100d09;color:inherit;box-shadow:inset 0 0 0 1px rgba(201,169,97,.3)}
   .pressgrid .p p{font-family:var(--serif);font-weight:300;font-size:21px;line-height:1.6;color:var(--ink-hi);margin-bottom:22px}
   .pressgrid .p div{font-size:11px;letter-spacing:.16em;color:var(--gold)}
+  .pressgrid .p div i{font-style:normal;color:var(--faint);margin-left:8px}
   .press-note{margin-top:20px;font-size:11px;color:var(--ghost);line-height:1.9}
 
   #archive{background:var(--void);padding:0 40px 120px;overflow:hidden}
-  #wallwrap{perspective:1800px;max-width:1400px;margin:0 auto}
-  #wall{transform-style:preserve-3d;transition:transform .5s var(--ease)}
-  .yblock{margin-bottom:80px;transform-style:preserve-3d}
-  .yhead{display:flex;align-items:baseline;gap:20px;margin-bottom:28px}
+  #wallwrap{max-width:1400px;margin:0 auto}
+  #wall{}
+  .yblock{margin-bottom:80px}
+  .yhead{display:flex;align-items:baseline;gap:20px;margin-bottom:28px;position:relative;z-index:3}
   .yhead b{font-family:var(--disp);font-weight:300;font-size:52px;color:var(--gold);line-height:1}
   .yhead small{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ghost)}
-  .ygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:32px 20px;transform-style:preserve-3d}
-  .ygrid a{display:block;transition:transform .4s var(--ease)}
-  .ygrid a:hover{transform:scale(1.05) translateY(-6px)}
-  .yhead{position:relative;z-index:3}
-  .ygrid .img{aspect-ratio:3/4;overflow:hidden;background:var(--panel);box-shadow:0 20px 44px -18px rgba(0,0,0,.85)}
-  .ygrid img{width:100%;height:100%;object-fit:cover;filter:brightness(.8) saturate(.85);transition:filter .4s}
-  .ygrid a:hover img{filter:brightness(1.05) saturate(1)}
+  .ygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:32px 20px}
+  .ygrid a{display:block;transition:opacity .35s,filter .35s,transform .35s var(--ease)}
+  .ygrid:hover a:not(:hover){opacity:.4;filter:brightness(.55)}
+  .ygrid a:hover{transform:translateY(-4px)}
+  .ygrid .img{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--panel);box-shadow:0 20px 44px -18px rgba(0,0,0,.85);transition:box-shadow .35s}
+  .ygrid .img::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(ellipse 85% 65% at 50% -5%,rgba(224,193,125,.4),transparent 70%)}
+  .ygrid a:hover .img{box-shadow:0 0 70px rgba(201,169,97,.5),0 26px 54px -16px rgba(0,0,0,.95)}
+  .ygrid a:hover .img::after{opacity:1}
+  .ygrid img{width:100%;height:100%;object-fit:cover;filter:brightness(.8) saturate(.85);transition:filter .35s}
+  .ygrid a:hover img{filter:brightness(1.18) saturate(1.08)}
   .ygrid .t{margin-top:12px;font-size:12px;font-weight:600;line-height:1.45;color:var(--ink)}
   .ygrid .s{font-size:10.5px;color:var(--ghost);margin-top:3px;line-height:1.5}
 
@@ -145,6 +155,7 @@
     <a href="#stills" data-en="Stage">무대</a>
     <a href="#archive" data-en="Archive">아카이브</a>
     <a href="3dabout.html">About</a>
+    <a href="index.html" data-en="Classic">클래식 버전</a>
     <a href="3ddb.html" class="nav-db">DB →</a>
     <button id="langbtn">KO / EN</button>
   </div>
@@ -192,9 +203,13 @@
 
 <section id="stills">
   <div class="wrap">
-    <div class="sec-bar" style="margin-bottom:56px"><h2 data-en="On Stage">무대 위</h2><small data-en="Drag to scroll">← 옆으로 밀어보세요</small></div>
+    <div class="sec-bar" style="margin-bottom:56px"><h2 data-en="On Stage">무대 위</h2><small data-en="Hover the arrows">화살표에 마우스를 올려보세요</small></div>
   </div>
-  <div id="strip"></div>
+  <div class="stripwrap">
+    <div class="sarrow left" id="arrL" aria-label="왼쪽으로">←</div>
+    <div class="sarrow right" id="arrR" aria-label="오른쪽으로">→</div>
+    <div id="strip"></div>
+  </div>
 </section>
 
 <section id="trailer">
@@ -211,12 +226,12 @@
   <div class="wrap" style="padding:0">
     <div class="eyebrow2" data-en="Press">언론</div>
     <div class="pressgrid">
-      <div class="p"><p>“연극과 검열에 대한 재기발랄하고 스릴 넘치는 풍자”</p><div>한겨레 · 2025.07 · 미러</div></div>
-      <div class="p"><p>“괴물을 삼킨 인간”</p><div>연합뉴스 · 2017.03 · 베헤모스</div></div>
-      <div class="p"><p>“전쟁의 참상을 공감각 할 수 있는 무대”</p><div>문화저널21 · 2026.01 · 벙커 트릴로지</div></div>
-      <div class="p"><p>“과학자 아닌 인간 마리를 말하다”</p><div>기호일보 · 2025.09 · 마리 퀴리</div></div>
-      <div class="p"><p>“게임 같은 연극, 극장 백스테이지까지 투어”</p><div>뉴스컬처 · 2017.05 · 더헬멧</div></div>
-      <div class="p"><p>“이 결혼은 허가되지 않은 연극 — 검열과 예술의 한판 승부”</p><div>중앙일보 · 2025.07 · 미러</div></div>
+      <a class="p" href="https://www.hani.co.kr/arti/culture/music/1207305.html" target="_blank" rel="noopener"><p>“연극과 검열에 대한 재기발랄하고 스릴 넘치는 풍자”</p><div>한겨레 · 2025.07 · 미러<i>↗</i></div></a>
+      <a class="p" href="http://app.yonhapnews.co.kr/YNA/Basic/SNS/r.aspx?c=AKR20170317114100704" target="_blank" rel="noopener"><p>“괴물을 삼킨 인간”</p><div>연합뉴스 · 2017.03 · 베헤모스<i>↗</i></div></a>
+      <a class="p" href="https://vop.co.kr/A00001687160.html" target="_blank" rel="noopener"><p>“전쟁의 참상을 공감각 할 수 있는 무대”</p><div>문화저널21 · 2026.01 · 벙커 트릴로지<i>↗</i></div></a>
+      <a class="p" href="http://www.kihoilbo.co.kr/news/articleView.html?idxno=1159856" target="_blank" rel="noopener"><p>“과학자 아닌 인간 마리를 말하다”</p><div>기호일보 · 2025.09 · 마리 퀴리<i>↗</i></div></a>
+      <a class="p" href="http://www.newsculture.press/view.htm?idxno=2017052206040099934" target="_blank" rel="noopener"><p>“게임 같은 연극, 극장 백스테이지까지 투어”</p><div>뉴스컬처 · 2017.05 · 더헬멧<i>↗</i></div></a>
+      <a class="p" href="https://www.joongang.co.kr/article/25350928" target="_blank" rel="noopener"><p>“이 결혼은 허가되지 않은 연극 — 검열과 예술의 한판 승부”</p><div>중앙일보 · 2025.07 · 미러<i>↗</i></div></a>
     </div>
     <p class="press-note">언론 기사 발췌 인용 · 각 기사의 저작권은 해당 매체에 있습니다.</p>
   </div>
@@ -224,7 +239,7 @@
 
 <section id="archive">
   <div class="wrap" style="padding:0">
-    <div class="sec-bar" style="margin-bottom:80px"><h2 data-en="Archive 2007 — 2027">아카이브 2007 — 2027</h2><small data-en="Move the cursor">커서를 움직여 보세요</small></div>
+    <div class="sec-bar" style="margin-bottom:80px"><h2 data-en="Archive 2007 — 2027">아카이브 2007 — 2027</h2><small data-en="Hover a poster — spotlight on">포스터에 조명이 들어옵니다 · 클릭하면 상세</small></div>
   </div>
   <div id="wallwrap"><div id="wall"></div></div>
 </section>
@@ -255,7 +270,7 @@
     var n=w.seasons?w.seasons.length:1;
     var cols=i%2?'1fr minmax(280px,440px)':'minmax(280px,440px) 1fr';
     sh+='<article class="spot" style="grid-template-columns:'+cols+'">';
-    sh+='<div class="tiltbox" data-tilt style="order:'+(i%2?2:0)+'"><div class="tiltin"><img src="'+esc(w.poster)+'" alt="'+esc(f.t)+'"'+(i?' loading="lazy"':'')+'></div></div>';
+    sh+='<div class="tiltbox" data-tilt style="order:'+(i%2?2:0)+'"><a href="'+link(f.t)+'" style="display:block"><div class="tiltin"><img src="'+esc(w.poster)+'" alt="'+esc(f.t)+'"'+(i?' loading="lazy"':'')+'></div></a></div>';
     sh+='<div><div class="meta">'+esc(w.genre)+' · '+w.debut+' 초연 · '+n+'시즌</div>';
     sh+='<h3>'+esc(f.t)+'</h3>';
     if(w.desc) sh+='<p class="desc">'+esc(w.desc)+'</p>';
@@ -317,7 +332,7 @@
     });
   });
 
-  /* ---- still strip 3D + drag ---- */
+  /* ---- still strip 3D + arrow hover-scroll ---- */
   var strip=document.getElementById('strip');
   function stripUpdate(){
     var sr=strip.getBoundingClientRect(), c=sr.left+sr.width/2;
@@ -330,23 +345,15 @@
   strip.addEventListener('scroll',stripUpdate,{passive:true});
   window.addEventListener('resize',stripUpdate);
   setTimeout(stripUpdate,400);
-  var down=false,sx=0,sl=0;
-  strip.addEventListener('pointerdown',function(e){down=true;sx=e.clientX;sl=strip.scrollLeft;strip.style.cursor='grabbing';});
-  window.addEventListener('pointerup',function(){down=false;strip.style.cursor='grab';});
-  strip.addEventListener('pointermove',function(e){if(down)strip.scrollLeft=sl-(e.clientX-sx);});
-
-  /* ---- archive wall mouse parallax ---- */
-  var wrapEl=document.getElementById('wallwrap'), wall=document.getElementById('wall');
-  wrapEl.addEventListener('mousemove',function(e){
-    var r=wrapEl.getBoundingClientRect();
-    var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-    wall.style.transition='transform .35s cubic-bezier(.16,1,.3,1)';
-    wall.style.transform='rotateY('+(x*7)+'deg) rotateX('+(-y*3.5)+'deg)';
-  });
-  wrapEl.addEventListener('mouseleave',function(){
-    wall.style.transition='transform .9s cubic-bezier(.16,1,.3,1)';
-    wall.style.transform='rotateY(0) rotateX(0)';
-  });
+  function hoverScroll(btn,dir){
+    var raf=null;
+    function step(){ strip.scrollLeft+=dir*9; raf=requestAnimationFrame(step); }
+    btn.addEventListener('mouseenter',function(){ if(!raf) raf=requestAnimationFrame(step); });
+    btn.addEventListener('mouseleave',function(){ cancelAnimationFrame(raf); raf=null; });
+    btn.addEventListener('click',function(){ strip.scrollBy({left:dir*Math.min(620,strip.clientWidth*0.6),behavior:'smooth'}); });
+  }
+  hoverScroll(document.getElementById('arrL'),-1);
+  hoverScroll(document.getElementById('arrR'),1);
 
   /* ---- KR/EN toggle ---- */
   var btn=document.getElementById('langbtn'), en=false;
