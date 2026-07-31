@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김태형 연출작 DB — 열람</title>
+<meta name="description" content="김태형 연출 59작 119시즌을 검색·장르·정렬로 열람하는 데이터베이스.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0a0906;--panel:#161209;--line:rgba(239,233,220,.10);--line2:rgba(239,233,220,.14);
+    --ink:#efe9dc;--ink-hi:#f6f1e6;--dim:#a89e8a;--faint:#6f6656;--ghost:#5c5546;
+    --gold:#c9a961;--bright:#e0c17d;--gdim:#8a7442;
+    --serif:"Noto Serif KR",serif;--disp:"Cormorant Garamond",serif;
+    --sans:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--void);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--bright)}
+  img{max-width:100%;display:block}
+  input{font-family:inherit}
+  input::placeholder{color:var(--faint)}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ::selection{background:rgba(201,169,97,.3)}
+  body::after{content:"";position:fixed;inset:0;z-index:901;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  header.top{position:sticky;top:0;z-index:1000;background:rgba(14,12,7,.9);backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);border-bottom:1px solid var(--line)}
+  .top-inner{max-width:1400px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .brand{font-family:var(--serif);font-weight:600;font-size:15px;white-space:nowrap}
+  .brand span{color:var(--gold)}
+  .search{flex:1 1 240px;min-width:180px}
+  .search input{width:100%;padding:10px 16px;border-radius:99px;background:rgba(22,18,9,.7);border:1px solid rgba(239,233,220,.18);color:var(--ink);font-size:14px;outline:none}
+  .search input:focus{border-color:var(--gdim);box-shadow:0 0 0 3px rgba(201,169,97,.12)}
+  .count{font-size:12.5px;color:var(--dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .count b{color:var(--bright);font-weight:600}
+  .pill{font-size:11.5px;letter-spacing:.1em;color:var(--dim);border:1px solid rgba(239,233,220,.18);border-radius:99px;padding:7px 15px;white-space:nowrap}
+  .pill:hover{color:var(--bright)}
+  .pill.gold{color:#241a08;background:linear-gradient(180deg,var(--bright),var(--gold));border:none;font-weight:600;padding:8px 16px}
+  .pill.gold:hover{color:#241a08}
+  .controls{max-width:1400px;margin:0 auto;padding:0 32px 14px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .seg{display:inline-flex;background:rgba(22,18,9,.7);border:1px solid rgba(239,233,220,.12);border-radius:99px;overflow:hidden}
+  .seg button{padding:8px 16px;font-size:12.5px;color:var(--dim);transition:color .2s,background .2s;white-space:nowrap}
+  .seg button:hover{color:var(--bright)}
+  .seg button[aria-pressed="true"]{background:rgba(201,169,97,.14);color:var(--bright)}
+  .view-seg{margin-left:auto}
+
+  .main{max-width:1400px;margin:0 auto;padding:36px 32px 100px;position:relative;z-index:2}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:32px 18px}
+  .cards a{display:block}
+  .cards .img{aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:var(--panel);box-shadow:0 14px 34px -14px rgba(0,0,0,.75);transition:transform .3s var(--ease),box-shadow .3s;display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:12px;text-align:center}
+  .cards a:hover .img{transform:translateY(-5px);box-shadow:0 22px 50px -16px rgba(0,0,0,.85),0 0 36px rgba(201,169,97,.15)}
+  .cards .img img{width:100%;height:100%;object-fit:cover;filter:brightness(.86) saturate(.9)}
+  .cards .cap{padding:11px 2px 0}
+  .cards .cap b{display:block;font-size:13.5px;font-weight:600;line-height:1.4;color:var(--ink)}
+  .cards .cap span{font-size:11px;color:var(--faint);display:block;margin-top:3px}
+
+  .tablewrap{border:1px solid var(--line2)}
+  .trow{display:grid;grid-template-columns:minmax(180px,1.6fr) 90px 70px 110px minmax(160px,1.6fr) 1fr;gap:18px;padding:14px 20px;border-bottom:1px solid rgba(239,233,220,.07);align-items:baseline;transition:background .2s}
+  .trow:hover{background:rgba(201,169,97,.05);color:inherit}
+  .trow.head{padding:13px 20px;border-bottom:1px solid var(--line2);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+  .trow .t{font-family:var(--serif);font-size:15px;color:var(--ink)}
+  .trow .g{font-size:12px;color:var(--gold)}
+  .trow .n{font-family:var(--disp);font-size:17px;color:var(--dim)}
+  .trow .sp{font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .trow .v,.trow .au{font-size:12px;color:var(--faint);line-height:1.5}
+  .empty{padding:120px 0;text-align:center;color:var(--faint);font-size:14px}
+  footer{margin-top:80px;border-top:1px solid var(--line);padding-top:36px;font-size:11.5px;color:var(--ghost);line-height:2}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a href="3dindex.html" class="brand">김태형 <span>·</span> 연출작 DB</a>
+    <div class="search"><input id="q" placeholder="작품 · 배우 · 극장 · 작가 검색"></div>
+    <div class="count"><b id="cnt">0</b> 작품 · <span id="scnt">0</span> 시즌</div>
+    <div style="display:flex;gap:10px">
+      <a class="pill" href="3dabout.html">About</a>
+      <a class="pill gold" href="3dindex.html">포트폴리오</a>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="seg" id="genreSeg">
+      <button data-v="전체" aria-pressed="true">전체</button>
+      <button data-v="연극" aria-pressed="false">연극</button>
+      <button data-v="뮤지컬" aria-pressed="false">뮤지컬</button>
+      <button data-v="기타" aria-pressed="false">기타</button>
+    </div>
+    <div class="seg" id="sortSeg">
+      <button data-v="latest" aria-pressed="true">최신 활동순</button>
+      <button data-v="debut" aria-pressed="false">데뷔순</button>
+      <button data-v="seasons" aria-pressed="false">시즌 많은순</button>
+    </div>
+    <div class="seg view-seg" id="viewSeg">
+      <button data-v="cards" aria-pressed="true">카드</button>
+      <button data-v="table" aria-pressed="false">표</button>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <div id="grid"></div>
+  <footer>데이터 — PlayDB 전수 수집(59작 119시즌) + 언론·웹 교차검증 · 포스터 저작권은 각 제작사에 있습니다.</footer>
+</div>
+
+<script src="db-data.js"></script>
+<script>
+(function(){
+  var DB=(window.DB_DATA&&window.DB_DATA.works)||[];
+  var state={q:'',genre:'전체',sort:'latest',view:'cards'};
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function link(t){ return '3dwork.html#'+encodeURIComponent(t); }
+  function span(w){
+    return (w.years&&w.years.length)
+      ? (w.years[0]===w.years[w.years.length-1]?String(w.years[0]):w.years[0]+'–'+w.years[w.years.length-1])
+      : String(w.debut||'');
+  }
+  function filtered(){
+    var q=state.q.toLowerCase().trim();
+    var list=DB.filter(function(w){
+      if(state.genre!=='전체'){
+        if(state.genre==='기타'){ if(w.genre==='연극'||w.genre==='뮤지컬') return false; }
+        else if(w.genre!==state.genre) return false;
+      }
+      if(!q) return true;
+      var hay=[w.title,w.author,(w.actors||[]).join(' '),(w.venues||[]).join(' '),(w.producers||[]).join(' ')].join(' ').toLowerCase();
+      return hay.indexOf(q)>=0;
+    });
+    if(state.sort==='latest') list.sort(function(a,b){return (b.latest_year||b.debut||0)-(a.latest_year||a.debut||0);});
+    else if(state.sort==='debut') list.sort(function(a,b){return (a.debut||0)-(b.debut||0);});
+    else if(state.sort==='seasons') list.sort(function(a,b){return (b.season_count||0)-(a.season_count||0);});
+    return list;
+  }
+  function render(){
+    var list=filtered();
+    document.getElementById('cnt').textContent=list.length;
+    document.getElementById('scnt').textContent=list.reduce(function(n,w){return n+(w.season_count||1);},0);
+    var grid=document.getElementById('grid');
+    if(!list.length){ grid.innerHTML='<div class="empty">검색 결과가 없습니다</div>'; return; }
+    if(state.view==='cards'){
+      grid.innerHTML='<div class="cards">'+list.map(function(w){
+        return '<a href="'+link(w.title)+'"><div class="img">'
+          +(w.poster?'<img src="'+esc(w.poster)+'" alt="'+esc(w.title)+'" loading="lazy">':'<span style="padding:12px;line-height:1.6">'+esc(w.title)+'</span>')
+          +'</div><div class="cap"><b>'+esc(w.title)+'</b><span>'+esc(w.genre)+' · '+span(w)+' · '+(w.season_count||1)+'시즌</span></div></a>';
+      }).join('')+'</div>';
+    } else {
+      grid.innerHTML='<div class="tablewrap"><div class="trow head"><span>작품</span><span>장르</span><span>시즌</span><span>활동</span><span>극장</span><span>작</span></div>'
+        +list.map(function(w){
+          return '<a class="trow" href="'+link(w.title)+'"><span class="t">'+esc(w.title)+'</span><span class="g">'+esc(w.genre)+'</span><span class="n">'+(w.season_count||1)+'</span><span class="sp">'+span(w)+'</span><span class="v">'+esc((w.venues||[]).slice(0,3).join(' · '))+'</span><span class="au">'+esc(w.author||'—')+'</span></a>';
+        }).join('')+'</div>';
+    }
+  }
+  function seg(id,key){
+    var el=document.getElementById(id);
+    el.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      state[key]=b.dataset.v;
+      el.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      render();
+    });
+  }
+  seg('genreSeg','genre'); seg('sortSeg','sort'); seg('viewSeg','view');
+  document.getElementById('q').addEventListener('input',function(e){ state.q=e.target.value; render(); });
+  render();
+})();
+</script>
+</body>
+</html>
