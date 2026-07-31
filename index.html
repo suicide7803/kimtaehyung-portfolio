@@ -395,13 +395,14 @@
   var SPOTLIGHT = [
     {t:"마리 퀴리", tag:["한국뮤지컬어워즈 연출상","대상 포함 5관왕","런던 프로덕션"]},
     {t:"빵야", tag:["K-Theater Awards 대상","창작산실 올해의신작"]},
-    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"]}
+    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"]},
+    {t:"더헬멧", tag:["PlayDB 평점 9.6 (2,760명)","4연째 스테디 레퍼토리 (2017→2026)","SPAF 초청"]}
   ];
   var sh='';
   SPOTLIGHT.forEach(function(f,i){
     var w=W[f.t]; if(!w) return;
     sh+='<article class="spot'+(i%2?' rev':'')+'" data-spot>';
-    sh+='<div class="spot-poster">'+(w.poster?'<img src="'+w.poster+'" alt="'+f.t+' 포스터"'+(i?' loading="lazy"':' fetchpriority="high"')+'>':'')+'</div>';
+    sh+='<a class="spot-poster" href="'+link(f.t)+'" aria-label="'+f.t+' 상세 페이지로 이동">'+(w.poster?'<img src="'+w.poster+'" alt="'+f.t+' 포스터"'+(i?' loading="lazy"':' fetchpriority="high"')+'>':'')+'</a>';
     sh+='<div class="spot-copy" data-reveal>';
     sh+='<div class="eyebrow">'+w.genre+' · '+w.debut+' — '+(w.seasons?w.seasons.length:1)+'시즌</div>';
     sh+='<h3>'+f.t+'</h3>';
@@ -417,7 +418,7 @@
   /* ---- featured grid: the rest ---- */
   var FEATURED = [
     {t:"히스토리 보이즈"},{t:"팬레터"},{t:"카포네 트릴로지"},{t:"벙커 트릴로지"},
-    {t:"더헬멧"},{t:"매디슨 카운티의 다리"},{t:"스윙데이즈"},{t:"미러 (A Mirror)"}
+    {t:"매디슨 카운티의 다리"},{t:"스윙데이즈"},{t:"미러 (A Mirror)"}
   ];
   var fh='';
   FEATURED.forEach(function(f){
