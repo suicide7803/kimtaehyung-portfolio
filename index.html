@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>김태형 — 연출 포트폴리오</title>
-<meta name="description" content="연극·뮤지컬 연출 김태형 — 2007년 데뷔 이후 60여 편의 작품, 120여 번의 공연 아카이브.">
+<meta name="description" content="연극·뮤지컬 연출 김태형 — 2007년 데뷔 이후 59편의 작품, 119번의 공연 아카이브.">
 <meta property="og:title" content="김태형 — 연출 포트폴리오">
-<meta property="og:description" content="소극장의 공간 실험에서 대극장 뮤지컬까지 — 60여 작 120여 시즌의 기록.">
+<meta property="og:description" content="소극장의 공간 실험에서 대극장 뮤지컬까지 — 59작 119시즌의 기록.">
 <meta property="og:image" content="https://suicide7803.github.io/kimtaehyung-portfolio/assets/posters/%EB%A7%88%EB%A6%AC%ED%80%B4%EB%A6%AC_2025.gif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,15 +104,18 @@
     display:flex;flex-wrap:wrap;gap:14px;margin-top:56px;
   }
   .stat{
-    flex:1 1 150px;min-width:140px;padding:20px 22px;border-radius:14px;
+    flex:1 1 165px;min-width:165px;padding:18px 18px;border-radius:14px;
     background:var(--glass);border:1px solid var(--line);
     backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   }
   .stat b{
-    display:block;font-family:var(--serif);font-weight:600;font-size:30px;color:var(--gold-bright);
-    font-variant-numeric:tabular-nums;letter-spacing:.01em;line-height:1.2;
+    display:block;font-family:var(--serif);font-weight:600;font-size:24px;color:var(--gold-bright);
+    font-variant-numeric:tabular-nums;letter-spacing:.005em;line-height:1.2;white-space:nowrap;
   }
   .stat span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+  .edu-note{margin-top:20px;font-size:11.5px;letter-spacing:.03em;color:var(--ink-faint)}
+  .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold-bright);margin-right:9px;box-shadow:0 0 9px rgba(224,193,125,.8);animation:livepulse 1.8s ease-in-out infinite;vertical-align:middle}
+  @keyframes livepulse{0%,100%{opacity:1}50%{opacity:.3}}
   .scroll-cue{
     position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;
     display:flex;flex-direction:column;align-items:center;gap:10px;
@@ -277,6 +280,7 @@
   <div class="inner">
     <div class="wordmark">김태형 <span>·</span> 연출 포트폴리오</div>
     <div class="navlinks">
+      <a href="#nowplaying">공연중</a>
       <a href="#featured">대표작</a>
       <a href="#awards">수상</a>
       <a href="#upcoming">예정</a>
@@ -294,18 +298,30 @@
   <div class="wrap hero-inner">
     <div class="eyebrow" data-hero>Director · Theatre &amp; Musical</div>
     <h1 class="title" id="heroTitle" data-hero>김태형</h1>
-    <p class="tag" data-hero>연극·뮤지컬 연출. 조명과 무대감독으로 시작해 <b>2007년 데뷔</b>.
+    <p class="tag" data-hero>연극·뮤지컬 연출. <b>2007년 데뷔</b>.
     소극장의 공간 실험에서 대극장 뮤지컬까지, 2026년 현재 <b>스무 번째 시즌</b>을 지나고 있다.</p>
     <div class="stats" id="stats" data-hero>
       <div class="stat"><b>2007 —</b><span>활동 시작</span></div>
-      <div class="stat"><b><span data-count="60">0</span>여</b><span>고유 작품</span></div>
-      <div class="stat"><b><span data-count="120">0</span>여</b><span>공연 프로덕션</span></div>
+      <div class="stat"><b><span data-count="59">0</span></b><span>고유 작품</span></div>
+      <div class="stat"><b><span data-count="119">0</span></b><span>공연 프로덕션</span></div>
       <div class="stat"><b>연출상 2</b><span>한국뮤지컬어워즈</span></div>
       <div class="stat"><b>대상 1</b><span>K-Theater Awards</span></div>
     </div>
+    <p class="edu-note" data-hero>한국과학기술원(KAIST) 중퇴 · 한국예술종합학교 졸업</p>
   </div>
   <div class="scroll-cue" aria-hidden="true">Scroll</div>
 </header>
+
+<section id="nowplaying">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow"><span class="live-dot"></span>Now Playing</div>
+      <h2>공연중</h2>
+      <p class="note">지금 무대에 오르고 있는 작품</p>
+    </div>
+    <div id="nowRoot"></div>
+  </div>
+</section>
 
 <section id="featured">
   <div class="wrap">
@@ -395,9 +411,31 @@
   var SPOTLIGHT = [
     {t:"마리 퀴리", tag:["한국뮤지컬어워즈 연출상","대상 포함 5관왕","런던 프로덕션"]},
     {t:"빵야", tag:["K-Theater Awards 대상","창작산실 올해의신작"]},
-    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"]},
-    {t:"더헬멧", tag:["PlayDB 평점 9.6 (2,760명)","4연째 스테디 레퍼토리 (2017→2026)","SPAF 초청"]}
+    {t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"]}
   ];
+
+  /* ---- now playing: currently running productions ---- */
+  var NOWPLAYING = [
+    {t:"더헬멧", tag:["연극 · 4연째 스테디 레퍼토리","2026.07.09 – 10.11","홍익대 대학로 아트센터 소극장"]},
+    {t:"비더슈탄트", tag:["뮤지컬 · 3연 · 전곡 교체 개정판","2026.07.23 – 10.11","링크아트센터드림 드림1관"]},
+    {t:"경성의 고독한 미식가들", tag:["연극 초연 · 관객참여형 이머시브","2026.07.25 – 08.09","두산아트센터 Space111"]}
+  ];
+  var nh='';
+  NOWPLAYING.forEach(function(f,i){
+    var w=W[f.t]; if(!w) return;
+    nh+='<article class="spot'+(i%2?' rev':'')+'" data-spot>';
+    nh+='<a class="spot-poster" href="'+link(f.t)+'" aria-label="'+f.t+' 상세 페이지로 이동">'+(w.poster?'<img src="'+w.poster+'" alt="'+f.t+' 포스터"'+(i?' loading="lazy"':' fetchpriority="high"')+'>':'')+'</a>';
+    nh+='<div class="spot-copy" data-reveal>';
+    nh+='<div class="eyebrow"><span class="live-dot"></span>공연중 · '+w.genre+' · '+w.debut+' 초연 — '+(w.seasons?w.seasons.length:1)+'시즌</div>';
+    nh+='<h3>'+f.t+'</h3>';
+    if(w.desc) nh+='<p class="desc">'+w.desc+'</p>';
+    nh+='<div class="chips">';
+    (f.tag||[]).forEach(function(g){ nh+='<span class="chip">'+g+'</span>'; });
+    nh+='</div>';
+    nh+='<a class="btn-gold" href="'+link(f.t)+'">시즌별 기록 '+arrow+'</a>';
+    nh+='</div></article>';
+  });
+  document.getElementById('nowRoot').innerHTML=nh;
   var sh='';
   SPOTLIGHT.forEach(function(f,i){
     var w=W[f.t]; if(!w) return;
@@ -487,6 +525,7 @@
   titleEl.style.opacity='1';
   M.animate('.hero .tag',{opacity:[0,1],transform:['translateY(24px)','translateY(0)']},{duration:.9,easing:EASE,delay:.7});
   M.animate('#stats',{opacity:[0,1],transform:['translateY(28px)','translateY(0)']},{duration:1,easing:EASE,delay:.9});
+  M.animate('.hero .edu-note',{opacity:[0,1],transform:['translateY(20px)','translateY(0)']},{duration:.9,easing:EASE,delay:1.05});
 
   /* hero: scroll-linked exit (parallax fade) */
   var hero=document.querySelector('.hero');

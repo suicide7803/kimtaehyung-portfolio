@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>김태형 — 연출 포트폴리오</title>
-<meta name="description" content="연극·뮤지컬 연출 김태형 — 무대 안으로. 60여 작 120여 시즌의 기록.">
+<meta name="description" content="연극·뮤지컬 연출 김태형 — 무대 안으로. 59작 119시즌의 기록.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
@@ -51,6 +51,9 @@
   .stats{display:flex;gap:52px}
   .stat b{display:block;font-family:var(--disp);font-weight:300;font-size:52px;line-height:1;color:var(--gold)}
   .stat span{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin-top:10px}
+  .hero .edu{margin-top:24px;font-size:11px;letter-spacing:.06em;color:var(--faint);animation:rise 1.2s var(--ease) both .8s}
+  .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--bright);margin-right:9px;box-shadow:0 0 9px rgba(224,193,125,.8);animation:livepulse 1.8s ease-in-out infinite;vertical-align:middle}
+  @keyframes livepulse{0%,100%{opacity:1}50%{opacity:.3}}
   .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;font-size:9px;letter-spacing:.36em;color:var(--faint);text-transform:uppercase}
   .scroll-cue i{width:1px;height:52px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 2.4s var(--ease) infinite;transform-origin:top}
 
@@ -150,6 +153,7 @@
 <nav class="top"><div class="inner">
   <a href="#top" class="wordmark" data-en="KIM TAEHYUNG · Director">김태형 <span>·</span> 연출</a>
   <div class="navlinks">
+    <a href="#nowplaying" data-en="Now Playing">공연중</a>
     <a href="#voice" data-en="Voice">작품세계</a>
     <a href="#works" data-en="Works">대표작</a>
     <a href="#stills" data-en="Stage">무대</a>
@@ -165,15 +169,23 @@
   <div class="eyebrow" data-en="Theatre &amp; Musical Director · Since 2007">연극 · 뮤지컬 연출 · Since 2007</div>
   <h1 class="title" data-en="Kim Taehyung">김태형</h1>
   <div class="hero-row">
-    <p data-en="Twenty years of building rooms an audience can stand inside. Some sixty works, over a hundred productions.">관객을 무대 안에 세우는 방법을 20년째 실험해 왔다.<br>60여 편의 작품, 120여 번의 프로덕션.</p>
+    <p data-en="Twenty years of building rooms an audience can stand inside. Fifty-nine works, 119 productions.">관객을 무대 안에 세우는 방법을 20년째 실험해 왔다.<br>59편의 작품, 119번의 프로덕션.</p>
     <div class="stats">
-      <div class="stat"><b>60여</b><span data-en="Works">고유 작품</span></div>
-      <div class="stat"><b>120여</b><span data-en="Productions">프로덕션</span></div>
+      <div class="stat"><b>59</b><span data-en="Works">고유 작품</span></div>
+      <div class="stat"><b>119</b><span data-en="Productions">프로덕션</span></div>
       <div class="stat"><b>04</b><span data-en="Major Awards">주요 수상</span></div>
     </div>
   </div>
+  <div class="edu" data-en="KAIST (dropped out) · Korea National University of Arts (graduated)">한국과학기술원(KAIST) 중퇴 · 한국예술종합학교 졸업</div>
   <div class="scroll-cue" aria-hidden="true"><span data-en="Enter the stage">무대 안으로</span><i></i></div>
 </header>
+
+<section id="nowplaying" style="padding:120px 40px 40px">
+  <div class="wrap" style="padding:0">
+    <div class="sec-bar" style="margin-bottom:100px"><h2 data-en="Now Playing"><span class="live-dot"></span>공연중</h2><small data-en="Currently on stage">지금 무대에 오르고 있는 작품</small></div>
+    <div id="nowRoot"></div>
+  </div>
+</section>
 
 <section id="voice">
   <blockquote style="margin:0 0 120px;max-width:1000px">
@@ -260,12 +272,33 @@
   function link(t){ return '3dwork.html#' + encodeURIComponent(t); }
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
+  /* ---- now playing: currently running productions ---- */
+  var NOWPLAYING = [
+    { t:"더헬멧", tag:["연극 · 4연째 스테디 레퍼토리","2026.07.09 – 10.11","홍익대 대학로 아트센터 소극장"] },
+    { t:"비더슈탄트", tag:["뮤지컬 · 3연 · 전곡 교체 개정판","2026.07.23 – 10.11","링크아트센터드림 드림1관"] },
+    { t:"경성의 고독한 미식가들", tag:["연극 초연 · 관객참여형 이머시브","2026.07.25 – 08.09","두산아트센터 Space111"] }
+  ];
+  var nh='';
+  NOWPLAYING.forEach(function(f,i){
+    var w=W[f.t]; if(!w) return;
+    var n=w.seasons?w.seasons.length:1;
+    var cols=i%2?'1fr minmax(280px,440px)':'minmax(280px,440px) 1fr';
+    nh+='<article class="spot" style="grid-template-columns:'+cols+'">';
+    nh+='<div class="tiltbox" data-tilt style="order:'+(i%2?2:0)+'"><a href="'+link(f.t)+'" style="display:block"><div class="tiltin"><img src="'+esc(w.poster)+'" alt="'+esc(f.t)+'"'+(i?' loading="lazy"':'')+'></div></a></div>';
+    nh+='<div><div class="meta"><span class="live-dot"></span>공연중 · '+esc(w.genre)+' · '+w.debut+' 초연 · '+n+'시즌</div>';
+    nh+='<h3>'+esc(f.t)+'</h3>';
+    if(w.desc) nh+='<p class="desc">'+esc(w.desc)+'</p>';
+    nh+='<div class="chips">'+f.tag.map(function(g){return '<span class="chip">'+esc(g)+'</span>';}).join('')+'</div>';
+    nh+='<a class="btn-gold" href="'+link(f.t)+'">시즌별 기록 →</a>';
+    nh+='</div></article>';
+  });
+  document.getElementById('nowRoot').innerHTML=nh;
+
   /* ---- spotlight ---- */
   var SPOT = [
     { t:"마리 퀴리", tag:["한국뮤지컬어워즈 연출상","대상 포함 5관왕","런던 채링크로스 시어터"], q:"과학자 아닌 인간 마리를 말하다", qs:"기호일보 · 2025.09" },
     { t:"빵야", tag:["K-Theater Awards 대상","창작산실 올해의신작","한국연극 베스트 7"], q:"아픈 시대의 꿈들이 울려퍼지는 소리", qs:"문화뉴스 · 2024.07" },
-    { t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"], q:"차별의 벽을 부순 영혼의 음악", qs:"위드인뉴스 · 2025.07" },
-    { t:"더헬멧", tag:["PlayDB 평점 9.6 (2,760명)","4연째 스테디 레퍼토리 (2017→2026)","서울국제공연예술제(SPAF) 초청"], q:"게임 같은 연극, 극장 백스테이지까지 투어", qs:"뉴스컬처 · 2017.05" }
+    { t:"멤피스", tag:["한국뮤지컬어워즈 연출상","작품상 포함 5관왕"], q:"차별의 벽을 부순 영혼의 음악", qs:"위드인뉴스 · 2025.07" }
   ];
   var sh='';
   SPOT.forEach(function(f,i){
