@@ -3445,14 +3445,21 @@ window.SHOW_EXTRAS = {
     "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     "videos": [
       {
-        "youtubeId": "7NrBGXNm5Wg",
-        "title": "【TMI 썰스데이】 🎤🎶찰떡인 캐스팅 배우들의 도레'미'친🎹 노래 실력을 보여드립니다!ㅣ뮤지컬[개와고양이의시간]1탄",
-        "outlet": "아떼오드",
-        "date": "2021-03-12",
-        "sourceUrl": "https://www.youtube.com/watch?v=7NrBGXNm5Wg"
+        "youtubeId": "AKCcuKNBrsg",
+        "title": "뮤지컬 개와 고양이의 시간_0819_고상호 문태유 하이라이트",
+        "outlet": "뮤지컬 〈개와 고양이의 시간〉",
+        "date": "2020-08",
+        "sourceUrl": "https://www.youtube.com/watch?v=AKCcuKNBrsg"
+      },
+      {
+        "youtubeId": "qOJgcNR99nc",
+        "title": "[뮤지컬 '개와 고양이의 시간' 두근두근 라이브 1탄] 배나라의 '프리스비를 다시 한 번'",
+        "outlet": "NOL 티켓",
+        "date": "2020",
+        "sourceUrl": "https://www.youtube.com/watch?v=qOJgcNR99nc"
       }
     ],
-    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
+    "videos_note": "유튜브 공개 영상(하이라이트·라이브클립). 2021년 재연(장우성 연출, 비연출작) 영상은 제외하고 2020년 초연(김태형 연출) 시즌 영상으로 교체. 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "봄 작가, 겨울 무대": {
     "highlights": [
