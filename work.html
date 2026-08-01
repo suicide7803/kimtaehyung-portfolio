@@ -172,6 +172,16 @@
   .photo-grid figcaption .cap{color:var(--ink)}
   .photo-grid figcaption .cred{color:var(--ink-faint);font-size:11px;white-space:nowrap}
 
+  .video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .video-grid figure{margin:0;border-radius:12px;overflow:hidden;background:var(--panel);
+    border:1px solid var(--line);box-shadow:var(--shadow-poster-sm)}
+  .video-grid .video-frame{position:relative;width:100%;padding-top:56.25%;background:#000}
+  .video-grid .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+  .video-grid figcaption{padding:11px 15px;font-size:12.5px;line-height:1.5;
+    display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+  .video-grid figcaption .cap{color:var(--ink)}
+  .video-grid figcaption .cred{color:var(--ink-faint);font-size:11px;white-space:nowrap}
+
   .notfound{padding:160px 0;text-align:center;color:var(--ink-dim)}
   footer{padding:40px 0 80px;font-size:12px;color:var(--ink-faint);border-top:1px solid var(--line);margin-top:20px;line-height:2}
   .js [data-reveal]{opacity:0}
@@ -387,6 +397,20 @@
       h+='</div>';
       if(ex.photos_note) h+='<div class="ex-subnote">'+esc(ex.photos_note)+'</div>';
     } else h+='<div class="ex-empty">공연 사진이 아직 없습니다 — 다음 단계에서 프로덕션 스틸을 추가.</div>';
+    h+='</div>';
+
+    /* 공연 영상 (프레스콜·하이라이트) */
+    h+='<div class="ex-block" data-reveal><h3>공연 영상 <span class="tag '+(ex.videos&&ex.videos.length?'live':'soon')+'">'+(ex.videos&&ex.videos.length?'시드':'준비중')+'</span></h3>';
+    if(ex.videos&&ex.videos.length){
+      h+='<div class="video-grid">';
+      ex.videos.forEach(function(v){
+        h+='<figure><div class="video-frame"><iframe src="https://www.youtube.com/embed/'+esc(v.youtubeId)+'" title="'+esc(v.title||work.title)+'" loading="lazy" allowfullscreen frameborder="0"></iframe></div>';
+        if(v.title||v.outlet) h+='<figcaption><span class="cap">'+esc(v.title||'')+'</span>'+(v.outlet?'<span class="cred">'+esc(v.outlet)+(v.date?' · '+esc(v.date):'')+'</span>':'')+'</figcaption>';
+        h+='</figure>';
+      });
+      h+='</div>';
+      if(ex.videos_note) h+='<div class="ex-subnote">'+esc(ex.videos_note)+'</div>';
+    } else h+='<div class="ex-empty">공연 영상이 아직 없습니다 — 다음 단계에서 프레스콜·하이라이트 영상을 추가.</div>';
     h+='</div>';
 
     h+='</section>';

@@ -49,7 +49,17 @@ window.SHOW_EXTRAS = {
         "url": "https://x.com/HeyreyP/status/1142325172638105600"
       }
     ],
-    "audience_note": "2019 초연(김태형 연출, 서울예술단, LG아트센터) 개막일 SNS(X) 관객 반응 발췌. 각 게시물의 저작권은 작성자에게 있음."
+    "audience_note": "2019 초연(김태형 연출, 서울예술단, LG아트센터) 개막일 SNS(X) 관객 반응 발췌. 각 게시물의 저작권은 작성자에게 있음.",
+    "videos": [
+      {
+        "youtubeId": "FgAT3v5Gqfw",
+        "title": "[아이뉴스24 컬처] 창작가무극 '신과함께_이승편' 프레스콜 2막",
+        "outlet": "아이뉴스24",
+        "date": "2019-06-22",
+        "sourceUrl": "https://www.youtube.com/watch?v=FgAT3v5Gqfw"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "미 온 더 송": {
     "photos": [
@@ -240,7 +250,38 @@ window.SHOW_EXTRAS = {
         "url": "https://blog.naver.com/mint_baby_g/224215951248"
       }
     ],
-    "audience_note": "2026 초연(김태형 연출, 링크아트센터드림 드림3관)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+    "audience_note": "2026 초연(김태형 연출, 링크아트센터드림 드림3관)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
+    "videos": [
+      {
+        "youtubeId": "N5qpokl0Bdo",
+        "title": "[STAGE ON&OFF] 초록 편 - 초록 (김지철, 박란주)",
+        "outlet": "링크픽 LINK PICK",
+        "date": "2026-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=N5qpokl0Bdo"
+      },
+      {
+        "youtubeId": "sAEBpIwjhVc",
+        "title": "[STAGE ON&OFF] 초록 편 - 예언 2 (김지철, 김재한, 박란주)",
+        "outlet": "링크픽 LINK PICK",
+        "date": "2026-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=sAEBpIwjhVc"
+      },
+      {
+        "youtubeId": "A45xZfsOiME",
+        "title": "[STAGE ON&OFF] 초록 편 - 내가 원하는 건 (박란주)",
+        "outlet": "링크픽 LINK PICK",
+        "date": "2026-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=A45xZfsOiME"
+      },
+      {
+        "youtubeId": "Yup7sO5nnNw",
+        "title": "ZOOM-IN 초록",
+        "outlet": "공연예술창작산실",
+        "date": "2026",
+        "sourceUrl": "https://www.youtube.com/watch?v=Yup7sO5nnNw"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "옥탑방 고양이": {
     "photos": [
@@ -280,7 +321,31 @@ window.SHOW_EXTRAS = {
         "url": "https://blog.naver.com/with__mong/224061100282"
       }
     ],
-    "audience_note": "대학로 장기 공연(김태형 연출) '더 라스트 시즌'의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+    "audience_note": "대학로 장기 공연(김태형 연출) '더 라스트 시즌'의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
+    "videos": [
+      {
+        "youtubeId": "qt0UR0aSZyI",
+        "title": "연극 〈옥탑방 고양이〉",
+        "outlet": "GS칼텍스 예울마루",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=qt0UR0aSZyI"
+      },
+      {
+        "youtubeId": "HCZT_BCfIb4",
+        "title": "연극 '옥탑방 고양이' [공연에 뜨겁게 미치다]",
+        "outlet": "TBS 시민의방송",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=HCZT_BCfIb4"
+      },
+      {
+        "youtubeId": "T163zU1ywic",
+        "title": "2030의 솔직한 사랑법... 연극 '옥탑방 고양이'",
+        "outlet": "인천광역시",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=T163zU1ywic"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "연애시대": {
     "press": [
@@ -559,7 +624,17 @@ window.SHOW_EXTRAS = {
         "url": "https://blog.naver.com/2000121037/221387412758"
       }
     ],
-    "audience_note": "2018 초연(구성·각색·연출 김태형, 국립극장 달오름극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음."
+    "audience_note": "2018 초연(구성·각색·연출 김태형, 국립극장 달오름극장)의 공개 관람 후기 발췌. 각 후기의 저작권은 작성자에게 있음.",
+    "videos": [
+      {
+        "youtubeId": "-LQjuOf2oIw",
+        "title": "국립창극단 '우주소리'가 궁금하다고? (feat. 더 파크 The Park)",
+        "outlet": "국립극장 National Theater of Korea",
+        "date": "2018-10",
+        "sourceUrl": "https://www.youtube.com/watch?v=-LQjuOf2oIw"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "BBK라는 이름의 떡밥": {
     "press": [
@@ -683,7 +758,38 @@ window.SHOW_EXTRAS = {
         "credit": "제공 ㈜엠비제트컴퍼니"
       }
     ],
-    "photos_note": "제작사 배포(언론 공개) 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "제작사 배포(언론 공개) 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "gpG4q1s2ilg",
+        "title": "나나의 손 끝에 걸린 트리거, 어디를 향해 당길 것인가📜✒️ 연극 '빵야' ｜2022올해의신작/프리뷰/산실위키/하성광/김태형",
+        "outlet": "공연예술창작산실",
+        "date": "2023",
+        "sourceUrl": "https://www.youtube.com/watch?v=gpG4q1s2ilg"
+      },
+      {
+        "youtubeId": "Iigj_llt9fQ",
+        "title": "[빵야] 연습실 현장 공개",
+        "outlet": "엠비제트컴퍼니",
+        "date": "2023-01-23",
+        "sourceUrl": "https://www.youtube.com/watch?v=Iigj_llt9fQ"
+      },
+      {
+        "youtubeId": "p887t8HfoyQ",
+        "title": "[빵야] 인터뷰 영상",
+        "outlet": "엠비제트컴퍼니",
+        "date": "2023-01-09",
+        "sourceUrl": "https://www.youtube.com/watch?v=p887t8HfoyQ"
+      },
+      {
+        "youtubeId": "plr_k23q43Q",
+        "title": "[연극 #빵야] 트레일러 영상",
+        "outlet": "엠비제트컴퍼니",
+        "date": "2026-02-12",
+        "sourceUrl": "https://www.youtube.com/watch?v=plr_k23q43Q"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "경성의 고독한 미식가들": {
     "press": [
@@ -831,7 +937,45 @@ window.SHOW_EXTRAS = {
         "credit": "프레스콜 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "fq-j6jXwtsE",
+        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '죽은 직공을 위한 볼레로' - 김히어라, 김아영, 장민수, 이아름솔",
+        "outlet": "NOL 티켓",
+        "date": "2018-12-26",
+        "sourceUrl": "https://www.youtube.com/watch?v=fq-j6jXwtsE"
+      },
+      {
+        "youtubeId": "Xd_8vvOu8VQ",
+        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '라듐 파라다이스' - 조풍래, 김히어라, 김아영, 외",
+        "outlet": "NOL 티켓",
+        "date": "2018-12-26",
+        "sourceUrl": "https://www.youtube.com/watch?v=Xd_8vvOu8VQ"
+      },
+      {
+        "youtubeId": "c2pReIyM348",
+        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '어둠 속에서' - 박영수, 김소향",
+        "outlet": "NOL 티켓",
+        "date": "2018-12-26",
+        "sourceUrl": "https://www.youtube.com/watch?v=c2pReIyM348"
+      },
+      {
+        "youtubeId": "H347zHCBZig",
+        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '뭔가 더 있어' - 김소향, 박영수 외",
+        "outlet": "NOL 티켓",
+        "date": "2018-12-26",
+        "sourceUrl": "https://www.youtube.com/watch?v=H347zHCBZig"
+      },
+      {
+        "youtubeId": "Jhu4H62gpIk",
+        "title": "K-Musical 'Marie Qurie' 뮤지컬 '마리 퀴리' '문 뒤에 선' - 임강희, 김히어라",
+        "outlet": "NOL 티켓",
+        "date": "2018-12-26",
+        "sourceUrl": "https://www.youtube.com/watch?v=Jhu4H62gpIk"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "멤피스": {
     "press": [
@@ -905,7 +1049,24 @@ window.SHOW_EXTRAS = {
         "credit": "언론 공개 · 개막 리뷰"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "BmMeFH-YZMA",
+        "title": "[23멤피스] MEMPHIS&MEMBERS – EP#02",
+        "outlet": "SHOWNOTE",
+        "date": "2023-08-14",
+        "sourceUrl": "https://www.youtube.com/watch?v=BmMeFH-YZMA"
+      },
+      {
+        "youtubeId": "a6ZKsHMx84Y",
+        "title": "[23멤피스] MEMPHIS&MEMBERS – EP#05",
+        "outlet": "SHOWNOTE",
+        "date": "2023-08-24",
+        "sourceUrl": "https://www.youtube.com/watch?v=a6ZKsHMx84Y"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "팬레터": {
     "press": [
@@ -992,7 +1153,45 @@ window.SHOW_EXTRAS = {
         "credit": "프레스콜 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "fEOu7TJ0Rrs",
+        "title": "[더뮤지컬] 뮤지컬 〈팬레터〉 2025 프레스콜 중 '거짓말이 아니야' (4k) - 김종구, 원태민, 강혜인 | 예스24",
+        "outlet": "THE MUSICAL",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=fEOu7TJ0Rrs"
+      },
+      {
+        "youtubeId": "E-9GlHeYJvw",
+        "title": "[더뮤지컬] 뮤지컬 〈팬레터〉 2025 프레스콜 중 '생의 반려' (4k) - 에녹, 김리현, 소정화, 김지철, 김승용, 장민수, 송상훈 | 예스24",
+        "outlet": "THE MUSICAL",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=E-9GlHeYJvw"
+      },
+      {
+        "youtubeId": "LKPDMZrD9TI",
+        "title": "[풀영상] 뮤지컬 '팬레터'(𝑭𝑨𝑵𝑳𝑬𝑻𝑻𝑬𝑹) 프레스콜 (문성일, 백형훈, 려욱, 김경수, 박준휘, 윤나무, 소정화, 허혜진, 강혜인 외) /연합뉴스통통컬처",
+        "outlet": "K-Culture NOW by 연합뉴스",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=LKPDMZrD9TI"
+      },
+      {
+        "youtubeId": "HSywNJ2yNQ8",
+        "title": "🎵뮤지컬 '팬레터' 10주년 기념 프레스콜 중 'Muse'+'섬세한 팬레터'ㅣ김경수·문성일·김히어라·정민·김승용·장인수·송상훈ㅣ2025.12.11",
+        "outlet": "K-Culture NOW by 연합뉴스",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=HSywNJ2yNQ8"
+      },
+      {
+        "youtubeId": "5xzoaTrLHeY",
+        "title": "뮤지컬 팬레터 프레스콜 中 거짓말이 아니야 - 김종구, 원태민, 강혜인 #뮤지컬 #팬레터 #프레스콜 #김종구 #원태민 #강혜인 #공연시선",
+        "outlet": "공연시선",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=5xzoaTrLHeY"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "히스토리 보이즈": {
     "press": [
@@ -1032,7 +1231,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "vGxbeTkbbDc",
+        "title": "[단독] 연극 '히스토리 보이즈' 연습 시연 하이라이트 1부 - 이대연, 김찬호, 박은석, 강영석 외",
+        "outlet": "NOL 티켓",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=vGxbeTkbbDc"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "매디슨 카운티의 다리": {
     "press": [
@@ -1101,7 +1310,45 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "BMaUQU7txPU",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '매디슨 카운티의 다리' 초연 하이라이트-옥주현, 박은태, 이상현, 김민수, 김나윤, 김현진, 송영미 외",
+        "outlet": "THE MUSICAL",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=BMaUQU7txPU"
+      },
+      {
+        "youtubeId": "gHfuXuH3a3I",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '매디슨 카운티의 다리' 초연 연습현장스케치-옥주현, 박은태",
+        "outlet": "THE MUSICAL",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=gHfuXuH3a3I"
+      },
+      {
+        "youtubeId": "D_FX6bketu4",
+        "title": "뮤지컬 '매디슨 카운티의 다리' ('The Bridges of Madison County') - To Build A Home(집을 짓다) 등 - 옥주현, 박은태, 유리아",
+        "outlet": "NOL 티켓",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=D_FX6bketu4"
+      },
+      {
+        "youtubeId": "pVbTK2sXmCc",
+        "title": "뮤지컬 '매디슨 카운티의 다리' 프레스콜 '내게 남은 건 그대' - 박은태, 차지연",
+        "outlet": "NOL 티켓",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=pVbTK2sXmCc"
+      },
+      {
+        "youtubeId": "XAnl_PW2C3k",
+        "title": "뮤지컬 '매디슨 카운티의 다리' 프레스콜 '나 떠나면' - 황만익, 김민수 외",
+        "outlet": "NOL 티켓",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=XAnl_PW2C3k"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "카포네 트릴로지": {
     "director_note": {
@@ -1173,7 +1420,24 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "TyIo9eyA_Z4",
+        "title": "[컬처씨어터TV] 연극'카포네 트릴로지' 하이라이트 (김종태, 이석준, 박은석, 윤나무, 정연, 김지현)",
+        "outlet": "컬처씨어터",
+        "date": "2015",
+        "sourceUrl": "https://www.youtube.com/watch?v=TyIo9eyA_Z4"
+      },
+      {
+        "youtubeId": "qH2vjbaxE2M",
+        "title": "[영상이YAM] 연극 '카포네 트릴로지' 프레스콜 #3",
+        "outlet": "얌스테이지YAMSTAGE",
+        "date": "2015",
+        "sourceUrl": "https://www.youtube.com/watch?v=qH2vjbaxE2M"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "벙커 트릴로지": {
     "press": [
@@ -1247,7 +1511,24 @@ window.SHOW_EXTRAS = {
         "credit": "언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "jZYofHtVvcc",
+        "title": "[공읽남] 숨막히는 전쟁의 광기…연극 '벙커 트릴로지' (The Bunker Trilogy) [통통영상]",
+        "outlet": "K-Culture NOW by 연합뉴스",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=jZYofHtVvcc"
+      },
+      {
+        "youtubeId": "c7LdmAd5sh4",
+        "title": "[2025 벙커 트릴로지] 캐릭터 무빙 포스터 🌫️ 박정복",
+        "outlet": "아이엠컬처",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=c7LdmAd5sh4"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "미러 (A Mirror)": {
     "director_note": {
@@ -1385,7 +1666,59 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "mj4jnxLrDAY",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] TRAILER",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=mj4jnxLrDAY"
+      },
+      {
+        "youtubeId": "wWnfbGP5bCY",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] 공연 스팟",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=wWnfbGP5bCY"
+      },
+      {
+        "youtubeId": "EoNd4c-3pPA",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] 하이라이트 영상(1)",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=EoNd4c-3pPA"
+      },
+      {
+        "youtubeId": "7IBGCQNtqj4",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] 하이라이트 영상(2)",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=7IBGCQNtqj4"
+      },
+      {
+        "youtubeId": "CKyC3T3CP68",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] 미스터 갬블러",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=CKyC3T3CP68"
+      },
+      {
+        "youtubeId": "YwnKVhpdi3I",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] 멈출 수 없어",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=YwnKVhpdi3I"
+      },
+      {
+        "youtubeId": "KHpDnyo682k",
+        "title": "[2024 뮤지컬 스윙 데이즈_암호명 A] 피날레",
+        "outlet": "뮤지컬 스윙 데이즈_암호명 A",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=KHpDnyo682k"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "더헬멧": {
     "press": [
@@ -1437,7 +1770,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "RBNXH9lGQCI",
+        "title": "[더뮤지컬] 컬처_연극 '더 헬멧-Room's Vol.1' 초연 하이라이트-정원조, 정연, 손지윤, 한송희, 양소민, 이정수, 이호영, 윤나무, 김도빈",
+        "outlet": "THE MUSICAL",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=RBNXH9lGQCI"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "로기수": {
     "press": [
@@ -1477,7 +1820,24 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "3sDpBfTOGeo",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '로기수' 2016 공연 하이라이트 1부-윤나무, 김종구 외",
+        "outlet": "THE MUSICAL",
+        "date": "2016",
+        "sourceUrl": "https://www.youtube.com/watch?v=3sDpBfTOGeo"
+      },
+      {
+        "youtubeId": "rgye__4Yqv0",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '로기수' 초연 하이라이트 2부",
+        "outlet": "THE MUSICAL",
+        "date": "2015",
+        "sourceUrl": "https://www.youtube.com/watch?v=rgye__4Yqv0"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "리지": {
     "press": [
@@ -1517,7 +1877,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "rdzSeBzx4cM",
+        "title": "20 뮤지컬 리지 하이라이트",
+        "outlet": "SHOWNOTE",
+        "date": "2020-05-26",
+        "sourceUrl": "https://www.youtube.com/watch?v=rdzSeBzx4cM"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "창문 넘어 도망친 100세 노인": {
     "press": [
@@ -1557,7 +1927,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "L8HUbxlAMO8",
+        "title": "지이선 작가 \"무대세트는 알란의 기억의 창고\" [연극] 창문넘어 도망친 100세 노인 프레스콜",
+        "outlet": "One Cut",
+        "date": "2018",
+        "sourceUrl": "https://www.youtube.com/watch?v=L8HUbxlAMO8"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "바스커빌 - 셜록홈즈 미스터리": {
     "press": [
@@ -1604,7 +1984,24 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "OMP1FmhqbSc",
+        "title": "[바스커빌: 셜록홈즈 미스터리] 인터뷰 영상 공개!",
+        "outlet": "MOMENTMAKERS모먼트메이커",
+        "date": "2024-03-20",
+        "sourceUrl": "https://www.youtube.com/watch?v=OMP1FmhqbSc"
+      },
+      {
+        "youtubeId": "h9pqPYkpG-U",
+        "title": "[바스커빌: 셜록홈즈 미스터리 Chapter2] 인터뷰 영상 공개!",
+        "outlet": "MOMENTMAKERS모먼트메이커",
+        "date": "2024-06-19",
+        "sourceUrl": "https://www.youtube.com/watch?v=h9pqPYkpG-U"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "보이A": {
     "press": [
@@ -1702,7 +2099,38 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "cVBQGE5xoiA",
+        "title": "[#보니앤클라이드] 하이라이트 CLIP - WHEN I DRIVEㅣ달려라",
+        "outlet": "SHOWNOTE",
+        "date": "2025-12",
+        "sourceUrl": "https://www.youtube.com/watch?v=cVBQGE5xoiA"
+      },
+      {
+        "youtubeId": "tYdUREuiQ9A",
+        "title": "뮤지컬 '보니앤클라이드' 프레스콜 - 6. WHEN I DRIVE (달려라)  | 조형균, 김찬호, 윤지인",
+        "outlet": "스튜디오 띠딧",
+        "date": "2025-12",
+        "sourceUrl": "https://www.youtube.com/watch?v=tYdUREuiQ9A"
+      },
+      {
+        "youtubeId": "uQzu1R1KIo8",
+        "title": "[#보니앤클라이드] 하이라이트 CLIP - RAISE A LITTLE HELLㅣ지옥을 보여줄게",
+        "outlet": "SHOWNOTE",
+        "date": "2025-12",
+        "sourceUrl": "https://www.youtube.com/watch?v=uQzu1R1KIo8"
+      },
+      {
+        "youtubeId": "es23tHyzaiM",
+        "title": "[4K] 뮤지컬 [보니 앤 클라이드] 조형균 & 이봄소리 \"우릴 기억하게 해줄게(THIS WORLD WILL REMEMBER US)\" Band LIVE | it's Live",
+        "outlet": "it's Live",
+        "date": "2026-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=es23tHyzaiM"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "존경하는 엘레나 선생님": {
     "press": [
@@ -1806,7 +2234,45 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "bVjfHGj6B60",
+        "title": "연극 '오펀스' 프레스콜 - 2막 2장 양소민 정인지 김주연 | the play Orphans PressCall [PICK, 비하인드][4K][LIVE] #오펀스",
+        "outlet": "비하인드 BEHIND CULTURE",
+        "date": "2026-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=bVjfHGj6B60"
+      },
+      {
+        "youtubeId": "SC76F1UCTeE",
+        "title": "[더뮤지컬] 연극 〈오펀스〉 2026 프레스콜 하이라이트 2 (4k) - 우현주, 오승훈, 김시유, 양소민, 정인지, 김주연",
+        "outlet": "THE MUSICAL",
+        "date": "2026-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=SC76F1UCTeE"
+      },
+      {
+        "youtubeId": "B7HDf3z2GCg",
+        "title": "[더뮤지컬] 연극 〈오펀스〉 2026 프레스콜 하이라이트 1 (4k) - 문근영, 김단이, 박지일, 최석진, 최정우",
+        "outlet": "THE MUSICAL",
+        "date": "2026-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=B7HDf3z2GCg"
+      },
+      {
+        "youtubeId": "rySBwVyba4o",
+        "title": "[연극 오펀스] 양소민, 정인지, 김주연 프레스콜 주요 장면 시연",
+        "outlet": "NCTV_뉴스컬처",
+        "date": "2026-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=rySBwVyba4o"
+      },
+      {
+        "youtubeId": "y_CpsgNApwM",
+        "title": "연극 [오펀스] 공부방송",
+        "outlet": "혜화로운공연생활",
+        "date": "2026-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=y_CpsgNApwM"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "홀연했던 사나이": {
     "press": [
@@ -1858,7 +2324,31 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "EQ3-nkr32do",
+        "title": "홀연했던영상 시리즈 가로라이브",
+        "outlet": "컴퍼니 연작",
+        "date": "2018-01-17",
+        "sourceUrl": "https://www.youtube.com/watch?v=EQ3-nkr32do"
+      },
+      {
+        "youtubeId": "t42uwMyEkzI",
+        "title": "홀연했던영상 시리즈. 그 두 번째 이야기",
+        "outlet": "컴퍼니 연작",
+        "date": "2017-12-18",
+        "sourceUrl": "https://www.youtube.com/watch?v=t42uwMyEkzI"
+      },
+      {
+        "youtubeId": "ZnTgkGt2P18",
+        "title": "홀연했던 영상 시리즈. 세번째 이야기",
+        "outlet": "컴퍼니 연작",
+        "date": "2017-12-19",
+        "sourceUrl": "https://www.youtube.com/watch?v=ZnTgkGt2P18"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "비더슈탄트": {
     "press": [
@@ -2002,7 +2492,31 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "64w1m6iVjfY",
+        "title": "[커튼콜168] 헨리8세 여섯 왕비들의 이혼 참수 라이브, 끝엔 반전이 | 뮤지컬 '식스' 협력연출 김태형 / 골라듣는 뉴스룸 / SBS",
+        "outlet": "SBS 뉴스",
+        "date": "2023-04-20",
+        "sourceUrl": "https://www.youtube.com/watch?v=64w1m6iVjfY"
+      },
+      {
+        "youtubeId": "BOhKKYiPZcc",
+        "title": "[식스더뮤지컬] 최초 한국어 공연 연습실 공개 🎤EX-Wives 하이라이트",
+        "outlet": "아이엠컬처",
+        "date": "2023-03-22",
+        "sourceUrl": "https://www.youtube.com/watch?v=BOhKKYiPZcc"
+      },
+      {
+        "youtubeId": "N0IFCbzs0ps",
+        "title": "'식스 더 뮤지컬' 내한공연, 최초 공개 'EX-Wives' 라이브 시연부터 영국 여왕들과 한국 여왕들의 만남까지 (MC 박가람, 홍지희)",
+        "outlet": "NOL 티켓",
+        "date": "2023-03-16",
+        "sourceUrl": "https://www.youtube.com/watch?v=N0IFCbzs0ps"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "금란방": {
     "press": [
@@ -2129,7 +2643,31 @@ window.SHOW_EXTRAS = {
         "credit": "언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "l6gtN-kRFlo",
+        "title": "[#뮤지컬아몬드] 밸런스게임",
+        "outlet": "콘텐츠제작사라이브",
+        "date": "2022-04-01",
+        "sourceUrl": "https://www.youtube.com/watch?v=l6gtN-kRFlo"
+      },
+      {
+        "youtubeId": "DVwjYv2gx08",
+        "title": "[뮤지컬 아몬드] 프로필 촬영장 메이킹 영상",
+        "outlet": "콘텐츠제작사라이브",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=DVwjYv2gx08"
+      },
+      {
+        "youtubeId": "c_PlesfS2dE",
+        "title": "[뮤지컬 아몬드] 희노애락애오욕 인터뷰🎬",
+        "outlet": "콘텐츠제작사라이브",
+        "date": "2022-03-30",
+        "sourceUrl": "https://www.youtube.com/watch?v=c_PlesfS2dE"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "천 개의 파랑": {
     "photos": [
@@ -2239,7 +2777,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "ZanihQJi3tk",
+        "title": "뮤지컬 [오늘 처음 만드는 뮤지컬] 오첨뮤 레전드 회차 다시보기 #찰스의보이지않는손",
+        "outlet": "아이엠컬처",
+        "date": "",
+        "sourceUrl": "https://www.youtube.com/watch?v=ZanihQJi3tk"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "이토록 보통의": {
     "photos": [
@@ -2335,7 +2883,24 @@ window.SHOW_EXTRAS = {
       "한국 초연 한 달 만에 예매율이 90%에 육박했고, 주말·인기 회차는 매진을 기록했다.",
       "중국 원작은 현지 다마이(Damai) 평점 9.8점, 또우반(Douban) 평점 8.3점을 기록한 화제작이다."
     ],
-    "highlights_note": "포커스테이지 배포 자료 및 아트코리아방송·에너지코리아 등 보도 기준."
+    "highlights_note": "포커스테이지 배포 자료 및 아트코리아방송·에너지코리아 등 보도 기준.",
+    "videos": [
+      {
+        "youtubeId": "Uz3sGUecizQ",
+        "title": "MUSICAL [#0528] M07. 광대 넘버 선공개",
+        "outlet": "FOCUSTAGE_kr",
+        "date": "2025-11-13",
+        "sourceUrl": "https://www.youtube.com/watch?v=Uz3sGUecizQ"
+      },
+      {
+        "youtubeId": "06OoVG80mCM",
+        "title": "MUSICAL [#0528] 유령즈 댄스 넘버 #0528 Dancing ghosts",
+        "outlet": "FOCUSTAGE_kr",
+        "date": "2025-10-27",
+        "sourceUrl": "https://www.youtube.com/watch?v=06OoVG80mCM"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "글로리아": {
     "press": [
@@ -2430,7 +2995,31 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "Je1zsYjTw4A",
+        "title": "[연극] 한밤중에 개에게 일어난 의문의 사건 (한밤개)프레스콜 현장 (2015.12.3)",
+        "outlet": "One Cut",
+        "date": "2015-12-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=Je1zsYjTw4A"
+      },
+      {
+        "youtubeId": "ghDG02Jptvk",
+        "title": "[더뮤지컬] 컬처_연극 '한밤중에 개에게 일어난 의문의 사건' 초연 기자간담회-려욱, 전성우, 심형탁 외",
+        "outlet": "THE MUSICAL",
+        "date": "2015",
+        "sourceUrl": "https://www.youtube.com/watch?v=ghDG02Jptvk"
+      },
+      {
+        "youtubeId": "MDeSUvVBY9Y",
+        "title": "[더뮤지컬] 컬처_연극 '한밤중에 개에게 일어난 의문의 사건' 초연 하이라이트 1부-전성우, 김영호, 배해선, 김로사, 김도현 외",
+        "outlet": "THE MUSICAL",
+        "date": "2015",
+        "sourceUrl": "https://www.youtube.com/watch?v=MDeSUvVBY9Y"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "아나키스트": {
     "press": [
@@ -2469,7 +3058,17 @@ window.SHOW_EXTRAS = {
       "티켓 오픈 직후 티켓링크 뮤지컬 부문 일간·주간 예매 랭킹 1위를 기록했고, 그룹 에이스(A.C.E) 강유찬의 뮤지컬 데뷔작으로 화제를 모았다.",
       "2026년 9월 16일~12월 6일 예스24아트원 1관으로 무대를 확장해 재연이 확정됐다."
     ],
-    "highlights_note": "제작사 엠비제트컴퍼니 보도자료 및 티켓링크·스포츠동아 등 보도 기준."
+    "highlights_note": "제작사 엠비제트컴퍼니 보도자료 및 티켓링크·스포츠동아 등 보도 기준.",
+    "videos": [
+      {
+        "youtubeId": "VmecELvGmBU",
+        "title": "[1DAY 1K-CULTURE: K-STAGE] Ep.21 Korean Original Musical Anarchist",
+        "outlet": "Arirang TV",
+        "date": "2025-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=VmecELvGmBU"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "부치하난": {
     "press": [
@@ -2503,7 +3102,52 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "yWoIzhke0Ws",
+        "title": "[2024 뮤지컬 부치하난] 공연 하이라이트 CLIP #1 | 노윤, 이재림, 김도현, 류찬열, 양성령, 장재웅",
+        "outlet": "라이브러리컴퍼니",
+        "date": "2024-10",
+        "sourceUrl": "https://www.youtube.com/watch?v=yWoIzhke0Ws"
+      },
+      {
+        "youtubeId": "oNhfO-M_plo",
+        "title": "2024 뮤지컬 부치하난 | 공연 하이라이트 CLIP #2 | 정택운, 임예진, 양승리, 이정수, 하미미, 정재헌",
+        "outlet": "라이브러리컴퍼니",
+        "date": "2024-10",
+        "sourceUrl": "https://www.youtube.com/watch?v=oNhfO-M_plo"
+      },
+      {
+        "youtubeId": "fA0TU-FRxiw",
+        "title": "[2024 뮤지컬 부치하난] 공연 하이라이트 CLIP #3 | 유영재, 지수연, 정필립, 류찬열, 양성령, 장재웅",
+        "outlet": "라이브러리컴퍼니",
+        "date": "2024-10-11",
+        "sourceUrl": "https://www.youtube.com/watch?v=fA0TU-FRxiw"
+      },
+      {
+        "youtubeId": "yUuJ6Glqxjs",
+        "title": "[2024 뮤지컬 부치하난] Lyric Video | 노윤&임예진 - 고래의 바다 | 리릭 비디오(Piano ver.)",
+        "outlet": "라이브러리컴퍼니",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/watch?v=yUuJ6Glqxjs"
+      },
+      {
+        "youtubeId": "1X07nuYxtPA",
+        "title": "뮤지컬 [부치하난] | 고래는 진짜 유-명한 부치하난 앙상블임 #뮤지컬 #부치하난 #라이브러리컴퍼니 #shorts",
+        "outlet": "라이브러리컴퍼니",
+        "date": "2024",
+        "sourceUrl": "https://www.youtube.com/shorts/1X07nuYxtPA"
+      },
+      {
+        "youtubeId": "Qf_hXrEROFI",
+        "title": "뮤지컬 '부치하난', 세계 최초 객석 위를 나는 고래 구현 / SBS",
+        "outlet": "SBS 뉴스",
+        "date": "2024-09-25",
+        "sourceUrl": "https://www.youtube.com/watch?v=Qf_hXrEROFI"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "브루클린": {
     "press": [
@@ -2542,7 +3186,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "QnPz6e_mPXM",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '브루클린' 2012 공연 하이라이트 1부 - 전나혜, 이주광, 김경선, 조형균, 소정화",
+        "outlet": "THE MUSICAL",
+        "date": "2012",
+        "sourceUrl": "https://www.youtube.com/watch?v=QnPz6e_mPXM"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "모범생들": {
     "press": [
@@ -2684,7 +3338,24 @@ window.SHOW_EXTRAS = {
       "관객은 입장 시 팔찌로 4개 가문(플레저·퓨리·새드·펀) 중 하나에 무작위 배정돼 해당 가문의 결혼식 하객이 되어 극에 참여한다.",
       "2023년 6월 8일~14일, 총 12회 공연이 첫 회차를 시작하기도 전에 전 회차 매진됐다 (MBC강원영동 보도)."
     ],
-    "highlights_note": "연합뉴스(2023.5.9/6.11), MBC강원영동 등 보도 기준."
+    "highlights_note": "연합뉴스(2023.5.9/6.11), MBC강원영동 등 보도 기준.",
+    "videos": [
+      {
+        "youtubeId": "FEUm7qSsHbk",
+        "title": "이머시브 뮤지컬 \"월하가요:Singing in the Moonlight\" 하이라이트✨",
+        "outlet": "엠비제트컴퍼니",
+        "date": "2023-09-27",
+        "sourceUrl": "https://www.youtube.com/watch?v=FEUm7qSsHbk"
+      },
+      {
+        "youtubeId": "3rnvBeEJANg",
+        "title": "[월하가요(月下歌謠)] 세상에서 하나뿐인, 한 번뿐인 공연을 만나다!",
+        "outlet": "강릉문화재단",
+        "date": "2023-05-19",
+        "sourceUrl": "https://www.youtube.com/watch?v=3rnvBeEJANg"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "땡큐 베리 스트로베리": {
     "press": [
@@ -2750,7 +3421,17 @@ window.SHOW_EXTRAS = {
         "credit": "프로덕션 스틸 · 언론 공개"
       }
     ],
-    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시."
+    "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
+    "videos": [
+      {
+        "youtubeId": "7NrBGXNm5Wg",
+        "title": "【TMI 썰스데이】 🎤🎶찰떡인 캐스팅 배우들의 도레'미'친🎹 노래 실력을 보여드립니다!ㅣ뮤지컬[개와고양이의시간]1탄",
+        "outlet": "아떼오드",
+        "date": "2021-03-12",
+        "sourceUrl": "https://www.youtube.com/watch?v=7NrBGXNm5Wg"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "봄 작가, 겨울 무대": {
     "highlights": [
@@ -2763,7 +3444,7 @@ window.SHOW_EXTRAS = {
 
 // === AUTO-GENERATED PHOTOS (build_photos.py) — 직접 편집 금지, scripts/build_photos.py가 생성) ===
 // 디스크(wiki/assets/photos/*)의 모든 공연 사진을 SHOW_EXTRAS[title].photos 에 src 기준 병합.
-window.PHOTOS_DATA = {"#0528":[{"src":"assets/photos/#0528/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_03.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_04.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_07.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"개와 고양이의 시간":[{"src":"assets/photos/개와고양이의시간/개와고양이_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"}],"경성의 고독한 미식가들":[{"src":"assets/photos/경성의고독한미식가들/web_2026_01.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/경성의고독한미식가들/web_2026_03.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"글로리아":[{"src":"assets/photos/글로리아/글로리아_2016_still.jpg","caption":"2016 프로덕션 스틸","credit":"프로덕션 스틸"}],"금란방":[{"src":"assets/photos/금란방/금란방_2024_still1.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/금란방_2024_still2.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2022_03.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"}],"내일 공연인데 어떡하지":[{"src":"assets/photos/내일공연인데어떡하지/web_2017_02.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"더헬멧":[{"src":"assets/photos/더헬멧/더헬멧_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/더헬멧_2019_still.png","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/38431_77206_646.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/45578_51826_634.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/45578_51828_730.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/45578_51830_826.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110099_555.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110100_5521.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110101_5611.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110102_5638.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/AKR20190115160800005_01_i_P4.jpg","caption":"2019 공연","credit":"연합뉴스"}],"두결한장":[{"src":"assets/photos/두결한장/web_2014_01.jpg","caption":"2014 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/두결한장/web_2014_02.jpg","caption":"2014 프로덕션 스틸","credit":"프로덕션 스틸"}],"로기수":[{"src":"assets/photos/로기수/로기수_2015_still.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/로기수_2015_still2.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/로기수_2015_still3.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_01.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_02.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_03.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2016_04.jpg","caption":"2016 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2016_05.jpg","caption":"2016 프로덕션 스틸","credit":"프로덕션 스틸"}],"리지":[{"src":"assets/photos/리지/리지_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2022_03.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2022_04.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"}],"마리 퀴리":[{"src":"assets/photos/마리퀴리/마리퀴리_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/마리퀴리_2020_still2.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/마리퀴리_2020_still3.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/마리퀴리_2020_still4.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_03.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2025_04.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"매디슨 카운티의 다리":[{"src":"assets/photos/매디슨/매디슨_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/매디슨_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/web_2025_03.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"멤피스":[{"src":"assets/photos/멤피스/멤피스_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/멤피스_2023_still2.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/멤피스_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"모범생들":[{"src":"assets/photos/모범생들/모범생들_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/모범생들_2017_still2.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/모범생들_2017_still3.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"미러 (A Mirror)":[{"src":"assets/photos/미러/미러_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_01.jpeg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_02.jpeg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"미 온 더 송":[{"src":"assets/photos/미온더송/미온더송_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_01.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_02.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"바스커빌 - 셜록홈즈 미스터리":[{"src":"assets/photos/바스커빌/바스커빌_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"벙커 트릴로지":[{"src":"assets/photos/벙커트릴로지/벙커_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/벙커_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/벙커_2018_still2.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/벙커_2019_still.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_01.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_02.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_03.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"베헤모스":[{"src":"assets/photos/베헤모스/베헤모스_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"보니 앤 클라이드":[{"src":"assets/photos/보니앤클라이드/보니앤클라이드_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/보니앤클라이드_2025_still2.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/보니앤클라이드_2025_still3.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"보이A":[{"src":"assets/photos/보이A/보이A_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보이A/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보이A/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보이A/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"부치하난":[{"src":"assets/photos/부치하난/부치하난_2024_still.png","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"브루클린":[{"src":"assets/photos/브루클린/브루클린_2012_still1.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/브루클린_2012_still2.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/web_2012_01.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/web_2012_02.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/web_2012_03.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"}],"비더슈탄트":[{"src":"assets/photos/비더슈탄트/비더슈탄트_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"빵야":[{"src":"assets/photos/빵야/빵야_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/빵야/빵야_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/빵야/빵야_2026_still.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"스윙데이즈":[{"src":"assets/photos/스윙데이즈/스윙데이즈_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2026_01.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2026_02.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"식스 더 뮤지컬":[{"src":"assets/photos/식스/식스_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"신과 함께 - 이승편":[{"src":"assets/photos/신과함께이승편/신과함께이승편_2019_still.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_01.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_02.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_03.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"신창극시리즈2 우주소리":[{"src":"assets/photos/신창극우주소리/신창극우주소리_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/신창극우주소리_2018_still2.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/web_2018_01.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/web_2018_02.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/web_2018_03.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"}],"아몬드":[{"src":"assets/photos/아몬드/아몬드_2025_still1.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/아몬드_2025_still2.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_02.jpeg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"앙상블":[{"src":"assets/photos/앙상블/web_2019_01.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_02.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_03.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_04.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_05.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"어쩔 수 없는 막, 다른 길에서":[{"src":"assets/photos/어쩔수없는막/어쩔수없는막_2021_still1.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/어쩔수없는막/어쩔수없는막_2021_still2.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"}],"언더스터디":[{"src":"assets/photos/언더스터디/언더스터디_2021_still.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2021_01.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2021_02.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"}],"연애시대":[{"src":"assets/photos/연애시대/web_2011_01.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_02.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_03.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_04.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_05.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"}],"오늘 처음 만드는 뮤지컬":[{"src":"assets/photos/오늘처음만드는뮤지컬/오늘처음_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"오펀스":[{"src":"assets/photos/오펀스/오펀스_2022_still.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/오펀스_2022_still2.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/오펀스_2022_still3.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/web_2026_03.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"옥탑방 고양이":[{"src":"assets/photos/옥탑방고양이/옥탑방고양이_2010_still.jpg","caption":"2010 프로덕션 스틸","credit":"프로덕션 스틸"}],"월하가요":[{"src":"assets/photos/월하가요/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/월하가요/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"이토록 보통의":[{"src":"assets/photos/이토록보통의/이토록보통의_2021_still.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"}],"존경하는 엘레나 선생님":[{"src":"assets/photos/존경하는엘레나선생님/존경하는엘레나_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/존경하는엘레나선생님/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/존경하는엘레나선생님/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"}],"창문 넘어 도망친 100세 노인":[{"src":"assets/photos/창문넘어도망친100세노인/창문넘어_2019_still.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"천 개의 파랑":[{"src":"assets/photos/천개의파랑/천개의파랑_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/천개의파랑_2024_still2.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/천개의파랑_2024_still3.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/web_2024_01.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/web_2024_02.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/web_2024_03.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"초록":[{"src":"assets/photos/초록/초록_2026_still.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"카포네 트릴로지":[{"src":"assets/photos/카포네트릴로지/카포네_2015_still.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2015_still2.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2015_still3.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_01.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_02.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_03.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_04.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_05.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"}],"팬레터":[{"src":"assets/photos/팬레터/팬레터_2021_still.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2021_still2.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2021_still3.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2025_still2.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2021_04.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_06.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_07.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_09.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2026_10.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2025_커튼콜.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"푸른 눈 박연":[{"src":"assets/photos/푸른눈박연/web_2013_01.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/푸른눈박연/web_2013_02.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"}],"한밤중에 개에게 일어난 의문의 사건":[{"src":"assets/photos/한밤중에개/한밤중에개_2015_still.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"}],"홀연했던 사나이":[{"src":"assets/photos/홀연했던사나이/홀연했던_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_01.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_02.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_03.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"}],"히스토리 보이즈":[{"src":"assets/photos/히스토리보이즈/히스토리보이즈_2013_still.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/히스토리보이즈/web_2026_06.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}]};
+window.PHOTOS_DATA = {"#0528":[{"src":"assets/photos/#0528/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_03.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_04.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/#0528/web_2025_07.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"개와 고양이의 시간":[{"src":"assets/photos/개와고양이의시간/개와고양이_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/개와고양이의시간/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/개와고양이의시간/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"}],"경성의 고독한 미식가들":[{"src":"assets/photos/경성의고독한미식가들/web_2026_01.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/경성의고독한미식가들/web_2026_03.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/경성의고독한미식가들/web_2026_04.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/경성의고독한미식가들/web_2026_05.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"글로리아":[{"src":"assets/photos/글로리아/글로리아_2016_still.jpg","caption":"2016 프로덕션 스틸","credit":"프로덕션 스틸"}],"금란방":[{"src":"assets/photos/금란방/금란방_2024_still1.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/금란방_2024_still2.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2022_03.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2022_04.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2022_05.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2024_06.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2024_07.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2024_08.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/금란방/web_2024_09.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"내일 공연인데 어떡하지":[{"src":"assets/photos/내일공연인데어떡하지/web_2017_02.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/내일공연인데어떡하지/web_2017_03.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/내일공연인데어떡하지/web_2017_04.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"더헬멧":[{"src":"assets/photos/더헬멧/더헬멧_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/더헬멧_2019_still.png","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/38431_77206_646.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/45578_51826_634.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/45578_51828_730.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/45578_51830_826.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110099_555.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110100_5521.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110101_5611.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/86494_110102_5638.jpg","caption":"프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/AKR20190115160800005_01_i_P4.jpg","caption":"2019 공연","credit":"연합뉴스"},{"src":"assets/photos/더헬멧/web_2018_01.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/더헬멧/web_2018_02.jpeg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"}],"두결한장":[{"src":"assets/photos/두결한장/web_2014_01.jpg","caption":"2014 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/두결한장/web_2014_02.jpg","caption":"2014 프로덕션 스틸","credit":"프로덕션 스틸"}],"로기수":[{"src":"assets/photos/로기수/로기수_2015_still.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/로기수_2015_still2.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/로기수_2015_still3.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_01.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_02.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_03.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_06.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_07.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_08.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_09.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2015_10.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2016_04.jpg","caption":"2016 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/로기수/web_2016_05.jpg","caption":"2016 프로덕션 스틸","credit":"프로덕션 스틸"}],"리지":[{"src":"assets/photos/리지/리지_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_05.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_06.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_07.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2020_08.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2022_03.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/리지/web_2022_04.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"}],"마리 퀴리":[{"src":"assets/photos/마리퀴리/마리퀴리_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/마리퀴리_2020_still2.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/마리퀴리_2020_still3.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/마리퀴리_2020_still4.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_03.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2020_06.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2025_04.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/마리퀴리/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"매디슨 카운티의 다리":[{"src":"assets/photos/매디슨/매디슨_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/매디슨_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/매디슨/web_2025_03.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"멤피스":[{"src":"assets/photos/멤피스/멤피스_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/멤피스_2023_still2.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/멤피스_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/web_2023_04.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/web_2023_05.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/멤피스/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"모범생들":[{"src":"assets/photos/모범생들/모범생들_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/모범생들_2017_still2.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/모범생들_2017_still3.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/web_2015_05.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/web_2017_01.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/web_2017_02.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/web_2017_03.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/모범생들/web_2017_04.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"미러 (A Mirror)":[{"src":"assets/photos/미러/미러_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_01.jpeg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_02.jpeg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_03.png","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_04.png","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미러/web_2025_06.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"미 온 더 송":[{"src":"assets/photos/미온더송/미온더송_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_01.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_02.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_03.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_04.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/미온더송/web_2017_05.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"바스커빌 - 셜록홈즈 미스터리":[{"src":"assets/photos/바스커빌/바스커빌_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"벙커 트릴로지":[{"src":"assets/photos/벙커트릴로지/벙커_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/벙커_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/벙커_2018_still2.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/벙커_2019_still.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_01.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_02.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_03.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_04.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_05.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_06.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/벙커트릴로지/web_2019_07.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"베헤모스":[{"src":"assets/photos/베헤모스/베헤모스_2017_still.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"보니 앤 클라이드":[{"src":"assets/photos/보니앤클라이드/보니앤클라이드_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/보니앤클라이드_2025_still2.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/보니앤클라이드_2025_still3.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_02.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_03.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_04.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보니앤클라이드/web_2025_06.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"보이A":[{"src":"assets/photos/보이A/보이A_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보이A/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보이A/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/보이A/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"부치하난":[{"src":"assets/photos/부치하난/부치하난_2024_still.png","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/부치하난/web_2024_01.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/부치하난/web_2024_02.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"브루클린":[{"src":"assets/photos/브루클린/브루클린_2012_still1.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/브루클린_2012_still2.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/web_2012_01.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/web_2012_02.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/브루클린/web_2012_03.jpg","caption":"2012 프로덕션 스틸","credit":"프로덕션 스틸"}],"비더슈탄트":[{"src":"assets/photos/비더슈탄트/비더슈탄트_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_04.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_05.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/비더슈탄트/web_2023_06.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"빵야":[{"src":"assets/photos/빵야/빵야_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/빵야/빵야_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/빵야/빵야_2026_still.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/빵야/web_2026_01.jpeg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/빵야/web_2026_02.jpeg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"스윙데이즈":[{"src":"assets/photos/스윙데이즈/스윙데이즈_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2024_03.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2024_04.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2024_05.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2024_06.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2024_07.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2026_01.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/스윙데이즈/web_2026_02.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"식스 더 뮤지컬":[{"src":"assets/photos/식스/식스_2023_still.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/식스/web_2023_04.jpeg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"신과 함께 - 이승편":[{"src":"assets/photos/신과함께이승편/신과함께이승편_2019_still.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_01.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_02.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_03.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_04.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_05.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_06.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신과함께이승편/web_2019_07.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"신창극시리즈2 우주소리":[{"src":"assets/photos/신창극우주소리/신창극우주소리_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/신창극우주소리_2018_still2.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/web_2018_01.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/web_2018_02.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/신창극우주소리/web_2018_03.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"}],"아몬드":[{"src":"assets/photos/아몬드/아몬드_2025_still1.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/아몬드_2025_still2.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_01.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_02.jpeg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_03.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_04.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/아몬드/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"앙상블":[{"src":"assets/photos/앙상블/web_2019_01.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_02.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_03.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_04.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_05.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_06.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/앙상블/web_2019_07.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"}],"어쩔 수 없는 막, 다른 길에서":[{"src":"assets/photos/어쩔수없는막/어쩔수없는막_2021_still1.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/어쩔수없는막/어쩔수없는막_2021_still2.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"}],"언더스터디":[{"src":"assets/photos/언더스터디/언더스터디_2021_still.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2021_01.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2021_02.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2021_07.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2022_03.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2022_04.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2022_05.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/언더스터디/web_2022_06.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"}],"연애시대":[{"src":"assets/photos/연애시대/web_2011_01.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_02.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_03.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_04.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/연애시대/web_2011_05.jpg","caption":"2011 프로덕션 스틸","credit":"프로덕션 스틸"}],"오늘 처음 만드는 뮤지컬":[{"src":"assets/photos/오늘처음만드는뮤지컬/오늘처음_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오늘처음만드는뮤지컬/web_2017_01.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오늘처음만드는뮤지컬/web_2017_02.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오늘처음만드는뮤지컬/web_2017_03.jpg","caption":"2017 프로덕션 스틸","credit":"프로덕션 스틸"}],"오펀스":[{"src":"assets/photos/오펀스/오펀스_2022_still.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/오펀스_2022_still2.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/오펀스_2022_still3.jpg","caption":"2022 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/web_2026_03.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/web_2026_04.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/오펀스/web_2026_05.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"옥탑방 고양이":[{"src":"assets/photos/옥탑방고양이/옥탑방고양이_2010_still.jpg","caption":"2010 프로덕션 스틸","credit":"프로덕션 스틸"}],"월하가요":[{"src":"assets/photos/월하가요/web_2023_01.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/월하가요/web_2023_02.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/월하가요/web_2023_03.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/월하가요/web_2023_04.jpg","caption":"2023 프로덕션 스틸","credit":"프로덕션 스틸"}],"이토록 보통의":[{"src":"assets/photos/이토록보통의/이토록보통의_2021_still.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/이토록보통의/web_2021_01.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"}],"존경하는 엘레나 선생님":[{"src":"assets/photos/존경하는엘레나선생님/존경하는엘레나_2020_still.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/존경하는엘레나선생님/web_2020_01.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/존경하는엘레나선생님/web_2020_02.jpg","caption":"2020 프로덕션 스틸","credit":"프로덕션 스틸"}],"창문 넘어 도망친 100세 노인":[{"src":"assets/photos/창문넘어도망친100세노인/창문넘어_2019_still.jpg","caption":"2019 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/창문넘어도망친100세노인/web_2018_01.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"}],"천 개의 파랑":[{"src":"assets/photos/천개의파랑/천개의파랑_2024_still.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/천개의파랑_2024_still2.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/천개의파랑_2024_still3.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/web_2024_01.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/web_2024_02.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/천개의파랑/web_2024_03.jpg","caption":"2024 프로덕션 스틸","credit":"프로덕션 스틸"}],"초록":[{"src":"assets/photos/초록/초록_2026_still.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/초록/web_2026_01.png","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}],"카포네 트릴로지":[{"src":"assets/photos/카포네트릴로지/카포네_2015_still.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2015_still2.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2015_still3.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/카포네_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_01.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_02.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_03.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_04.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_05.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/카포네트릴로지/web_2015_06.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"}],"팬레터":[{"src":"assets/photos/팬레터/팬레터_2021_still.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2021_still2.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2021_still3.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2025_still.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2025_still2.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2021_04.jpg","caption":"2021 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_05.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_06.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_07.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2025_09.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/web_2026_10.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/팬레터/팬레터_2025_커튼콜.jpg","caption":"2025 프로덕션 스틸","credit":"프로덕션 스틸"}],"푸른 눈 박연":[{"src":"assets/photos/푸른눈박연/web_2013_01.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/푸른눈박연/web_2013_02.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/푸른눈박연/web_2013_03.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"}],"한밤중에 개에게 일어난 의문의 사건":[{"src":"assets/photos/한밤중에개/한밤중에개_2015_still.jpg","caption":"2015 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/한밤중에개/IE001918281_PHT.jpg","caption":"1918 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/한밤중에개/IE001918292_PHT.jpg","caption":"1918 프로덕션 스틸","credit":"프로덕션 스틸"}],"홀연했던 사나이":[{"src":"assets/photos/홀연했던사나이/홀연했던_2018_still.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_01.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_02.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_03.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_04.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/홀연했던사나이/web_2018_05.jpg","caption":"2018 프로덕션 스틸","credit":"프로덕션 스틸"}],"히스토리 보이즈":[{"src":"assets/photos/히스토리보이즈/히스토리보이즈_2013_still.jpg","caption":"2013 프로덕션 스틸","credit":"프로덕션 스틸"},{"src":"assets/photos/히스토리보이즈/web_2026_06.jpg","caption":"2026 프로덕션 스틸","credit":"프로덕션 스틸"}]};
 (function(){
   var P = window.PHOTOS_DATA || {};
   var S = window.SHOW_EXTRAS || (window.SHOW_EXTRAS = {});
