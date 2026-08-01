@@ -940,42 +940,63 @@ window.SHOW_EXTRAS = {
     "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     "videos": [
       {
-        "youtubeId": "fq-j6jXwtsE",
-        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '죽은 직공을 위한 볼레로' - 김히어라, 김아영, 장민수, 이아름솔",
+        "youtubeId": "CH2c4ttGCeA",
+        "title": "뮤지컬 '마리퀴리' 2020 프레스콜 '또 다른 이름' - 김소향",
         "outlet": "NOL 티켓",
-        "date": "2018-12-26",
-        "sourceUrl": "https://www.youtube.com/watch?v=fq-j6jXwtsE"
+        "date": "2020-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=CH2c4ttGCeA"
       },
       {
-        "youtubeId": "Xd_8vvOu8VQ",
-        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '라듐 파라다이스' - 조풍래, 김히어라, 김아영, 외",
+        "youtubeId": "6nQY8rYHMQg",
+        "title": "뮤지컬 '마리 퀴리' 2020 프레스콜 하이라이트 1편 'Opening' '두드려' - 리사, 김히어라 외",
         "outlet": "NOL 티켓",
-        "date": "2018-12-26",
-        "sourceUrl": "https://www.youtube.com/watch?v=Xd_8vvOu8VQ"
+        "date": "2020-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=6nQY8rYHMQg"
       },
       {
-        "youtubeId": "c2pReIyM348",
-        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '어둠 속에서' - 박영수, 김소향",
+        "youtubeId": "jgpM8iGT7cM",
+        "title": "뮤지컬 '마리퀴리' 2020 프레스콜 '예측할 수 없고 알려지지 않은' '문제 없어' - 김소향, 임별 외",
         "outlet": "NOL 티켓",
-        "date": "2018-12-26",
-        "sourceUrl": "https://www.youtube.com/watch?v=c2pReIyM348"
+        "date": "2020-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=jgpM8iGT7cM"
       },
       {
-        "youtubeId": "H347zHCBZig",
-        "title": "K-Musical Marie Qurie 뮤지컬 '마리 퀴리'  '뭔가 더 있어' - 김소향, 박영수 외",
-        "outlet": "NOL 티켓",
-        "date": "2018-12-26",
-        "sourceUrl": "https://www.youtube.com/watch?v=H347zHCBZig"
+        "youtubeId": "tK6EkIKQh9I",
+        "title": "[풀영상] 뮤지컬 '마리 퀴리' 프레스콜 (김소향과 김찬호, 김히어라, 이봄소리, 양승리 외) [통통TV]",
+        "outlet": "K-Culture NOW by 연합뉴스",
+        "date": "2020-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=tK6EkIKQh9I"
       },
       {
-        "youtubeId": "Jhu4H62gpIk",
-        "title": "K-Musical 'Marie Qurie' 뮤지컬 '마리 퀴리' '문 뒤에 선' - 임강희, 김히어라",
-        "outlet": "NOL 티켓",
-        "date": "2018-12-26",
-        "sourceUrl": "https://www.youtube.com/watch?v=Jhu4H62gpIk"
+        "youtubeId": "0j9S0IgppvI",
+        "title": "[더뮤지컬] 뮤지컬 〈마리 퀴리〉 2025 프레스콜 중 '블랙 미스 폴란드' (4k) - 김려원, 차윤해 | 예스24",
+        "outlet": "THE MUSICAL",
+        "date": "2025-07",
+        "sourceUrl": "https://www.youtube.com/watch?v=0j9S0IgppvI"
+      },
+      {
+        "youtubeId": "VWTo8f5wQM8",
+        "title": "[더뮤지컬] 뮤지컬 〈마리 퀴리〉 2025 프레스콜 중 '두드려' (4k) - 박혜나 | 예스24",
+        "outlet": "THE MUSICAL",
+        "date": "2025-07",
+        "sourceUrl": "https://www.youtube.com/watch?v=VWTo8f5wQM8"
+      },
+      {
+        "youtubeId": "GObl0ICej28",
+        "title": "[더뮤지컬] 뮤지컬 〈마리 퀴리〉 2025 프레스콜 중 '모든 것들의 지도' (4k) - 김려원, 강혜인 | 예스24",
+        "outlet": "THE MUSICAL",
+        "date": "2025-07",
+        "sourceUrl": "https://www.youtube.com/watch?v=GObl0ICej28"
+      },
+      {
+        "youtubeId": "VEReh0c3ZyY",
+        "title": "뮤지컬 '마리 퀴리' 프레스콜 | 라듐 파라다이스 – 강태을, 전민지",
+        "outlet": "문화포커스",
+        "date": "2025-07",
+        "sourceUrl": "https://www.youtube.com/watch?v=VEReh0c3ZyY"
       }
     ],
-    "videos_note": "유튜브 공개 영상(프레스콜·하이라이트·공연실황). 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
+    "videos_note": "유튜브 공개 영상(프레스콜). 2018년 트라이아웃(비연출작) 영상은 제외하고 2020년 재연(김태형 연출) 및 2025년 시즌 영상으로 교체. 저작권은 각 채널·제작사에 있으며 아카이브 목적으로 출처와 함께 임베드."
   },
   "멤피스": {
     "press": [
