@@ -102,6 +102,15 @@
   #strip figcaption{margin-top:16px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
   #strip figcaption b{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--ink)}
   #strip figcaption span{font-size:11px;letter-spacing:.14em;color:var(--faint)}
+  /* 모바일·터치: 3D 틸트 끄고 평면 스크롤 + 스냅 (안정성 우선) */
+  @media (hover:none), (max-width:760px){
+    #strip{perspective:none;scroll-snap-type:x mandatory;gap:18px;padding:0 24px 28px}
+    #strip figure{transform:none!important;transition:none}
+    .sarrow{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    #strip figure{transform:none!important;transition:none}
+  }
 
   #trailer{background:var(--void);padding:0 40px 160px}
   .tslot{position:relative;aspect-ratio:16/9;border:1px solid var(--line2);border-radius:4px;overflow:hidden;background:repeating-linear-gradient(135deg,#100d09,#100d09 12px,#141009 12px,#141009 24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
@@ -365,13 +374,15 @@
     ['assets/photos/옥탑방고양이/옥탑방고양이_2010_still.jpg','옥탑방 고양이','2010']
   ];
   /* STRIP:AUTO-END */
-  /* 무대 스트립: 매 방문마다 랜덤 순서 (Fisher–Yates) */
-  for (var si = STILLS.length - 1; si > 0; si--) {
-    var sj = Math.floor(Math.random() * (si + 1));
+  /* 무대 스트립: 리드 8장(고화질 큐레이션)은 고정, 나머지만 랜덤 (Fisher–Yates) */
+  var LEAD_FIXED = Math.min(8, STILLS.length);
+  for (var si = STILLS.length - 1; si > LEAD_FIXED; si--) {
+    var sj = LEAD_FIXED + Math.floor(Math.random() * (si - LEAD_FIXED + 1));
     var tmp = STILLS[si]; STILLS[si] = STILLS[sj]; STILLS[sj] = tmp;
   }
-  document.getElementById('strip').innerHTML=STILLS.map(function(p){
-    return '<figure data-still><div class="ph"><img src="'+p[0]+'" alt="'+p[1]+'" loading="lazy"></div><figcaption><b>'+p[1]+'</b><span>'+p[2]+'</span></figcaption></figure>';
+  document.getElementById('strip').innerHTML=STILLS.map(function(p, i){
+    var eager = i < 4 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+    return '<figure data-still><div class="ph"><img src="'+p[0]+'" alt="'+p[1]+'"'+eager+' decoding="async"></div><figcaption><b>'+p[1]+'</b><span>'+p[2]+'</span></figcaption></figure>';
   }).join('');
 
   /* ---- archive wall ---- */
@@ -410,9 +421,13 @@
     });
   });
 
-  /* ---- still strip 3D + arrow hover-scroll ---- */
+  /* ---- still strip 3D + arrow hover-scroll (데스크톱 전용 틸트, rAF 스로틀) ---- */
   var strip=document.getElementById('strip');
+  var tiltOff = window.matchMedia('(hover:none)').matches
+             || window.matchMedia('(max-width:760px)').matches
+             || window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   function stripUpdate(){
+    if(tiltOff) return;
     var sr=strip.getBoundingClientRect(), c=sr.left+sr.width/2;
     strip.querySelectorAll('[data-still]').forEach(function(f){
       var r=f.getBoundingClientRect();
@@ -420,7 +435,12 @@
       f.style.transform='rotateY('+(-d*26)+'deg) translateZ('+(-Math.abs(d)*170)+'px)';
     });
   }
-  strip.addEventListener('scroll',stripUpdate,{passive:true});
+  var stripTick=false;
+  strip.addEventListener('scroll',function(){
+    if(tiltOff||stripTick) return;
+    stripTick=true;
+    requestAnimationFrame(function(){ stripUpdate(); stripTick=false; });
+  },{passive:true});
   window.addEventListener('resize',stripUpdate);
   setTimeout(stripUpdate,400);
   function hoverScroll(btn,dir){
