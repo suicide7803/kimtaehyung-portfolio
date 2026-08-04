@@ -97,6 +97,9 @@
   .sarrow.left{left:18px}
   .sarrow.right{right:18px}
   #strip figure{margin:0;flex:0 0 clamp(320px,46vw,620px);scroll-snap-align:center;transform-style:preserve-3d;transition:transform .4s var(--ease)}
+  #strip .still-link{display:block;color:inherit}
+  #strip .still-link:hover{color:inherit}
+  #strip .still-link:focus-visible{outline:2px solid var(--bright);outline-offset:6px}
   #strip .ph{overflow:hidden;border-radius:3px;background:var(--panel);box-shadow:0 40px 90px -34px rgba(0,0,0,.9)}
   #strip img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:brightness(.92) saturate(.95)}
   #strip figcaption{margin-top:16px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
@@ -278,7 +281,14 @@
 <script>
 (function(){
   var W = window.WORKS_DATA || {};
-  function link(t){ return '3dwork.html#' + encodeURIComponent(t); }
+  function workKey(t){
+    if(W[t]) return t;
+    var norm=String(t||'').replace(/\s+/g,'').toLowerCase(), keys=Object.keys(W);
+    for(var i=0;i<keys.length;i++) if(keys[i].replace(/\s+/g,'').toLowerCase()===norm) return keys[i];
+    for(var j=0;j<keys.length;j++) if(keys[j].indexOf(t)>=0||String(t).indexOf(keys[j])>=0) return keys[j];
+    return t;
+  }
+  function link(t){ return '3dwork.html#' + encodeURIComponent(workKey(t)); }
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
   /* ---- now playing: currently running productions ---- */
@@ -382,7 +392,7 @@
   }
   document.getElementById('strip').innerHTML=STILLS.map(function(p, i){
     var eager = i < 4 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
-    return '<figure data-still><div class="ph"><img src="'+p[0]+'" alt="'+p[1]+'"'+eager+' decoding="async"></div><figcaption><b>'+p[1]+'</b><span>'+p[2]+'</span></figcaption></figure>';
+    return '<figure data-still><a class="still-link" href="'+link(p[1])+'" aria-label="'+esc(p[1])+' 상세페이지"><div class="ph"><img src="'+p[0]+'" alt="'+p[1]+'"'+eager+' decoding="async"></div><figcaption><b>'+p[1]+'</b><span>'+p[2]+'</span></figcaption></a></figure>';
   }).join('');
 
   /* ---- archive wall ---- */
