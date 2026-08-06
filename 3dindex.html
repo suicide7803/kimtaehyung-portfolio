@@ -97,19 +97,24 @@
   .sarrow.left{left:18px}
   .sarrow.right{right:18px}
   #strip figure{margin:0;flex:0 0 clamp(320px,46vw,620px);scroll-snap-align:center;transform-style:preserve-3d;transition:transform .4s var(--ease)}
-  #strip .still-link{display:block;color:inherit}
-  #strip .still-link:hover{color:inherit}
-  #strip .still-link:focus-visible{outline:2px solid var(--bright);outline-offset:6px}
   #strip .ph{overflow:hidden;border-radius:3px;background:var(--panel);box-shadow:0 40px 90px -34px rgba(0,0,0,.9)}
   #strip img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:brightness(.92) saturate(.95)}
   #strip figcaption{margin-top:16px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
   #strip figcaption b{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--ink)}
   #strip figcaption span{font-size:11px;letter-spacing:.14em;color:var(--faint)}
-  /* 모바일·터치: 3D 틸트 끄고 평면 스크롤 + 스냅 (안정성 우선) */
+  #strip a.stilllink{display:block;color:inherit}
+  #strip a.stilllink:hover{color:inherit}
+  #strip a.stilllink:hover figcaption b{color:var(--bright)}
+  #stripbar{display:none;height:3px;background:rgba(239,233,220,.12);margin:16px 24px 0;border-radius:99px;position:relative;overflow:hidden}
+  #stripbar i{position:absolute;top:0;left:0;height:100%;width:20%;background:linear-gradient(90deg,var(--gold),var(--bright));border-radius:99px}
+  /* 모바일·터치 전용 버전: 평면 스크롤 + 카드 스냅 + 가장자리 페이드 + 진행 바 */
   @media (hover:none), (max-width:760px){
-    #strip{perspective:none;scroll-snap-type:x mandatory;gap:18px;padding:0 24px 28px}
-    #strip figure{transform:none!important;transition:none}
+    #strip{perspective:none;scroll-snap-type:x mandatory;gap:18px;padding:0 24px 28px;
+      -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 20px,#000 calc(100% - 20px),transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0,#000 20px,#000 calc(100% - 20px),transparent 100%)}
+    #strip figure{transform:none!important;transition:none;flex-basis:82vw}
     .sarrow{display:none}
+    #stripbar{display:block}
   }
   @media (prefers-reduced-motion:reduce){
     #strip figure{transform:none!important;transition:none}
@@ -233,6 +238,7 @@
     <div class="sarrow left" id="arrL" aria-label="왼쪽으로">←</div>
     <div class="sarrow right" id="arrR" aria-label="오른쪽으로">→</div>
     <div id="strip"></div>
+    <div id="stripbar" aria-hidden="true"><i id="stripbarIn"></i></div>
   </div>
 </section>
 
@@ -253,7 +259,7 @@
       <a class="p" href="http://app.yonhapnews.co.kr/YNA/Basic/SNS/r.aspx?c=AKR20170317114100704" target="_blank" rel="noopener"><p>“괴물을 삼킨 인간”</p><div>연합뉴스 · 2017.03 · 베헤모스<i>↗</i></div></a>
       <a class="p" href="https://vop.co.kr/A00001687160.html" target="_blank" rel="noopener"><p>“전쟁의 참상을 공감각 할 수 있는 무대”</p><div>문화저널21 · 2026.01 · 벙커 트릴로지<i>↗</i></div></a>
       <a class="p" href="http://www.kihoilbo.co.kr/news/articleView.html?idxno=1159856" target="_blank" rel="noopener"><p>“과학자 아닌 인간 마리를 말하다”</p><div>기호일보 · 2025.09 · 마리 퀴리<i>↗</i></div></a>
-      <a class="p" href="http://www.newsculture.press/view.htm?idxno=2017052206040099934" target="_blank" rel="noopener"><p>“게임 같은 연극, 극장 백스테이지까지 투어”</p><div>뉴스컬처 · 2017.05 · 내일 공연인데 어떡하지<i>↗</i></div></a>
+      <a class="p" href="http://www.newsculture.press/view.htm?idxno=2017052206040099934" target="_blank" rel="noopener"><p>“게임 같은 연극, 극장 백스테이지까지 투어”</p><div>뉴스컬처 · 2017.05 · 더헬멧<i>↗</i></div></a>
       <a class="p" href="https://www.joongang.co.kr/article/25350928" target="_blank" rel="noopener"><p>“이 결혼은 허가되지 않은 연극 — 검열과 예술의 한판 승부”</p><div>중앙일보 · 2025.07 · 미러<i>↗</i></div></a>
       <a class="p" href="https://www.khan.co.kr/article/201908211522011" target="_blank" rel="noopener"><p>“공연 팬들에게 믿고 보는 '탱연출'이라는 애칭이 있다”</p><div>경향신문 · 2019.08 · 연출가 프로필<i>↗</i></div></a>
       <a class="p" href="https://auditorium.kr/2013/03/%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EB%B3%B4%EC%9D%B4%EC%A6%88/" target="_blank" rel="noopener"><p>“진지한 주제의식과 함께 공연의 재미를 잘 살렸다고 평가받는 김태형”</p><div>객석 · 2013.03 · 히스토리 보이즈<i>↗</i></div></a>
@@ -281,14 +287,7 @@
 <script>
 (function(){
   var W = window.WORKS_DATA || {};
-  function workKey(t){
-    if(W[t]) return t;
-    var norm=String(t||'').replace(/\s+/g,'').toLowerCase(), keys=Object.keys(W);
-    for(var i=0;i<keys.length;i++) if(keys[i].replace(/\s+/g,'').toLowerCase()===norm) return keys[i];
-    for(var j=0;j<keys.length;j++) if(keys[j].indexOf(t)>=0||String(t).indexOf(keys[j])>=0) return keys[j];
-    return t;
-  }
-  function link(t){ return '3dwork.html#' + encodeURIComponent(workKey(t)); }
+  function link(t){ return '3dwork.html#' + encodeURIComponent(t); }
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
   /* ---- now playing: currently running productions ---- */
@@ -390,9 +389,18 @@
     var sj = LEAD_FIXED + Math.floor(Math.random() * (si - LEAD_FIXED + 1));
     var tmp = STILLS[si]; STILLS[si] = STILLS[sj]; STILLS[sj] = tmp;
   }
+  /* 스트립 캐프션 표기가 DB 제목과 다를 수 있어(예: 미러 ↔ 미러 (A Mirror)) 정규화 매칭으로 상세페이지 링크 해석 */
+  function stillHref(t){
+    if (W[t]) return link(t);
+    var norm=function(s){ return String(s).replace(/[\s\-()\[\]A-Za-z]/g,''); };
+    var keys=Object.keys(W), n=norm(t), k;
+    for(k=0;k<keys.length;k++){ if(norm(keys[k])===n) return link(keys[k]); }
+    for(k=0;k<keys.length;k++){ var nk=norm(keys[k]); if(nk&&n&&(nk.indexOf(n)===0||n.indexOf(nk)===0)) return link(keys[k]); }
+    return link(t);
+  }
   document.getElementById('strip').innerHTML=STILLS.map(function(p, i){
     var eager = i < 4 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
-    return '<figure data-still><a class="still-link" href="'+link(p[1])+'" aria-label="'+esc(p[1])+' 상세페이지"><div class="ph"><img src="'+p[0]+'" alt="'+p[1]+'"'+eager+' decoding="async"></div><figcaption><b>'+p[1]+'</b><span>'+p[2]+'</span></figcaption></a></figure>';
+    return '<figure data-still><a class="stilllink" href="'+stillHref(p[1])+'"><div class="ph"><img src="'+p[0]+'" alt="'+p[1]+'"'+eager+' decoding="async"></div><figcaption><b>'+p[1]+'</b><span>'+p[2]+'</span></figcaption></a></figure>';
   }).join('');
 
   /* ---- archive wall ---- */
@@ -445,14 +453,23 @@
       f.style.transform='rotateY('+(-d*26)+'deg) translateZ('+(-Math.abs(d)*170)+'px)';
     });
   }
+  var bar=document.getElementById('stripbarIn'), barTrack=document.getElementById('stripbar');
+  function barUpdate(){
+    if(!bar||!barTrack||barTrack.offsetParent===null) return;
+    var max=strip.scrollWidth-strip.clientWidth;
+    var frac=max>0?strip.scrollLeft/max:0;
+    var wFrac=strip.scrollWidth>0?strip.clientWidth/strip.scrollWidth:1;
+    bar.style.width=(wFrac*100)+'%';
+    bar.style.left=(frac*(1-wFrac)*100)+'%';
+  }
   var stripTick=false;
   strip.addEventListener('scroll',function(){
-    if(tiltOff||stripTick) return;
+    if(stripTick) return;
     stripTick=true;
-    requestAnimationFrame(function(){ stripUpdate(); stripTick=false; });
+    requestAnimationFrame(function(){ if(!tiltOff) stripUpdate(); barUpdate(); stripTick=false; });
   },{passive:true});
-  window.addEventListener('resize',stripUpdate);
-  setTimeout(stripUpdate,400);
+  window.addEventListener('resize',function(){ stripUpdate(); barUpdate(); });
+  setTimeout(function(){ stripUpdate(); barUpdate(); },400);
   function hoverScroll(btn,dir){
     var raf=null;
     function step(){ strip.scrollLeft+=dir*9; raf=requestAnimationFrame(step); }

@@ -8,3 +8,5 @@ assets/photos/_collected_manifest.csv
 assets/photos/_dllist.txt
 assets/photos/**/_raw/
 _video/
+
+.video/

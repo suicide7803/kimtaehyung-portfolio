@@ -1749,31 +1749,6 @@ window.SHOW_EXTRAS = {
         "quote": "백골단 곤봉 피하려 지하실에 숨어든 학생들",
         "context": "룸 서울",
         "url": "http://news.donga.com/3/all/20190129/93900918/1"
-      },
-      {
-        "outlet": "아트인사이트",
-        "date": "2018.03",
-        "quote": "연극 '더 헬멧'의 실험적인 연출에 대하여",
-        "url": "https://www.artinsight.co.kr/news/view.php?no=33882"
-      },
-      {
-        "outlet": "민중의소리",
-        "date": "2018.01",
-        "quote": "권력과 전쟁에 대한 네개의 시선과 하나의 이야기, 독특하고 새로운 창작극",
-        "url": "https://vop.co.kr/A00001238227.html"
-      },
-      {
-        "outlet": "아트조선·뉴시스",
-        "date": "2017.12",
-        "quote": "두개 공간서 통하는 하나의 이야기… 연극 '더 헬멧'",
-        "url": "https://art.chosun.com/site/data/html_dir/2017/12/22/2017122200839.html"
-      },
-      {
-        "outlet": "브런치",
-        "date": "2019.01",
-        "quote": "에이리언 2로 읽는 연극, '더 헬멧'",
-        "context": "밋너",
-        "url": "https://brunch.co.kr/@anddelightful/30"
       }
     ],
     "press_note": "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",

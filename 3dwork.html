@@ -108,9 +108,7 @@
   .aud a:hover{border-color:var(--gdim);color:var(--bright)}
   .aud a small{font-size:11px;color:var(--faint);margin-left:6px}
   .photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-  .photo-grid figure{margin:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);box-shadow:0 24px 60px -28px rgba(0,0,0,.85);cursor:zoom-in;transition:transform .25s var(--ease),border-color .25s var(--ease)}
-  .photo-grid figure:hover{transform:translateY(-3px);border-color:var(--gdim)}
-  .photo-grid figure:focus-visible{outline:2px solid var(--bright);outline-offset:5px}
+  .photo-grid figure{margin:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);box-shadow:0 24px 60px -28px rgba(0,0,0,.85)}
   .photo-grid figcaption{padding:12px 16px;font-size:12.5px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
   .photo-grid figcaption .cap{color:var(--ink)}
   .photo-grid figcaption .cred{color:var(--faint);font-size:10.5px;white-space:nowrap}
@@ -121,30 +119,6 @@
   .video-grid figcaption{padding:12px 16px;font-size:12.5px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
   .video-grid figcaption .cap{color:var(--ink)}
   .video-grid figcaption .cred{color:var(--faint);font-size:10.5px;white-space:nowrap}
-  body.photo-viewer-open{overflow:hidden}
-  .photo-viewer{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:44px 100px 34px;background:rgba(4,3,2,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-  .photo-viewer.open{display:flex}
-  .pv-stage{display:flex;flex-direction:column;align-items:center;gap:14px;max-width:min(1180px,calc(100vw - 180px));max-height:calc(100vh - 78px);margin:0}
-  .pv-stage img{display:block;max-width:100%;max-height:calc(100vh - 150px);width:auto;height:auto;object-fit:contain;border:1px solid var(--line2);box-shadow:0 30px 80px rgba(0,0,0,.7)}
-  .pv-caption{width:100%;display:flex;justify-content:space-between;gap:18px;align-items:baseline;color:var(--ink);font-size:13px;line-height:1.5}
-  .pv-caption .cred{color:var(--faint);font-size:11px;white-space:nowrap}
-  .pv-count{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-size:11px;letter-spacing:.14em;color:var(--faint)}
-  .pv-close,.pv-nav{position:absolute;z-index:2;display:flex;align-items:center;justify-content:center;border:1px solid rgba(239,233,220,.24);color:var(--bright);background:rgba(10,9,6,.72);cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
-  .pv-close:hover,.pv-nav:hover{background:rgba(201,169,97,.18);border-color:var(--gold)}
-  .pv-close:focus-visible,.pv-nav:focus-visible{outline:2px solid var(--bright);outline-offset:4px}
-  .pv-close{top:22px;right:28px;width:42px;height:42px;border-radius:50%;font-size:28px;line-height:1;font-family:var(--sans)}
-  .pv-nav{top:50%;width:54px;height:54px;border-radius:50%;font-size:34px;line-height:1;font-family:var(--disp);transform:translateY(-50%)}
-  .pv-prev{left:28px}.pv-next{right:28px}
-  .pv-prev:hover{transform:translate(-2px,-50%)}.pv-next:hover{transform:translate(2px,-50%)}
-  @media(max-width:760px){
-    .photo-viewer{padding:58px 48px 36px}
-    .pv-stage{max-width:calc(100vw - 74px);max-height:calc(100vh - 112px)}
-    .pv-stage img{max-height:calc(100vh - 176px)}
-    .pv-nav{width:40px;height:40px;font-size:27px}
-    .pv-prev{left:7px}.pv-next{right:7px}
-    .pv-close{top:12px;right:12px;width:38px;height:38px;font-size:24px}
-    .pv-caption{display:block;text-align:center}.pv-caption .cred{display:block;margin-top:4px}
-  }
   .subnote{margin-top:14px;font-size:11px;color:var(--ghost)}
   .notfound{padding:220px 40px;text-align:center;color:var(--dim);position:relative;z-index:2}
   .notfound h2{font-family:var(--serif);font-weight:300;font-size:34px;margin-bottom:20px;color:var(--ink-hi)}
@@ -175,64 +149,7 @@
   function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function statusLabel(s){return {repertoire:'레퍼토리',upcoming:'예정',development:'개발중',closed:'종료'}[s]||'';}
 
-  function initPhotoViewer(photos){
-    if(!photos||!photos.length) return;
-    var viewer=document.getElementById('photoViewer');
-    if(!viewer) return;
-    var image=document.getElementById('pvImage');
-    var caption=document.getElementById('pvCaption');
-    var credit=document.getElementById('pvCredit');
-    var count=document.getElementById('pvCount');
-    var closeBtn=viewer.querySelector('.pv-close');
-    var prevBtn=viewer.querySelector('.pv-prev');
-    var nextBtn=viewer.querySelector('.pv-next');
-    var current=0, lastTrigger=null;
-    function show(index){
-      current=(index+photos.length)%photos.length;
-      var p=photos[current]||{};
-      image.src=p.src||'';
-      image.alt=p.caption||'공연 사진';
-      caption.textContent=p.caption||'공연 사진';
-      credit.textContent=p.credit||'';
-      count.textContent=(current+1)+' / '+photos.length;
-    }
-    function open(index,trigger){
-      lastTrigger=trigger||null;
-      show(index);
-      viewer.classList.add('open');
-      viewer.setAttribute('aria-hidden','false');
-      document.body.classList.add('photo-viewer-open');
-      closeBtn.focus();
-    }
-    function close(){
-      viewer.classList.remove('open');
-      viewer.setAttribute('aria-hidden','true');
-      document.body.classList.remove('photo-viewer-open');
-      image.removeAttribute('src');
-      if(lastTrigger&&lastTrigger.focus) lastTrigger.focus();
-      lastTrigger=null;
-    }
-    document.querySelectorAll('.photo-card').forEach(function(card){
-      var index=Number(card.getAttribute('data-photo-index'))||0;
-      card.addEventListener('click',function(){open(index,card);});
-      card.addEventListener('keydown',function(e){
-        if(e.key==='Enter'||e.key===' '){e.preventDefault();open(index,card);}
-      });
-    });
-    closeBtn.addEventListener('click',close);
-    prevBtn.addEventListener('click',function(){show(current-1);});
-    nextBtn.addEventListener('click',function(){show(current+1);});
-    viewer.addEventListener('click',function(e){if(e.target===viewer) close();});
-    viewer.addEventListener('keydown',function(e){
-      if(!viewer.classList.contains('open')) return;
-      if(e.key==='Escape'){e.preventDefault();close();}
-      else if(e.key==='ArrowLeft'){e.preventDefault();show(current-1);}
-      else if(e.key==='ArrowRight'){e.preventDefault();show(current+1);}
-    });
-  }
-
   function render(){
-    document.body.classList.remove('photo-viewer-open');
     var raw=decodeURIComponent((location.hash||'').slice(1));
     var key=raw.split('::')[0].trim();
     var work=null;
@@ -313,7 +230,6 @@
     h+='</section>';
 
     var ex=EXTRAS[work.title];
-    var photoItems=(ex&&ex.photos&&ex.photos.length)?ex.photos:[];
     if(ex){
       if(ex.director_note){
         var dn=(typeof ex.director_note==='string')?{body:ex.director_note}:ex.director_note;
@@ -358,18 +274,11 @@
       }
       if(ex.photos&&ex.photos.length){
         h+='<section style="padding:64px 0 0"><div class="eyebrow2">공연 사진</div><div class="photo-grid">';
-        photoItems.forEach(function(p,pidx){
-          h+='<figure class="photo-card" data-photo-index="'+pidx+'" tabindex="0" role="button" aria-label="'+esc((p.caption||'공연 사진')+' 크게 보기')+'"><img src="'+esc(p.src)+'" alt="'+esc(p.caption||'')+'" loading="lazy">';
+        ex.photos.forEach(function(p){
+          h+='<figure><img src="'+esc(p.src)+'" alt="'+esc(p.caption||'')+'" loading="lazy">';
           h+='<figcaption><span class="cap">'+esc(p.caption||'')+'</span><span class="cred">'+esc(p.credit||'')+'</span></figcaption></figure>';
         });
         h+='</div>'+(ex.photos_note?'<p class="subnote">'+esc(ex.photos_note)+'</p>':'')+'</section>';
-      }
-      if(photoItems.length){
-        h+='<div class="photo-viewer" id="photoViewer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="공연 사진 크게 보기">';
-        h+='<button class="pv-close" type="button" aria-label="사진 보기 닫기">×</button>';
-        h+='<button class="pv-nav pv-prev" type="button" aria-label="이전 사진">‹</button>';
-        h+='<figure class="pv-stage"><img id="pvImage" alt=""><figcaption class="pv-caption"><span id="pvCaption"></span><span id="pvCredit" class="cred"></span></figcaption></figure>';
-        h+='<button class="pv-nav pv-next" type="button" aria-label="다음 사진">›</button><div class="pv-count" id="pvCount" aria-live="polite"></div></div>';
       }
       if(ex.videos&&ex.videos.length){
         h+='<section style="padding:64px 0 0"><div class="eyebrow2">공연 영상</div><div class="video-grid">';
@@ -389,7 +298,6 @@
 
     h+='<footer>포스터·공연사진 저작권은 각 제작사에 있습니다 · 시즌·캐스트·크리에이티브 정보는 PlayDB 전수 수집 + 언론·웹 교차검증 · 세부 정보는 계속 업데이트됩니다</footer>';
     root.innerHTML=h;
-    initPhotoViewer(photoItems);
 
     /* ---------- comments (Disqus) — 식별자·URL을 work.html과 동일하게 맞춰 하나의 스레드 공유 ---------- */
     (function(){

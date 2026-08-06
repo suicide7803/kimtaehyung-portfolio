@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17221f" />
+  <title>VOICE / TONE — 녹음 음질 콘솔</title>
+  <style>
+    :root {
+      --ink: #17221f;
+      --paper: #f1f1e9;
+      --soft: #d9ddd2;
+      --leaf: #62866d;
+      --moss: #355340;
+      --signal: #e56b4d;
+      --line: rgba(23, 34, 31, .16);
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      --sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-width: 320px; color: var(--ink); background: var(--paper);
+      font-family: var(--sans); letter-spacing: -.025em;
+    }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 26px 0 48px; }
+    .masthead { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--ink); padding-bottom: 18px; }
+    .brand { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; font-weight: 700; }
+    .tag { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .11em; color: var(--moss); }
+
+    .intro { display: grid; grid-template-columns: 1.1fr .9fr; gap: 42px; padding: 42px 0 34px; align-items: end; }
+    h1 { font-size: clamp(45px, 7vw, 88px); line-height: .87; letter-spacing: -.075em; margin: 0; max-width: 700px; font-weight: 750; }
+    .intro p { margin: 0; color: #4f5c55; font-size: 16px; line-height: 1.65; max-width: 360px; }
+
+    .console { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(290px, .7fr); border: 1px solid var(--ink); background: #f9f9f3; }
+    .main { min-width: 0; border-right: 1px solid var(--ink); }
+    .panel-head { min-height: 57px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid var(--ink); }
+    .panel-label { font-family: var(--mono); font-weight: 700; font-size: 11px; letter-spacing: .08em; }
+    .status { display: flex; align-items: center; gap: 7px; color: #5c6961; font-family: var(--mono); font-size: 10px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #9da69e; }
+    .dot.live { background: var(--signal); box-shadow: 0 0 0 4px rgba(229, 107, 77, .16); animation: blink 1.1s infinite; }
+    @keyframes blink { 50% { opacity: .45; } }
+
+    .scope { position: relative; min-height: 310px; overflow: hidden; background: var(--ink); }
+    #waveform { width: 100%; height: 310px; display: block; }
+    .scope-info { position: absolute; inset: 18px 20px auto; display: flex; justify-content: space-between; font-family: var(--mono); color: #bfcabe; font-size: 10px; letter-spacing: .07em; }
+    .elapsed { font-size: 22px; line-height: 1; letter-spacing: -.08em; color: #eef2e8; }
+    .scope-note { position: absolute; bottom: 17px; left: 20px; color: #92a495; font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
+
+    .transport { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 18px 20px; border-bottom: 1px solid var(--ink); }
+    .record-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-width: 146px; padding: 13px 18px; border: 0; border-radius: 2px; color: #fffaf5; background: var(--signal); font-weight: 700; }
+    .record-button.recording { background: var(--ink); }
+    .record-button:disabled { cursor: not-allowed; opacity: .45; }
+    .record-icon { width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+    .recording .record-icon { border-radius: 1px; }
+    .outline-button { border: 1px solid var(--ink); background: transparent; padding: 11px 14px; color: var(--ink); font-size: 13px; }
+    .outline-button:disabled { opacity: .3; cursor: not-allowed; }
+    .save-button { margin-left: auto; background: var(--moss); color: white; border: 0; padding: 12px 15px; font-size: 13px; font-weight: 700; }
+    .save-button:disabled { opacity: .35; cursor: not-allowed; }
+    .hint { flex: 1 1 100%; margin: 1px 0 0; color: #637068; font-size: 12px; }
+
+    .output { padding: 18px 20px 22px; }
+    .output h2 { margin: 0 0 12px; font-size: 14px; }
+    audio { display: block; width: 100%; height: 38px; }
+    .empty { color: #657067; font-size: 13px; line-height: 1.55; }
+    .result-meta { margin-top: 10px; font-family: var(--mono); font-size: 10px; color: #657067; letter-spacing: .03em; }
+
+    .controls { background: #e3e7de; }
+    .control-body { padding: 8px 20px 22px; }
+    .preset { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 12px 0 18px; }
+    .preset button { min-height: 42px; padding: 7px; border: 1px solid var(--line); background: transparent; color: #526158; font-size: 12px; text-align: left; }
+    .preset button.active { border-color: var(--moss); background: var(--moss); color: #fff; }
+    .preset strong { display: block; font-size: 13px; }
+    .control { padding: 13px 0 15px; border-top: 1px solid var(--line); }
+    .control label { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; font-weight: 650; }
+    .value { font-family: var(--mono); font-size: 10px; font-weight: 400; color: #59685f; }
+    input[type="range"] { appearance: none; width: 100%; height: 18px; margin: 10px 0 0; background: transparent; accent-color: var(--moss); }
+    input[type="range"]::-webkit-slider-runnable-track { height: 3px; background: #aab5a9; }
+    input[type="range"]::-webkit-slider-thumb { appearance: none; width: 14px; height: 14px; margin-top: -5px; border-radius: 50%; background: var(--moss); }
+    .switch-line { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-top: 1px solid var(--line); font-size: 13px; font-weight: 650; }
+    .switch-line span { display: block; color: #637068; font-size: 11px; font-weight: 400; margin-top: 3px; }
+    .switch { width: 40px; height: 23px; position: relative; display: inline-block; flex: 0 0 auto; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; inset: 0; border-radius: 20px; background: #a9b3aa; transition: .18s; }
+    .slider::before { content: ""; position: absolute; width: 17px; height: 17px; left: 3px; bottom: 3px; border-radius: 50%; background: #fff; transition: .18s; }
+    input:checked + .slider { background: var(--moss); }
+    input:checked + .slider::before { transform: translateX(17px); }
+    .format-note { color: #66746b; font-size: 11px; line-height: 1.5; margin: 0; }
+    .permission { margin-top: 20px; padding: 11px 12px; border-left: 3px solid var(--leaf); background: rgba(255,255,255,.38); color: #516057; font-size: 11px; line-height: 1.52; }
+    .permission.error { border-color: var(--signal); color: #84402d; }
+
+    .how { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--ink); border-top: 0; }
+    .how-item { min-height: 116px; padding: 20px; border-right: 1px solid var(--ink); }
+    .how-item:last-child { border: 0; }
+    .how-num { font-family: var(--mono); color: var(--leaf); font-size: 10px; letter-spacing: .08em; }
+    .how h3 { margin: 11px 0 5px; font-size: 15px; }
+    .how p { margin: 0; color: #657068; font-size: 12px; line-height: 1.5; }
+    .footer { display: flex; justify-content: space-between; padding-top: 17px; color: #6a756e; font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
+    :focus-visible { outline: 3px solid #e7a13f; outline-offset: 3px; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 26px, 1180px); padding-top: 17px; }
+      .intro, .console { grid-template-columns: 1fr; gap: 20px; }
+      .intro { padding: 30px 0 26px; }
+      .main { border-right: 0; border-bottom: 1px solid var(--ink); }
+      .scope, #waveform { min-height: 240px; height: 240px; }
+      .how { grid-template-columns: 1fr; }
+      .how-item { min-height: 0; border-right: 0; border-bottom: 1px solid var(--ink); }
+      .how-item:last-child { border-bottom: 0; }
+      .save-button { margin-left: 0; }
+      .footer { gap: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .dot.live { animation: none; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead"><div class="brand">VOICE / TONE</div><div class="tag">Local recording studio · v1.0</div></header>
+    <section class="intro">
+      <h1>말소리를<br>정돈하세요.</h1>
+      <p>내 목소리를 위한 간단한 녹음 콘솔입니다. 소리를 확인하고, 선명도와 온기를 조절한 뒤 즉시 저장하세요.</p>
+    </section>
+
+    <section class="console" aria-label="음성 녹음 콘솔">
+      <div class="main">
+        <div class="panel-head"><span class="panel-label">INPUT MONITOR</span><span class="status"><i class="dot" id="statusDot"></i><span id="statusText">마이크 대기 중</span></span></div>
+        <div class="scope">
+          <canvas id="waveform" aria-label="입력 음량 파형"></canvas>
+          <div class="scope-info"><span>LIVE SIGNAL</span><strong class="elapsed" id="elapsed">00:00</strong></div>
+          <span class="scope-note" id="scopeNote">마이크 연결 후 입력 파형이 표시됩니다.</span>
+        </div>
+        <div class="transport">
+          <button class="record-button" id="recordButton" type="button"><i class="record-icon"></i><span>녹음 시작</span></button>
+          <button class="outline-button" id="micButton" type="button">마이크 연결</button>
+          <button class="outline-button" id="clearButton" type="button" disabled>결과 지우기</button>
+          <button class="save-button" id="saveButton" type="button" disabled>녹음 저장</button>
+          <p class="hint" id="hint">먼저 ‘마이크 연결’을 눌러 권한을 허용하세요.</p>
+        </div>
+        <div class="output" id="outputArea">
+          <h2>방금 녹음한 파일</h2>
+          <p class="empty" id="emptyState">아직 녹음이 없습니다. 짧게 말해 보고 재생해 보세요.</p>
+          <audio id="playback" controls hidden></audio>
+          <div class="result-meta" id="resultMeta" hidden></div>
+        </div>
+      </div>
+
+      <aside class="controls">
+        <div class="panel-head"><span class="panel-label">VOICE TREATMENT</span><span class="tag">REC PATH</span></div>
+        <div class="control-body">
+          <div class="preset" aria-label="음질 프리셋">
+            <button class="preset-button active" data-preset="natural" type="button"><strong>자연스럽게</strong>원음에 가깝게</button>
+            <button class="preset-button" data-preset="clear" type="button"><strong>또렷하게</strong>대사·내레이션</button>
+            <button class="preset-button" data-preset="warm" type="button"><strong>따뜻하게</strong>차분한 톤</button>
+            <button class="preset-button" data-preset="broadcast" type="button"><strong>방송처럼</strong>일정한 음량</button>
+          </div>
+          <div class="control"><label for="gain">입력 볼륨 <output class="value" id="gainValue">0 dB</output></label><input id="gain" type="range" min="-12" max="18" value="0" step="1"></div>
+          <div class="control"><label for="clarity">선명도 <output class="value" id="clarityValue">0</output></label><input id="clarity" type="range" min="-8" max="10" value="0" step="1"></div>
+          <div class="control"><label for="warmth">목소리 온기 <output class="value" id="warmthValue">0</output></label><input id="warmth" type="range" min="-8" max="10" value="0" step="1"></div>
+          <div class="control"><label for="compression">음량 균일화 <output class="value" id="compressionValue">약함</output></label><input id="compression" type="range" min="0" max="3" value="1" step="1"></div>
+          <div class="switch-line"><div>마이크 소음 억제<span>다음 마이크 연결부터 적용</span></div><label class="switch"><input id="noiseSuppression" type="checkbox" checked><i class="slider"></i></label></div>
+          <div class="switch-line"><div>내 목소리 모니터링<span>헤드폰 사용을 권장</span></div><label class="switch"><input id="monitor" type="checkbox"><i class="slider"></i></label></div>
+          <p class="format-note">저장 형식: WebM / Opus · 고음질 192 kbps</p>
+          <p class="permission" id="permissionNote">녹음과 음질 처리는 이 브라우저 안에서만 이루어집니다. 파일은 자동으로 전송되지 않습니다.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="how" aria-label="사용 순서">
+      <div class="how-item"><div class="how-num">01 / CONNECT</div><h3>마이크를 연결하세요</h3><p>처음 한 번만 브라우저 권한이 필요합니다.</p></div>
+      <div class="how-item"><div class="how-num">02 / LISTEN</div><h3>파형을 보며 조절하세요</h3><p>파형이 위아래 끝에 계속 닿으면 입력 볼륨을 낮추세요.</p></div>
+      <div class="how-item"><div class="how-num">03 / KEEP</div><h3>듣고 저장하세요</h3><p>녹음 후 재생해 보고, 마음에 들면 파일로 보관합니다.</p></div>
+    </section>
+    <footer class="footer"><span>녹음은 로컬에서 처리됩니다.</span><span>HEADPHONES RECOMMENDED</span></footer>
+  </main>
+
+  <script>
+    const $ = (selector) => document.querySelector(selector);
+    const canvas = $('#waveform');
+    const drawContext = canvas.getContext('2d');
+    const recordButton = $('#recordButton');
+    const micButton = $('#micButton');
+    const clearButton = $('#clearButton');
+    const saveButton = $('#saveButton');
+    const playback = $('#playback');
+    const elapsed = $('#elapsed');
+    const statusDot = $('#statusDot');
+    const statusText = $('#statusText');
+    const scopeNote = $('#scopeNote');
+    const hint = $('#hint');
+    const permissionNote = $('#permissionNote');
+    const emptyState = $('#emptyState');
+    const resultMeta = $('#resultMeta');
+    const controls = ['gain', 'clarity', 'warmth', 'compression'];
+    let audioContext, stream, recorder, source, analyser, destination, gainNode, clarityNode, warmthNode, compressor;
+    let chunks = [], recordingBlob, recordStartedAt, timerId, animationId, isRecording = false;
+
+    const presetValues = {
+      natural: { gain: 0, clarity: 0, warmth: 0, compression: 1 },
+      clear: { gain: 1, clarity: 6, warmth: -1, compression: 2 },
+      warm: { gain: 1, clarity: 1, warmth: 7, compression: 1 },
+      broadcast: { gain: 2, clarity: 4, warmth: 2, compression: 3 }
+    };
+
+    function dbToGain(db) { return Math.pow(10, db / 20); }
+    function formatTime(milliseconds) {
+      const totalSeconds = Math.floor(milliseconds / 1000);
+      return `${String(Math.floor(totalSeconds / 60)).padStart(2, '0')}:${String(totalSeconds % 60).padStart(2, '0')}`;
+    }
+    function setStatus(text, live = false) {
+      statusText.textContent = text;
+      statusDot.classList.toggle('live', live);
+    }
+    function syncValues() {
+      $('#gainValue').textContent = `${$('#gain').value > 0 ? '+' : ''}${$('#gain').value} dB`;
+      $('#clarityValue').textContent = `${$('#clarity').value > 0 ? '+' : ''}${$('#clarity').value}`;
+      $('#warmthValue').textContent = `${$('#warmth').value > 0 ? '+' : ''}${$('#warmth').value}`;
+      $('#compressionValue').textContent = ['끔', '약함', '보통', '강함'][$('#compression').value];
+    }
+    function applyTone() {
+      syncValues();
+      if (!audioContext) return;
+      gainNode.gain.value = dbToGain(Number($('#gain').value));
+      clarityNode.gain.value = Number($('#clarity').value);
+      warmthNode.gain.value = Number($('#warmth').value);
+      const setting = Number($('#compression').value);
+      compressor.threshold.value = setting === 0 ? 0 : [-24, -20, -16][setting - 1];
+      compressor.ratio.value = setting === 0 ? 1 : [2, 4, 8][setting - 1];
+      compressor.knee.value = setting === 0 ? 0 : 18;
+    }
+    function resizeCanvas() {
+      const ratio = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.floor(rect.width * ratio); canvas.height = Math.floor(rect.height * ratio);
+      drawContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+    function drawWave() {
+      const width = canvas.clientWidth, height = canvas.clientHeight;
+      drawContext.clearRect(0, 0, width, height);
+      drawContext.fillStyle = '#17221f'; drawContext.fillRect(0, 0, width, height);
+      drawContext.strokeStyle = 'rgba(202, 220, 202, .12)'; drawContext.lineWidth = 1;
+      for (let y = 0; y < height; y += height / 4) { drawContext.beginPath(); drawContext.moveTo(0, y + .5); drawContext.lineTo(width, y + .5); drawContext.stroke(); }
+      if (analyser) {
+        const values = new Uint8Array(analyser.fftSize); analyser.getByteTimeDomainData(values);
+        drawContext.strokeStyle = isRecording ? '#e56b4d' : '#a8c7a8'; drawContext.lineWidth = 2; drawContext.beginPath();
+        values.forEach((sample, index) => { const x = index / (values.length - 1) * width; const y = (sample / 255) * height; index ? drawContext.lineTo(x, y) : drawContext.moveTo(x, y); });
+        drawContext.stroke();
+      } else {
+        drawContext.strokeStyle = 'rgba(202, 220, 202, .22)'; drawContext.lineWidth = 1.2; drawContext.beginPath();
+        drawContext.moveTo(0, height / 2); drawContext.lineTo(width, height / 2); drawContext.stroke();
+      }
+      animationId = requestAnimationFrame(drawWave);
+    }
+    async function connectMicrophone() {
+      if (stream) { hint.textContent = '마이크가 연결되어 있습니다. 파형을 확인한 뒤 녹음을 시작하세요.'; return; }
+      try {
+        permissionNote.classList.remove('error');
+        permissionNote.textContent = '마이크 권한을 요청하고 있습니다…';
+        stream = await navigator.mediaDevices.getUserMedia({ audio: {
+          echoCancellation: true, noiseSuppression: $('#noiseSuppression').checked,
+          autoGainControl: false, channelCount: 1
+        }});
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        source = audioContext.createMediaStreamSource(stream);
+        gainNode = audioContext.createGain();
+        const highPass = audioContext.createBiquadFilter(); highPass.type = 'highpass'; highPass.frequency.value = 80;
+        warmthNode = audioContext.createBiquadFilter(); warmthNode.type = 'lowshelf'; warmthNode.frequency.value = 180;
+        clarityNode = audioContext.createBiquadFilter(); clarityNode.type = 'peaking'; clarityNode.frequency.value = 3200; clarityNode.Q.value = 0.9;
+        compressor = audioContext.createDynamicsCompressor();
+        analyser = audioContext.createAnalyser(); analyser.fftSize = 2048;
+        destination = audioContext.createMediaStreamDestination();
+        source.connect(highPass).connect(warmthNode).connect(clarityNode).connect(compressor).connect(gainNode);
+        gainNode.connect(analyser); gainNode.connect(destination);
+        applyTone(); resizeCanvas();
+        if (!animationId) drawWave();
+        micButton.textContent = '마이크 연결됨'; micButton.disabled = true;
+        recordButton.disabled = false; setStatus('입력 신호 대기', true); scopeNote.textContent = '말해 보세요. 신호가 붉은 선을 넘지 않게 조절하세요.';
+        hint.textContent = '준비되었습니다. 녹음 시작을 누르면 음질 조절값이 파일에 적용됩니다.';
+        permissionNote.textContent = '연결되었습니다. 녹음은 이 기기 안에서 처리되며, 파일은 직접 저장할 때만 생성됩니다.';
+      } catch (error) {
+        const message = error.name === 'NotAllowedError' ? '마이크 권한이 허용되지 않았습니다. 브라우저 주소창의 권한 설정을 확인하세요.' : '마이크를 연결할 수 없습니다. 다른 앱이 마이크를 사용 중인지 확인하세요.';
+        permissionNote.textContent = message; permissionNote.classList.add('error'); hint.textContent = '마이크 연결이 필요합니다.'; setStatus('마이크 연결 실패');
+      }
+    }
+    function updateMonitor() {
+      if (!gainNode || !audioContext) return;
+      try { gainNode.disconnect(audioContext.destination); } catch (_) { /* no monitor connection yet */ }
+      if ($('#monitor').checked) gainNode.connect(audioContext.destination);
+    }
+    function startRecording() {
+      if (!stream || isRecording) return;
+      if (audioContext.state === 'suspended') audioContext.resume();
+      chunks = [];
+      const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : '';
+      recorder = new MediaRecorder(destination.stream, { mimeType, audioBitsPerSecond: 192000 });
+      recorder.ondataavailable = (event) => { if (event.data.size) chunks.push(event.data); };
+      recorder.onstop = finishRecording;
+      recorder.start(250); isRecording = true; recordStartedAt = Date.now();
+      timerId = setInterval(() => { elapsed.textContent = formatTime(Date.now() - recordStartedAt); }, 200);
+      recordButton.classList.add('recording'); recordButton.querySelector('span').textContent = '녹음 종료';
+      setStatus('녹음 중', true); scopeNote.textContent = '녹음 중입니다. 자연스럽게 말해 주세요.'; hint.textContent = '녹음을 마치려면 ‘녹음 종료’를 누르세요.';
+    }
+    function stopRecording() { if (recorder && isRecording) recorder.stop(); }
+    function finishRecording() {
+      clearInterval(timerId); isRecording = false;
+      recordingBlob = new Blob(chunks, { type: recorder.mimeType || 'audio/webm' });
+      playback.src = URL.createObjectURL(recordingBlob); playback.hidden = false; emptyState.hidden = true; resultMeta.hidden = false;
+      resultMeta.textContent = `${formatTime(Date.now() - recordStartedAt)} · ${(recordingBlob.size / 1024 / 1024).toFixed(1)} MB · WEBM/OPUS`;
+      recordButton.classList.remove('recording'); recordButton.querySelector('span').textContent = '새 녹음 시작';
+      saveButton.disabled = false; clearButton.disabled = false; setStatus('녹음 완료', true); scopeNote.textContent = '재생하여 음질을 확인하세요.'; hint.textContent = '마음에 들면 ‘녹음 저장’을 눌러 파일로 보관하세요.';
+    }
+    function clearResult() {
+      if (playback.src) URL.revokeObjectURL(playback.src);
+      recordingBlob = null; playback.removeAttribute('src'); playback.hidden = true; emptyState.hidden = false; resultMeta.hidden = true;
+      saveButton.disabled = true; clearButton.disabled = true; elapsed.textContent = '00:00'; hint.textContent = '새로운 녹음을 시작할 수 있습니다.';
+    }
+    function saveRecording() {
+      if (!recordingBlob) return;
+      const link = document.createElement('a'); const stamp = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-');
+      link.href = URL.createObjectURL(recordingBlob); link.download = `voice-tone-${stamp}.webm`; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 500);
+    }
+    controls.forEach((id) => $(`#${id}`).addEventListener('input', () => { applyTone(); document.querySelectorAll('.preset-button').forEach((button) => button.classList.remove('active')); }));
+    document.querySelectorAll('.preset-button').forEach((button) => button.addEventListener('click', () => {
+      Object.entries(presetValues[button.dataset.preset]).forEach(([key, value]) => { $(`#${key}`).value = value; });
+      document.querySelectorAll('.preset-button').forEach((item) => item.classList.toggle('active', item === button)); applyTone();
+    }));
+    $('#monitor').addEventListener('change', updateMonitor);
+    $('#noiseSuppression').addEventListener('change', () => { if (stream) hint.textContent = '소음 억제 설정은 마이크를 새로 연결할 때 적용됩니다.'; });
+    micButton.addEventListener('click', connectMicrophone);
+    recordButton.addEventListener('click', () => isRecording ? stopRecording() : startRecording());
+    clearButton.addEventListener('click', clearResult); saveButton.addEventListener('click', saveRecording);
+    window.addEventListener('resize', resizeCanvas); resizeCanvas(); drawWave(); syncValues();
+  </script>
+</body>
+</html>
