@@ -316,7 +316,22 @@
   /* ---------- extras (future-phase; only when seeded) ---------- */
   var ex=EXTRAS[work.title];
   if(ex){
-    h+='<section class="block extras"><div class="sec-head" data-reveal><h2>공연 아카이브</h2><span class="hn">언론·관객 리뷰 · 공연 사진 · 주요 대사</span></div>';
+    h+='<section class="block extras"><div class="sec-head" data-reveal><h2>공연 아카이브</h2><span class="hn">공연 영상 · 언론·관객 리뷰 · 공연 사진 · 주요 대사</span></div>';
+
+    /* 공연 영상 (프레스콜·하이라이트) — 아카이브 최상단 */
+    h+='<div class="ex-block" data-reveal><h3>공연 영상 <span class="tag '+(ex.videos&&ex.videos.length?'live':'soon')+'">'+(ex.videos&&ex.videos.length?'시드':'준비중')+'</span></h3>';
+    if(ex.videos&&ex.videos.length){
+      h+='<div class="video-grid">';
+      ex.videos.forEach(function(v){
+        h+='<figure><div class="video-frame"><iframe src="https://www.youtube.com/embed/'+esc(v.youtubeId)+'" title="'+esc(v.title||work.title)+'" loading="lazy" allowfullscreen frameborder="0"></iframe></div>';
+        if(v.title||v.outlet) h+='<figcaption><span class="cap">'+esc(v.title||'')+'</span>'+(v.outlet?'<span class="cred">'+esc(v.outlet)+(v.date?' · '+esc(v.date):'')+'</span>':'')+'</figcaption>';
+        h+='</figure>';
+      });
+      h+='</div>';
+      if(ex.videos_note) h+='<div class="ex-subnote">'+esc(ex.videos_note)+'</div>';
+    } else h+='<div class="ex-empty">공연 영상이 아직 없습니다 — 다음 단계에서 프레스콜·하이라이트 영상을 추가.</div>';
+    h+='</div>';
+
     h+='<div class="ex-note" data-reveal>언론·관객 리뷰와 공연 사진, 주요 대사를 검색·직접입력으로 축적하는 <b>공연 아카이브</b>입니다. 자료가 확보된 작품부터 순차적으로 채워집니다.</div>';
 
     /* 연출 노트 (director's statement) */
@@ -397,20 +412,6 @@
       h+='</div>';
       if(ex.photos_note) h+='<div class="ex-subnote">'+esc(ex.photos_note)+'</div>';
     } else h+='<div class="ex-empty">공연 사진이 아직 없습니다 — 다음 단계에서 프로덕션 스틸을 추가.</div>';
-    h+='</div>';
-
-    /* 공연 영상 (프레스콜·하이라이트) */
-    h+='<div class="ex-block" data-reveal><h3>공연 영상 <span class="tag '+(ex.videos&&ex.videos.length?'live':'soon')+'">'+(ex.videos&&ex.videos.length?'시드':'준비중')+'</span></h3>';
-    if(ex.videos&&ex.videos.length){
-      h+='<div class="video-grid">';
-      ex.videos.forEach(function(v){
-        h+='<figure><div class="video-frame"><iframe src="https://www.youtube.com/embed/'+esc(v.youtubeId)+'" title="'+esc(v.title||work.title)+'" loading="lazy" allowfullscreen frameborder="0"></iframe></div>';
-        if(v.title||v.outlet) h+='<figcaption><span class="cap">'+esc(v.title||'')+'</span>'+(v.outlet?'<span class="cred">'+esc(v.outlet)+(v.date?' · '+esc(v.date):'')+'</span>':'')+'</figcaption>';
-        h+='</figure>';
-      });
-      h+='</div>';
-      if(ex.videos_note) h+='<div class="ex-subnote">'+esc(ex.videos_note)+'</div>';
-    } else h+='<div class="ex-empty">공연 영상이 아직 없습니다 — 다음 단계에서 프레스콜·하이라이트 영상을 추가.</div>';
     h+='</div>';
 
     h+='</section>';

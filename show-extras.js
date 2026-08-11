@@ -1794,6 +1794,11 @@ window.SHOW_EXTRAS = {
     "photos_note": "언론 공개 프로덕션 스틸. 저작권은 제작사에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     "videos": [
       {
+        "youtubeId": "kWDdgdudV00",
+        "title": "연극 「더헬멧」 공연 영상",
+        "sourceUrl": "https://www.youtube.com/watch?v=kWDdgdudV00"
+      },
+      {
         "youtubeId": "RBNXH9lGQCI",
         "title": "[더뮤지컬] 컬처_연극 '더 헬멧-Room's Vol.1' 초연 하이라이트-정원조, 정연, 손지윤, 한송희, 양소민, 이정수, 이호영, 윤나무, 김도빈",
         "outlet": "THE MUSICAL",
