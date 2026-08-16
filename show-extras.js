@@ -3537,6 +3537,49 @@ window.SHOW_EXTRAS = {
       }
     ],
     "press_note": "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음. 공연사진·관객 후기·공연영상은 검색 결과 확인되지 않아 미포함(2026-08-01 기준) — 포스터만 확보."
+  },
+  "아가사": {
+    "press": [
+      {
+        "outlet": "더뮤지컬 (125호)",
+        "date": "2014.02",
+        "quote": "배해선의 연기는 철저히 '작가 아가사'를 근간으로 한다. 인물의 다층성이 설득력 있게 펼쳐진다.",
+        "context": "송준호 — [CAST VS CAST] 레이몬드·아가사·로이 캐스트 비교 리뷰",
+        "url": "https://www.themusical.co.kr/Magazine/Detail?num=1051"
+      }
+    ],
+    "press_note": "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음.",
+    "videos": [
+      {
+        "youtubeId": "rIKaNIDTsbY",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '아가사' 초연 하이라이트 1부",
+        "outlet": "더뮤지컬",
+        "date": "2014-01-10",
+        "sourceUrl": "https://www.youtube.com/watch?v=rIKaNIDTsbY"
+      },
+      {
+        "youtubeId": "xyDtOjlDNJU",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '아가사' 2015 공연 하이라이트 1부",
+        "outlet": "더뮤지컬",
+        "date": "2015-02",
+        "sourceUrl": "https://www.youtube.com/watch?v=xyDtOjlDNJU"
+      },
+      {
+        "youtubeId": "ZBobEHnV608",
+        "title": "[더뮤지컬] 스테이지_뮤지컬 '아가사' 2015 공연 하이라이트 2부",
+        "outlet": "더뮤지컬",
+        "date": "2015-03",
+        "sourceUrl": "https://www.youtube.com/watch?v=ZBobEHnV608"
+      },
+      {
+        "youtubeId": "3vJX_p9iBzA",
+        "title": "[4K] 뮤지컬 아가사 AGATHA 10주년 스페셜 커튼콜",
+        "outlet": "팬 촬영",
+        "date": "2024-01-04",
+        "sourceUrl": "https://www.youtube.com/watch?v=3vJX_p9iBzA"
+      }
+    ],
+    "videos_note": "유튜브 공개 영상. 더뮤지컬 공식 채널 하이라이트 및 관객 촬영 커튼콜 영상."
   }
 };
 
