@@ -3539,7 +3539,74 @@ window.SHOW_EXTRAS = {
     "press_note": "언론 기사·리뷰 발췌를 출처 링크와 함께 인용. 각 기사의 저작권은 해당 매체에 있음. 공연사진·관객 후기·공연영상은 검색 결과 확인되지 않아 미포함(2026-08-01 기준) — 포스터만 확보."
   },
   "아가사": {
+    "photos": [
+      {
+        "src": "assets/photos/아가사/아가사_2014_still1.jpg",
+        "caption": "눈 내리는 문 앞 — 실종의 밤 (2014 초연)",
+        "credit": "마이데일리 · 언론 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still2.jpg",
+        "caption": "체스판을 사이에 둔 두 사람 (2014 초연)",
+        "credit": "마이데일리 · 언론 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still3.jpg",
+        "caption": "미궁 — 앙상블 장면 (2014 초연)",
+        "credit": "마이데일리 · 언론 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still4.jpg",
+        "caption": "벽난로 앞 응접실 장면 (2014 초연 프레스콜)",
+        "credit": "컨슈머타임스 · 프레스콜 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still5.jpg",
+        "caption": "만찬 테이블 — 빈 의자 (2014 초연)",
+        "credit": "마이데일리 · 언론 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still6.jpg",
+        "caption": "티타임 심문 장면 (2014 초연 프레스콜)",
+        "credit": "컨슈머타임스 · 프레스콜 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still7.jpg",
+        "caption": "3인 대치 장면 (2014 초연 프레스콜)",
+        "credit": "컨슈머타임스 · 프레스콜 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still8.jpg",
+        "caption": "붉은 조명의 2인 장면 (2014 초연)",
+        "credit": "마이데일리 · 언론 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still9.jpg",
+        "caption": "카메라를 든 레이몬드 (2014 초연 프레스콜)",
+        "credit": "컨슈머타임스 · 프레스콜 공개"
+      },
+      {
+        "src": "assets/photos/아가사/아가사_2014_still10.jpg",
+        "caption": "레이몬드 독백 (2014 초연 프레스콜)",
+        "credit": "컨슈머타임스 · 프레스콜 공개"
+      }
+    ],
+    "photos_note": "2014년 초연(동국대 이해랑예술극장) 언론 공개 프로덕션 스틸. 저작권은 제작사·촬영 매체에 있으며 아카이브 목적으로 크레딧과 함께 게시.",
     "press": [
+      {
+        "outlet": "컨슈머타임스",
+        "date": "2014.01",
+        "quote": "완벽한 추리물로써 이야기를 만들지 않았다. 소설 속 살인의 과정보다 '아가사'에게 살인을 다루는 것이 어떤 의미를 갖는지에 초점을 맞췄다.",
+        "context": "김태형 연출 — 초연 프레스콜 (2014.01.07 이해랑예술극장) · 정지혜 기자",
+        "url": "http://www.cstimes.com/news/articleView.html?idxno=129361"
+      },
+      {
+        "outlet": "마이데일리",
+        "date": "2014.02",
+        "quote": "뮤지컬 '아가사', 뻔하지만 다른 무언가가 살아 숨쉰다.",
+        "context": "허설희 — 초연 리뷰",
+        "url": "https://www.mydaily.co.kr/page/view/2014022813232804427"
+      },
       {
         "outlet": "더뮤지컬 (125호)",
         "date": "2014.02",
