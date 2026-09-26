@@ -290,12 +290,35 @@
   function link(t){ return '3dwork.html#' + encodeURIComponent(t); }
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-  /* ---- now playing: currently running productions ---- */
-  var NOWPLAYING = [
-    { t:"더헬멧", tag:["연극 · 4연째 스테디 레퍼토리","2026.07.09 – 10.11","홍익대 대학로 아트센터 소극장"] },
-    { t:"비더슈탄트", tag:["뮤지컬 · 3연 · 전곡 교체 개정판","2026.07.23 – 10.11","링크아트센터드림 드림1관"] },
-    { t:"경성의 고독한 미식가들", tag:["연극 초연 · 관객참여형 이머시브","2026.07.25 – 08.09","두산아트센터 Space111"] }
-  ];
+  /* ---- now playing: 시즌 dates에서 자동 산출 — 김태형 — 포트폴리오.html(2D)과 동일 로직 ----
+     오늘이 시즌 기간 안인 작품만. 폐막하면 저절로 빠지고, 하나도 없으면 섹션·메뉴를 숨긴다. */
+  var NOW_COPY = {
+    "더헬멧":     "4연째 스테디 레퍼토리",
+    "비더슈탄트": "3연 · 전곡 새로 쓴 개정판",
+    "아나키스트": "재연 · 젠더프리 캐스팅"
+  };
+  function seasonRange(s){
+    var m=String(s.dates||'').match(/(\d{4})\.(\d{1,2})\.(\d{1,2})\s*[–~\-]\s*(?:(\d{4})\.)?(\d{1,2})\.(\d{1,2})/);
+    if(!m) return null;
+    var a=new Date(+m[1],m[2]-1,+m[3]), b=new Date(+(m[4]||m[1]),m[5]-1,+m[6]);
+    if(b<a) b.setFullYear(b.getFullYear()+1);
+    return [a,b];
+  }
+  var today=new Date(); today.setHours(0,0,0,0);
+  var NOWPLAYING=[];
+  Object.keys(W).forEach(function(t){
+    (W[t].seasons||[]).forEach(function(s){
+      var r=seasonRange(s);
+      if(r && r[0]<=today && today<=r[1]) NOWPLAYING.push({t:t, a:r[0],
+        tag:[W[t].genre+' · '+(NOW_COPY[t]||String(s.label||'').replace(/\s*\(.*\)$/,'')),
+             String(s.dates||'').replace(/\s*[–~]\s*/,' – '), s.venue||'']});
+    });
+  });
+  NOWPLAYING.sort(function(x,y){ return x.a-y.a; });
+  if(!NOWPLAYING.length){
+    var np=document.getElementById('nowplaying'); if(np) np.style.display='none';
+    var nl=document.querySelector('a[href="#nowplaying"]'); if(nl) nl.style.display='none';
+  }
   var nh='';
   NOWPLAYING.forEach(function(f,i){
     var w=W[f.t]; if(!w) return;
