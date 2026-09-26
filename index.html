@@ -67,7 +67,9 @@
   .navlinks a:focus-visible{outline:2px solid var(--gold-dim);outline-offset:4px;border-radius:2px}
   .navlinks a.nav-db{color:var(--gold);border:1px solid var(--gold-dim);border-radius:99px;padding:5px 13px}
   .navlinks a.nav-db:hover{background:rgba(201,169,97,.12);color:var(--gold-bright)}
-  @media(max-width:640px){.navlinks{gap:14px;font-size:12px}.navlinks a:nth-child(n+3):not(.nav-db){display:none}}
+  @media(max-width:640px){.navlinks{gap:14px;font-size:12px}.navlinks a:nth-child(n+3):not(.nav-db){display:none}
+    /* 폰: 워드마크 한 줄 + 링크 한 줄 (글자가 세로로 쌓이던 것 방지) */
+    nav.top .inner{flex-wrap:wrap;row-gap:10px;padding:12px 16px}.wordmark,.navlinks a{white-space:nowrap}header.hero{justify-content:flex-start}.hero .hero-inner{padding-top:120px;padding-bottom:90px}}
 
   /* ---------- hero ---------- */
   .hero{
