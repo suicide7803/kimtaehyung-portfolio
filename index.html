@@ -112,7 +112,7 @@
     display:block;font-family:var(--serif);font-weight:600;font-size:24px;color:var(--gold-bright);
     font-variant-numeric:tabular-nums;letter-spacing:.005em;line-height:1.2;white-space:nowrap;
   }
-  .stat span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+  .stat > span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
   .edu-note{margin-top:20px;font-size:11.5px;letter-spacing:.03em;color:var(--ink-faint)}
   .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold-bright);margin-right:9px;box-shadow:0 0 9px rgba(224,193,125,.8);animation:livepulse 1.8s ease-in-out infinite;vertical-align:middle}
   @keyframes livepulse{0%,100%{opacity:1}50%{opacity:.3}}
@@ -273,6 +273,7 @@
 </style>
 </head>
 <body>
+<script src="intro-reel.js"></script><!-- 쇼릴 인트로 (2026-09-27 v1) — 이 줄을 지우면 원래대로 -->
 
 <div class="progress" aria-hidden="true"></div>
 
@@ -559,15 +560,23 @@
   });
   var heroBits=document.querySelectorAll('[data-hero]');
   heroBits.forEach(function(el){el.style.opacity='0';});
-  M.animate('.hero .eyebrow',{opacity:[0,1],transform:['translateY(18px)','translateY(0)']},{duration:.9,easing:EASE,delay:.15});
-  document.querySelectorAll('#heroTitle .ch').forEach(function(ch,i){
-    ch.style.opacity='0';
-    M.animate(ch,{opacity:[0,1],transform:['translateY(60px)','translateY(0)']},{duration:1.1,easing:EASE,delay:.3+i*.09});
-  });
+  var heroChars=document.querySelectorAll('#heroTitle .ch');
+  heroChars.forEach(function(ch){ch.style.opacity='0';});
   titleEl.style.opacity='1';
-  M.animate('.hero .tag',{opacity:[0,1],transform:['translateY(24px)','translateY(0)']},{duration:.9,easing:EASE,delay:.7});
-  M.animate('#stats',{opacity:[0,1],transform:['translateY(28px)','translateY(0)']},{duration:1,easing:EASE,delay:.9});
-  M.animate('.hero .edu-note',{opacity:[0,1],transform:['translateY(20px)','translateY(0)']},{duration:.9,easing:EASE,delay:1.05});
+  /* 쇼릴 인트로(intro-reel.js)가 재생 중이면 끝난 뒤에 등장 — 인트로가 없으면 바로 */
+  function afterIntro(fn){
+    if(window.__introReel&&window.__introReel.active)document.addEventListener('introreel:done',fn,{once:true});
+    else fn();
+  }
+  afterIntro(function(){
+    M.animate('.hero .eyebrow',{opacity:[0,1],transform:['translateY(18px)','translateY(0)']},{duration:.9,easing:EASE,delay:.15});
+    heroChars.forEach(function(ch,i){
+      M.animate(ch,{opacity:[0,1],transform:['translateY(60px)','translateY(0)']},{duration:1.1,easing:EASE,delay:.3+i*.09});
+    });
+    M.animate('.hero .tag',{opacity:[0,1],transform:['translateY(24px)','translateY(0)']},{duration:.9,easing:EASE,delay:.7});
+    M.animate('#stats',{opacity:[0,1],transform:['translateY(28px)','translateY(0)']},{duration:1,easing:EASE,delay:.9});
+    M.animate('.hero .edu-note',{opacity:[0,1],transform:['translateY(20px)','translateY(0)']},{duration:.9,easing:EASE,delay:1.05});
+  });
 
   /* hero: scroll-linked exit (parallax fade) */
   var hero=document.querySelector('.hero');
@@ -587,7 +596,7 @@
     requestAnimationFrame(frame);
   }
   M.inView('#stats',function(){
-    document.querySelectorAll('[data-count]').forEach(countUp);
+    afterIntro(function(){document.querySelectorAll('[data-count]').forEach(countUp);});
   },{amount:.4});
 
   /* generic reveals */
