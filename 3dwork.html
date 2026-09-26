@@ -148,6 +148,19 @@
   var EXTRAS=window.SHOW_EXTRAS||{};
   function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function statusLabel(s){return {repertoire:'레퍼토리',upcoming:'예정',development:'개발중',closed:'종료'}[s]||'';}
+  /* 오늘 날짜가 시즌 기간(dates "YYYY.MM.DD–[YYYY.]MM.DD") 안이면 그 시즌 — work.html과 동일 로직 */
+  function runningSeason(w){
+    var t=new Date(); t.setHours(0,0,0,0);
+    var ss=(w&&w.seasons)||[];
+    for(var i=0;i<ss.length;i++){
+      var m=String(ss[i].dates||'').match(/(\d{4})\.(\d{1,2})\.(\d{1,2})\s*[–~\-]\s*(?:(\d{4})\.)?(\d{1,2})\.(\d{1,2})/);
+      if(!m) continue;
+      var a=new Date(+m[1],m[2]-1,+m[3]), b=new Date(+(m[4]||m[1]),m[5]-1,+m[6]);
+      if(b<a) b.setFullYear(b.getFullYear()+1);
+      if(a<=t&&t<=b) return ss[i];
+    }
+    return null;
+  }
 
   function render(){
     var raw=decodeURIComponent((location.hash||'').slice(1));
@@ -174,6 +187,8 @@
     if(work.genre) h+='<span class="badge">'+esc(work.genre)+'</span>';
     if(work.immersive) h+='<span class="badge">이머시브 공연</span>';
     if(work.genre_detail) h+='<span class="badge">'+esc(work.genre_detail)+'</span>';
+    var onNow=runningSeason(work);
+    if(onNow) h+='<span class="badge" style="background:var(--gold);color:#111;border-color:var(--gold)">● 공연 중'+(onNow.label?' · '+esc(String(onNow.label).replace(/\s*\(.*\)$/,'')):'')+'</span>';
     if(work.status&&statusLabel(work.status)) h+='<span class="badge">'+esc(statusLabel(work.status))+'</span>';
     h+='</div><h1>'+esc(work.title)+'</h1><div class="credit">';
     if(work.author) h+='작 · <b>'+esc(work.author)+'</b><br>';
