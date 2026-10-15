@@ -7,7 +7,12 @@
 <meta name="description" content="연극·뮤지컬 연출 김태형 — 2007년 데뷔 이후 62편의 작품, 124번의 공연 아카이브.">
 <meta property="og:title" content="김태형 — 연출 포트폴리오">
 <meta property="og:description" content="소극장의 공간 실험에서 대극장 뮤지컬까지 — 62작 124시즌의 기록.">
-<meta property="og:image" content="https://suicide7803.github.io/kimtaehyung-portfolio/assets/posters/%EB%A7%88%EB%A6%AC%ED%80%B4%EB%A6%AC_2025.gif">
+<meta property="og:image" content="https://suicide7803.github.io/kimtaehyung-portfolio/assets/video/trailer-poster.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://suicide7803.github.io/kimtaehyung-portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://suicide7803.github.io/kimtaehyung-portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d0b08'/%3E%3Ctext x='32' y='45' font-size='36' font-family='serif' font-weight='700' text-anchor='middle' fill='%23c9a961'%3E%EA%B9%80%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
@@ -67,7 +72,8 @@
   .navlinks a:focus-visible{outline:2px solid var(--gold-dim);outline-offset:4px;border-radius:2px}
   .navlinks a.nav-db{color:var(--gold);border:1px solid var(--gold-dim);border-radius:99px;padding:5px 13px}
   .navlinks a.nav-db:hover{background:rgba(201,169,97,.12);color:var(--gold-bright)}
-  @media(max-width:640px){.navlinks{gap:14px;font-size:12px}.navlinks a:nth-child(n+3):not(.nav-db){display:none}
+  @media(max-width:640px){.navlinks{gap:14px;font-size:12px;width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .navlinks::-webkit-scrollbar{display:none}.navlinks a{flex:0 0 auto;padding-block:7px}
     /* 폰: 워드마크 한 줄 + 링크 한 줄 (글자가 세로로 쌓이던 것 방지) */
     nav.top .inner{flex-wrap:wrap;row-gap:10px;padding:12px 16px}.wordmark,.navlinks a{white-space:nowrap}header.hero{justify-content:flex-start}.hero .hero-inner{padding-top:120px;padding-bottom:90px}}
 
@@ -265,6 +271,9 @@
   }
   footer b{color:var(--ink-dim)}
 
+  .award .wk a,.subnote a{color:inherit;border-bottom:1px solid var(--gold-dim);transition:color .2s,border-color .2s}
+  .award .wk a:hover,.subnote a:hover,.award .wk a:focus-visible,.subnote a:focus-visible{color:var(--gold-bright);border-color:var(--gold-bright)}
+
   /* reveal defaults: hidden only when JS present; reduced-motion sees everything */
   .js [data-reveal]{opacity:0}
   @media (prefers-reduced-motion: reduce){
@@ -358,12 +367,12 @@
       <h2>수상</h2>
     </div>
     <div class="awards" data-reveal-group>
-      <div class="award"><div class="yr">2021</div><div class="nm">제5회 한국뮤지컬어워즈 연출상</div><div class="wk">마리 퀴리 — 대상 포함 5관왕</div></div>
-      <div class="award"><div class="yr">2023</div><div class="nm">제61회 K-Theater Awards 대상</div><div class="wk">빵야</div></div>
-      <div class="award"><div class="yr">2024</div><div class="nm">제8회 한국뮤지컬어워즈 연출상</div><div class="wk">멤피스 — 작품상 포함 5관왕</div></div>
-      <div class="award"><div class="yr">2026</div><div class="nm">제62회 백상예술대상 백상연극상 후보</div><div class="wk">미러 A Mirror</div></div>
+      <div class="award"><div class="yr">2021</div><div class="nm">제5회 한국뮤지컬어워즈 연출상</div><div class="wk"><a href="work.html#%EB%A7%88%EB%A6%AC%20%ED%80%B4%EB%A6%AC">마리 퀴리</a> — 대상 포함 5관왕</div></div>
+      <div class="award"><div class="yr">2023</div><div class="nm">제61회 K-Theater Awards 대상</div><div class="wk"><a href="work.html#%EB%B9%B5%EC%95%BC">빵야</a></div></div>
+      <div class="award"><div class="yr">2024</div><div class="nm">제8회 한국뮤지컬어워즈 연출상</div><div class="wk"><a href="work.html#%EB%A9%A4%ED%94%BC%EC%8A%A4">멤피스</a> — 작품상 포함 5관왕</div></div>
     </div>
     <p class="subnote" data-reveal>
+      <b>후보</b> 제62회 백상예술대상 백상연극상 · <a href="work.html#%EB%AF%B8%EB%9F%AC%20(A%20Mirror)">미러 A Mirror</a> (2026) &nbsp;·&nbsp;
       <b>한국뮤지컬어워즈 연출상 후보</b> 제1회 로기수 (2017) · 제3회 매디슨 카운티의 다리 (2019) · 제9회 스윙 데이즈 (2025) · 제10회 매디슨 카운티의 다리 (2026) &nbsp;·&nbsp;
       <b>빵야</b> 2022 창작산실 올해의신작 · 월간 한국연극 2023 공연 베스트 7 &nbsp;·&nbsp;
       <b>히스토리 보이즈</b> 2014 대한민국 연극대상 작품상 &nbsp;·&nbsp;
