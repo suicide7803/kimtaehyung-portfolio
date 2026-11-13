@@ -10,9 +10,9 @@
  */
 (function () {
   var KEY = 'introReelSeen.v1';
-  var SRC_HI = 'assets/video/showreel_15s_1080.mp4';
-  var SRC_LO = 'assets/video/showreel_15s_720.mp4';
-  var POSTER = 'assets/video/showreel_poster.jpg';
+  var SRC_HI = 'assets/video/showreel_15s_1080.mp4?v=20261113';
+  var SRC_LO = 'assets/video/showreel_15s_720.mp4?v=20261113';
+  var POSTER = 'assets/video/showreel_poster.jpg?v=20261113';
 
   var q = location.search;
   var force = /[?&]intro=1\b/.test(q);
