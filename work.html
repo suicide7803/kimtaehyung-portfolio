@@ -256,7 +256,7 @@
   if(work.genre_detail) h+='<span class="badge plain">'+esc(work.genre_detail)+'</span>';
   var onNow=runningSeason(work);
   if(onNow) h+='<span class="badge" style="background:var(--gold);color:#111;border-color:var(--gold)">● 공연 중'+(onNow.label?' · '+esc(String(onNow.label).replace(/\s*\(.*\)$/,'')):'')+'</span>';
-  if(work.status) h+='<span class="badge plain">'+esc(statusLabel(work.status))+'</span>';
+  if(work.status&&statusLabel(work.status)) h+='<span class="badge plain">'+esc(statusLabel(work.status))+'</span>';
   h+='</div>';
   h+='<h1 data-reveal>'+esc(work.title)+'</h1>';
   h+='<div class="credit" data-reveal>';
