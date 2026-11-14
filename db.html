@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>김태형 연출작 DB — 열람</title>
+<title>김태형 연출작 DB — 연극·뮤지컬 전 작품·캐스트 열람</title>
 <meta name="description" content="김태형 연출 65작 127시즌을 연도·배우·극장·제작사·장르별로 열람하는 데이터베이스.">
+<meta property="og:title" content="김태형 연출작 DB — 연극·뮤지컬 전 작품·캐스트 열람">
+<meta property="og:description" content="연극·뮤지컬 연출가 김태형의 65작 127시즌을 연도·배우·극장·제작사별로 열람.">
+<meta property="og:url" content="https://directortank.com/db.html">
+<meta property="og:image" content="https://directortank.com/assets/video/trailer-poster.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="김태형 연출가 포트폴리오">
+<link rel="canonical" href="https://directortank.com/db.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
@@ -262,7 +270,7 @@
   var works = DB.works || [];
   var $ = function(s,r){return (r||document).querySelector(s);};
   function el(t,c){var e=document.createElement(t); if(c)e.className=c; return e;}
-  function workLink(w){ return 'work.html#'+encodeURIComponent(w.title); }
+  function workLink(w){ return 'work.html?w='+encodeURIComponent(w.title); }
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 
   var STATUS_LABEL = {closed:'종료',repertoire:'레퍼토리',running:'공연중',upcoming:'예정',development:'개발중'};

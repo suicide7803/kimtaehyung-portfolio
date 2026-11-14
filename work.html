@@ -210,7 +210,8 @@
   var root=document.getElementById('root');
   var DB=(window.DB_DATA&&window.DB_DATA.works)||[];
   var EXTRAS=window.SHOW_EXTRAS||{};
-  var raw=decodeURIComponent((location.hash||'').slice(1));
+  var qw=new URLSearchParams(location.search).get('w');
+  var raw=qw!=null?qw:decodeURIComponent((location.hash||'').slice(1));
   var parts=raw.split('::');
   var key=parts[0].trim();
   var seasonHint=(parts[1]||'').trim();
@@ -238,7 +239,21 @@
     root.innerHTML='<div class="notfound">작품을 찾을 수 없습니다.<br><a class="backbtn gold" style="margin-top:20px" href="db.html">DB로 돌아가기</a></div>';
     document.documentElement.classList.remove('js'); return;
   }
-  document.title=work.title+' — 김태형 연출';
+
+  /* SEO: 작품별 제목·설명·canonical (표준 주소 = work.html?w=작품명) */
+  function setMeta(sel,attr,name,val){var isL=sel.indexOf('link')===0;var m=document.head.querySelector(sel);if(!m){m=document.createElement(isL?'link':'meta');m.setAttribute(attr,name);document.head.appendChild(m);}m.setAttribute(isL?'href':'content',val);}
+  function seoWork(w){
+    var url='https://directortank.com/work.html?w='+encodeURIComponent(w.title);
+    var yrs=(w.years&&w.years.length)?(w.years[0]===w.years[w.years.length-1]?w.years[0]:w.years[0]+'–'+w.years[w.years.length-1]):'';
+    var d='김태형 연출 〈'+w.title+'〉'+(w.genre?' ('+w.genre+(yrs?', '+yrs:'')+')':'')+' — '+(w.desc?w.desc+' ':'')+'시즌·캐스트·창작진 기록.';
+    document.title='〈'+w.title+'〉 — 김태형 연출 | 연극·뮤지컬 연출가 포트폴리오';
+    setMeta('meta[name="description"]','name','description',d);
+    setMeta('link[rel="canonical"]','rel','canonical',url);
+    setMeta('meta[property="og:title"]','property','og:title',document.title);
+    setMeta('meta[property="og:description"]','property','og:description',d);
+    setMeta('meta[property="og:url"]','property','og:url',url);
+  }
+  seoWork(work);
 
   var span = (work.years&&work.years.length)
       ? (work.years[0]===work.years[work.years.length-1]?String(work.years[0]):work.years[0]+'–'+work.years[work.years.length-1])

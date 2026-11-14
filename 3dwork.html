@@ -163,7 +163,8 @@
   }
 
   function render(){
-    var raw=decodeURIComponent((location.hash||'').slice(1));
+    var qw=new URLSearchParams(location.search).get('w');
+    var raw=qw!=null?qw:decodeURIComponent((location.hash||'').slice(1));
     var key=raw.split('::')[0].trim();
     var work=null;
     for(var i=0;i<DB.length;i++){ if(DB[i].title===key||DB[i].page===key){work=DB[i];break;} }
@@ -174,6 +175,7 @@
       return;
     }
     document.title=work.title+' — 김태형 연출';
+    (function(){var l=document.head.querySelector('link[rel="canonical"]');if(!l){l=document.createElement('link');l.rel='canonical';document.head.appendChild(l);}l.href='https://directortank.com/work.html?w='+encodeURIComponent(work.title);})();
 
     var span=(work.years&&work.years.length)
       ?(work.years[0]===work.years[work.years.length-1]?String(work.years[0]):work.years[0]+'–'+work.years[work.years.length-1])
